@@ -94,7 +94,9 @@ test('adapter exceptions fail closed', async () => {
 test('MCP initialize, discovery, tools and malformed calls', async () => {
   const call = (method, params) => handle({jsonrpc: '2.0', id: 1, method, params});
   assert.equal((await call('initialize', {protocolVersion: '2025-03-26'})).result.protocolVersion, '2025-03-26');
-  assert.equal((await call('tools/list')).result.tools.length, 3);
+  assert.equal((await call('tools/list')).result.tools.length, 4);
+  const scaffold = await call('tools/call', {name: 'kechap_scaffold', arguments: {provider: 'pow'}});
+  assert.ok(JSON.parse(scaffold.result.content[0].text).files['examples/web/server.js']);
   assert.equal((await call('tools/call', {name: 'kechap_recommend', arguments: {assurance: 'identity'}})).result.isError, undefined);
   assert.equal((await call('tools/call', {name: 'kechap_plan', arguments: {selfHosted: 'yes'}})).result.isError, true);
   assert.equal((await call('tools/call', {name: 'unknown'})).result.isError, true);
