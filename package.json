@@ -5,7 +5,7 @@
   "description": "Policy-driven human-verification provider orchestration for agents and products",
   "type": "module",
   "engines": {"node": ">=20"},
-  "exports": {".": "./src/index.js"},
-  "scripts": {"test": "node test/core.test.js", "demo": "node examples/local.js", "mcp": "node src/mcp.js", "recommend": "node src/cli.js", "catalog:check": "node scripts/check-catalog.js", "research:refresh": "node scripts/refresh-evidence.js"},
+  "exports": {".": "./src/index.js", "./browser": "./src/browser.js"},
+  "scripts": {"test": "node test/core.test.js && node test/web.test.js", "demo": "node examples/local.js", "demo:web": "node examples/web/server.js", "mcp": "node src/mcp.js", "recommend": "node src/cli.js", "catalog:check": "node scripts/check-catalog.js", "research:refresh": "node scripts/refresh-evidence.js"},
   "license": "Apache-2.0"
 }

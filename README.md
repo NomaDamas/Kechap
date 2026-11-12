@@ -17,6 +17,10 @@ npm run recommend -- '{"selfHosted":true,"assurance":"automation-cost"}'
 
 PoW 예제는 스크립트로 작업을 풀고 토큰 재사용이 거절되는 것을 보여 줍니다. 이는 사람의 존재를 확인하는 예제가 아닙니다. 저장소는 아직 npm에 배포하지 않았습니다.
 
+브라우저 폼 연동은 `npm run demo:web` 후 `http://localhost:3000`에서 확인할 수 있습니다. 기본값은 외부 서비스가 필요 없는 PoW이며, 서버 세션·CSRF 검사·서버 검증·토큰 소비를 연결합니다. 취소·재발급 UI도 포함합니다. 이 실행 환경에서는 포트 바인딩이 금지되어 실제 HTTP/브라우저 검증은 미완료이고, 요청 핸들러와 공급자 SDK 모의 테스트만 통과했습니다.
+
+공식 공급자를 쓰려면 `KECHAP_PROVIDERS=turnstile,hcaptcha`와 각 `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET`, `HCAPTCHA_SITE_KEY`, `HCAPTCHA_SECRET`을 서버 환경에 설정합니다. `KECHAP_HOSTNAME`은 키에 등록한 호스트명이어야 합니다. reCAPTCHA는 `RECAPTCHA_MODE=v2` 또는 `v3`, v3는 `RECAPTCHA_MIN_SCORE`도 설정합니다. 브라우저 모듈 [`src/browser.js`](src/browser.js)의 `mountChallenge(container, issued, {onResponse, onError, signal})`이 공식 widget과 PoW를 같은 인터페이스로 연결하고 공급자 교체 시 이전 콜백을 정리합니다. 외부 공급자 스크립트는 해당 방식이 선택된 경우에만 로드합니다.
+
 ## SDK 사용
 
 ```js

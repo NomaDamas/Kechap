@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kechap · 인증 연동 데모</title>
+<style>
+  :root {font: 17px/1.6 system-ui; color: #17252a; background: #f6f5f0}
+  body {max-width: 640px; margin: 8vh auto; padding: 24px}
+  h1 {font-size: 40px; margin-bottom: 0} p {max-width: 60ch}
+  section {background: white; border: 1px solid #d7d9cf; border-radius: 16px; padding: 24px; margin: 24px 0}
+  button {font: inherit; border: 1px solid #245b43; background: #245b43; color: white; border-radius: 8px; padding: 10px 18px; margin: 6px 8px 6px 0; cursor: pointer}
+  button:disabled {opacity: .5; cursor: default} button:focus-visible,a:focus-visible {outline: 3px solid #b45518; outline-offset: 4px}
+  a {color: #245b43} #widget {min-height: 70px} small {color: #44534b}
+</style>
+<main>
+  <h1>Kechap</h1>
+  <p>제품에 맞는 인증 수단을 연결하고 교체합니다.</p>
+  <section aria-labelledby="verification-title">
+    <h2 id="verification-title">요청 확인</h2>
+    <p id="description">인증 수단을 준비하고 있습니다.</p>
+    <div id="widget"></div>
+    <p id="status" role="status" aria-live="polite"></p>
+    <button id="retry" type="button">새 인증 요청</button>
+    <button id="submit" type="button" disabled>데모 요청 보내기</button>
+    <button id="cancel" type="button">취소</button>
+    <p>진행하기 어렵다면 취소할 수 있습니다. 실제 계정이나 신청은 생성하지 않습니다.</p>
+  </section>
+  <small>로컬 통합 데모입니다. 기본 연산 작업은 사람의 존재를 증명하지 않으며 계정을 만들지 않습니다.</small>
+</main>
+<script type="module" src="/app.js"></script>
+</html>
