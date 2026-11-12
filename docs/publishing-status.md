@@ -19,7 +19,7 @@
 git clone https://github.com/NomaDamas/Kechap.git /tmp/kechap-publish
 cd /tmp/kechap-publish
 git fetch /tmp/kechap-delivery.bundle main
-git cherry-pick FETCH_HEAD
+git cherry-pick $(git rev-list --reverse FETCH_HEAD)
 # 기존 코드와 충돌하면 원격 이력을 보존하며 해결
 npm test
 npm run catalog:check
