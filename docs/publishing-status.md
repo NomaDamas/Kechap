@@ -26,3 +26,7 @@ Aside·Windows VM은 실행하지 않았다. 기존 DNS/인증차단 기록은 �
 ## 설치 흐름 보강 검증
 
 요구사항 기반 setup 게시 커밋은 `0edac435f6a8e6f946887b340741106a08495c66`이며 [CI43203277224](https://github.com/NomaDamas/Kechap/actions/runs/43203277224)는 Node20/22/24와 Chromium job이 모두 success다. JS50개·Python3개·카탈로그·toy baseline을 검증했다. 이슈 #2/#5/#8/#10/#12는 각각 근거 댓글을 첨부해 닫았고 나머지는 완료로 간주하지 않는다. 이후 문서 상태 갱신은 history를 확인한다.
+
+## 전체 열린 이슈 구현분 게시
+
+49624baf80c2f985bc39e10223af16e33d855f84를main에푸시했고 [CI43227160100](https://github.com/NomaDamas/Kechap/actions/runs/43227160100)에서Node20/22/24의JS102개·Python3개·카탈로그Schema·Redis100동시와Chromium의실제폼/패스키/생성설치/replay/동의철회/무모델baseline이모두성공했다. 실제MyProxy모델실행은명시적별도실험으로artifact를게시했다. 현재17개closed/7개open이며외부조건은docs/issues.md와각댓글에기록했다.
