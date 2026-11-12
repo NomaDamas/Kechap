@@ -1,9 +1,10 @@
 import {createInterface} from 'node:readline';
 import {readFile} from 'node:fs/promises';
 import {recommend, recommendationProperties} from './policy.js';
-import {scaffoldPlan} from './scaffold.js';
+import {scaffoldPlan, integrationPlan} from './scaffold.js';
 
 const tools = [
+  {name: 'kechap_setup', description: 'Choose an implemented adapter under product requirements and return integration files, or explain unmet requirements. Never writes files or downgrades requirements.', inputSchema: {type: 'object', required: ['requirements'], properties: {requirements: {type: 'object', properties: recommendationProperties, additionalProperties: false}, provider: {type: 'string', enum: ['pow', 'altcha', 'cap', 'turnstile', 'hcaptcha', 'recaptcha']}, recaptchaMode: {type: 'string', enum: ['v2', 'v3']}, hostname: {type: 'string'}}, additionalProperties: false}},
   {name: 'kechap_scaffold', description: 'Generate reviewable Node HTTP integration file contents without writing files or credentials.', inputSchema: {type: 'object', properties: {provider: {type: 'string', enum: ['pow', 'altcha', 'cap', 'turnstile', 'hcaptcha', 'recaptcha']}, recaptchaMode: {type: 'string', enum: ['v2', 'v3']}, hostname: {type: 'string'}}, additionalProperties: false}},
   {name: 'kechap_catalog', description: 'List human verification candidates and evidence status; not a security endorsement.', inputSchema: {type: 'object', properties: {}, additionalProperties: false}},
   {name: 'kechap_recommend', description: 'Explain eligibility and unmet requirements for implemented adapters; not a security endorsement.', inputSchema: {type: 'object', properties: recommendationProperties, additionalProperties: false}},
@@ -25,12 +26,13 @@ export async function handle(message) {
   try {
     if (!tools.some(t => t.name === name)) throw new Error('Unknown tool');
     if (!args || typeof args !== 'object' || Array.isArray(args)) throw new Error('Arguments must be an object');
-    const allowed = name === 'kechap_catalog' ? [] : name === 'kechap_scaffold' ? ['provider', 'recaptchaMode', 'hostname'] : Object.keys(recommendationProperties);
+    const allowed = name === 'kechap_catalog' ? [] : name === 'kechap_setup' ? ['requirements', 'provider', 'recaptchaMode', 'hostname'] : name === 'kechap_scaffold' ? ['provider', 'recaptchaMode', 'hostname'] : Object.keys(recommendationProperties);
     if (Object.keys(args).some(k => !allowed.includes(k))) throw new Error('Unknown argument');
     if (['selfHosted', 'noThirdParty'].some(k => args[k] !== undefined && typeof args[k] !== 'boolean')) throw new Error('Expected boolean');
     if (args.exclude !== undefined && (!Array.isArray(args.exclude) || args.exclude.some(v => typeof v !== 'string'))) throw new Error('exclude must contain strings');
     let result;
-    if (name === 'kechap_scaffold') result = await scaffoldPlan(args);
+    if (name === 'kechap_setup') result = await integrationPlan(args);
+    else if (name === 'kechap_scaffold') result = await scaffoldPlan(args);
     else if (name === 'kechap_catalog') result = JSON.parse(await readFile(new URL('../catalog/providers.json', import.meta.url), 'utf8'));
     else {
       result = recommend(args);
