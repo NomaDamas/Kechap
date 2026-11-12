@@ -1,0 +1,23 @@
+{
+  "repository": "SriramS-77/rl-captcha-orchestration",
+  "fetchedAt": "2026-11-12T09:54:57.382955+00:00",
+  "revision": "c0da97e145dcd467bbcec5f86cf866c5466c5384",
+  "metadataUrl": "https://api.github.com/repos/SriramS-77/rl-captcha-orchestration",
+  "metadataSha256": "e5db64024aa0730cfbfc7dcf167d0a62a7e68c66d3339ec7434a3713165bc689",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 0,
+  "archived": false,
+  "pushedAt": "2026-10-19T11:22:49Z",
+  "apiLicenseCandidate": null,
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/SriramS-77/rl-captcha-orchestration/blob/c0da97e145dcd467bbcec5f86cf866c5466c5384/README.md",
+      "apiUrl": "https://api.github.com/repos/SriramS-77/rl-captcha-orchestration/readme?ref=c0da97e145dcd467bbcec5f86cf866c5466c5384",
+      "contentSha256": "6314b9ed09ac5f99af12806862cb8cc72600dd285f1cea5839fd01d481b3ca23",
+      "path": "README.md",
+      "openingExcerpt": "# Adaptive CAPTCHA Orchestration via Reinforcement Learning\n\nCode, data and results for the paper\n\n> **Balancing Security and Usability: Adaptive CAPTCHA Orchestration via RL**\n> Manuscript: *[link to be added]*\n\nA behavioural **Humanity Scorer** turns 10 s chunks of a user's mouse movement into\nP(bot). A reinforcement-learning controller reads that score and the session history, and picks\none of 11 intervention levels for every active user. The levels range from no challenge, through\ninvisible checks and visible CAPTCHAs, to an audio fallback.\n\nPolicies are trained and evaluated in a simulator grounded in published CAPTCHA user studies,\nwith a leakage-controlled data protocol:\n- **Learners.** DQN, PPO, Neural-LinUCB and Neural Thompson Sampling, compared with static score\n  thresholds.\n- **Drift study.** It tests what happens when unseen covert bots break the scorer's calibration,\n  and compares offline training, online training with label-free and audit-based rewards, and\n  online tr"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

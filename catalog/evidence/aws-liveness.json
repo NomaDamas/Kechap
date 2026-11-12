@@ -1,0 +1,14 @@
+{
+  "url": "https://docs.aws.amazon.com/rekognition/latest/dg/face-liveness.html",
+  "resolvedUrl": "https://docs.aws.amazon.com/rekognition/latest/dg/face-liveness.html",
+  "fetchedAt": "2026-11-12T09:50:01.455293+00:00",
+  "rawSha256": "0b3fbb7c0dfba3a7164cd9037c8c12a0b8773782c0b71ee953b353cd6f7f3d0c",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "confidence",
+      "text": "they follow a series of prompts intended to verify their presence. Face Liveness is determined with a probabilistic calculation, and then a confidence score (between 0–100) is returned after the check. The higher the score, the greater the confidence that the person taking the check is live. Face Liveness also returns a frame, called a reference image that can be used for face comparison and search. As with any probability-based system, Face Liveness cannot guarantee perfect results. Use it with other factors to make a risk-based decision about"
+    }
+  ],
+  "note": "Vendor/author claims are not independent Kechap security measurements."
+}

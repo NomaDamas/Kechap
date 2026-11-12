@@ -1,0 +1,36 @@
+{
+  "repository": "fingerprintjs/BotD",
+  "fetchedAt": "2026-11-12T09:42:51.103753+00:00",
+  "revision": "193c471ac70530afcebe5b09664c09f611d19218",
+  "metadataUrl": "https://api.github.com/repos/fingerprintjs/BotD",
+  "metadataSha256": "b381e0a005543967faf2308c1214fbc37a9c2d9167e154aaa0ff78fb4f4307b9",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1495,
+  "archived": false,
+  "pushedAt": "2026-11-01T15:03:52Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/fingerprintjs/BotD/blob/193c471ac70530afcebe5b09664c09f611d19218/README.md",
+      "apiUrl": "https://api.github.com/repos/fingerprintjs/BotD/readme?ref=193c471ac70530afcebe5b09664c09f611d19218",
+      "contentSha256": "6b3703d48fbf7ce7645984e2e9f400f8bafaf974cd012c4e9ef4452c5213f27e",
+      "path": "README.md",
+      "openingExcerpt": "<p align=\"center\">\n  <a href=\"https://fingerprint.com\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/fingerprintjs/botd/dev/resources/logo_light.svg\" />\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/fingerprintjs/botd/dev/resources/logo_dark.svg\" />\n      <img src=\"https://raw.githubusercontent.com/fingerprintjs/botd/dev/resources/logo_dark.svg\" alt=\"FingerprintJS logo\" width=\"312px\" />\n    </picture>\n  </a>\n</p>\n<p align=\"center\">\n  <a href=\"https://www.npmjs.com/package/@fingerprintjs/botd\">\n    <img src=\"https://img.shields.io/npm/v/@fingerprintjs/botd.svg\" alt=\"Current NPM version\">\n  </a>\n   <a href=\"https://opensource.org/licenses/MIT\">\n    <img src=\"https://img.shields.io/:license-mit-blue.svg?style=flat\"/>\n  </a>\n  <a href=\"https://discord.gg/39EpE2neBg\">\n    <img src=\"https://img.shields.io/discord/852099967190433792?style=logo&label=Discord&logo=Discord&logoColor=whit"
+    },
+    "license": {
+      "url": "https://github.com/fingerprintjs/BotD/blob/193c471ac70530afcebe5b09664c09f611d19218/LICENSE",
+      "apiUrl": "https://api.github.com/repos/fingerprintjs/BotD/license?ref=193c471ac70530afcebe5b09664c09f611d19218",
+      "contentSha256": "dda20c4ba0799b22561763c4263f7584b1d366887b05a547afc6935fd467ce13",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2025 FingerprintJS, Inc\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN "
+    }
+  },
+  "notes": "Client-side automation signal; manipulable signal, not sufficient standalone server authorization."
+}

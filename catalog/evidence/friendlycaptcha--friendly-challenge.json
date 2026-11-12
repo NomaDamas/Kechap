@@ -1,0 +1,36 @@
+{
+  "repository": "FriendlyCaptcha/friendly-challenge",
+  "fetchedAt": "2026-11-12T09:42:29.074282+00:00",
+  "revision": "3357309cbe59ec9ac7885b782756296814daad90",
+  "metadataUrl": "https://api.github.com/repos/FriendlyCaptcha/friendly-challenge",
+  "metadataSha256": "d5260d93ea813fb988fa31c18c8d59697bdda3411c50b9429f922326af5eea41",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 453,
+  "archived": false,
+  "pushedAt": "2026-06-30T07:35:29Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/FriendlyCaptcha/friendly-challenge/blob/3357309cbe59ec9ac7885b782756296814daad90/README.md",
+      "apiUrl": "https://api.github.com/repos/FriendlyCaptcha/friendly-challenge/readme?ref=3357309cbe59ec9ac7885b782756296814daad90",
+      "contentSha256": "f1460b995a132a9f41f78c41939ffb68110c1826dc34080ccbd45844d95ae6b8",
+      "path": "README.md",
+      "openingExcerpt": "# 🛡️ Friendly Challenge\n\n[![NPM badge](https://img.shields.io/npm/v/friendly-challenge)](https://www.npmjs.com/package/friendly-challenge) [![Documentation](https://img.shields.io/badge/Read%20the-documentation-1abc9c.svg)](https://docs.friendlycaptcha.com)\n\n![Friendly Captcha widget solving screenshot](https://i.imgur.com/BNRdsxS.png) ![Friendly Captcha widget finished screenshot](https://i.imgur.com/HlMY7QM.png)\n\nThis repository contains the widget code and documentation for Friendly Captcha, here is a [demo](https://friendlycaptcha.com/demo) of the widget in a real form.\n\nFriendly Captcha is a proof-of-work based CAPTCHA alternative that respects the user's privacy, see the [**Friendly Captcha website**](https://friendlycaptcha.com).\n\n## Getting started\nRead the [**documentation**](https://docs.friendlycaptcha.com).\n\n## Changelog\nCheck the [**changelog**](https://docs.friendlycaptcha.com/#/changelog).\n\n## License\n[**MIT**](./LICENSE.md)"
+    },
+    "license": {
+      "url": "https://github.com/FriendlyCaptcha/friendly-challenge/blob/3357309cbe59ec9ac7885b782756296814daad90/LICENSE.md",
+      "apiUrl": "https://api.github.com/repos/FriendlyCaptcha/friendly-challenge/license?ref=3357309cbe59ec9ac7885b782756296814daad90",
+      "contentSha256": "370ee90a518aea2d98c15738a1e8b685fdbc69b6e17b240ee02336b531391ea8",
+      "path": "LICENSE.md",
+      "openingExcerpt": "Copyright 2020-2023 Friendly Captcha GmbH\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTIO"
+    }
+  },
+  "notes": "Older Friendly Captcha client under MIT; do not infer v2 SDK or hosted verification service has same licensing or self-hostability."
+}

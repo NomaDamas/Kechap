@@ -1,0 +1,23 @@
+{
+  "repository": "andorsk/awesome-proof-of-personhood",
+  "fetchedAt": "2026-11-12T09:48:07.634150+00:00",
+  "revision": "8abe377b635f8297f9cd8b1752096e1701a5125e",
+  "metadataUrl": "https://api.github.com/repos/andorsk/awesome-proof-of-personhood",
+  "metadataSha256": "bd9fabcdf4f668dce2157f1d6a2ada7af988587d40c02c9a9bc92e197be7308a",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 19,
+  "archived": false,
+  "pushedAt": "2025-08-13T18:08:42Z",
+  "apiLicenseCandidate": null,
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/andorsk/awesome-proof-of-personhood/blob/8abe377b635f8297f9cd8b1752096e1701a5125e/readme.md",
+      "apiUrl": "https://api.github.com/repos/andorsk/awesome-proof-of-personhood/readme?ref=8abe377b635f8297f9cd8b1752096e1701a5125e",
+      "contentSha256": "c905e4bdcf6cdca13c4155f8321da43081ff5cc675cbb920093b1888390abb5d",
+      "path": "readme.md",
+      "openingExcerpt": "# awesome-proof-of-personhood [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)\n\nA curated list of proof of personhood approaches.  \n\n## Relevant Papers\n\n* [Personhood: The Killer\n  Credential?](https://www.vennfactory.com/blog-post/personhood-the-killer-credential) :\n  Blog post by Eve Maler describing the impact of a personhood credential on the\n  decentralized ecosystem.  \n* [Personhood credentials: Artificial intelligence and the value of\nprivacy-preserving tools to distinguish who is real\nonline](https://arxiv.org/html/2408.07892v1) : Made in August 31, this paper was\ncreated with 31 authors and leaders from the Identity space. It explores the\nproblem space and expresses the importance of a solution, without explicitly\ndefining _the_ solution.\n* [What do I think about biometric proof of\n  personhood?](https://vitalik.eth.limo/general/2023/07/24/biometric.html) :\n  Blog post in July 2023 from Vitalik Buterin about his thoughts on biometric\n  proof of personhood.\n\n## Ef"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

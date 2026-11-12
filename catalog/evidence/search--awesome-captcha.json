@@ -1,0 +1,224 @@
+{
+  "url": "https://api.github.com/search/repositories?q=awesome+captcha+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:43:11.581803+00:00",
+  "sha256": "1f77b065170fa51d97369b2de6b37aa2302ecf7eae64e78c8fc81de5b2d7e331",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 9052,
+    "incompleteResults": false,
+    "returned": 30,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "sindresorhus/awesome",
+      "html_url": "https://github.com/sindresorhus/awesome",
+      "description": "😎 Awesome lists about all kinds of interesting topics [NOTE: Pull requests are temporarily disabled until I have a chance to catch up with the existing ones]",
+      "stargazers_count": 535562,
+      "archived": false
+    },
+    {
+      "full_name": "awesome-selfhosted/awesome-selfhosted",
+      "html_url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+      "stargazers_count": 336272,
+      "archived": false
+    },
+    {
+      "full_name": "avelino/awesome-go",
+      "html_url": "https://github.com/avelino/awesome-go",
+      "description": "A curated list of awesome Go frameworks, libraries and software",
+      "stargazers_count": 193427,
+      "archived": false
+    },
+    {
+      "full_name": "punkpeye/awesome-mcp-servers",
+      "html_url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "description": "A collection of MCP servers.",
+      "stargazers_count": 97636,
+      "archived": false
+    },
+    {
+      "full_name": "vsouza/awesome-ios",
+      "html_url": "https://github.com/vsouza/awesome-ios",
+      "description": "A curated list of awesome iOS ecosystem, including Objective-C and Swift Projects ",
+      "stargazers_count": 53955,
+      "archived": false
+    },
+    {
+      "full_name": "VoltAgent/awesome-openclaw-skills",
+      "html_url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+      "stargazers_count": 53713,
+      "archived": false
+    },
+    {
+      "full_name": "brillout/awesome-react-components",
+      "html_url": "https://github.com/brillout/awesome-react-components",
+      "description": "Curated List of React Components & Libraries.",
+      "stargazers_count": 48851,
+      "archived": false
+    },
+    {
+      "full_name": "GitHubDaily/GitHubDaily",
+      "html_url": "https://github.com/GitHubDaily/GitHubDaily",
+      "description": "坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",
+      "stargazers_count": 48431,
+      "archived": false
+    },
+    {
+      "full_name": "VoltAgent/awesome-agent-skills",
+      "html_url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+      "stargazers_count": 37109,
+      "archived": false
+    },
+    {
+      "full_name": "bayandin/awesome-awesomeness",
+      "html_url": "https://github.com/bayandin/awesome-awesomeness",
+      "description": "A curated list of awesome awesomeness",
+      "stargazers_count": 33782,
+      "archived": false
+    },
+    {
+      "full_name": "jivoi/awesome-osint",
+      "html_url": "https://github.com/jivoi/awesome-osint",
+      "description": ":scream: A curated list of amazingly awesome OSINT",
+      "stargazers_count": 31007,
+      "archived": false
+    },
+    {
+      "full_name": "jobbole/awesome-python-cn",
+      "html_url": "https://github.com/jobbole/awesome-python-cn",
+      "description": "Python资源大全中文版，包括：Web框架、网络爬虫、模板引擎、数据库、数据可视化、图片处理等，由「开源前哨」和「Python开发者」微信公号团队维护更新。",
+      "stargazers_count": 30689,
+      "archived": false
+    },
+    {
+      "full_name": "n0shake/Public-APIs",
+      "html_url": "https://github.com/n0shake/Public-APIs",
+      "description": "📚 A public list of APIs from round the web.",
+      "stargazers_count": 24106,
+      "archived": false
+    },
+    {
+      "full_name": "AZeC4/TelegramGroup",
+      "html_url": "https://github.com/AZeC4/TelegramGroup",
+      "description": "2026最新悄咪咪收集的10000+个Telegram群合集，附全网最有趣好用的机器人BOT🤖【dianbaodaohang.com】",
+      "stargazers_count": 23993,
+      "archived": false
+    },
+    {
+      "full_name": "pluja/awesome-privacy",
+      "html_url": "https://github.com/pluja/awesome-privacy",
+      "description": "Awesome Privacy - A curated list of services and alternatives that respect your privacy because PRIVACY MATTERS.",
+      "stargazers_count": 20283,
+      "archived": false
+    },
+    {
+      "full_name": "dexteryy/spellbook-of-modern-webdev",
+      "html_url": "https://github.com/dexteryy/spellbook-of-modern-webdev",
+      "description": "A Big Picture, Thesaurus, and Taxonomy of Modern JavaScript Web Development",
+      "stargazers_count": 17957,
+      "archived": false
+    },
+    {
+      "full_name": "zhuima/awesome-cloudflare",
+      "html_url": "https://github.com/zhuima/awesome-cloudflare",
+      "description": "⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.",
+      "stargazers_count": 15609,
+      "archived": false
+    },
+    {
+      "full_name": "sbilly/awesome-security",
+      "html_url": "https://github.com/sbilly/awesome-security",
+      "description": "A collection of awesome software, libraries, documents, books, resources and cools stuffs about security.",
+      "stargazers_count": 15097,
+      "archived": false
+    },
+    {
+      "full_name": "markets/awesome-ruby",
+      "html_url": "https://github.com/markets/awesome-ruby",
+      "description": "💎 A collection of awesome Ruby libraries, tools, frameworks and software",
+      "stargazers_count": 14186,
+      "archived": false
+    },
+    {
+      "full_name": "qazbnm456/awesome-web-security",
+      "html_url": "https://github.com/qazbnm456/awesome-web-security",
+      "description": "🐶 A curated list of Web Security materials and resources.",
+      "stargazers_count": 14040,
+      "archived": false
+    },
+    {
+      "full_name": "ddgksf2013/ddgksf2013",
+      "html_url": "https://github.com/ddgksf2013/ddgksf2013",
+      "description": "墨鱼去广告计划 | QuantumultX 去广告 | 去开屏广告 | 应用净化 | 会员解锁 | 墨鱼配置 | 应用增强 | 网页优化 | 网盘资源 | 模块去广告 | 圈 X 配置 | Shadowrocket配置 | 墨鱼规则 | Clash配置 | 小火箭去广告 | 资源库 | AdBlock | 网页广告 | 不完全指北",
+      "stargazers_count": 13918,
+      "archived": false
+    },
+    {
+      "full_name": "TonnyL/Awesome_APIs",
+      "html_url": "https://github.com/TonnyL/Awesome_APIs",
+      "description": ":octocat: A collection of APIs",
+      "stargazers_count": 13203,
+      "archived": true
+    },
+    {
+      "full_name": "nestjs/awesome-nestjs",
+      "html_url": "https://github.com/nestjs/awesome-nestjs",
+      "description": "A curated list of awesome things related to NestJS 😎",
+      "stargazers_count": 13192,
+      "archived": false
+    },
+    {
+      "full_name": "h4cc/awesome-elixir",
+      "html_url": "https://github.com/h4cc/awesome-elixir",
+      "description": "A curated list of amazingly awesome Elixir and Erlang libraries, resources and shiny things. Updates:",
+      "stargazers_count": 13167,
+      "archived": false
+    },
+    {
+      "full_name": "chiraggude/awesome-laravel",
+      "html_url": "https://github.com/chiraggude/awesome-laravel",
+      "description": "A curated list of bookmarks, packages, tutorials, videos and other cool resources from the Laravel ecosystem",
+      "stargazers_count": 13138,
+      "archived": false
+    },
+    {
+      "full_name": "jnv/lists",
+      "html_url": "https://github.com/jnv/lists",
+      "description": "The definitive list of lists (of lists) curated on GitHub and elsewhere",
+      "stargazers_count": 11657,
+      "archived": false
+    },
+    {
+      "full_name": "bunkerity/bunkerweb",
+      "html_url": "https://github.com/bunkerity/bunkerweb",
+      "description": "🛡️ Open-source and cloud-native Web Application Firewall (WAF)",
+      "stargazers_count": 11254,
+      "archived": false
+    },
+    {
+      "full_name": "paralax/awesome-honeypots",
+      "html_url": "https://github.com/paralax/awesome-honeypots",
+      "description": "an awesome list of honeypot resources",
+      "stargazers_count": 10664,
+      "archived": false
+    },
+    {
+      "full_name": "PatrickJS/awesome-angular",
+      "html_url": "https://github.com/PatrickJS/awesome-angular",
+      "description": ":page_facing_up: A curated list of awesome Angular resources",
+      "stargazers_count": 10098,
+      "archived": false
+    },
+    {
+      "full_name": "marcelscruz/public-apis",
+      "html_url": "https://github.com/marcelscruz/public-apis",
+      "description": "A collaborative list of public APIs for developers",
+      "stargazers_count": 9718,
+      "archived": false
+    }
+  ]
+}

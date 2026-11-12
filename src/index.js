@@ -1,6 +1,8 @@
 import {randomBytes, createHash} from 'node:crypto';
 import {selectProvider} from './policy.js';
-export {recommend, selectProvider, capabilities} from './policy.js';
+import {resolvePolicy} from './runtime-policy.js';
+export {recommend, selectProvider, capabilities, assuranceTypes} from './policy.js';
+export {resolvePolicy} from './runtime-policy.js';
 
 const digest = value => createHash('sha256').update(value).digest('hex');
 const contextKey = c => {
@@ -72,7 +74,13 @@ export class Kechap {
     if (![ttlMs, attestationTtlMs].every(v => Number.isInteger(v) && v > 0 && v <= 300000)) throw new Error('TTL must be 1..300000 ms');
     this.adapters = new Map(Object.entries(adapters)); this.store = store ?? new MemoryStore({now}); this.now = now; this.ttlMs = ttlMs; this.attestationTtlMs = attestationTtlMs;
   }
-  async issue({context, providers, assurance, sessionId, mode = 'stable', previous}) {
+  async issueWithPolicy({context, sessionId, policy, risk, previous, health, requiredAssurance}) {
+    contextKey(context);
+    const decision = resolvePolicy({policy, action: context.action, risk, sessionId, previous, health, requiredAssurance});
+    if (decision.configuredProviders.some(id => !this.adapters.has(id) || this.adapters.get(id).assurance !== decision.assurance)) throw new Error('Policy contains an unconfigured or weaker provider');
+    return this.issue({context, sessionId, providers: [decision.provider], assurance: decision.assurance, policyVersion: decision.policyVersion, risk: decision.risk});
+  }
+  async issue({context, providers, assurance, sessionId, mode = 'stable', previous, policyVersion = 'unversioned', risk}) {
     const binding = contextKey(context);
     if (typeof sessionId !== 'string' || !sessionId) throw new Error('Server-generated sessionId required');
     if (!Array.isArray(providers) || !providers.length || providers.some(id => !this.adapters.has(id) || this.adapters.get(id).assurance !== assurance)) throw new Error('All rotation providers must be configured and meet the requested assurance');
@@ -81,8 +89,8 @@ export class Kechap {
     const challenge = await adapter.issue({context});
     const id = randomBytes(24).toString('base64url');
     const expiresAt = this.now() + this.ttlMs;
-    await this.store.put(`challenge:${id}`, {provider, binding, state: challenge.private, expiresAt}, expiresAt);
-    return {id, provider, assurance: adapter.assurance, challenge: challenge.public, expiresAt};
+    await this.store.put(`challenge:${id}`, {provider, binding, assurance, policyVersion, risk, state: challenge.private, expiresAt}, expiresAt);
+    return {id, provider, assurance, policyVersion, challenge: challenge.public, expiresAt};
   }
   async verify({id, context, response}) {
     const binding = contextKey(context);
@@ -90,19 +98,20 @@ export class Kechap {
     const record = await this.store.take(`challenge:${id}`);
     if (!record || record.expiresAt <= this.now() || record.binding !== binding) return {ok: false};
     const adapter = this.adapters.get(record.provider);
+    if (!adapter || adapter.assurance !== record.assurance) return {ok: false};
     let valid = false;
     try { valid = await adapter.verify({response, state: record.state, context}); } catch { /* fail closed */ }
     if (valid !== true || record.expiresAt <= this.now()) return {ok: false};
     const token = randomBytes(32).toString('base64url');
     const expiresAt = this.now() + this.attestationTtlMs;
-    await this.store.put(`attestation:${digest(token)}`, {binding, provider: record.provider, assurance: adapter.assurance, expiresAt}, expiresAt);
-    return {ok: true, token, expiresAt, provider: record.provider, assurance: adapter.assurance};
+    await this.store.put(`attestation:${digest(token)}`, {binding, provider: record.provider, assurance: record.assurance, policyVersion: record.policyVersion, expiresAt}, expiresAt);
+    return {ok: true, token, expiresAt, provider: record.provider, assurance: record.assurance, policyVersion: record.policyVersion};
   }
   async consume({token, context}) {
     const binding = contextKey(context);
     if (typeof token !== 'string' || token.length > 128) return {ok: false};
     const record = await this.store.take(`attestation:${digest(token)}`);
     if (!record || record.expiresAt <= this.now() || record.binding !== binding) return {ok: false};
-    return {ok: true, provider: record.provider, assurance: record.assurance};
+    return {ok: true, provider: record.provider, assurance: record.assurance, policyVersion: record.policyVersion};
   }
 }

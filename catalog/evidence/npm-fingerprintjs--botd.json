@@ -1,0 +1,13 @@
+{
+  "url": "https://api.npmjs.org/downloads/point/last-month/%40fingerprintjs%2Fbotd",
+  "fetchedAt": "2026-11-12T09:59:25.587547+00:00",
+  "rawSha256": "2fdf4a246b884df744e9dadce44add21c73406ecc01aff7c2e64719a6ff576e1",
+  "evidenceType": "npm-download-metric",
+  "data": {
+    "downloads": 1514604,
+    "start": "2026-10-13",
+    "end": "2026-11-11",
+    "package": "@fingerprintjs/botd"
+  },
+  "limitation": "Downloads are registry activity, not unique deployments, humans or audited security effectiveness."
+}

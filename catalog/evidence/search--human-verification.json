@@ -1,0 +1,224 @@
+{
+  "url": "https://api.github.com/search/repositories?q=human+verification+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:43:12.954526+00:00",
+  "sha256": "0f9395772c2fc6124ce96cecc67b700a1c50d8cb83225309e82a47431c8918b5",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 5452,
+    "incompleteResults": false,
+    "returned": 30,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "NAalytics/Assemblies-of-putative-SARS-CoV2-spike-encoding-mRNA-sequences-for-vaccines-BNT-162b2-and-mRNA-1273",
+      "html_url": "https://github.com/NAalytics/Assemblies-of-putative-SARS-CoV2-spike-encoding-mRNA-sequences-for-vaccines-BNT-162b2-and-mRNA-1273",
+      "description": "RNA vaccines have become a key tool in moving forward through the challenges raised both in the current pandemic and in numerous other public health and medical challenges.  With the rollout of vaccines for COVID-19, these synthetic mRNAs have become broadly distributed RNA species in numerous human populations.  Despite their ubiquity, sequences are not always available for such RNAs.  Standard m [truncated]",
+      "stargazers_count": 3353,
+      "archived": false
+    },
+    {
+      "full_name": "keslr/keslr_connect",
+      "html_url": "https://github.com/keslr/keslr_connect",
+      "description": "Connect your service to Keslr: sign in with Keslr and read the verification claim that proves a user is a real, vouched-for human — plus run services reachable only by Keslr members.",
+      "stargazers_count": 1013,
+      "archived": false
+    },
+    {
+      "full_name": "claw-eval/claw-eval",
+      "html_url": "https://github.com/claw-eval/claw-eval",
+      "description": "Claw-Eval is an evaluation harness for evaluating LLM as agents. All tasks verified by humans.",
+      "stargazers_count": 927,
+      "archived": false
+    },
+    {
+      "full_name": "AmElmo/proofshot",
+      "html_url": "https://github.com/AmElmo/proofshot",
+      "description": "Give AI coding agents eyes. Records browser sessions, captures screenshots, collects errors, and bundles proof artifacts — so humans can verify what the agent built.",
+      "stargazers_count": 870,
+      "archived": false
+    },
+    {
+      "full_name": "dabingfy-dot/solo-to-team-skills",
+      "html_url": "https://github.com/dabingfy-dot/solo-to-team-skills",
+      "description": "Skills for human-led AI teams: delegate tasks, verify evidence, explain steps clearly, and learn from real cases. 一个人统筹 AI 团队：派活、核证、清楚说明、经验复用。",
+      "stargazers_count": 732,
+      "archived": false
+    },
+    {
+      "full_name": "J-Rios/TLG_JoinCaptchaBot",
+      "html_url": "https://github.com/J-Rios/TLG_JoinCaptchaBot",
+      "description": "Telegram Bot to verify if users joining a group are human. The Bot sends a captcha challenge to each new user and removes those who fail to solve it within a specified time.",
+      "stargazers_count": 627,
+      "archived": false
+    },
+    {
+      "full_name": "AnttiHero/lavern",
+      "html_url": "https://github.com/AnttiHero/lavern",
+      "description": "An agentic law firm. Yours. 67 specialist AI agents that review documents through evidence-backed debate, with mandatory human gates and a 10-pass verification loop. Apache 2.0.",
+      "stargazers_count": 322,
+      "archived": false
+    },
+    {
+      "full_name": "lechmazur/confabulations",
+      "html_url": "https://github.com/lechmazur/confabulations",
+      "description": "Hallucinations (Confabulations) Document-Based Benchmark for RAG. Includes human-verified questions and answers.",
+      "stargazers_count": 251,
+      "archived": false
+    },
+    {
+      "full_name": "CyborgTests/playwright-manual-step-automation",
+      "html_url": "https://github.com/CyborgTests/playwright-manual-step-automation",
+      "description": "🤖🇺🇦 Cyborg Test adds manual verification steps to Playwright tests, letting testers confirm actions during execution. Combine automation with human checks in one flow.",
+      "stargazers_count": 213,
+      "archived": false
+    },
+    {
+      "full_name": "swghosh/DeepFace",
+      "html_url": "https://github.com/swghosh/DeepFace",
+      "description": "Keras implementation of the renowned publication \"DeepFace: Closing the Gap to Human-Level Performance in Face Verification\" by Taigman et al. Pre-trained weights on VGGFace2 dataset.",
+      "stargazers_count": 212,
+      "archived": false
+    },
+    {
+      "full_name": "fossifer/Telegram-CAPTCHA-bot",
+      "html_url": "https://github.com/fossifer/Telegram-CAPTCHA-bot",
+      "description": "A bot running on Telegram which will send CAPTCHA to verify if the new member is a human.",
+      "stargazers_count": 132,
+      "archived": false
+    },
+    {
+      "full_name": "arthurpanhku/dvalincode",
+      "html_url": "https://github.com/arthurpanhku/dvalincode",
+      "description": "Independent security verification for code written by humans and AI agents. Scan, repair, then prove it — Dvalin runs your project's own checks and issues a Verified Fix Record anyone can re-derive offline. Local-first, policy-bound, MIT.",
+      "stargazers_count": 120,
+      "archived": false
+    },
+    {
+      "full_name": "doraemonkeys/claude-code-debug-mode",
+      "html_url": "https://github.com/doraemonkeys/claude-code-debug-mode",
+      "description": "Cursor-style Debug Mode skill for coding agents. Hypothesis-driven debugging with runtime log instrumentation and autonomous verification, with human fallback.",
+      "stargazers_count": 119,
+      "archived": false
+    },
+    {
+      "full_name": "hongnoul/hwatu",
+      "html_url": "https://github.com/hongnoul/hwatu",
+      "description": "Headless verification browser for AI coding agents: 35 ms one-call checks, pixel diffs, live human hand-off",
+      "stargazers_count": 118,
+      "archived": false
+    },
+    {
+      "full_name": "Harry-zklcdc/go-bingai-pass",
+      "html_url": "https://github.com/Harry-zklcdc/go-bingai-pass",
+      "description": "Pass BingAI Human machine Verification",
+      "stargazers_count": 113,
+      "archived": false
+    },
+    {
+      "full_name": "worldcoin/world-id-lens",
+      "html_url": "https://github.com/worldcoin/world-id-lens",
+      "description": "ARCHIVED. Human verification for Lens Protocol with World ID.",
+      "stargazers_count": 105,
+      "archived": true
+    },
+    {
+      "full_name": "whitiy666/Cap-NurlNext-Plugin",
+      "html_url": "https://github.com/whitiy666/Cap-NurlNext-Plugin",
+      "description": "基于 capjs.js.org 的人机验证 Flutter 插件 A Flutter plugin for human verification powered by capjs.js.org",
+      "stargazers_count": 103,
+      "archived": false
+    },
+    {
+      "full_name": "sfw/loom",
+      "html_url": "https://github.com/sfw/loom",
+      "description": "Loom is an AI harness, that can be used with local or cloud LLMs, for complex tasks. It decomposes work, drives execution through a verification harness, and keeps models on track with structured state instead of history. It can route between thinking and acting models, verifies outputs, and exposes an APP/TUI/API/CLI/MCP for both humans & agents.",
+      "stargazers_count": 79,
+      "archived": false
+    },
+    {
+      "full_name": "cuihuash/CiteVerify",
+      "html_url": "https://github.com/cuihuash/CiteVerify",
+      "description": "A local tool for verifying references in research papers. It extracts citations from PDF and docx files, searches for matching scholarly records online, and creates an HTML report for human review.",
+      "stargazers_count": 75,
+      "archived": false
+    },
+    {
+      "full_name": "TraceCohenTech/ai-seo-playbook",
+      "html_url": "https://github.com/TraceCohenTech/ai-seo-playbook",
+      "description": "The open-source SEO + GEO/AEO playbook: tested scripts, guardrails and methodology behind a site that reached 11.08M impressions / 44.8K clicks in 90 days. Human-vs-AI-agent query analysis, matched-control measurement, evidence-verified facts.",
+      "stargazers_count": 75,
+      "archived": false
+    },
+    {
+      "full_name": "ujjwalredd/Dopamine",
+      "html_url": "https://github.com/ujjwalredd/Dopamine",
+      "description": "A human-dopamine-inspired AI agent skill that adapts effort, learns from feedback, and delivers the smallest verified solution.",
+      "stargazers_count": 73,
+      "archived": false
+    },
+    {
+      "full_name": "ngtiendong/Academic-Research-Agent-Skill",
+      "html_url": "https://github.com/ngtiendong/Academic-Research-Agent-Skill",
+      "description": "Human-guided Research Agent Skill for Master and PhD students in CS, AI, math, and engineering: literature grounding, novelty gates, math formalization, experiment planning, reviewer simulation, and claim verification.",
+      "stargazers_count": 70,
+      "archived": false
+    },
+    {
+      "full_name": "junbolian/Academic-Humanizer",
+      "html_url": "https://github.com/junbolian/Academic-Humanizer",
+      "description": "Agent skill that removes AI tone from academic writing in English and Chinese, and verifies that every number, equation, citation, and theorem statement stays unchanged. ",
+      "stargazers_count": 68,
+      "archived": false
+    },
+    {
+      "full_name": "alexdevassy/AI-Powered-Vulnerability-Impact-Analyzer",
+      "html_url": "https://github.com/alexdevassy/AI-Powered-Vulnerability-Impact-Analyzer",
+      "description": "Vulnerability impact analyzer that reduces false positives in SCA tools by performing intelligent code analysis. Uses agentic AI with open source models to understand CVEs and verify actual vulnerability impact in your codebase. Keeps your code secure with on-premises execution and human-in-the-loop verification.",
+      "stargazers_count": 66,
+      "archived": false
+    },
+    {
+      "full_name": "lucasfcosta/backpressured",
+      "html_url": "https://github.com/lucasfcosta/backpressured",
+      "description": "Skills for running long unattended AI coding sessions. It will help the agent verify and review its own work using tests, adversarial review, and manual verification through cURL or real browsers. This skill reduces the burden on human review and feedback by making the agent more thorough and self-sufficient.",
+      "stargazers_count": 63,
+      "archived": false
+    },
+    {
+      "full_name": "bo-miao/LangMap",
+      "html_url": "https://github.com/bo-miao/LangMap",
+      "description": "[NeurIPS 2026] LangMap: A Human-Verified Benchmark for Hierarchical Open-Vocabulary Goal Navigation",
+      "stargazers_count": 62,
+      "archived": false
+    },
+    {
+      "full_name": "Haohao-end/Ctrip-Style-AI-Travel-Assistant",
+      "html_url": "https://github.com/Haohao-end/Ctrip-Style-AI-Travel-Assistant",
+      "description": "A stateful multi-agent travel service system built on LangChain & LangGraph. Features intelligent task delegation, permission control, and human-in-the-loop verification for flight booking, hotel reservations, car rentals, and tour planning.",
+      "stargazers_count": 58,
+      "archived": false
+    },
+    {
+      "full_name": "presidio-oss/factif-ai",
+      "html_url": "https://github.com/presidio-oss/factif-ai",
+      "description": "AI-powered computer control for automated testing. Factifai uses vision models (Claude, GPT-4o, Gemini) to interact with applications naturally - clicking, typing, and verifying results just like a human would.",
+      "stargazers_count": 56,
+      "archived": false
+    },
+    {
+      "full_name": "Agile-V/agile_v_skills",
+      "html_url": "https://github.com/Agile-V/agile_v_skills",
+      "description": "Agent Skills for traceable requirements, independent verification, human approval gates, and auditable AI-assisted engineering. Supports Claude Code, Cursor, VS Code, and GitHub Copilot; ISO 9001/27001 aligned (design phase), GxP-aware.",
+      "stargazers_count": 55,
+      "archived": false
+    },
+    {
+      "full_name": "AFP-Medialab/verification-plugin",
+      "html_url": "https://github.com/AFP-Medialab/verification-plugin",
+      "description": "A verification “Swiss army knife” helping journalists, fact-checkers, and human rights defenders to save time and be more efficient in their fact-checking and debunking tasks on social networks especially when verifying videos and images",
+      "stargazers_count": 52,
+      "archived": false
+    }
+  ]
+}

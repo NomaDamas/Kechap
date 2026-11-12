@@ -1,0 +1,36 @@
+{
+  "repository": "dromara/tianai-captcha",
+  "fetchedAt": "2026-11-12T09:42:49.249965+00:00",
+  "revision": "8b3dcafda7e8333b5692ec720799c534d40226eb",
+  "metadataUrl": "https://api.github.com/repos/dromara/tianai-captcha",
+  "metadataSha256": "d3a104b6e7e587c023684b14f513ab87c213547c994f496ac92a6451b702a93b",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1297,
+  "archived": false,
+  "pushedAt": "2026-11-12T07:36:32Z",
+  "apiLicenseCandidate": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/dromara/tianai-captcha/blob/8b3dcafda7e8333b5692ec720799c534d40226eb/readme.md",
+      "apiUrl": "https://api.github.com/repos/dromara/tianai-captcha/readme?ref=8b3dcafda7e8333b5692ec720799c534d40226eb",
+      "contentSha256": "1b104275d5036a3e667e40d477e34dadc8ec205744238fde386f1b63bc7c16e1",
+      "path": "readme.md",
+      "openingExcerpt": "> **🌏 Looking for English?** Read the **[English README](./README_EN.md)** · Online docs: **[English Documentation](http://doc.captcha.tianai.cloud/en/)**  \n> **中文文档** · [在线文档](http://doc.captcha.tianai.cloud)\n\n<div align=\"center\">\n\n![][image-logo]\n\n![star](https://gitcode.com/dromara/tianai-captcha/star/badge.svg)\n\n### tianaiCAPTCHA - 天爱验证码(TAC)\n#### 基于 JAVA实现的行为验证码\n\n**Language / 语言:** [中文](./readme.md) · [English](./README_EN.md)\n\n### **[在线体验 🚀][online-demo-link]**\n### **[在线文档 🚀][doc-link]** · **[English Docs 🚀][doc-en-link]**\n</div>\n\n\n![](images/标题图片.jpg)\n\n## 简单介绍\n\n- tianai-captcha 目前支持的行为验证码类型\n    - 滑块验证码（`SLIDER`）\n    - 旋转验证码（`ROTATE`）\n    - 滑动还原验证码（`CONCAT`）\n    - 文字点选验证码（`WORD_IMAGE_CLICK`）\n    - 工作量证明验证码（`POW`，v1.5.6 新增，无图片、前端自动求解）\n    - 后面会陆续支持市面上更多好玩的验证码玩法... 敬请期待\n\n- 完整可运行示例：[tianai-captcha-demo](https://gitee.com/tianai/tianai-captcha-demo)\n- 更详细的配置说明请看 [在线文档][doc-link]\n\n## 快速上手(后端)\n\n当前版本：**1.5.6**\n\n### SpringBoot 项目\n\n1. 导入依赖\n\n   ```xml\n   <dependency>\n       <groupId>cloud."
+    },
+    "license": {
+      "url": "https://github.com/dromara/tianai-captcha/blob/8b3dcafda7e8333b5692ec720799c534d40226eb/LICENSE",
+      "apiUrl": "https://api.github.com/repos/dromara/tianai-captcha/license?ref=8b3dcafda7e8333b5692ec720799c534d40226eb",
+      "contentSha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "path": "LICENSE",
+      "openingExcerpt": "                                 Apache License\r\n                           Version 2.0, January 2004\r\n                        http://www.apache.org/licenses/\r\n\r\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\r\n\r\n   1. Definitions.\r\n\r\n      \"License\" shall mean the terms and conditions for use, reproduction,\r\n      and distribution as defined by Sections 1 through 9 of this document.\r\n\r\n      \"Licensor\" shall mean the copyright owner or entity authorized by\r\n      the copyright owner that is granting the License.\r\n\r\n      \"Legal Entity\" shall mean the union of the acting entity and all\r\n      other entities that control, are controlled by, or are under common\r\n      control with that entity. For the purposes of this definition,\r\n      \"control\" means (i) the power, direct or indirect, to cause the\r\n      direction or management of such entity, whether by contract or\r\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\r\n      outstanding shares, or ("
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

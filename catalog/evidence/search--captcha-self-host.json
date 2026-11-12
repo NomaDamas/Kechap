@@ -1,0 +1,224 @@
+{
+  "url": "https://api.github.com/search/repositories?q=captcha+self-hosted+in%3Adescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:48:43.540466+00:00",
+  "sha256": "45365f7b3367618449e240c4ef1895b06ef37c3a2d3a730688fd58375f0df78d",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 143,
+    "incompleteResults": false,
+    "returned": 30,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "altcha-org/altcha",
+      "html_url": "https://github.com/altcha-org/altcha",
+      "description": "GDPR, WCAG 2.2 AA, and EAA compliant, self-hosted CAPTCHA alternative with PoW mechanism.",
+      "stargazers_count": 2897,
+      "archived": false
+    },
+    {
+      "full_name": "germondai/trawl",
+      "html_url": "https://github.com/germondai/trawl",
+      "description": "Self-hosted scraping engine — bypasses any JS challenge & captcha: Cloudflare, Turnstile, reCAPTCHA, hCaptcha, GeeTest. FlareSolverr & Byparr alternative and drop-in replacement for your *arr stack.",
+      "stargazers_count": 1134,
+      "archived": false
+    },
+    {
+      "full_name": "shenhao-stu/ohmycaptcha",
+      "html_url": "https://github.com/shenhao-stu/ohmycaptcha",
+      "description": "⚡ Self-hostable YesCaptcha-compatible captcha solver built with FastAPI, Playwright, and OpenAI-compatible multimodal models.",
+      "stargazers_count": 906,
+      "archived": false
+    },
+    {
+      "full_name": "librecaptcha/lc-core",
+      "html_url": "https://github.com/librecaptcha/lc-core",
+      "description": "The LibreCaptcha framework, for self-hosted, privacy respecting CAPTCHAs",
+      "stargazers_count": 432,
+      "archived": false
+    },
+    {
+      "full_name": "WebDecoy/FCaptcha",
+      "html_url": "https://github.com/WebDecoy/FCaptcha",
+      "description": "Self-hosted, invisible CAPTCHA that detects AI agents driving real browsers. GDPR, WCAG 2.2 AA, and EAA: no cookies, no third-party data sharing, and no visual or audio puzzle. With a false-positive budget enforced in CI. Proof of work, drop-in for Turnstile and reCAPTCHA.",
+      "stargazers_count": 237,
+      "archived": false
+    },
+    {
+      "full_name": "a-ve/wicketkeeper",
+      "html_url": "https://github.com/a-ve/wicketkeeper",
+      "description": "A privacy-friendly, self-hostable Proof-of-Work (PoW) CAPTCHA",
+      "stargazers_count": 229,
+      "archived": false
+    },
+    {
+      "full_name": "PrivateCaptcha/PrivateCaptcha",
+      "html_url": "https://github.com/PrivateCaptcha/PrivateCaptcha",
+      "description": "Independent, privacy-first, self-hostable PoW CAPTCHA service made in EU",
+      "stargazers_count": 199,
+      "archived": false
+    },
+    {
+      "full_name": "fabianwennink/IconCaptcha-PHP",
+      "html_url": "https://github.com/fabianwennink/IconCaptcha-PHP",
+      "description": "A self-hosted, customizable, easy-to-implement and user-friendly captcha for PHP.",
+      "stargazers_count": 184,
+      "archived": false
+    },
+    {
+      "full_name": "miguilimzero/antibotlinks",
+      "html_url": "https://github.com/miguilimzero/antibotlinks",
+      "description": "An easy to install self-hosted image captcha library implemented with PHP + InterventionImage.",
+      "stargazers_count": 53,
+      "archived": false
+    },
+    {
+      "full_name": "VeyraAgent/cf-solver",
+      "html_url": "https://github.com/VeyraAgent/cf-solver",
+      "description": "Self-hosted captcha-solving HTTP sidecar — 50 challenge types (Cloudflare, Akamai, DataDome, Imperva, reCAPTCHA, GeeTest, Arkose…) — zero per-solve cost, no external solver APIs. Educational use only.",
+      "stargazers_count": 36,
+      "archived": false
+    },
+    {
+      "full_name": "MiladJoodi/CaptchaKit",
+      "html_url": "https://github.com/MiladJoodi/CaptchaKit",
+      "description": "Self-hosted CAPTCHA for React and Next.js — no database, Redis, or external provider.",
+      "stargazers_count": 36,
+      "archived": false
+    },
+    {
+      "full_name": "sebadob/leptos-captcha",
+      "html_url": "https://github.com/sebadob/leptos-captcha",
+      "description": "Simple, fully self-hosted Captcha / PoW component for Leptos without any user interaction",
+      "stargazers_count": 34,
+      "archived": true
+    },
+    {
+      "full_name": "tarator/hcaptcha-response-generator",
+      "html_url": "https://github.com/tarator/hcaptcha-response-generator",
+      "description": "Online self-hosted hCaptcha Solver. (Demo available) Create `h-captcha-response` for any Site with the public hCaptcha-Sitekey. Nothing else is needed. Handy for use with REST Clients, curl, Postman etc. in Development phase. Plain HTML and Javascript (no node)",
+      "stargazers_count": 24,
+      "archived": false
+    },
+    {
+      "full_name": "TianmuTNT/zzyCaptcha",
+      "html_url": "https://github.com/TianmuTNT/zzyCaptcha",
+      "description": "A simple, self-hostable, \"persistence of vision\" CAPTCHA service. 一个简单的、可自行部署的、基于“视觉暂留”效果的验证码服务。",
+      "stargazers_count": 23,
+      "archived": true
+    },
+    {
+      "full_name": "renton4code/p-captcha",
+      "html_url": "https://github.com/renton4code/p-captcha",
+      "description": "Open-source self-hosted proof-of-work CAPTCHA",
+      "stargazers_count": 19,
+      "archived": false
+    },
+    {
+      "full_name": "akeeba/plg_captcha_altcha",
+      "html_url": "https://github.com/akeeba/plg_captcha_altcha",
+      "description": "Joomla! plugin to implement ALTCHA, the Open Source, proof-of-work, self-hosted CAPTCHA alternative",
+      "stargazers_count": 17,
+      "archived": false
+    },
+    {
+      "full_name": "maodeyu180/TelegramDoor",
+      "html_url": "https://github.com/maodeyu180/TelegramDoor",
+      "description": "Telegram 双向私聊机器人，支持人机验证、防骚扰、消息转发、封禁与中文管理后台。基于 Cloudflare Workers + D1，可在免费额度内自部署。Self-hosted Telegram relay bot with CAPTCHA and anti-spam.",
+      "stargazers_count": 16,
+      "archived": false
+    },
+    {
+      "full_name": "RakinSV/Telegram-admin-app-project",
+      "html_url": "https://github.com/RakinSV/Telegram-admin-app-project",
+      "description": "Self-hosted Telegram automation, three bots in one stack: content pipeline with a two-agent AI editorial desk (journalist + fact-checking editor), Guardian group moderation (captcha, spam filter, anti-raid), and Engage gamification (post quizzes, anti-fraud referrals, verifiable giveaways). FastAPI admin, Docker, 1252 tests.",
+      "stargazers_count": 12,
+      "archived": false
+    },
+    {
+      "full_name": "yassinedoghri/codeigniter-altcha",
+      "html_url": "https://github.com/yassinedoghri/codeigniter-altcha",
+      "description": "A CodeIgniter4 library for ALTCHA, a GDPR, WCAG 2.2 AA, and EAA compliant, self-hosted CAPTCHA alternative with PoW mechanism. ",
+      "stargazers_count": 11,
+      "archived": false
+    },
+    {
+      "full_name": "teknologi-umum/captcha",
+      "html_url": "https://github.com/teknologi-umum/captcha",
+      "description": "Self-hostable powerful yet lightweight Telegram captcha bot",
+      "stargazers_count": 10,
+      "archived": false
+    },
+    {
+      "full_name": "0xMissy22/captcha-solver-global",
+      "html_url": "https://github.com/0xMissy22/captcha-solver-global",
+      "description": "Self-hosted CAPTCHA/Cloudflare solver — Turnstile, reCAPTCHA v2/v3/Enterprise, hCaptcha, cf_clearance, AWS WAF. FastAPI + CloakBrowser + Mistral Vision.",
+      "stargazers_count": 10,
+      "archived": false
+    },
+    {
+      "full_name": "willybahuaud/gaitcha-for-wp",
+      "html_url": "https://github.com/willybahuaud/gaitcha-for-wp",
+      "description": "Self-hosted behavioral captcha for WordPress — fine-grained interaction analysis, no external service, no tracking.",
+      "stargazers_count": 10,
+      "archived": false
+    },
+    {
+      "full_name": "ZeroStorageCaptcha/api-daemon",
+      "html_url": "https://github.com/ZeroStorageCaptcha/api-daemon",
+      "description": "Zero Storage Captcha REST API self-hosted service",
+      "stargazers_count": 9,
+      "archived": true
+    },
+    {
+      "full_name": "PrivateCaptcha/self-hosting",
+      "html_url": "https://github.com/PrivateCaptcha/self-hosting",
+      "description": "Self-hosting instructions for Private Captcha",
+      "stargazers_count": 8,
+      "archived": false
+    },
+    {
+      "full_name": "MSPanchenko/captcha-bypass",
+      "html_url": "https://github.com/MSPanchenko/captcha-bypass",
+      "description": "Self-hosted async captcha bypass service with HTTP API. Tested on Cloudflare and Amazon challenges. By https://remrent.com",
+      "stargazers_count": 8,
+      "archived": false
+    },
+    {
+      "full_name": "1Sewercat/Origami",
+      "html_url": "https://github.com/1Sewercat/Origami",
+      "description": "A self-hosted, zero-JavaScript \"Drag The Item\" CAPTCHA authorization provider for privacy-focused websites.",
+      "stargazers_count": 7,
+      "archived": false
+    },
+    {
+      "full_name": "openporte/openporte",
+      "html_url": "https://github.com/openporte/openporte",
+      "description": "OpenPorte - a Wordpress plugin - is a community-maintained free, open source, self-hostable, privacy-friendly CAPTCHA alternative.",
+      "stargazers_count": 7,
+      "archived": false
+    },
+    {
+      "full_name": "Edneam/ani-cli-relay",
+      "html_url": "https://github.com/Edneam/ani-cli-relay",
+      "description": "Make ani-cli work from regions where allanime is geo-blocked (e.g. India, NEED_CAPTCHA) — no VPN, no playback lag. Self-hosted US relay + patched ani-cli.",
+      "stargazers_count": 7,
+      "archived": false
+    },
+    {
+      "full_name": "unmask-sh/unmask",
+      "html_url": "https://github.com/unmask-sh/unmask",
+      "description": "Self-hosted bot challenge for stock nginx, or a gateway container in front of any HTTP server. Proof-of-work first, behavioral CAPTCHA when suspicious; search and AI crawlers pass, verified by IP range. RPM/DEB/APK + Docker.",
+      "stargazers_count": 7,
+      "archived": false
+    },
+    {
+      "full_name": "P5vc/bot-block",
+      "html_url": "https://github.com/P5vc/bot-block",
+      "description": "Self-Hosted, Privacy-Respecting CAPTCHA",
+      "stargazers_count": 6,
+      "archived": false
+    }
+  ]
+}

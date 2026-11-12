@@ -1,0 +1,36 @@
+{
+  "repository": "produck/svg-captcha",
+  "fetchedAt": "2026-11-12T09:43:06.598269+00:00",
+  "revision": "eb2e1dd4f8f93e902d41c6256382b3dffa171ece",
+  "metadataUrl": "https://api.github.com/repos/produck/svg-captcha",
+  "metadataSha256": "86f8d2a937ac0a826587c7d3c0093b876929b9f75cb4b3b34412f9146073e9d5",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1933,
+  "archived": false,
+  "pushedAt": "2024-02-04T23:20:25Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/produck/svg-captcha/blob/eb2e1dd4f8f93e902d41c6256382b3dffa171ece/README.md",
+      "apiUrl": "https://api.github.com/repos/produck/svg-captcha/readme?ref=eb2e1dd4f8f93e902d41c6256382b3dffa171ece",
+      "contentSha256": "8207c5957d793c4c2653034dda482ab3cc5d2bfef97d29fb16f2d7231dae282c",
+      "path": "README.md",
+      "openingExcerpt": "![svg-captcha](media/header.png)\n\n<div align=\"center\">\n\n[![Build Status](https://img.shields.io/travis/lemonce/svg-captcha/master.svg?style=flat-square)](https://travis-ci.org/lemonce/svg-captcha)\n[![NPM Version](https://img.shields.io/npm/v/svg-captcha.svg?style=flat-square)](https://www.npmjs.com/package/svg-captcha)\n[![NPM Downloads](https://img.shields.io/npm/dm/svg-captcha.svg?style=flat-square)](https://www.npmjs.com/package/svg-captcha)\n\n</div>\n\n> generate svg captcha in node.js\n\n## Translations\n[中文](README_CN.md)\n\n## useful if you\n\n- cannot or do not want to use google recaptcha\n- have issue with install c++ addon\n\n## install\n```\nnpm install --save svg-captcha\n```\n\n## usage\n```Javascript\nvar svgCaptcha = require('svg-captcha');\n\nvar captcha = svgCaptcha.create();\nconsole.log(captcha);\n// {data: '<svg.../svg>', text: 'abcd'}\n```\nwith express\n```Javascript\nvar svgCaptcha = require('svg-captcha');\n\napp.get('/captcha', function (req, res) {\n\tvar captcha = svgCaptcha.create();\n\treq."
+    },
+    "license": {
+      "url": "https://github.com/produck/svg-captcha/blob/eb2e1dd4f8f93e902d41c6256382b3dffa171ece/LICENSE.md",
+      "apiUrl": "https://api.github.com/repos/produck/svg-captcha/license?ref=eb2e1dd4f8f93e902d41c6256382b3dffa171ece",
+      "contentSha256": "67677ac61e98864960f047d386dc969432d38b89c574a8f1ecc6f817eb4963a1",
+      "path": "LICENSE.md",
+      "openingExcerpt": "The MIT License (MIT)\n\nCopyright (c) 2016 - present Weilin Shi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nO"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

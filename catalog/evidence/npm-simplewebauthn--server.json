@@ -1,0 +1,13 @@
+{
+  "url": "https://api.npmjs.org/downloads/point/last-month/%40simplewebauthn%2Fserver",
+  "fetchedAt": "2026-11-12T09:59:27.204729+00:00",
+  "rawSha256": "55fa076d34391f94602f648445b8a5700cd5c4b4f478051ed2fb17f03c116393",
+  "evidenceType": "npm-download-metric",
+  "data": {
+    "downloads": 34442061,
+    "start": "2026-10-13",
+    "end": "2026-11-11",
+    "package": "@simplewebauthn/server"
+  },
+  "limitation": "Downloads are registry activity, not unique deployments, humans or audited security effectiveness."
+}

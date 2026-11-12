@@ -1,0 +1,36 @@
+{
+  "repository": "FriendlyCaptcha/friendly-captcha-sdk",
+  "fetchedAt": "2026-11-12T09:54:52.571377+00:00",
+  "revision": "ea02222ced6573cbf504cca64386d8dabfd34b0d",
+  "metadataUrl": "https://api.github.com/repos/FriendlyCaptcha/friendly-captcha-sdk",
+  "metadataSha256": "092fc7f5260eeb7bd7b43a0931a6e50b0533257cd0b94cf55564055a53d0b686",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 37,
+  "archived": false,
+  "pushedAt": "2026-11-11T13:39:10Z",
+  "apiLicenseCandidate": {
+    "key": "mpl-2.0",
+    "name": "Mozilla Public License 2.0",
+    "spdx_id": "MPL-2.0",
+    "url": "https://api.github.com/licenses/mpl-2.0",
+    "node_id": "MDc6TGljZW5zZTE0"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/FriendlyCaptcha/friendly-captcha-sdk/blob/ea02222ced6573cbf504cca64386d8dabfd34b0d/README.md",
+      "apiUrl": "https://api.github.com/repos/FriendlyCaptcha/friendly-captcha-sdk/readme?ref=ea02222ced6573cbf504cca64386d8dabfd34b0d",
+      "contentSha256": "788302832f1810da0f0ea764456da1c9450135a3eb2615cb7c7478917ae4dc55",
+      "path": "README.md",
+      "openingExcerpt": "# Friendly Captcha SDK\n\n[![NPM Version badge](https://img.shields.io/npm/v/%40friendlycaptcha/sdk)](https://www.npmjs.com/package/@friendlycaptcha/sdk)\n\nThe SDK that is used to integrate Friendly Captcha v2 into your website.\n\nThis is the code that runs on your website, inserting the captcha widget.\n\n> ☝️ This is the SDK for **Friendly Captcha v2 only**. If you are looking for the v1 SDK, you can find that [here](https://github.com/friendlycaptcha/friendly-challenge).\n\n## Installation\n\n```shell\n# using npm\nnpm install @friendlycaptcha/sdk\n\n# using yarn\nyarn add @friendlycaptcha/sdk\n```\n\nYou can then use it in your library.\n\n```js\nimport { FriendlyCaptchaSDK } from \"@friendlycaptcha/sdk\"\n\n// Re-use this SDK if you are creating multiple widgets.\nconst sdk = new FriendlyCaptchaSDK();\n```\n\n```js\n// HTML element that you want to mount the widget under.\nconst mount = document.querySelector(\"#my-widget-mount\");\n\n// Create the widget\nconst widget = sdk.createWidget({\n    element: mount,\n    si"
+    },
+    "license": {
+      "url": "https://github.com/FriendlyCaptcha/friendly-captcha-sdk/blob/ea02222ced6573cbf504cca64386d8dabfd34b0d/LICENSE",
+      "apiUrl": "https://api.github.com/repos/FriendlyCaptcha/friendly-captcha-sdk/license?ref=ea02222ced6573cbf504cca64386d8dabfd34b0d",
+      "contentSha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "path": "LICENSE",
+      "openingExcerpt": "Mozilla Public License Version 2.0\n==================================\n\n1. Definitions\n--------------\n\n1.1. \"Contributor\"\n    means each individual or legal entity that creates, contributes to\n    the creation of, or owns Covered Software.\n\n1.2. \"Contributor Version\"\n    means the combination of the Contributions of others (if any) used\n    by a Contributor and that particular Contributor's Contribution.\n\n1.3. \"Contribution\"\n    means Covered Software of a particular Contributor.\n\n1.4. \"Covered Software\"\n    means Source Code Form to which the initial Contributor has attached\n    the notice in Exhibit A, the Executable Form of such Source Code\n    Form, and Modifications of such Source Code Form, in each case\n    including portions thereof.\n\n1.5. \"Incompatible With Secondary Licenses\"\n    means\n\n    (a) that the initial Contributor has attached the notice described\n        in Exhibit B to the Covered Software; or\n\n    (b) that the Covered Software was made available under the terms of\n "
+    }
+  },
+  "notes": "Friendly Captcha v2 browser SDK under MPL-2.0; this does not provide rights to the proprietary hosted engine."
+}

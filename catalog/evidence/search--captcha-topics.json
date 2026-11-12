@@ -1,0 +1,224 @@
+{
+  "url": "https://api.github.com/search/repositories?q=topic%3Acaptcha&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:48:45.111377+00:00",
+  "sha256": "d29d03a1d8f7b8dd7c8df01bccffee2ceb59bf3b4b8b6497daa31d5cd3b5a560",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 2629,
+    "incompleteResults": false,
+    "returned": 30,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "chaitin/SafeLine",
+      "html_url": "https://github.com/chaitin/SafeLine",
+      "description": "SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.",
+      "stargazers_count": 23258,
+      "archived": false
+    },
+    {
+      "full_name": "sml2h3/ddddocr",
+      "html_url": "https://github.com/sml2h3/ddddocr",
+      "description": "带带弟弟 通用验证码识别OCR pypi版",
+      "stargazers_count": 14934,
+      "archived": false
+    },
+    {
+      "full_name": "ultrafunkamsterdam/undetected-chromedriver",
+      "html_url": "https://github.com/ultrafunkamsterdam/undetected-chromedriver",
+      "description": "Custom Selenium Chromedriver | Zero-Config | Passes ALL bot mitigation systems (like Distil / Imperva/ Datadadome / CloudFlare IUAM)",
+      "stargazers_count": 12902,
+      "archived": false
+    },
+    {
+      "full_name": "dessant/buster",
+      "html_url": "https://github.com/dessant/buster",
+      "description": "Captcha solver extension for humans, available for Chrome, Edge and Firefox",
+      "stargazers_count": 9377,
+      "archived": false
+    },
+    {
+      "full_name": "tiagozip/cap",
+      "html_url": "https://github.com/tiagozip/cap",
+      "description": "The open-source, privacy-friendly CAPTCHA you host yourself. Bots and AI agents out, people in.",
+      "stargazers_count": 8352,
+      "archived": false
+    },
+    {
+      "full_name": "lining0806/PythonSpiderNotes",
+      "html_url": "https://github.com/lining0806/PythonSpiderNotes",
+      "description": "Python入门网络爬虫之精华版",
+      "stargazers_count": 7490,
+      "archived": false
+    },
+    {
+      "full_name": "zhaipro/easy12306",
+      "html_url": "https://github.com/zhaipro/easy12306",
+      "description": "使用机器学习算法完成对12306验证码的自动识别",
+      "stargazers_count": 2909,
+      "archived": false
+    },
+    {
+      "full_name": "altcha-org/altcha",
+      "html_url": "https://github.com/altcha-org/altcha",
+      "description": "GDPR, WCAG 2.2 AA, and EAA compliant, self-hosted CAPTCHA alternative with PoW mechanism.",
+      "stargazers_count": 2897,
+      "archived": false
+    },
+    {
+      "full_name": "ypwhs/captcha_break",
+      "html_url": "https://github.com/ypwhs/captcha_break",
+      "description": "验证码识别",
+      "stargazers_count": 2822,
+      "archived": false
+    },
+    {
+      "full_name": "mewebstudio/captcha",
+      "html_url": "https://github.com/mewebstudio/captcha",
+      "description": "Captcha for Laravel 5+",
+      "stargazers_count": 2592,
+      "archived": false
+    },
+    {
+      "full_name": "QIN2DIM/hcaptcha-challenger",
+      "html_url": "https://github.com/QIN2DIM/hcaptcha-challenger",
+      "description": "🥂 Gracefully face hCaptcha challenge with multimodal large language model.",
+      "stargazers_count": 2570,
+      "archived": false
+    },
+    {
+      "full_name": "mCaptcha/mCaptcha",
+      "html_url": "https://github.com/mCaptcha/mCaptcha",
+      "description": "A no-nonsense CAPTCHA system with seamless UX | Backend component",
+      "stargazers_count": 2501,
+      "archived": false
+    },
+    {
+      "full_name": "wenlng/go-captcha",
+      "html_url": "https://github.com/wenlng/go-captcha",
+      "description": "🖖 GoCaptcha: A high-performance, interactive behavior captcha library for Go. Supporting click, slide, drag-drop, and rotation modes to secure your applications with ease.",
+      "stargazers_count": 2472,
+      "archived": false
+    },
+    {
+      "full_name": "mojocn/base64Captcha",
+      "html_url": "https://github.com/mojocn/base64Captcha",
+      "description": "captcha of base64 image string",
+      "stargazers_count": 2364,
+      "archived": false
+    },
+    {
+      "full_name": "dchest/captcha",
+      "html_url": "https://github.com/dchest/captcha",
+      "description": "Go package captcha implements generation and verification of image and audio CAPTCHAs.",
+      "stargazers_count": 2065,
+      "archived": false
+    },
+    {
+      "full_name": "ambethia/recaptcha",
+      "html_url": "https://github.com/ambethia/recaptcha",
+      "description": "ReCaptcha helpers for ruby apps",
+      "stargazers_count": 2006,
+      "archived": false
+    },
+    {
+      "full_name": "produck/svg-captcha",
+      "html_url": "https://github.com/produck/svg-captcha",
+      "description": "generate svg captcha in node",
+      "stargazers_count": 1933,
+      "archived": false
+    },
+    {
+      "full_name": "anhskohbo/no-captcha",
+      "html_url": "https://github.com/anhskohbo/no-captcha",
+      "description": "No CAPTCHA reCAPTCHA For Laravel.",
+      "stargazers_count": 1847,
+      "archived": false
+    },
+    {
+      "full_name": "Gregwar/Captcha",
+      "html_url": "https://github.com/Gregwar/Captcha",
+      "description": "PHP Captcha library",
+      "stargazers_count": 1823,
+      "archived": false
+    },
+    {
+      "full_name": "xishandong/crawlProject",
+      "html_url": "https://github.com/xishandong/crawlProject",
+      "description": "python爬虫项目合集，从基础到js逆向，包含基础篇、自动化篇、进阶篇以及验证码篇。案例涵盖各大网站(xhs douyin weibo ins boss job，jd...)，你将会学到有关爬虫以及反爬虫、自动化和验证码的各方面知识",
+      "stargazers_count": 1805,
+      "archived": false
+    },
+    {
+      "full_name": "oxylabs/how-to-handle-amazon-captcha",
+      "html_url": "https://github.com/oxylabs/how-to-handle-amazon-captcha",
+      "description": "The process of handling CAPTCHA when extracting public data from Amazon with Oxylabs Amazon Scraper API.",
+      "stargazers_count": 1764,
+      "archived": false
+    },
+    {
+      "full_name": "NopeCHALLC/nopecha-python",
+      "html_url": "https://github.com/NopeCHALLC/nopecha-python",
+      "description": "Automated CAPTCHA solver for Python.",
+      "stargazers_count": 1706,
+      "archived": false
+    },
+    {
+      "full_name": "raodv/captcha",
+      "html_url": "https://github.com/raodv/captcha",
+      "description": "行为验证码(滑动拼图、点选文字)，前后端(java)交互，包含h5/Android/IOS/flutter/uni-app的源码和实现",
+      "stargazers_count": 1704,
+      "archived": false
+    },
+    {
+      "full_name": "ADD-SP/ngx_waf",
+      "html_url": "https://github.com/ADD-SP/ngx_waf",
+      "description": "Handy, High performance, ModSecurity compatible Nginx firewall module & 方便、高性能、兼容 ModSecurity 的 Nginx 防火墙模块",
+      "stargazers_count": 1637,
+      "archived": false
+    },
+    {
+      "full_name": "cdpdriver/zendriver",
+      "html_url": "https://github.com/cdpdriver/zendriver",
+      "description": "A blazing fast, async-first, undetectable webscraping/web automation framework based on ultrafunkamsterdam/nodriver. Now with Docker support!",
+      "stargazers_count": 1479,
+      "archived": false
+    },
+    {
+      "full_name": "NopeCHALLC/nopecha-nodejs",
+      "html_url": "https://github.com/NopeCHALLC/nopecha-nodejs",
+      "description": "Automated CAPTCHA solver for Node.js.",
+      "stargazers_count": 1461,
+      "archived": false
+    },
+    {
+      "full_name": "ZYSzys/awesome-captcha",
+      "html_url": "https://github.com/ZYSzys/awesome-captcha",
+      "description": ":key: Curated list of awesome captcha libraries and crack tools.",
+      "stargazers_count": 1442,
+      "archived": false
+    },
+    {
+      "full_name": "mbi/django-simple-captcha",
+      "html_url": "https://github.com/mbi/django-simple-captcha",
+      "description": "Django Simple Captcha is an extremely simple, yet highly customizable Django application to add captcha images to any Django form.",
+      "stargazers_count": 1419,
+      "archived": false
+    },
+    {
+      "full_name": "markets/invisible_captcha",
+      "html_url": "https://github.com/markets/invisible_captcha",
+      "description": "🍯 Unobtrusive and flexible spam protection for Rails apps",
+      "stargazers_count": 1253,
+      "archived": false
+    },
+    {
+      "full_name": "privacypass/challenge-bypass-extension",
+      "html_url": "https://github.com/privacypass/challenge-bypass-extension",
+      "description": "DEPRECATED - Client for Privacy Pass protocol providing unlinkable cryptographic tokens",
+      "stargazers_count": 1252,
+      "archived": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "repository": "mewebstudio/captcha",
+  "fetchedAt": "2026-11-12T09:48:11.905926+00:00",
+  "revision": "7154a930e88bdb7b02630b14105c5b7b3ecc7fb4",
+  "metadataUrl": "https://api.github.com/repos/mewebstudio/captcha",
+  "metadataSha256": "cf06dda5e59cf9fcc85f903b1e0a2844637b5cc0bf3ff1bf098eac8a5419ebe4",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2592,
+  "archived": false,
+  "pushedAt": "2026-08-28T22:06:43Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/mewebstudio/captcha/blob/7154a930e88bdb7b02630b14105c5b7b3ecc7fb4/README.md",
+      "apiUrl": "https://api.github.com/repos/mewebstudio/captcha/readme?ref=7154a930e88bdb7b02630b14105c5b7b3ecc7fb4",
+      "contentSha256": "8077b45c71f0a115550693f6e5e939e1bbada4593498f8ff00f5aa618cbf57ee",
+      "path": "README.md",
+      "openingExcerpt": "# Captcha for Laravel 10/11/12\n\n[![Build Status](https://travis-ci.org/mewebstudio/captcha.svg?branch=master)](https://travis-ci.org/mewebstudio/captcha) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mewebstudio/captcha/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/mewebstudio/captcha/?branch=master)\n[![Latest Stable Version](https://poser.pugx.org/mews/captcha/v/stable.svg)](https://packagist.org/packages/mews/captcha)\n[![Latest Unstable Version](https://poser.pugx.org/mews/captcha/v/unstable.svg)](https://packagist.org/packages/mews/captcha)\n[![License](https://poser.pugx.org/mews/captcha/license.svg)](https://packagist.org/packages/mews/captcha)\n[![Total Downloads](https://poser.pugx.org/mews/captcha/downloads.svg)](https://packagist.org/packages/mews/captcha)\n\nA simple [Laravel 5/6/7/8/9/10/11/12](http://www.laravel.com/) service provider for including the [Captcha for Laravel](https://github.com/mewebstudio/captcha).\n\nfor Laravel 4 [Captcha for Larav"
+    },
+    "license": {
+      "url": "https://github.com/mewebstudio/captcha/blob/7154a930e88bdb7b02630b14105c5b7b3ecc7fb4/LICENSE",
+      "apiUrl": "https://api.github.com/repos/mewebstudio/captcha/license?ref=7154a930e88bdb7b02630b14105c5b7b3ecc7fb4",
+      "contentSha256": "952220e1ae75904e89a338b5745bdfdecbd79bc56ceb5cebc2d0245c7f5a1f8e",
+      "path": "LICENSE",
+      "openingExcerpt": "The MIT License (MIT)\n\nCopyright (c) 2015 MeWebStudio - Muharrem ERİN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING "
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

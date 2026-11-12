@@ -1,0 +1,36 @@
+{
+  "repository": "wenlng/go-captcha",
+  "fetchedAt": "2026-11-12T09:48:14.261086+00:00",
+  "revision": "de8cdfb00538c3cb1d04f7da5bcfc76faadd900e",
+  "metadataUrl": "https://api.github.com/repos/wenlng/go-captcha",
+  "metadataSha256": "cc07b6a4f3702e55b82c8ba830a721d5dbc36c681525f2558f93c451ffdd75e7",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2472,
+  "archived": false,
+  "pushedAt": "2026-03-07T09:26:40Z",
+  "apiLicenseCandidate": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/wenlng/go-captcha/blob/de8cdfb00538c3cb1d04f7da5bcfc76faadd900e/README.md",
+      "apiUrl": "https://api.github.com/repos/wenlng/go-captcha/readme?ref=de8cdfb00538c3cb1d04f7da5bcfc76faadd900e",
+      "contentSha256": "b602fd85148def64468085b056592cc03ecec1fd111c5ae15395dd414cefba8f",
+      "path": "README.md",
+      "openingExcerpt": "<div align=\"center\">\n<img width=\"120\" style=\"padding-top: 50px; margin: 0;\" src=\"https://github.com/wenlng/git-assets/blob/master/go-captcha/gocaptcha_logo.svg?raw=true\"/>\n<h1 style=\"margin: 0; padding: 0\">GoCaptcha</h1>\n<p>Behavior Captcha Of Golang</p>\n<a href=\"https://goreportcard.com/report/github.com/wenlng/go-captcha\"><img src=\"https://goreportcard.com/badge/github.com/wenlng/go-captcha\"/></a>\n<a href=\"https://godoc.org/github.com/wenlng/go-captcha\"><img src=\"https://godoc.org/github.com/wenlng/go-captcha?status.svg\"/></a>\n<a href=\"https://github.com/wenlng/go-captcha/releases\"><img src=\"https://img.shields.io/github/v/release/wenlng/go-captcha.svg\"/></a>\n<a href=\"https://github.com/wenlng/go-captcha/blob/v2/LICENSE\"><img src=\"https://img.shields.io/badge/License-Apache2.0-green.svg\"/></a>\n<a href=\"https://github.com/wenlng/go-captcha\"><img src=\"https://img.shields.io/github/stars/wenlng/go-captcha.svg\"/></a>\n<a href=\"https://github.com/wenlng/go-captcha\"><img src=\"https://img.sh"
+    },
+    "license": {
+      "url": "https://github.com/wenlng/go-captcha/blob/de8cdfb00538c3cb1d04f7da5bcfc76faadd900e/LICENSE",
+      "apiUrl": "https://api.github.com/repos/wenlng/go-captcha/license?ref=de8cdfb00538c3cb1d04f7da5bcfc76faadd900e",
+      "contentSha256": "944193840d37377c9bddcba0ff5e93e8c69111322705b2e74ca8ebd6751f0ddb",
+      "path": "LICENSE",
+      "openingExcerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial owne"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

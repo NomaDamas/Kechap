@@ -19,15 +19,15 @@ MCP가 인증 비밀키를 반환하거나 에이전트가 CAPTCHA를 대신 풀
 
 ## 현재 MVP와 운영 경계
 
-현재 구현의 중심은 `src/index.js`다. `Kechap.issue({context: {tenant, action, subject}, providers, assurance, sessionId, mode, previous})`가 세션의 공급자를 고정하고, `verify({id, context, response})`가 서버 검증 후 짧게 유효한 불투명 토큰을 발급한다. 제품 서버는 `consume({token, context})`로 토큰을 일회용 소비한 뒤 해당 작업을 수행한다. `mode`는 `stable` 또는 `rotate`이며 `previous`는 로테이션 입력이다. 자세한 입력 제약은 코드와 테스트를 기준으로 한다.
+현재 구현의 중심은 `src/index.js`다. `Kechap.issue({context: {tenant, action, subject}, providers, assurance, sessionId, mode, previous})`가 세션의 공급자를 고정하고, `verify({id, context, response})`가 서버 검증 후 짧게 유효한 불투명 토큰을 발급한다. 제품 서버는 `consume({token, context})`로 토큰을 일회용 소비한 뒤 해당 작업을 수행한다. `issueWithPolicy`는 서버 action/risk별 설정·health·weighted선택과 policyVersion고정을 추가로 제공한다. 기본 `mode`는 `stable` 또는 `rotate`이며 `previous`는 로테이션 입력이다. 자세한 입력 제약은 코드와 테스트를 기준으로 한다.
 
 `MemoryStore`는 데모용이다. 운영에서는 원자적인 `put`/`take` 계약을 구현한 공유 저장소가 필요하다. 토큰 소비와 실제 지급·게시 작업 사이의 장애를 제품 트랜잭션 또는 idempotency key로 처리해야 한다.
 
-`siteverifyAdapter`는 Turnstile/hCaptcha/reCAPTCHA의 공식 검증 endpoint와 hostname/action/score 조건을 사용하며 오류 시 실패한다. `powAdapter`는 실험적인 automation-cost 예제로, 인간 존재를 검증하는 공급자가 아니다. 현재 MCP의 catalog/recommend/plan 도구는 읽기와 계획 생성용이며 인증 세션이나 토큰을 발급하지 않는다. 이 문서의 분산 저장소·운영 대시보드·replay·liveness 확장은 백로그다.
+`siteverifyAdapter`는 Turnstile/hCaptcha/reCAPTCHA의 공식 검증 endpoint와 hostname/action/score 조건을 사용하며 오류 시 실패한다. `powAdapter`는 실험적인 automation-cost 예제로, 인간 존재를 검증하는 공급자가 아니다. 현재 MCP의 catalog/recommend/plan/scaffold 도구는 읽기·계획·신규 Node HTTP 파일 생성용이며 인증 세션이나 토큰을 발급하지 않는다. ALTCHA/Cap은 공식 패키지 실제 통합과 브라우저 검증을 수행했다. replay는 세 가지 toy world와 benchmark가 구현되어 있으나 인간 구별 성능은 미검증이다. 분산 저장소·운영 대시보드·liveness는 백로그다.
 
 ## 보장의 구분
 
-현재 SDK의 assurance 문자열은 `automation-cost`, `bot-mitigation`, `liveness`, `identity`, `uniqueness`다. 아래 분류는 장기 카탈로그 설계로, 현재 API enum과 일치한다고 가정하지 않는다. PoW는 automation-cost이며 CAPTCHA는 bot-mitigation에 해당한다. 비교 표와 추천은 서로 다른 보장을 하나의 “사람 점수”로 만들지 않는다.
+현재 SDK의 assurance 문자열은 `automation-cost`, `bot-mitigation`, `interaction`, `liveness`, `identity`, `uniqueness`다. 아래 분류는 장기 카탈로그 설계로, 현재 API enum과 일치한다고 가정하지 않는다. PoW는 automation-cost이며 CAPTCHA는 bot-mitigation에 해당한다. 비교 표와 추천은 서로 다른 보장을 하나의 “사람 점수”로 만들지 않는다.
 
 - `anti-abuse`: PoW, 속도 제한, 봇 위험 신호. 요청 비용을 올리지만 사람의 존재를 증명하지 않는다.
 - `interaction`: 퍼즐·게임·행동 검증. 현재 상호작용의 증거이며 인간 작업자 대행을 배제하지 못한다.

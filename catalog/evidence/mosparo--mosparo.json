@@ -1,0 +1,36 @@
+{
+  "repository": "mosparo/mosparo",
+  "fetchedAt": "2026-11-12T09:54:44.216650+00:00",
+  "revision": "4f4820aa65123b5116a5967798a0f37d4f1b5f47",
+  "metadataUrl": "https://api.github.com/repos/mosparo/mosparo",
+  "metadataSha256": "1f3ecbcaae74ad92f8688e15054dab801436844225473ee20b5765ed9b8c0857",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 314,
+  "archived": false,
+  "pushedAt": "2026-11-09T07:08:28Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/mosparo/mosparo/blob/4f4820aa65123b5116a5967798a0f37d4f1b5f47/README.md",
+      "apiUrl": "https://api.github.com/repos/mosparo/mosparo/readme?ref=4f4820aa65123b5116a5967798a0f37d4f1b5f47",
+      "contentSha256": "bcba9d14cc8bb872e24884a95f62150d8ccd893c5550b542b0a49ea53cc423b1",
+      "path": "README.md",
+      "openingExcerpt": "&nbsp;\n<p align=\"center\">\n    <img src=\"https://github.com/mosparo/mosparo/blob/master/assets/images/mosparo-logo.svg?raw=true\" alt=\"mosparo logo contains a bird with the name Mo and the mosparo text\"/>\n</p>\n\n<p align=\"center\">\n    The <b>mo</b>dern <b>spa</b>m p<b>ro</b>tection tool.<br>\n    It replaces other captcha methods with a simple and easy to use spam protection solution.<br>\n    <em>FYI: The bird is called <a href=\"https://mothesparrow.com\" target=\"_blank\">Mo (the sparrow)</a>.</em>\n</p>\n\n-----\n\n## Description\n\nmosparo is the modern solution to protect your online forms from spam. The protection method is simple: mosparo blocks spam based on rules matching the form's data. The detection method is comparable to an email spam filter. The user does not have to prove it is a real human by solving a puzzle. Instead, the tool scans the entered form data for words or other information which are not allowed. You can add different kinds of rules to catch all possible spam.\n\n## How it "
+    },
+    "license": {
+      "url": "https://github.com/mosparo/mosparo/blob/4f4820aa65123b5116a5967798a0f37d4f1b5f47/LICENSE",
+      "apiUrl": "https://api.github.com/repos/mosparo/mosparo/license?ref=4f4820aa65123b5116a5967798a0f37d4f1b5f47",
+      "contentSha256": "86ee21a9d6d94682a9232bd8fbe1788e368285233475617b3e475b346ebf9b16",
+      "path": "LICENSE",
+      "openingExcerpt": "The MIT License (MIT)\n\nCopyright 2021-2026 mosparo Core Developers and contributors\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHER"
+    }
+  },
+  "notes": "Rule-based form spam filter, not proof of humanity; README lists collected form data, IP, user agent and retention. Requires privacy review."
+}

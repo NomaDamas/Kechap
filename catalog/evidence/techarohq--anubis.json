@@ -1,0 +1,36 @@
+{
+  "repository": "TecharoHQ/anubis",
+  "fetchedAt": "2026-11-12T09:42:37.595020+00:00",
+  "revision": "f197f9a6235d255000c7b654ac478354a6e4bd02",
+  "metadataUrl": "https://api.github.com/repos/TecharoHQ/anubis",
+  "metadataSha256": "af65a339f9db312976706729ecde7128a923a738f94feb549af9c1156283beae",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 24115,
+  "archived": false,
+  "pushedAt": "2026-11-09T00:37:14Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/TecharoHQ/anubis/blob/f197f9a6235d255000c7b654ac478354a6e4bd02/README.md",
+      "apiUrl": "https://api.github.com/repos/TecharoHQ/anubis/readme?ref=f197f9a6235d255000c7b654ac478354a6e4bd02",
+      "contentSha256": "1e524f0af6f12b2e13f0fbde4174cf99e3565d052ee22f944f97c048bd726529",
+      "path": "README.md",
+      "openingExcerpt": "# Anubis\n\n<center>\n<img width=256 src=\"./web/static/img/happy.webp\" alt=\"A smiling chibi dark-skinned anthro jackal with brown hair and tall ears looking victorious with a thumbs-up\" />\n</center>\n\n![enbyware](https://pride-badges.pony.workers.dev/static/v1?label=enbyware&labelColor=%23555&stripeWidth=8&stripeColors=FCF434%2CFFFFFF%2C9C59D1%2C2C2C2C)\n![GitHub Issues or Pull Requests by label](https://img.shields.io/github/issues/TecharoHQ/anubis)\n![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/TecharoHQ/anubis)\n![language count](https://img.shields.io/github/languages/count/TecharoHQ/anubis)\n![repo size](https://img.shields.io/github/repo-size/TecharoHQ/anubis)\n[![GitHub Sponsors](https://img.shields.io/github/sponsors/Xe)](https://github.com/sponsors/Xe)\n\n## Sponsors\n\nAnubis is brought to you by sponsors and donors like:\n\n### Diamond Tier\n\n<a href=\"https://www.raptorcs.com/content/base/products.html\">\n  <img src=\"./docs/static/img/sponsors/raptor-computing-l"
+    },
+    "license": {
+      "url": "https://github.com/TecharoHQ/anubis/blob/f197f9a6235d255000c7b654ac478354a6e4bd02/LICENSE",
+      "apiUrl": "https://api.github.com/repos/TecharoHQ/anubis/license?ref=f197f9a6235d255000c7b654ac478354a6e4bd02",
+      "contentSha256": "c6972ceff523e3269737c9da49c92b00729eea31808ce685f9b6150caa5fc944",
+      "path": "LICENSE",
+      "openingExcerpt": "Copyright (c) 2025 Xe Iaso <me@xeiaso.net>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTI"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

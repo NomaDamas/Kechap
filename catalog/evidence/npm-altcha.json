@@ -1,0 +1,13 @@
+{
+  "url": "https://api.npmjs.org/downloads/point/last-month/altcha",
+  "fetchedAt": "2026-11-12T09:59:24.057242+00:00",
+  "rawSha256": "d2a08639f532e1cc6e44006a27258c24bf779d941ea4c9777aea99ef81bed795",
+  "evidenceType": "npm-download-metric",
+  "data": {
+    "downloads": 1045779,
+    "start": "2026-10-13",
+    "end": "2026-11-11",
+    "package": "altcha"
+  },
+  "limitation": "Downloads are registry activity, not unique deployments, humans or audited security effectiveness."
+}

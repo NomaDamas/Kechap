@@ -1,0 +1,105 @@
+{
+  "url": "https://api.github.com/search/repositories?q=%22human+verification%22+mcp+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:48:39.130162+00:00",
+  "sha256": "88c74977e2224e97518601c591ea6f93ecd6a4d5290f458197f4c51b5db0eebc",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 13,
+    "incompleteResults": false,
+    "returned": 13,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "DevAnimecx/free-ai-agent-stack",
+      "html_url": "https://github.com/DevAnimecx/free-ai-agent-stack",
+      "description": "Every free LLM API, MCP server, agent framework and free-tier service you need to build an AI agent in 2026. 384 resources, human-verified, no credit card required for 222, links checked daily. Build a production AI agent for zero dollars.",
+      "stargazers_count": 2,
+      "archived": false
+    },
+    {
+      "full_name": "areycruzer/substrate-friction",
+      "html_url": "https://github.com/areycruzer/substrate-friction",
+      "description": "Agent triage, measured: does this edit need a human, or can the AI handle it? We measure whether the graph under the agent can reach the tests that guard a change (0.42 pooled, 7 repos) and ship the fail-closed gate that routes unproven maps to human verification. CLI · MCP · SARIF · in-engine on HydraDB.",
+      "stargazers_count": 2,
+      "archived": false
+    },
+    {
+      "full_name": "forgesworn/bray",
+      "html_url": "https://github.com/forgesworn/bray",
+      "description": "Trust-aware Nostr MCP server for AI agents and humans. Verification, proximity, and access woven into every interaction.",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "AskAHumanOnline/askahuman-mcp-server",
+      "html_url": "https://github.com/AskAHumanOnline/askahuman-mcp-server",
+      "description": "MCP server for AskAHuman.online — human verification as a tool for AI agents",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "saiyamranjitpatil/composio-integration-research",
+      "html_url": "https://github.com/saiyamranjitpatil/composio-integration-research",
+      "description": "AI-powered, evidence-first integration research across 100 apps : APIs, auth, MCP, access models, buildability, and human verification.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "RoninForge/ai-price-index-mcp",
+      "html_url": "https://github.com/RoninForge/ai-price-index-mcp",
+      "description": "Read-only, zero-key MCP server over the AI Price Index. AI model prices for when quality matters: first-party-sourced, dated, point-in-time, and human-verified.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "bjyoe2016/dyoe-agent-tools-mcp",
+      "html_url": "https://github.com/bjyoe2016/dyoe-agent-tools-mcp",
+      "description": "MCP server for the DYOE Agent Tools — pay-per-call trust, due-diligence & data tools for AI agents, settled in USDC on Base via x402. Includes human-verified Guardian approval.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "Priya-1514/MCP_Server",
+      "html_url": "https://github.com/Priya-1514/MCP_Server",
+      "description": "A secure and interactive human verification system. Users log in with credentials and verify their identity by clicking randomly generated colored dots, making it harder for AI bots to bypass. An innovative alternative to traditional CAPTCHAs.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "lomeyollc/nasheed-directory",
+      "html_url": "https://github.com/lomeyollc/nasheed-directory",
+      "description": "Open catalog of halal, freely-licensed background audio. Voice and duff only, no melodic instruments, human-verified. Queryable by REST API and MCP.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "gm4prezi/oig-leie",
+      "html_url": "https://github.com/gm4prezi/oig-leie",
+      "description": "Python client and MCP server for screening against the public OIG LEIE federal healthcare exclusion list. Returns possible matches for human verification, never a definitive verdict.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "kaviyakumar23/kept",
+      "html_url": "https://github.com/kaviyakumar23/kept",
+      "description": "Slack-native, human-verified, event-sourced obligation ledger for shared customer channels. The LLM proposes; deterministic code decides; work items via MCP. Built for the Slack Agent Builder Challenge (New Slack Agent).",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "deepdeduction/taskly-skill",
+      "html_url": "https://github.com/deepdeduction/taskly-skill",
+      "description": "Skill + MCP server that lets AI agents push human action items to a cross-platform todo board (Web + iOS). Agents finish the work, summarize what needs human verification, and send it to Taskly.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "PanStories/free-and-cheap-tokens",
+      "html_url": "https://github.com/PanStories/free-and-cheap-tokens",
+      "description": "Free and Cheap Tokens (FaCT) — a curated, daily human-verified catalog of free tiers and cheap token promos for AI models, served as one MCP server. 8 tools, 4 resources, 3 prompts, 17 promos across OpenAI, Anthropic, Google, Zhipu, SiliconFlow, Groq and more. No paid placements, no affiliate links.",
+      "stargazers_count": 0,
+      "archived": false
+    }
+  ]
+}

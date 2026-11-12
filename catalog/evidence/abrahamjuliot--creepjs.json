@@ -1,0 +1,36 @@
+{
+  "repository": "abrahamjuliot/creepjs",
+  "fetchedAt": "2026-11-12T09:42:39.359310+00:00",
+  "revision": "10aa6724cd33a1015db1574211890518cd04f0cc",
+  "metadataUrl": "https://api.github.com/repos/abrahamjuliot/creepjs",
+  "metadataSha256": "ebaf8e170e968215833df7a844ee5192e4b9a614b6e0d2d48f9a236d27062002",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2547,
+  "archived": false,
+  "pushedAt": "2026-06-11T02:46:58Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/abrahamjuliot/creepjs/blob/10aa6724cd33a1015db1574211890518cd04f0cc/README.md",
+      "apiUrl": "https://api.github.com/repos/abrahamjuliot/creepjs/readme?ref=10aa6724cd33a1015db1574211890518cd04f0cc",
+      "contentSha256": "7e5941fef566985bf5e9c7746645459712fe639dc560fb7ad975dfcb2fa23394",
+      "path": "README.md",
+      "openingExcerpt": "# CreepJS™\n\n> [!CAUTION]\n> **SECURITY ALERT: EXTERNAL DOMAINS ARE UNSAFE**\n>\n> **The ONLY official live deployment is on GitHub Pages.**\n> Any `.org`, `.com`, or custom domain claiming to be CreepJS is an **unauthorized mirror** and should be treated as a malicious honeypot designed to steal your fingerprint data.\n>\n> * ✅ **Official:** `https://abrahamjuliot.github.io/creepjs`\n> * ❌ **Unsafe:** All other URLs.\n\n[https://abrahamjuliot.github.io/creepjs](https://abrahamjuliot.github.io/creepjs)\n\nThe purpose of this project is to shed light on weaknesses and privacy leaks among modern anti-fingerprinting extensions and browsers.\n\n1. Detect and ignore JavaScript tampering (prototype lies)\n2. Fingerprint lie patterns\n3. Fingerprint extension code\n4. Fingerprint browser privacy settings\n5. Use large-scale validation and collect inconsistencies\n6. Feature detect and fingerprint [new APIs](https://www.javascripture.com/) that contain high entropy\n7. For fingerprinting, use APIs that are the mo"
+    },
+    "license": {
+      "url": "https://github.com/abrahamjuliot/creepjs/blob/10aa6724cd33a1015db1574211890518cd04f0cc/LICENSE",
+      "apiUrl": "https://api.github.com/repos/abrahamjuliot/creepjs/license?ref=10aa6724cd33a1015db1574211890518cd04f0cc",
+      "contentSha256": "f6653ea45a373c2fed73f6a2a6b4b18d51b70b37d7fe110e4d579a61b1dba173",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2021 abrahamjuliot\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNE"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

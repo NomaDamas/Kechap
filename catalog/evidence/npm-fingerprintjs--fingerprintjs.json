@@ -1,0 +1,13 @@
+{
+  "url": "https://api.npmjs.org/downloads/point/last-month/%40fingerprintjs%2Ffingerprintjs",
+  "fetchedAt": "2026-11-12T09:59:25.031722+00:00",
+  "rawSha256": "fff02fe2994bd3b5a5e434d4841edae71c0399ac88d8b08730f387006582cd74",
+  "evidenceType": "npm-download-metric",
+  "data": {
+    "downloads": 8703708,
+    "start": "2026-10-13",
+    "end": "2026-11-11",
+    "package": "@fingerprintjs/fingerprintjs"
+  },
+  "limitation": "Downloads are registry activity, not unique deployments, humans or audited security effectiveness."
+}

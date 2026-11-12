@@ -11,6 +11,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
+      - run: npm ci --omit=optional
       - run: npm test
       - run: npm run catalog:check
       - run: npm run test:research
+      - run: npm run benchmark -- 20

@@ -1,0 +1,36 @@
+{
+  "repository": "mCaptcha/mCaptcha",
+  "fetchedAt": "2026-11-12T09:42:58.900031+00:00",
+  "revision": "b215a411ed3e53e3c5d77465f73b40d35986ec93",
+  "metadataUrl": "https://api.github.com/repos/mCaptcha/mCaptcha",
+  "metadataSha256": "c6a6b89045fa9d6410e69a0b369396a092a988ef61731cc8667fe7985b350437",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2501,
+  "archived": false,
+  "pushedAt": "2025-10-07T08:47:27Z",
+  "apiLicenseCandidate": {
+    "key": "agpl-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "spdx_id": "AGPL-3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0",
+    "node_id": "MDc6TGljZW5zZTE="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/mCaptcha/mCaptcha/blob/b215a411ed3e53e3c5d77465f73b40d35986ec93/README.md",
+      "apiUrl": "https://api.github.com/repos/mCaptcha/mCaptcha/readme?ref=b215a411ed3e53e3c5d77465f73b40d35986ec93",
+      "contentSha256": "58f944e52c963c411a6b92d72273b07cc7946bf512fd59034aecf5b4bd1054e8",
+      "path": "README.md",
+      "openingExcerpt": "<div align=\"center\">\n<img width=\"100px\" alt=\"mcaptcha logo\" src=\"./docs/res/icon-trans.png\" />\n  <h1>mCaptcha</h1>\n  <p>\n    <strong>\nProof of work based, privacy respecting CAPTCHA system with a kickass UX. \n</strong>\n  </p>\n\n[![Documentation](https://img.shields.io/badge/docs-master-blue?style=flat-square)](https://mcaptcha.github.io/mCaptcha/mCaptcha/)\n[![Build](https://github.com/mCaptcha/mCaptcha/actions/workflows/linux.yml/badge.svg)](https://github.com/mCaptcha/mCaptcha/actions/workflows/linux.yml)\n[![Docker](https://img.shields.io/docker/pulls/mcaptcha/mcaptcha)](https://hub.docker.com/r/mcaptcha/mcaptcha)\n[![dependency status](https://deps.rs/repo/github/mCaptcha/mCaptcha/status.svg?style=flat-square)](https://deps.rs/repo/github/mCaptcha/mCaptcha)\n[![codecov](https://codecov.io/gh/mCaptcha/mCaptcha/branch/master/graph/badge.svg?style=flat-square)](https://codecov.io/gh/mCaptcha/mCaptcha)\n<br />\n[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg?style=flat-squ"
+    },
+    "license": {
+      "url": "https://github.com/mCaptcha/mCaptcha/blob/b215a411ed3e53e3c5d77465f73b40d35986ec93/LICENSE.md",
+      "apiUrl": "https://api.github.com/repos/mCaptcha/mCaptcha/license?ref=b215a411ed3e53e3c5d77465f73b40d35986ec93",
+      "contentSha256": "ad858d53cae05eed9531ecd4c467440803acffe34c69de7b88e03affc5b6a1bd",
+      "path": "LICENSE.md",
+      "openingExcerpt": "### GNU AFFERO GENERAL PUBLIC LICENSE\n\nVersion 3, 19 November 2007\n\nCopyright (C) 2007 Free Software Foundation, Inc.\n<https://fsf.org/>\n\nEveryone is permitted to copy and distribute verbatim copies of this\nlicense document, but changing it is not allowed.\n\n### Preamble\n\nThe GNU Affero General Public License is a free, copyleft license for\nsoftware and other kinds of works, specifically designed to ensure\ncooperation with the community in the case of network server software.\n\nThe licenses for most software and other practical works are designed\nto take away your freedom to share and change the works. By contrast,\nour General Public Licenses are intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains\nfree software for all its users.\n\nWhen we speak of free software, we are referring to freedom, not\nprice. Our General Public Licenses are designed to make sure that you\nhave the freedom to distribute copies of free software (and charge for\nt"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

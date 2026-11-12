@@ -1,39 +1,30 @@
-# Kechap 진행 상태와 수정 계획
+# Kechap 현재 상태와 다음 계획
 
-사용자 최신 지시: **Aside와 Windows VM은 하지 않는다.** 기존 조사 기록의 해당 설치·접속 항목은 현재 범위 밖이다. GitHub와 공식 문서를 직접 확인한다. REA는 Linux에서 지원하는지 먼저 조사하며 OS 우회 설치를 전제하지 않는다.
+2026-11-12 네트워크 권한 변경 후 실제 GitHub 인증·원격 권한을 확인했고 출처 조사를 완료했다. Aside와 Windows VM은 사용자 지시에 따라 제외했다.
 
-## 현재 구현의 정확한 범위
+| 범위 | 실제 완료한 내용 | 남은 확장 |
+| --- | --- | --- |
+| 카탈로그 | 역할별50개, revision고정 GitHub37개, 공식 문서10개, evidence79개 | 나머지3개 및 독립 고객/감사 근거 |
+| 기존 생태계 조사 | awesome-captcha, personhood 목록, 솔버/사람판단 MCP, RL orchestration 비교 | 완전한 검색이나 최초 주장 아님 |
+| 기존 OSS 통합 | ALTCHA2.8.0와 Cap0.1.15 실제 생성/검증/만료/재사용 + Chromium 폼 | Cap instrumentation/HashWX, mCaptcha 등 |
+| 상용 연동 | 공식 Turnstile/hCaptcha/classic reCAPTCHA 어댑터와 계약 모의 테스트 | 실제 고객 키·운영환경 연동 |
+| SDK/rotation | 문맥 결속, 일회성 토큰, TTL, server policy version, action/risk/health/가중치 | 분산 atomic store, 자체 risk signal 모델, 운영 계측 |
+| 설치 | CLI/MCP가 신규 Node HTTP 프로젝트 파일 생성, 기존 파일 덮어쓰기 거절 | 기존 제품 자동 패치·추가 framework |
+| 브라우저 | 실제 Chromium에서 ALTCHA/Cap/PoW 교체·작업·서버 제출, HTTP smoke | 장애 사용자·실제 모바일/저사양·상용 widget |
+| 실시간 연구 | 세 가지 toy surface, 서버 replay, rule-aware/fixed macro 실측 baseline | 실제 시각 UI·인간/VLM/computer-use 평가 |
+| 벤치마크 | seed/nonce/hash·버전·표본 수와 공개 가능한 자동화 결과, 확장 계획 | 인간 완료율/p95/접근성·VLM비용·리더보드 |
+| 커뮤니티 | 기여 계약, issue form, roadmap와 실제 이슈23개 | 외부 기여·응답 운영 실적 |
+| Sponsors | NomaDamas FUNDING 설정 | 조직의 계정 개설·지급 심사 필요 |
 
-| 항목 | 구현 / 검증 상태 |
-| --- | --- |
-| SDK | challenge 발급, 서버 verify, 짧은 TTL, 문맥 결속, 일회성 consume 구현 |
-| 공급자 | 자체 실험 PoW + Turnstile/hCaptcha/classic reCAPTCHA 공식 검증 어댑터. ALTCHA/Cap/mCaptcha의 실제 엔진 통합은 아직 없음 |
-| 로테이션 | 세션 기반 선택과 직전 공급자 다음 순환, 같은 assurance 범주 검사. 가중치·건강 상태·위험 점수 기반 적응형 선택은 없음 |
-| 브라우저 | 공통 mount·취소·위젯 정리와 웹 예제. 공급자 SDK는 모의 테스트이며 실제 widget 실행 미검증 |
-| MCP | 후보 조회·추천·계획·scaffold 4개 도구. Node HTTP 신규 프로젝트 파일 내용 생성 가능. CLI는 새 디렉터리에 생성하며 기존 제품 자동 수정은 미구현 |
-| Skill | 코딩 에이전트의 통합 작업 지침 작성. 실제 여러 제품에서 원클릭 설치가 성립하는지 검증하지 않음 |
-| 카탈로그 | 34개 후보 기록. 최신 stars·라이선스 원문·실사용 근거는 미검증. 검증 완료 OSS 34개라는 의미가 아님 |
-| 테스트 | 마지막 실행 기준 JS 21개·조사 도구 3개 통과, 포트 bind 제한으로 실제 HTTP 1개 미실행 |
-| 문서·이슈 | 로드맵과 개별 이슈 본문 23개. 원격 GitHub 이슈는 생성되지 않음 |
-| 저장소 게시 | 로컬 Git 커밋과 bundle만 존재. NomaDamas/Kechap 원격 push 미완료 |
-| 연구·벤치 | 계획만 작성. 게임/replay 엔진, 행동·기기·네트워크 risk engine, 영상·음성 liveness, 실제 인간/에이전트 실험·리더보드는 미구현 |
+모든 후보 `productionReady=false`다. source-reviewed는 실제 출처를 읽었다는 뜻이고 운영 승인·보안 감사와 다르다. 라이브 OSS integration은 소유 로컬 과제를 검증했다는 뜻이지 사람 구별 성능 인증이 아니다.
 
-## 어떤 제품으로 완성할 것인가
+## 다음 순서
 
-**SDK가 실제 인증을 집행하고, MCP·CLI가 제품 요구에 맞는 검토 가능한 설치 패치를 만드는 구조**로 간다. Skill은 그 도구를 일관되게 쓰는 절차를 제공한다. 카탈로그는 발견 후보와 승인된 어댑터를 구분하고, 벤치마크는 별 수와 별개로 실제 효과·비용·접근성을 측정한다.
+1. 실제 고객 키가 준비된 제품에서 상용 공급자 staging 검증과 보호된 업무의 멱등성 테스트.
+2. Redis/DB atomic TTL 저장소와 multi-worker 동시성, 장애·관측성·privacy 정책.
+3. 지원 framework 확대와 기존 제품에 대한 검토 가능한 설치 patch 생성.
+4. 접근 가능한 동등 대체 경로와 모바일·저사양 사용자 평가.
+5. 동의받은 인간 실험, owned-site VLM/computer-use benchmark와 신뢰구간·비용 비교.
+6. 필요가 확인된 경우에만 생체정보를 최소 취급하는 liveness·identity·personhood 공식 공급자 승격.
 
-개발자 흐름은 “제품과 제약 설명 → 에이전트가 기존 코드 확인 → 근거가 있는 후보·선택 이유 제안 → 설정과 프런트/서버 패치 생성 → 테스트 → 자격증명 설정·배포”다. 비밀키 발급이나 아직 검증되지 않은 공급자를 자동으로 준비된 것처럼 표시하지 않는다.
-
-현재 즉시 사용할 수 있는 생성 명령은 `npm run scaffold -- /tmp/new-kechap-product '{"provider":"pow"}'`다. 목적지는 새 디렉터리여야 하며 기존 파일은 덮어쓰지 않는다. 상용 공급자는 `turnstile`, `hcaptcha`, `recaptcha`를 명시하고 자체 발급 키를 설정한다. 생성기 테스트는 생성 결과를 독립적으로 import하여 실제 PoW 발급·검증·소비·재사용 거절을 확인한다. 공급자 live widget과 자동 기존 코드 수정까지 완료된 것은 아니다.
-
-## 다음 실행 순서와 완료 조건
-
-1. **출처와 유사 프로젝트 확인.** GitHub API·공식 문서에서 별 수, LICENSE, 유지보수, 실제 도입·감사 근거를 수집한다. Awesome list·MCP·provider wrapper 비교표를 만든다. 결과물은 revision과 조회일이 있는 검증 카탈로그이며, 근거 없이는 최초·유일을 주장하지 않는다.
-2. **기존 OSS 실제 연결.** ALTCHA와 Cap의 현재 공식 계약을 확인한 뒤 우선 통합한다. mCaptcha는 라이선스와 배포 형태를 검토한다. 공통 issue/verify/browser 계약, replay·expiry·실패 테스트와 자체 호스팅 실행 예제를 완료 기준으로 삼는다. PoW가 인간 존재를 증명한다고 표현하지 않는다.
-3. **에이전트 설치 경험 완성.** 먼저 지원 프레임워크 하나를 정해 실제 보호된 폼의 프런트·서버·환경변수 예제를 생성한다. self-host, 개인정보, 비용, 접근성, assurance 제약별 설명과 불가능한 조건의 거절을 포함한다. 별도 제품 fixture에 적용하고 빌드·통합 테스트가 통과해야 완료다.
-4. **운영 로테이션과 위험 정책.** 발급 시 provider·정책 버전 고정, 위험 수준별 허용 집합, 공급자 상태·가중치, 분산 원자 TTL 저장소와 관측성을 추가한다. 장애나 낮은 위험 판단으로 검증이 자동 성공하지 않고 보장 하향도 차단해야 한다. rate limit과 계정 연속성 등 추가 방어의 제품 연동 지점도 제공한다.
-5. **실시간 replay 연구.** 소유한 toy 환경에서 정적 선택·drag/rotate·seed 기반 동적 과제를 비교한다. 서버가 이벤트 수·순서·타이밍·상태를 재생 검증한다. 유효한 입력을 에이전트도 만들 수 있다는 한계를 결과 스키마에 유지한다. 접근성 대체 경로는 별도 완료 기준이다.
-6. **벤치마크와 생체정보 확장.** 통제된 자동화 baseline, 동의받은 인간 실험, 표본 수·신뢰구간·완료 시간·성공률·비용·fallback 결과를 공개한다. 실제 측정 전 리더보드 수치를 만들지 않는다. 얼굴·동작·음성은 선택적 공식 공급자 승격으로 검토하고 생체정보 원본 비수집·동의·보존·대체 경로를 먼저 설계한다.
-7. **커뮤니티와 게시.** adapter PR에 라이선스·공식 계약·테스트·접근성 근거를 요구한다. 원격 이력을 읽어 기존 코드와 통합하고 push한 SHA를 확인한다. 이슈 23개를 게시하고 실제 URL을 기록한다.
-
-현재 네트워크 소켓 생성이 EPERM으로 차단되는 실행 환경이 핵심 차단 요인이다. 저장된 GitHub 인증은 읽을 수 있으며, 유효성과 저장소 쓰기 권한은 네트워크 복구 후 확인한다. Aside나 VM을 복구할 필요는 없다. 외부 접근 없이 할 수 있는 구현은 진행할 수 있지만, 추가 로컬 코드가 외부 출처 검증·실제 공급자 계약·원격 게시의 완료를 대신하지는 않는다.
+세부 수용 기준·의존성은 [로드맵](roadmap.md)과 [원격 이슈](https://github.com/NomaDamas/Kechap/issues)에 있다. 후속 단계를 완료했다고 표시하지 않는다. 원격 커밋/CI 상태는 [게시 상태](publishing-status.md)를 따른다.

@@ -1,0 +1,36 @@
+{
+  "repository": "ArgoZhang/SliderCaptcha",
+  "fetchedAt": "2026-11-12T09:54:48.516281+00:00",
+  "revision": "f70d04d00f323a58e51c3feeeaa4867d21a5536c",
+  "metadataUrl": "https://api.github.com/repos/ArgoZhang/SliderCaptcha",
+  "metadataSha256": "3720da5a5dfb3edaaf36a10cc6db3cc8224ec4834c3a8eab223e0d7cb9280a0b",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 305,
+  "archived": false,
+  "pushedAt": "2023-09-22T07:55:51Z",
+  "apiLicenseCandidate": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/ArgoZhang/SliderCaptcha/blob/f70d04d00f323a58e51c3feeeaa4867d21a5536c/README.md",
+      "apiUrl": "https://api.github.com/repos/ArgoZhang/SliderCaptcha/readme?ref=f70d04d00f323a58e51c3feeeaa4867d21a5536c",
+      "contentSha256": "6db1c4d74ac344f1cbdcb2eb80b70886f4745ef574035f1e179754f1d774f5f5",
+      "path": "README.md",
+      "openingExcerpt": "﻿## Slider Captcha\n\n<span>English</span> | <a href=\"README.zh-CN.md\">中文</a>\n\n---\n\nThe user completes the verification by dragging the slider to support the PC and mobile terminals. The time, accuracy and sliding trajectory information of user dragging behavior can be sent to the server, and then the background algorithm verification can be carried out.\n\n## Blazor Version\n\nhttp://blazor.sdgxgz.com/captchas\n\n## Online Demonstration\nSingle page presentation: http://longbowenterprise.gitee.io/slidercaptcha/  \nIn-Project Demonstration: https://admin.blazor.zone/ (Open source Admin Control Pannel [[BootstrapAdmin](https://github.com/ArgoZhang/BootstrapAdmin)])  \n**Slide captcha appears for the fourth time after three times of incorrect password input**  \n\n## Screenshot\n![输入图片说明](https://images.gitee.com/uploads/images/2019/0316/003740_c5175e6b_554725.png \"SliderCaptcha.png\")\n![输入图片说明](https://gitee.com/uploads/images/2019/0410/124955_f9b6d54c_554725.png \"Untitled.png\")\n\n## Quick Start\n\n### D"
+    },
+    "license": {
+      "url": "https://github.com/ArgoZhang/SliderCaptcha/blob/f70d04d00f323a58e51c3feeeaa4867d21a5536c/LICENSE",
+      "apiUrl": "https://api.github.com/repos/ArgoZhang/SliderCaptcha/license?ref=f70d04d00f323a58e51c3feeeaa4867d21a5536c",
+      "contentSha256": "cd170462ef6e305671b22562afeb7859dcfc561ecf2344670a65af844ca658f3",
+      "path": "LICENSE",
+      "openingExcerpt": "Apache License\nVersion 2.0, January 2004\nhttp://www.apache.org/licenses/\n\nTERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n1. Definitions.\n\n\"License\" shall mean the terms and conditions for use, reproduction, and\ndistribution as defined by Sections 1 through 9 of this document.\n\n\"Licensor\" shall mean the copyright owner or entity authorized by the copyright\nowner that is granting the License.\n\n\"Legal Entity\" shall mean the union of the acting entity and all other entities\nthat control, are controlled by, or are under common control with that entity.\nFor the purposes of this definition, \"control\" means (i) the power, direct or\nindirect, to cause the direction or management of such entity, whether by\ncontract or otherwise, or (ii) ownership of fifty percent (50%) or more of the\noutstanding shares, or (iii) beneficial ownership of such entity.\n\n\"You\" (or \"Your\") shall mean an individual or Legal Entity exercising\npermissions granted by this License.\n\n\"Source\" form shall mean "
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

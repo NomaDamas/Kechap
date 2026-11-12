@@ -1,0 +1,22 @@
+{
+  "url": "https://www.usenix.org/conference/usenixsecurity25/presentation/teoh",
+  "resolvedUrl": "https://www.usenix.org/conference/usenixsecurity25/presentation/teoh",
+  "fetchedAt": "2026-11-12T09:50:03.101903+00:00",
+  "rawSha256": "5e0afe80aa61b5d9874d492b498f0831a43f5d33739f1bbb2ecd12e6d4784c33",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "60.7",
+      "text": "ensive experiments show that Halligan is a game-changer to the known practice of adopting visual CAPTCHAs, which achieves a solving rate of 60.7% on 2,600 challenges belonging to 26 types of visual CAPTCHAs. Further, we use Halligan to infiltrate human-driven CAPTCHA farms, achieving an average solving rate of 70.6% on previously unseen visual challenges from CAPTCHAs in the wild over a 30-day period. Based on the experimental results, we further shed light on puzzle-less anti-bot alternatives in this era. Category:&nbsp; Short Presentati"
+    },
+    {
+      "term": "70.6",
+      "text": "ing to 26 types of visual CAPTCHAs. Further, we use Halligan to infiltrate human-driven CAPTCHA farms, achieving an average solving rate of 70.6% on previously unseen visual challenges from CAPTCHAs in the wild over a 30-day period. Based on the experimental results, we further shed light on puzzle-less anti-bot alternatives in this era. Category:&nbsp; Short Presentation Open Access Media USENIX is committed to Open Access to the research presented at our events. Papers and proceedings are freely available to everyone once the event begi"
+    },
+    {
+      "term": "captcha",
+      "text": " Are CAPTCHAs Still Bot-hard? Generalized Visual CAPTCHA Solving with Agentic Vision Language Model | USENIX Back to USENIX Sign In Conferences Attend Registration Information Registration Discounts Grant Opportunities Venue, Hotel, and Travel Schedule Technical Sessions Cycle 1 Accepted Papers Activities Poster Session Participate Call for Papers Submission Policies and Instructions Reviewing Model Ethics Gu"
+    }
+  ],
+  "note": "Vendor/author claims are not independent Kechap security measurements."
+}

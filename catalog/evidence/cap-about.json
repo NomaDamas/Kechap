@@ -1,0 +1,26 @@
+{
+  "url": "https://capjs.js.org/about.html",
+  "resolvedUrl": "https://capjs.js.org/about.html",
+  "fetchedAt": "2026-11-12T09:50:01.227139+00:00",
+  "rawSha256": "fbf1a57ddab2742d5adcca6ec5885890858d5eb781852b1c7153aeaedbf3e8f9",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "server",
+      "text": "Cap is bot protection you can read, audit, and self-host: A ~20 KB widget that renders a single checkbox instead of image puzzles. capd , a server that ships as one Docker container with a dashboard and multi-site-key support. A server library , capjs-core , for running challenges inside your own backend, plus community ports to other languages. A siteverify API compatible with reCAPTCHA and hCaptcha , so migrating is mostly a URL swap. The full source lives at github.com/tiagozip/cap under the Apache 2.0 license . Why does Cap exist? ​ Mai"
+    },
+    {
+      "term": "proof-of-work",
+      "text": "out.md for this page in Markdown format About Cap ​ TL;DR: Cap is a free, open-source CAPTCHA alternative that replaces visual puzzles with proof-of-work and instrumentation challenges. It&#39;s licensed under Apache 2.0 and runs entirely on your own infrastructure, so visitor data never reaches a third party. What is Cap? ​ Cap is bot protection you can read, audit, and self-host: A ~20 KB widget that renders a single checkbox instead of image puzzles. capd , a server that ships as one Docker container with a dashboard and multi-site-key support."
+    },
+    {
+      "term": "self-host",
+      "text": "rely on your own infrastructure, so visitor data never reaches a third party. What is Cap? ​ Cap is bot protection you can read, audit, and self-host: A ~20 KB widget that renders a single checkbox instead of image puzzles. capd , a server that ships as one Docker container with a dashboard and multi-site-key support. A server library , capjs-core , for running challenges inside your own backend, plus community ports to other languages. A siteverify API compatible with reCAPTCHA and hCaptcha , so migrating is mostly a URL swap. The full source"
+    },
+    {
+      "term": "captcha",
+      "text": " About Cap – Cap CAPTCHA Skip to content Cap Search K Main Navigation Docs Demo Compare English 简体中文 Deutsch Français ไทย English 简体中文 Deutsch Français ไทย GitHub, 8.3k stars Return to top Copy markdown On this page Are you an LLM? You can read better optimized documentation at /about.md for this page in Markdown format About Cap ​ TL;DR: Cap is a free, open-source CAPTCHA alternative that replaces visual puzzles with pr"
+    }
+  ],
+  "note": "Vendor/author claims are not independent Kechap security measurements."
+}

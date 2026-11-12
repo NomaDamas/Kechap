@@ -1,0 +1,13 @@
+{
+  "url": "https://api.npmjs.org/downloads/point/last-month/%40cap.js%2Fwidget",
+  "fetchedAt": "2026-11-12T09:59:24.542341+00:00",
+  "rawSha256": "8997722cdcd0d25abfce6f0bb30ff664f8e0f61f37735b5acfd7301f168bf89f",
+  "evidenceType": "npm-download-metric",
+  "data": {
+    "downloads": 166070,
+    "start": "2026-10-13",
+    "end": "2026-11-11",
+    "package": "@cap.js/widget"
+  },
+  "limitation": "Downloads are registry activity, not unique deployments, humans or audited security effectiveness."
+}

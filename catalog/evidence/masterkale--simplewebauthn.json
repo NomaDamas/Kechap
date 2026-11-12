@@ -1,0 +1,36 @@
+{
+  "repository": "MasterKale/SimpleWebAuthn",
+  "fetchedAt": "2026-11-12T09:42:32.709282+00:00",
+  "revision": "01d1a640d5ded4fced0b45a9d806fd0ff44ad244",
+  "metadataUrl": "https://api.github.com/repos/MasterKale/SimpleWebAuthn",
+  "metadataSha256": "3f7e715e6d273723a467779da96165d0215a1e2b19525ce87abc5163f0c0e781",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2392,
+  "archived": false,
+  "pushedAt": "2026-11-06T20:21:15Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/MasterKale/SimpleWebAuthn/blob/01d1a640d5ded4fced0b45a9d806fd0ff44ad244/README.md",
+      "apiUrl": "https://api.github.com/repos/MasterKale/SimpleWebAuthn/readme?ref=01d1a640d5ded4fced0b45a9d806fd0ff44ad244",
+      "contentSha256": "464532993190f48a693f4ada5f1658d2a25b74555b2048f850d6d9cd84bc9bb0",
+      "path": "README.md",
+      "openingExcerpt": "# SimpleWebAuthn <!-- omit in toc -->\n\n![WebAuthn](https://img.shields.io/badge/WebAuthn-Simplified-blueviolet?style=for-the-badge&logo=WebAuthn)\n[![npm (scoped)](https://img.shields.io/npm/v/@simplewebauthn/server?style=for-the-badge&logo=npm)](https://www.npmjs.com/search?q=simplewebauthn)\n[![JSR Scope](https://jsr.io/badges/@simplewebauthn?style=for-the-badge)](https://jsr.io/@simplewebauthn)\n\n- [Overview](#overview)\n- [Installation](#installation)\n- [Documentation](#documentation)\n- [Sponsors](#sponsors)\n- [Example](#example)\n- [Contributions](#contributions)\n- [Development](#development)\n\n## Overview\n\nThis project features two complimentary libraries to help reduce the amount of work needed to\nincorporate WebAuthn into a website. The following packages are maintained here:\n\n- [@simplewebauthn/server](https://github.com/MasterKale/SimpleWebAuthn/tree/master/packages/server)\n- [@simplewebauthn/browser](https://github.com/MasterKale/SimpleWebAuthn/tree/master/packages/browser)\n\n## In"
+    },
+    "license": {
+      "url": "https://github.com/MasterKale/SimpleWebAuthn/blob/01d1a640d5ded4fced0b45a9d806fd0ff44ad244/LICENSE.md",
+      "apiUrl": "https://api.github.com/repos/MasterKale/SimpleWebAuthn/license?ref=01d1a640d5ded4fced0b45a9d806fd0ff44ad244",
+      "contentSha256": "bd9e3f45696472076c7160c7f66e54b2d62d38bc2646c812d19be83ee4400c63",
+      "path": "LICENSE.md",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2020 Matthew Miller\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and\nassociated documentation files (the \"Software\"), to deal in the Software without restriction,\nincluding without limitation the rights to use, copy, modify, merge, publish, distribute,\nsublicense, and/or sell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial\nportions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT\nNOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES\nOR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN\nCONN"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

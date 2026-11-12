@@ -1,0 +1,36 @@
+{
+  "repository": "dchest/captcha",
+  "fetchedAt": "2026-11-12T09:42:47.276692+00:00",
+  "revision": "6f8a3fce31a3a5f25edd18555c6f38eff73275f6",
+  "metadataUrl": "https://api.github.com/repos/dchest/captcha",
+  "metadataSha256": "a8aff9efd39a686978f2f4bc91f7f605dc7a0b853851b9f0122d25121ecfac6d",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2065,
+  "archived": false,
+  "pushedAt": "2024-12-11T08:07:11Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/dchest/captcha/blob/6f8a3fce31a3a5f25edd18555c6f38eff73275f6/README.md",
+      "apiUrl": "https://api.github.com/repos/dchest/captcha/readme?ref=6f8a3fce31a3a5f25edd18555c6f38eff73275f6",
+      "contentSha256": "3e97fd64afce032cb0f67d2d17a1ee342dde1e7512ab6c0aa5b332d279c3e60a",
+      "path": "README.md",
+      "openingExcerpt": "Package captcha\n=====================\n\n**:warning: Warning: this captcha can be broken by advanced OCR captcha breaking algorithms.**\n\n\timport \"github.com/dchest/captcha\"\n\nPackage captcha implements generation and verification of image and audio\nCAPTCHAs.\n\nA captcha solution is the sequence of digits 0-9 with the defined length.\nThere are two captcha representations: image and audio.\n\nAn image representation is a PNG-encoded image with the solution printed on\nit in such a way that makes it hard for computers to solve it using OCR.\n\nAn audio representation is a WAVE-encoded (8 kHz unsigned 8-bit) sound with the\nspoken solution (currently in English, Russian, Chinese, and Japanese). To make\nit hard for computers to solve audio captcha, the voice that pronounces numbers\nhas random speed and pitch, and there is a randomly generated background noise\nmixed into the sound.\n\nThis package doesn't require external files or libraries to generate captcha\nrepresentations; it is self-contained.\n\nTo "
+    },
+    "license": {
+      "url": "https://github.com/dchest/captcha/blob/6f8a3fce31a3a5f25edd18555c6f38eff73275f6/LICENSE",
+      "apiUrl": "https://api.github.com/repos/dchest/captcha/license?ref=6f8a3fce31a3a5f25edd18555c6f38eff73275f6",
+      "contentSha256": "60eb46d0207f1c1bb6a735e92cb829089a6b5c2c303a94b60ad8ac5b93b40516",
+      "path": "LICENSE",
+      "openingExcerpt": "Copyright (c) 2011-2014 Dmitry Chestnykh <dmitry@codingrobots.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FRO"
+    }
+  },
+  "notes": "README explicitly warns advanced OCR can break this CAPTCHA. Use as a benchmark baseline, not proof of strong human presence."
+}

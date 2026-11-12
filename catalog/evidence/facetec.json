@@ -1,0 +1,27 @@
+{
+  "url": "https://dev.facetec.com/",
+  "resolvedUrl": "https://dev.facetec.com/",
+  "fetchedAt": "2026-11-12T10:21:26.246136+00:00",
+  "rawSha256": "1356aca62eac5caf85257e782add54cdda8e5331f0cffdb1efa1124e3d79a92f",
+  "title": "FaceTec Developer Documentation - FaceTec",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "liveness",
+      "text": " FaceTec Developer Documentation - FaceTec FaceTec Developer Documentation World-leading 3D Liveness & Face Matching for iOS, Android & Webcams with NIST/NVLAP Lab Certified Level 1&2 Anti-Spoofing & a $600,000 Spoof Bounty Program . v10.1 has been released! Please see the v10.1 Release Notes here . v10.1 – Significantly Improved Security & Usability. FREE Unlimited Photo ID Scans With OCR, 2,300+ Officially Supported OCR Templates, Two+ Forms of ID Support, Universal 3D FaceVectors, & Much More"
+    },
+    {
+      "term": "server",
+      "text": "ersal 3D FaceVectors, & Much More Improvements & Features in v10 : Backwards Compatibility. FaceTec Server v10 is backward compatible with v9.x.x of the FaceTec Device SDKs. All 3D FaceScans, 3D FaceMaps, and ID Scans generated from pre-v10 FaceTec Versions are compatible with FaceTec Server v10. The v10 Device SDKs ARE NOT backward compatible with v9.7.x and v9.6.x FaceTec Servers. Increased Security. Significant improvements have been made to FaceTec's 3D Liveness Security Layers to block emerging G"
+    },
+    {
+      "term": "token",
+      "text": " the amount of code needed to integrate the FaceTec Device SDKs and FaceTec Server. No-Code Session Tokens. Session Token Security Checks are now handled automatically without the need for extra code and network request handling. Simple Key Management. SDK Encryption Keys & FaceScan/FaceMap/ID Scan Encryption Keys no longer need to be set in the v10 Device SDKs, reducing management overhead and improving version update times. Improved Support for Landscape Mode. The FaceTec Device SDKs can now be ini"
+    },
+    {
+      "term": "authentication",
+      "text": " FaceTec's 2,300+ Official OCR Templates or not. This captures any Photo ID and still performs some authentication checks, even if FaceTec’s AI has never seen that Photo ID Type before. Dashboard + FaceTec Server. Improved Server Dashboard UI is included with Account De-duplication and Known Fraudster List Features. Video Injection & Camera Bypass Security. Lab Tested & Security Confirmed Level 4 & 5 Video Injection & Camera Bypass Security. 1:N Search/Duplicate Check Speed Improvements. 1:N Search/Duplicatio"
+    }
+  ],
+  "note": "Documentation/marketing description only; no live certification or independent performance validation."
+}

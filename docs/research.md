@@ -1,126 +1,89 @@
-# Kechap 조사 노트와 근거 수집 계획
+# Kechap 실시간 조사와 근거
 
-> 최신 범위 변경: 사용자 지시에 따라 Aside와 Windows VM은 실행하지 않습니다. 아래 관련 기록은 과거 시도·계획이며 현재 필수 작업이 아닙니다. 현재 보고와 실행 순서는 [진행 상태와 수정 계획](status-and-plan.md)을 따릅니다.
+조회일: **2026-11-12 UTC**. 이전 DNS 제한은 해소되어 GitHub API, upstream README·LICENSE, 공급자 공식 문서, npm 다운로드 API를 실제 읽었다. Aside 연결과 Windows VM은 사용자 지시에 따라 제외했다. 현재 카탈로그는 **50개 역할별 후보, GitHub 출처를 검토한 후보 37개**다. 이 수치는 검증된 CAPTCHA 엔진 50개 또는 운영 승인 37개라는 의미가 아니다.
 
-기준일: 2026-11-12. 이 문서는 **오프라인 후보 조사**다. 현재 실행 환경에서 `api.github.com`과 `aside.com`의 DNS 조회가 실패했다(`curl` exit 6). 따라서 GitHub 현재 별 수, 최신 커밋, 실제 배포 수, 라이선스 원문, 벤더 최신 가격·기능, Awesome list 및 MCP의 존재 여부를 실시간 검증하지 못했다. 아래 링크는 후속 조사 출발점이며 이번 세션에서 읽었다는 증거가 아니다. 사용자 제공 설명 역시 독립 검증 결과로 바꾸어 표기하지 않는다.
+근거는 [`catalog/evidence/`](../catalog/evidence/)에 조회일·URL·upstream revision·내용 hash·인용 구간으로 보존했다. 원본 응답 전체는 로컬 `.local/research/`, `.local/research-extra/`에 있고, 공개 근거는 필요한 메타데이터와 짧은 인용만 담는다. `source-reviewed`는 문서·코드 출처를 읽었다는 뜻이며 보안 감사, 실제 CAPTCHA 방어력 측정, 배포 고객 수 검증이 아니다. **현재 모든 외부 후보의 `productionReady`는 false**다. 실행 어댑터와 실제 테스트 상태는 코드·README를 따르며 이 조사만으로 자동 승인하지 않는다.
 
-## 제품의 기준
+## 핵심 조사 결과
 
-Kechap은 CAPTCHA 콘텐츠를 한데 복사한 제품보다 **인증 수단의 레지스트리 + 정책 엔진 + 공식 검증 어댑터 + 에이전트 설치 도구 + 재현 가능한 벤치마크**로 만드는 편이 낫다. 제품 개발자는 “한국 이용자 중심, 가입 폼, 자체 호스팅 필수, 생체정보 금지, 월 검증량, 모바일 비중, 접근성 요구”를 입력하고, 에이전트는 해당 조건에 맞는 후보와 선택 이유를 제시한다. 서버 키와 배포 승인이 필요한 지점만 사람이 결정한다.
+1. **관련 Awesome list는 이미 있다.** [ZYSzys/awesome-captcha](https://github.com/ZYSzys/awesome-captcha)는 라이브러리·생성기·크랙 도구를 함께 모은 목록이다. [andorsk/awesome-proof-of-personhood](https://github.com/andorsk/awesome-proof-of-personhood)는 personhood 접근과 논문을 모은다. 따라서 Kechap의 가치는 목록 존재 자체가 아니라 도입·운영·측정 품질이어야 한다.
+2. **CAPTCHA MCP도 이미 있지만 상당수가 솔버다.** 조사한 `captcha mcp in:name,description` 표본에는 솔버와 브라우저 우회 도구가 다수였다. 사람에게 판단을 의뢰하는 AskAHuman MCP도 있으나 제품에 방어를 설치하는 SDK와는 다르다. 조사 범위에서 Kechap의 전체 조합과 같은 검증된 통합 제품은 확인하지 못했지만, 검색으로 부재나 최초를 증명하지 않는다. [비교표](comparison.md)를 참고한다.
+3. **10K stars가 필수이면 직접 CAPTCHA 후보 상당수가 제외된다.** ALTCHA 2,897, Cap 8,352, mCaptcha 2,501이었다. 10K를 넘은 후보는 Anubis·FingerprintJS·SafeLine·CrowdSec처럼 프록시·기기 신호·위험 방어 역할이 많다. 이들을 폼 CAPTCHA 엔진과 같은 기능으로 취급하면 잘못된 추천이 된다.
+4. **라이선스와 유지보수에 실질적 수정이 있었다.** base64Captcha는 Apache-2.0이며 이전 MIT 후보 표기를 수정했다. Securimage는 BSD-2-Clause이고 README가 유지보수 종료를 명시한다. anji-plus/captcha의 현재 README는 유지보수 중단을 표시한다. Private Captcha는 PolyForm Noncommercial이어서 상업적 무제한 OSS로 추천하면 안 된다.
+5. **REA는 Linux에서도 일부 분석이 가능하다.** README가 Linux의 procps `ps` 전제와 static JavaScript/Electron 분석 경로를 설명한다. macOS 또는 Windows만 있어야 하는 도구라는 전제는 틀렸다. 현재 Node 요구는 22.23.4+/24.22.1+/26.12.1+이며 로컬 Node 20에서는 바로 실행할 수 없다. 실제 실행·상용 엔진 추출은 하지 않았다.
 
-클라이언트에서 CAPTCHA UI를 교체하는 것만으로는 안전한 로테이션이 되지 않는다. 서버가 발급 시점의 provider, purpose, origin, 정책 버전, 만료 시각을 고정하고 해당 provider의 서버 검증으로만 결과를 받는 방식이어야 한다. 유효한 토큰을 다른 액션이나 다른 공급자로 옮기지 못하게 해야 한다. 공급자 장애 때 더 약한 수단으로 조용히 통과시키는 정책은 금지하고 명시적 대체 경로를 제공한다.
+## 인기도와 사용 근거는 분리한다
 
-MCP와 Skill은 **제품에 붙여 주는 개발 도구**이고, 브라우저 사용자 CAPTCHA를 대신 풀어 주는 솔버가 아니다. SDK와 서버 검증 API가 런타임이며 MCP/Skill이 없어도 제품이 동작해야 한다.
+10K는 우선 **GitHub stars ≥ 10,000**으로 해석했다. 별 수는 조회 시점 값이며 보안·유지보수·활성 사용자 수를 증명하지 않는다. 다음 값은 공개 evidence 파일과 카탈로그의 `starsCheckedAt`에 연결된다.
 
-## 서로 다른 보증 수준
+| 후보 | GitHub stars | 읽은 라이선스 | 실제 역할과 도입 판단 |
+| --- | ---: | --- | --- |
+| Anubis | 24,115 | MIT | AI scraper 방어용 프록시/PoW. 폼 위젯이나 human-presence 증명과 다름 |
+| FingerprintJS | 28,731 | MIT, 확인한 revision 기준 | 브라우저 기기 식별 신호. OSS와 상용 Fingerprint Identification은 다른 구현 |
+| SafeLine | 23,258 | 저장소 루트 GPL-3.0 | WAF·프록시의 anti-bot 기능. 배포되는 모든 바이너리의 소스 공개 여부는 별도 확인 필요 |
+| CrowdSec | 15,561 | MIT | 로그·HTTP 행동·평판·remediation. CAPTCHA와 결합 가능한 위험 레이어 |
+| Cap | 8,352 | Apache-2.0 | self-hosted PoW/instrumentation, 공식 repo는 tiagozip/cap |
+| ALTCHA | 2,897 | MIT | self-hosted PoW. 실제 버전별 접근성·Sentinel/서비스 경계 확인 필요 |
+| mCaptcha | 2,501 | AGPL-3.0 | PoW 백엔드. 배포·수정·서비스 제공 의무 검토 |
+| GoCaptcha | 2,472 | Apache-2.0 | Go click/slide/drag/rotate 라이브러리, 행동 입력 자체가 인간 보장은 아님 |
+| Laravel Captcha | 2,592 | MIT | Laravel 이미지 CAPTCHA 통합, 현대 OCR/VLM 기준선 측정 필요 |
+| mosparo | 314 | MIT | 입력 내용 규칙 기반 스팸 필터. 퍼즐 없는 폼 방어, human proof는 아님 |
 
-| 분류 | 확인하려는 것 | 후보 예 | 증명하지 못하는 것 |
-| --- | --- | --- | --- |
-| 봇 비용·위험 신호 | 요청 자동화 비용 또는 수상한 환경 | ALTCHA, Cap, mCaptcha, Anubis, Turnstile | 실제 사람 존재, 실명, 유일성 |
-| 인터랙션 | 과제와 일치하는 입력이 발생 | 기존 이미지·드래그, Kechap replay 실험 | 그 입력의 작성자가 사람인지 |
-| 라이브니스 | 지금 살아 있는 사람이 센서 앞에 있음 | AWS, FaceTec, iProov, Pindrop | 등록 본인 또는 한 사람 한 계정 |
-| 계정 연속성 | 등록된 인증 수단 소유 | WebAuthn/passkey | 최초 등록자가 사람인지 |
-| 그룹 소속 | 등록 그룹의 구성원임 | Semaphore | 그룹 등록 절차가 확인하지 않은 인간성 |
-| Personhood | 특정 발급자의 인간/유일성 자격 | World ID 등 | 발급자·자격 종류 밖의 보편적 보장 |
+npm의 최근 1개월 다운로드도 별도로 조회했다. 기간은 **2026-10-13~2026-11-11**이다. `altcha` 1,045,779회, `@cap.js/widget` 166,070회, `@fingerprintjs/fingerprintjs` 8,703,708회, `@fingerprintjs/botd` 1,514,604회, `svg-captcha` 324,929회, `@simplewebauthn/server` 34,442,061회였다. [npm 근거](../catalog/evidence/npm-altcha.json)처럼 응답을 보존했다. **다운로드는 CI·재설치·캐시 영향을 받는 배포 활동 지표이며 고유 제품·월 사용자·보안 효과가 아니다.** Python `lepture/captcha`와 npm의 동명 `captcha`를 동일 프로젝트로 연결하지 않는다.
 
-“사람만 할 수 있는 게임”이라는 표현은 검증 가능한 보안 주장이 아니다. 서버 replay는 위조된 성공 선언을 막는 수단이고, 유효한 입력을 생성하는 에이전트까지 구분해 준다는 뜻은 아니다. Kechap은 이 차이를 선택 UI, 결과 스키마, 문서와 벤치마크에서 유지해야 한다.
+Cap README는 bunny.net·AdGuard의 운영 사용을 주장한다. 이는 **maintainer 주장**으로 분류하며 두 고객의 독립 문서나 실사용 계측을 확인한 것으로 표시하지 않는다. Anubis README의 후원사 목록 역시 배포 고객 목록과 같지 않다. 실제 고객·외부 감사 근거는 후속 provider 승인 단계의 별도 필드다.
 
-## 오픈소스 후보군
+## 후보 분류와 우선순위
 
-기계 판독 원본은 [`catalog/providers.json`](../catalog/providers.json)에 있다. 34개 항목은 역할이 서로 다르며 모두 CAPTCHA 엔진인 것은 아니다. 초기 라이선스 표기는 알려진 후보값이고, 현재 원문을 확인한 법적 감사 결과가 아니다. 각 항목의 `stars`, `starsCheckedAt`, `over10k`는 모두 `null`이다.
-
-| 후보 | 형태 / 유용한 용도 | 도입 전에 확인할 점 |
+| 분류 | 후보 | Kechap에서의 위치 |
 | --- | --- | --- |
-| [ALTCHA](https://github.com/altcha-org/altcha) | self-host PoW, 폼·API 자동화 비용 부과 | 코어/유료 위험 분석 기능 경계, 저사양 기기 비용, 재사용 방지 |
-| [Cap](https://capjs.js.org/) | self-host CAPTCHA 대체 후보 | 공식 저장소, instrumentation 범위, siteverify 호환 버전 |
-| [mCaptcha](https://github.com/mCaptcha/mCaptcha) | self-host PoW | AGPL 적용 범위와 수정·서비스 제공 의무 검토 |
-| [Anubis](https://github.com/TecharoHQ/anubis) | scraper 방어 reverse proxy | 폼 위젯과 다른 통합, 정상 봇 allowlist, JS 불가 사용자 |
-| [Cerberus](https://github.com/SJTUG/cerberus) | PoW 기반 edge 보호 후보 | 현재 프로젝트 상태, 라이선스, 프록시 배포 계약 |
-| [dchest/captcha](https://github.com/dchest/captcha), [base64Captcha](https://github.com/mojocn/base64Captcha) | Go 이미지·오디오 생성기 | 현대 OCR/VLM 방어력 별도 측정, 세션·TTL 직접 결합 |
-| [Tianai](https://github.com/dromara/tianai-captcha), [AJ-Captcha](https://github.com/anji-plus/captcha) | Java 드래그·이미지 인터랙션 | 키보드/비시각 대체, upstream 유지보수, 공격 비용 |
-| [lepture/captcha](https://github.com/lepture/captcha), [django-simple-captcha](https://github.com/mbi/django-simple-captcha) | Python / Django 통합 | 라이브러리를 완성된 위험 엔진으로 간주하지 않을 것 |
-| [svg-captcha](https://github.com/produck/svg-captcha), [Gregwar](https://github.com/Gregwar/Captcha), [Securimage](https://github.com/dapphp/securimage) | JS/PHP 기존 텍스트 CAPTCHA | 주로 비교 기준선; 효과·접근성 측정 없이 추천 금지 |
-| [BotD](https://github.com/fingerprintjs/BotD) | 브라우저 자동화 신호 | 클라이언트 신호 조작 가능성, 오탐, 단독 인증 금지 |
-| [FingerprintJS](https://github.com/fingerprintjs/fingerprintjs), [CreepJS](https://github.com/abrahamjuliot/creepjs) | 기기 신호·연구 도구 | 개인정보, 라이선스 버전, signal ≠ human 구분 |
-| [LibreCaptcha 후보](https://github.com/librecaptcha/lc-core) | 커뮤니티 CAPTCHA 후보 | 저장소 정체성부터 재확인해야 하는 discovery 항목 |
-| [Friendly Captcha](https://github.com/FriendlyCaptcha/friendly-challenge) | 공개 client + 상용 서비스 경계 조사 | 버전별 라이선스와 self-host 범위 |
-| [SimpleWebAuthn](https://github.com/MasterKale/SimpleWebAuthn) | 인증된 계정의 대체 경로 | 최초 인간성 증명이 아님; 복구·등록 UX |
-| [Semaphore](https://github.com/semaphore-protocol/semaphore) | 익명 그룹 소속·nullifier | 등록자 검증과 범위 제한은 별도 문제 |
+| 폼/API 연산 작업 | ALTCHA, Cap, mCaptcha, Wicketkeeper | 실제 엔진 연동 우선. PoW는 automation cost, 사람 증명 아님 |
+| 이미지·오디오 생성 | dchest/captcha, base64Captcha, lepture/captcha, Django Simple Captcha, Gregwar, Laravel Captcha, svg-captcha | 생성·저장·만료·replay 계약을 검토하고 OCR/VLM 기준선으로 측정 |
+| 상호작용 | Tianai, GoCaptcha, SliderCaptcha, AJ-Captcha 역사적 fork | 키보드·비시각 대안과 서버 검증 유무 검토. 입력 궤적만으로 human=true 발급 금지 |
+| 위험·프록시 | Anubis, Cerberus, SafeLine, CrowdSec, BotD, FingerprintJS | 독립된 risk/edge layer. 기기나 요청 위험은 identity와 별도 |
+| 퍼즐 없는 스팸 방어 | mosparo, Rails Invisible Captcha | 내용 규칙·honeypot·timing. 차단 비용과 오탐 측정 필요 |
+| 상용 공식 API | Turnstile, hCaptcha, reCAPTCHA, Arkose, GeeTest | 공식 서버 검증·키 발급·이용조건으로 연동. proprietary engine을 소유한 것으로 주장하지 않음 |
+| 선택적 liveness | AWS, FaceTec, iProov, Pindrop | 명시적 동의와 equivalent recovery가 있는 고위험 승격 후보. 원본 영상/음성 기본 비수집 |
+| 계정/유일성 | SimpleWebAuthn, World ID, Semaphore | account continuity, issuer-backed personhood, group membership을 각각 구분 |
 
-### “10K 이상”을 다루는 규칙
+### 승인 전에 제외·검토할 사례
 
-요청의 10K는 우선 **GitHub stars ≥ 10,000** 후보 필터로 해석한다. 다운로드·배포·월 사용자 수 10K를 뜻한다면 별도 지표로 분리해야 한다. 별은 인기도 신호이며 보안 검증, 유지보수 품질, 실제 사용량의 대체 지표가 아니다. 현재 별 수를 조회하지 못했으므로 이 문서는 어떤 후보도 “10K 검증 완료”로 표시하지 않는다.
+- **dchest/captcha:** README 자체가 advanced OCR에 깨질 수 있다고 경고한다. 자동 추천의 강한 방어로 올리지 않는다.
+- **Securimage:** 유지보수 종료. 역사적 기준선으로만 남긴다.
+- **anji-plus/captcha:** 현재 canonical repo의 별 수는 27이며 README는 중단 안내다. `raodv/captcha`의 1,704 stars를 합치거나 과거 인기를 현재 canonical 값으로 대체하지 않는다.
+- **Private Captcha:** PolyForm Noncommercial 1.0.0. 상업 배포는 별도 라이선스 조건 확인 필요. permissive OSS와 같은 자동 설치 후보가 아니다.
+- **Wicketkeeper:** client/example MIT, server AGPL v3인 복합 라이선스다.
+- **Friendly Captcha:** 과거 `friendly-challenge` 클라이언트 MIT와 v2 SDK MPL-2.0, 호스팅 엔진·서비스 조건을 구분한다.
+- **SwipeCaptcha:** API·README는 읽었으나 LICENSE 원문을 찾지 못했다. 소스가 보인다는 이유만으로 복사·배포 승인을 주지 않는다.
+- **FCaptcha:** AI-agent 차단·WCAG·오탐 예산 등 주장은 maintainer 주장이다. Kechap이 독립 재현한 결과로 쓰지 않는다.
 
-연결 가능한 환경에서는 후보별 GitHub API `/repos/{owner}/{repo}` 응답에서 `stargazers_count`, `archived`, `pushed_at`, `license.spdx_id`, 기본 브랜치를 수집하고 응답 시각·원문 hash를 기록한다. README, LICENSE, 릴리스, 보안 정책, 최근 이슈 응답, 외부 도입 사례를 pin한 커밋과 연결한다. 출시 시 승인하는 어댑터는 별 수와 별개로 다음 evidence gate를 통과해야 한다.
+## 공식 문서에서 확인한 서버 계약
 
-1. upstream 정체성과 배포 패키지 소유자가 일치하고 버전·라이선스를 확인했다.
-2. 실제 공식 API로 sandbox/contract test를 통과했다.
-3. 서버 검증, TTL, replay, purpose·hostname 결속이 확인됐다.
-4. 최소 한 가지 접근 가능한 동등 경로와 장애 정책이 검증됐다.
-5. 개인정보·운영 비용 및 유지보수 책임이 문서화됐다.
-6. 보안 효과는 재현 가능한 공격/인간 실험 또는 외부 감사의 범위와 버전을 함께 제시한다.
+- [Turnstile 공식 server validation](https://developers.cloudflare.com/turnstile/get-started/server-side-validation/): 서버 Siteverify 필수, 300초 유효 토큰, 일회성 의도, hostname/action/cdata 검사. 최신 문서는 토큰 재사용과 네트워크 convergence도 별도로 설명한다. 공급자 일회성에만 의존하지 않고 Kechap의 원자적 소비도 필요하다. [근거](../catalog/evidence/turnstile-server.json)
+- [hCaptcha 문서](https://docs.hcaptcha.com/): siteverify, secret/response, 테스트 키, 토큰 만료·single-use. 개발 호스트 설정과 CSP도 검토해야 한다. [근거](../catalog/evidence/hcaptcha.json)
+- [Google classic v3 문서](https://developers.google.com/recaptcha/docs/v3): 서버가 action과 risk score를 검증해야 한다. 조회 페이지는 deprecated 안내와 Google Cloud Fraud Defense 경로를 표시하므로 classic siteverify와 Enterprise assessment를 혼동하지 않는다. [근거](../catalog/evidence/recaptcha-v3.json)
+- [Cap 공식 설명](https://capjs.js.org/about.html): Apache-2.0 self-host, widget/capd/capjs-core, PoW와 instrumentation, reCAPTCHA/hCaptcha 호환 siteverify를 설명한다. [근거](../catalog/evidence/cap-about.json)
+- [AWS Face Liveness](https://docs.aws.amazon.com/rekognition/latest/dg/face-liveness.html): 0~100 probabilistic confidence이며 완전 보장을 하지 않고 다른 요인과 risk-based decision을 권한다. CAPTCHA 단독 대체라는 주장은 하지 않는다. [근거](../catalog/evidence/aws-liveness.json)
+- [World ID](https://docs.world.org/world-id/overview): Proof of Human / Attributes / Presence는 보증이 서로 다르다. issuer credential·scope·nullifier에 따른 중복 범위를 확인해야 한다. [근거](../catalog/evidence/world-id.json)
+- [WCAG 2.2 1.1.1](https://www.w3.org/TR/WCAG22/#non-text-content): CAPTCHA의 목적을 설명하는 text alternative와 서로 다른 감각 출력의 대체 형태를 요구한다. 실제 통합이 이를 만족하는지는 별도의 보조공학 평가가 필요하다. [근거](../catalog/evidence/wcag-captcha.json)
 
-의존성은 자동으로 “최신”으로 바꾸지 않는다. 후보 발견, 승인된 버전, 추천 가능 상태를 서로 분리한다.
+## REA 조사 결과와 범위
 
-## 클로즈드소스 연동
+[morluto/rea](https://github.com/morluto/rea)의 README·MIT LICENSE를 revision `d74549e495…`에서 읽었다. [증거](../catalog/evidence/morluto--rea.json)의 전체 SHA를 기준으로 한다. REA는 분석 도구이며 CAPTCHA 서버 엔진 자체가 아니다.
 
-[Turnstile](https://developers.cloudflare.com/turnstile/), [reCAPTCHA](https://docs.cloud.google.com/recaptcha/docs/overview), [hCaptcha](https://docs.hcaptcha.com/), [Arkose](https://developer.arkoselabs.com/docs/standard-setup), [GeeTest](https://docs.geetest.com/)는 공식 API 어댑터 대상으로 조사한다. Kechap에 벤더의 CAPTCHA 엔진 소유권이 생기는 것은 아니다. API·SDK 라이선스, 데이터 처리, 키 발급, 요금과 장애 정책을 각 항목에 표시한다.
+README는 static JavaScript/Electron 분석에 native analysis engine이 필요 없고 Linux에서 procps 호환 `ps`가 필요하다고 명시한다. native 분석은 Hopper·Ghidra·IDA·Kuna 등 선택한 provider와 호스트 지원에 의존한다. Node.js는 22.x ≥22.23.4, 24.x ≥24.22.1 또는 26.12.1+를 요구한다. 현재 작업 Node 20과는 차이가 있으므로 `npx ...@latest`를 곧바로 실행한 것으로 보고하지 않는다.
 
-AWS Face Liveness, FaceTec, iProov, Pindrop은 일반 가입폼의 기본값이 아니라 명시적으로 생체정보와 높은 비용을 허용한 고위험 정책의 승격 후보로만 둔다. 원본 영상·음성을 Kechap이 수집하는 공통 API부터 만들지 않는다. vendor session/reference와 필요한 최소 검증 결과를 받는 방향을 우선 검토한다. World ID 역시 자격 종류별 보증 수준과 사용자 등록 가능 지역을 확인해야 한다.
+이번에는 지원 OS·라이선스·분석 계약을 확인했다. **설치, 에이전트 전역 설정 변경, 상용 서비스 분석, 비공개 CAPTCHA 엔진 추출·재배포는 수행하지 않았다.** Windows VM이나 Aside는 필요 조건도 실행 계획도 아니다. 이후 Linux에서 소유하거나 명시적으로 허가된 fixture를 분석하는 별도 실험으로 사용할 수 있다. 도구의 MIT 라이선스가 분석 대상 엔진의 복사·배포 권한까지 부여하지는 않는다.
 
-### REA와 Windows VM
+## 공개 벤치마크 방향
 
-사용자가 지정한 [morluto/rea](https://github.com/morluto/rea.git)는 네트워크 제약으로 README·라이선스·설치 요구 사항을 읽지 못했다. 따라서 해당 도구가 Windows를 지원한다거나 macOS 전용이라고 단정하지 않는다. 상용 엔진을 추출·재배포할 권한이 있다고도 간주하지 않는다.
+[USENIX Security 2025 Halligan](https://www.usenix.org/conference/usenixsecurity25/presentation/teoh)의 실제 페이지는 visual CAPTCHA 26종 2,600개에서 60.7%, CAPTCHA farm 미지 challenge에서 평균 70.6%를 보고한다. [인용 근거](../catalog/evidence/usenix-agent.json)를 보존했다. 이는 해당 연구의 실험 결과이고 Kechap 성능 결과가 아니다.
 
-후속 작업은 저장소를 pin한 뒤 요구 OS, 도구 의존성, 라이선스, 자격증명 처리, 외부 전송을 확인하는 것부터 시작한다. 분석은 자체 제작 또는 명시적으로 허용된 로컬 challenge·바이너리에서 수행한다. 발견된 공개 API 계약은 어댑터에 반영할 수 있지만, 공급자의 비공개 challenge 엔진·키·검증 회피 코드를 복사해 기본 패키지로 배포하지 않는다. 상용 서비스는 공식 연동으로 충분한지 먼저 확인한다.
+따라서 seed·nonce·서버 replay는 조작된 성공 선언과 replay를 막는 수단으로 평가하고 “인간만 가능”이라고 주장하지 않는다. 실제 유효 입력을 VLM/computer-use agent도 만들 수 있는지 측정해야 한다. 자체 toy 환경의 정적 선택·drag/rotate·동적 순서/물리 과제를 비교하고 아래를 보고한다.
 
-Linux에서 Windows VM 실행이 필요하다고 확인되면 KVM 지원, `/dev/kvm`, 메모리·디스크 용량, 승인된 Windows 이미지와 라이선스, 격리 네트워크를 점검한다. 이번 세션에서는 이미지 다운로드, VM 생성, Windows 부팅 또는 REA 실행을 완료하지 않았다. `macOS를 못 띄우므로 Windows`라는 전제만으로 실제 도구 호환성이 해결되지는 않는다. 이를 완료한 연구처럼 보고하지 않는다.
+- 인간 완료율·이탈·median/p95 시간·false reject, 모바일·저사양·보조공학별 결과.
+- script·직접 API·headless·VLM·computer-use 성공률, 재시도·모델 버전·토큰·시간·금전 예산.
+- 서버 replay/토큰 재사용 거절, 공급자 outage와 회전 중 일관성, 검증 CPU·지연·운영 비용.
+- 표본 수, 모집 조건, 동의·철회, 신뢰구간, 학습 오염·holdout, 원본 biometric 비수집.
 
-## Aside와 MyProxy 연결
-
-`https://aside.com/`은 이 실행 환경에서 DNS 해석되지 않았고, 사용 가능한 Aside 전용 커넥터도 확인되지 않았다. 사이트의 실제 서비스 기능·API·인증 방식을 확인하지 않은 상태에서 특정 endpoint를 구현하면 안 된다. 같은 이유로 이번 조사에서 “Aside deep research 완료”라고 말할 수 없다.
-
-연결 가능한 환경에서 해야 할 일:
-
-1. Aside의 공식 API/브라우저 지원 범위와 이용 약관을 확인하고, 사용자 계정으로 허용된 조사 경로를 정한다.
-2. MyProxy의 문서로 base URL, 인증 헤더, 실제 모델 목록, API 호환 형식, 보존 정책을 확인한다. 비밀키는 환경 변수/secret store로 주입하고 저장소·로그에 넣지 않는다.
-3. 검색 질문을 오픈소스 CAPTCHA, 접근성, PoW, interaction, PAD/liveness, proof-of-personhood, awesome lists, MCP로 나눠 검색한다.
-4. Aside 출력은 발견 자료로 취급하고 별 수·라이선스·보안 주장을 upstream과 공식 문서에서 재확인한다.
-5. 조사 결과에는 요청 시각, 모델·설정, URL, 인용 구간, upstream revision, 상충하는 근거를 기록한다. 비밀키나 개인 연구 대화는 첨부하지 않는다.
-
-## 이미 유사한 Awesome list 또는 MCP가 있는가
-
-**현재 환경에서는 존재·부재를 확인하지 못했다.** “없다”, “최초다”, “유일하다”는 표현을 쓰지 않는다. 상용 CAPTCHA 선택 플랫폼, 라이브러리 컬렉션, bot-detection 목록, agent solver MCP는 서로 다른 시장이므로 검색 결과를 한 덩어리로 세지 않는다.
-
-재실행할 공개 검색 경로:
-
-- [GitHub awesome captcha](https://github.com/search?q=awesome+captcha&type=repositories)
-- [GitHub human verification](https://github.com/search?q=human+verification&type=repositories)
-- [GitHub captcha MCP](https://github.com/search?q=captcha+mcp&type=repositories)
-- [GitHub proof of personhood](https://github.com/search?q=proof+of+personhood&type=repositories)
-- [GitHub captcha provider SDK](https://github.com/search?q=captcha+provider+sdk&type=repositories)
-- [MCP Registry](https://registry.modelcontextprotocol.io/)
-- [Awesome Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)에서 CAPTCHA/identity 관련 항목과 해당 항목의 현재 경로를 검색
-
-각 발견 결과는 목적(통합/선택/벤치마크/솔버), maintainer, 최근 release, 허가, 공식 연동, 서버 검증, rotation, 접근성, 정책 설명, agent install 기능으로 비교한다. 솔버만 제공하는 MCP는 Kechap의 경쟁 제품과 다른 분류로 기록한다. 일반적인 provider wrapper가 존재하더라도 **근거 버전이 있는 추천 + 접근성 정책 + 서버 결속 rotation + 인간/에이전트 비용 벤치마크**가 함께 있는지 확인해야 차별화를 주장할 수 있다.
-
-## 벤치마크가 제공해야 하는 근거
-
-실험은 소유·허가된 환경에서만 수행하고 외부 서비스의 CAPTCHA 우회 실험과 혼동하지 않는다. 최초 baseline은 정적 이미지/드래그/서버 replay 동적 challenge와 PoW다. 자동화가 통과하면 그대로 결과를 공개한다. 공개 데이터셋과 비공개 holdout을 구분하고 seed 누출·학습 오염을 측정한다.
-
-- 인간: 완료율, 중도 이탈, 중간값/p95 시간, false reject, 모바일/데스크톱, 저사양·저대역폭, 보조공학과 대체 경로 완료율.
-- 자동화: 직접 API, 고정 매크로, Playwright, screenshot-loop VLM, 실시간 computer-use, relay에 대한 성공률·비용·모델/도구 버전.
-- 서버: 검증 p95, 공급자 호출 실패, 토큰 replay 차단, 정책 교체 중 검증 일관성, 장애시 동작, 메모리·CPU·요금.
-- 통계: 표본 수, 모집 조건, 신뢰구간, 결측과 제외 기준, 재시도 한도, 공격 예산, challenge revision과 실험 hash.
-- 개인정보: 원본 생체정보 기본 비수집, 동의·최소 보존, 참가자별 철회 경로, 익명화된 집계 공개.
-
-파일럿의 5~8초 완료 시간 같은 목표는 성능 결과가 아니라 가설이다. 성능 증명 없이 `human_verified=true`라는 보편적 claim을 발급하지 않는다. 결과에는 `assurance`, `provider`, `policyVersion`, `purpose`, `issuedAt`, `expiresAt`와 실제 확인 범위가 남아야 한다.
-
-## 우선순위
-
-1. MVP: 제한된 안전한 어댑터, 후보 레지스트리, 결정 이유가 보이는 추천, 서버에서 고정한 rotation, replay/expiry 테스트, 문서와 예제.
-2. 근거 갱신: 네트워크 복구 후 현재 별 수·라이선스·공식 API·기존 프로젝트 조사와 후보 승인.
-3. 실제 통합: Turnstile/ALTCHA/Cap의 공식 버전별 sandbox, 프레임워크 설치 PR 생성, secret 배포 가이드.
-4. 벤치마크: 인간 참가 파일럿, 접근성 평가, 소유한 테스트 사이트에서만 에이전트 평가.
-5. 기여 생태계: adapter manifest, provenance 검토, DCO/라이선스 정책, maintainer 책임, 취약점 신고·폐기 절차.
-6. 실험: 동적 replay surface, 선택적 liveness/personhood, 신호 결합·비용 기반 정책. 검증 전에는 안정 어댑터와 별도 배포한다.
+현 단계는 수집된 출처와 구현 계약의 기반이다. 독립 보안 감사, 모든 후보의 live sandbox, 인간 파일럿, 최종 접근성 적합성, 광범위 실사용 사례 검증은 남아 있다.

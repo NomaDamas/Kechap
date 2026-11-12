@@ -1,0 +1,36 @@
+{
+  "repository": "google/recaptcha",
+  "fetchedAt": "2026-11-12T09:54:46.384561+00:00",
+  "revision": "7d35508fe5060b61955cce30af491e48f9b50f57",
+  "metadataUrl": "https://api.github.com/repos/google/recaptcha",
+  "metadataSha256": "e95764a615283dea932b90d63105aeb292d02e21b37b18e2d62888fedd1db4fd",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 3581,
+  "archived": false,
+  "pushedAt": "2026-10-23T17:15:11Z",
+  "apiLicenseCandidate": {
+    "key": "bsd-3-clause",
+    "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "spdx_id": "BSD-3-Clause",
+    "url": "https://api.github.com/licenses/bsd-3-clause",
+    "node_id": "MDc6TGljZW5zZTU="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/google/recaptcha/blob/7d35508fe5060b61955cce30af491e48f9b50f57/README.md",
+      "apiUrl": "https://api.github.com/repos/google/recaptcha/readme?ref=7d35508fe5060b61955cce30af491e48f9b50f57",
+      "contentSha256": "dcf79577410e8413299ab91342b3023e1916e1eb9c43713f39734470bfaca0c5",
+      "path": "README.md",
+      "openingExcerpt": "# reCAPTCHA PHP client library\n\n\n[![Latest stable version](https://poser.pugx.org/google/recaptcha/v/stable.svg)](https://packagist.org/packages/google/recaptcha)\n[![PHP version required](https://poser.pugx.org/google/recaptcha/require/php)](https://packagist.org/packages/google/recaptcha)\n[![Coverage Status](https://coveralls.io/repos/github/google/recaptcha/badge.svg?branch=main)](https://coveralls.io/github/google/recaptcha?branch=main)\n[![Total downloads](https://poser.pugx.org/google/recaptcha/downloads.svg)](https://packagist.org/packages/google/recaptcha)\n[![License](https://poser.pugx.org/google/recaptcha/license.svg)](https://packagist.org/packages/google/recaptcha)\n\nreCAPTCHA is a free CAPTCHA service that protects websites from spam and abuse.\nThis is a PHP library that wraps up the server-side verification step required\nto process responses from the reCAPTCHA service. This client supports both v2\nand v3.\n\n- reCAPTCHA: https://cloud.google.com/security/products/recaptcha\n- T"
+    },
+    "license": {
+      "url": "https://github.com/google/recaptcha/blob/7d35508fe5060b61955cce30af491e48f9b50f57/LICENSE",
+      "apiUrl": "https://api.github.com/repos/google/recaptcha/license?ref=7d35508fe5060b61955cce30af491e48f9b50f57",
+      "contentSha256": "fa11dfc538d4d983d054fc286f12fe49e80518a15dc9068fb5090deeece0e94f",
+      "path": "LICENSE",
+      "openingExcerpt": "BSD 3-Clause License\n\nCopyright (c) 2019, Google Inc.\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIM"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

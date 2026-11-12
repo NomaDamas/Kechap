@@ -1,0 +1,36 @@
+{
+  "repository": "crowdsecurity/crowdsec",
+  "fetchedAt": "2026-11-12T09:54:42.101454+00:00",
+  "revision": "356b2683387d2cc3e6b3219f83ee197bc38114b7",
+  "metadataUrl": "https://api.github.com/repos/crowdsecurity/crowdsec",
+  "metadataSha256": "b5dffb850d953177c04a97293481fd177a8550acdfe40fee721fcca266e92193",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 15561,
+  "archived": false,
+  "pushedAt": "2026-11-10T16:16:23Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/crowdsecurity/crowdsec/blob/356b2683387d2cc3e6b3219f83ee197bc38114b7/README.md",
+      "apiUrl": "https://api.github.com/repos/crowdsecurity/crowdsec/readme?ref=356b2683387d2cc3e6b3219f83ee197bc38114b7",
+      "contentSha256": "33dbfdfcbc369b21b456fb7443464b3c1935c6c455ff07e19cd5400b8dd1b16e",
+      "path": "README.md",
+      "openingExcerpt": "\n<p align=\"center\">\n<img src=\"https://raw.githubusercontent.com/crowdsecurity/crowdsec-docs/main/crowdsec-docs/static/img/crowdsec_logo.png\" alt=\"CrowdSec\" title=\"CrowdSec\" width=\"400\" height=\"260\"/>\n</p>\n</br>\n</br>\n</br>\n<p align=\"center\">\n<img src=\"https://github.com/crowdsecurity/crowdsec/actions/workflows/go-tests.yml/badge.svg\">\n<img src=\"https://github.com/crowdsecurity/crowdsec/actions/workflows/bats.yml/badge.svg\">\n<img src=\"https://img.shields.io/github/license/crowdsecurity/crowdsec\">\n<a href=\"https://discord.com/invite/crowdsec\">\n  <img src=\"https://img.shields.io/discord/921520481163673640?label=Discord&logo=discord\">\n</a>\n<img src=\"https://img.shields.io/twitter/follow/Crowd_Security?style=social\">\n</p>\n\n<h1 align=\"center\">CrowdSec: open-source IDS/IPS, WAF and bot detection</h1>\n\n_CrowdSec is an open-source and participative security solution offering crowdsourced server detection and protection against malicious IPs. Detect and block with our Security Engine, contribute"
+    },
+    "license": {
+      "url": "https://github.com/crowdsecurity/crowdsec/blob/356b2683387d2cc3e6b3219f83ee197bc38114b7/LICENSE",
+      "apiUrl": "https://api.github.com/repos/crowdsecurity/crowdsec/license?ref=356b2683387d2cc3e6b3219f83ee197bc38114b7",
+      "contentSha256": "198fa694dee3f87684bd26b9ae5227e07f016cc7a3ac187d0036afaf8d08d2da",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2020-2023 Crowdsec\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNE"
+    }
+  },
+  "notes": "Log/HTTP behavior detection, reputation and remediation engine; supports bot challenge workflows, but is not a form CAPTCHA widget or identity proof."
+}

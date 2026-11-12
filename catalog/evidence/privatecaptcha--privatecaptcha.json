@@ -1,0 +1,36 @@
+{
+  "repository": "PrivateCaptcha/PrivateCaptcha",
+  "fetchedAt": "2026-11-12T09:48:18.597231+00:00",
+  "revision": "75d33f140586afa6ee83f94ef6737e461d9535d1",
+  "metadataUrl": "https://api.github.com/repos/PrivateCaptcha/PrivateCaptcha",
+  "metadataSha256": "becc08e4917cf24330f6a44f262e1970eca45d3a722b0bbad507d007a6659a67",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 199,
+  "archived": false,
+  "pushedAt": "2026-11-12T07:33:17Z",
+  "apiLicenseCandidate": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/PrivateCaptcha/PrivateCaptcha/blob/75d33f140586afa6ee83f94ef6737e461d9535d1/README.md",
+      "apiUrl": "https://api.github.com/repos/PrivateCaptcha/PrivateCaptcha/readme?ref=75d33f140586afa6ee83f94ef6737e461d9535d1",
+      "contentSha256": "43b41bf7e70f5553e49e70e0cb3e063aa54f728c982f42e015e069d83187b7c7",
+      "path": "README.md",
+      "openingExcerpt": "<a name=\"top\"></a>\n<picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"./web/static/img/pc-logo-light.png\">\n    <img alt=\"Private Captcha Logo\" src=\"./web/static/img/pc-logo-dark.svg\" height=\"50\">\n</picture>\n---\n\n![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/PrivateCaptcha/PrivateCaptcha)\n\n[![CI](https://github.com/PrivateCaptcha/PrivateCaptcha/actions/workflows/ci.yaml/badge.svg)](https://github.com/PrivateCaptcha/PrivateCaptcha/actions/workflows/ci.yaml) [![Go Lint](https://github.com/PrivateCaptcha/PrivateCaptcha/actions/workflows/golangci-lint.yml/badge.svg)](https://github.com/PrivateCaptcha/PrivateCaptcha/actions/workflows/golangci-lint.yml) [![JS lint](https://github.com/PrivateCaptcha/PrivateCaptcha/actions/workflows/widget.yml/badge.svg)](https://github.com/PrivateCaptcha/PrivateCaptcha/actions/workflows/widget.yml)\n\n[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=PrivateCaptcha_PrivateCaptcha&met"
+    },
+    "license": {
+      "url": "https://github.com/PrivateCaptcha/PrivateCaptcha/blob/75d33f140586afa6ee83f94ef6737e461d9535d1/LICENSE",
+      "apiUrl": "https://api.github.com/repos/PrivateCaptcha/PrivateCaptcha/license?ref=75d33f140586afa6ee83f94ef6737e461d9535d1",
+      "contentSha256": "15e4d97f3b3dfd130c51c6626a993a5526da6b67f81ca957e6faa97fe07c2343",
+      "path": "LICENSE",
+      "openingExcerpt": "# PolyForm Noncommercial License 1.0.0\n\n<https://polyformproject.org/licenses/noncommercial/1.0.0>\n\n## Acceptance\n\nIn order to get any license under these terms, you must agree\nto them as both strict obligations and conditions to all\nyour licenses.\n\n## Copyright License\n\nThe licensor grants you a copyright license for the\nsoftware to do everything you might do with the software\nthat would otherwise infringe the licensor's copyright\nin it for any permitted purpose.  However, you may\nonly distribute the software according to [Distribution\nLicense](#distribution-license) and make changes or new works\nbased on the software according to [Changes and New Works\nLicense](#changes-and-new-works-license).\n\n## Distribution License\n\nThe licensor grants you an additional copyright license\nto distribute copies of the software.  Your license\nto distribute covers distributing the software with\nchanges and new works permitted by [Changes and New Works\nLicense](#changes-and-new-works-license).\n\n## Notic"
+    }
+  },
+  "notes": "Source-available under PolyForm Noncommercial 1.0.0; README requires separate commercial license for commercial edition. Not unrestricted OSS."
+}

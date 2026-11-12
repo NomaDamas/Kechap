@@ -1,0 +1,36 @@
+{
+  "repository": "ambethia/recaptcha",
+  "fetchedAt": "2026-11-12T09:48:26.860597+00:00",
+  "revision": "eaff28e4b302f854e4ae2d2a1c968c42b3b53746",
+  "metadataUrl": "https://api.github.com/repos/ambethia/recaptcha",
+  "metadataSha256": "dc8e23f5b6d04ada67cf6f744f937b59308f7f53c1705b431487561745b35143",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2006,
+  "archived": false,
+  "pushedAt": "2026-10-23T23:03:37Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/ambethia/recaptcha/blob/eaff28e4b302f854e4ae2d2a1c968c42b3b53746/README.md",
+      "apiUrl": "https://api.github.com/repos/ambethia/recaptcha/readme?ref=eaff28e4b302f854e4ae2d2a1c968c42b3b53746",
+      "contentSha256": "804b163d700b2cae247aae58ddb106fd3eccb6a818052fa397ee4f3fcdfee70e",
+      "path": "README.md",
+      "openingExcerpt": "\n# reCAPTCHA\n[![Gem Version](https://badge.fury.io/rb/recaptcha.svg)](https://badge.fury.io/rb/recaptcha)\n\nAuthor:    Jason L Perry (http://ambethia.com)<br/>\nCopyright: Copyright (c) 2007-2013 Jason L Perry<br/>\nLicense:   [MIT](http://creativecommons.org/licenses/MIT/)<br/>\nInfo:      https://github.com/ambethia/recaptcha<br/>\nBugs:      https://github.com/ambethia/recaptcha/issues<br/>\n\nThis gem provides helper methods for the [reCAPTCHA API](https://www.google.com/recaptcha). In your\nviews you can use the `recaptcha_tags` method to embed the needed javascript, and you can validate\nin your controllers with `verify_recaptcha` or `verify_recaptcha!`, which raises an error on\nfailure.\n\n\n# Table of Contents\n1. [Obtaining a key](#obtaining-a-key)\n2. [Rails Installation](#rails-installation)\n3. [Sinatra / Rack / Ruby Installation](#sinatra--rack--ruby-installation)\n4. [reCAPTCHA V2 API & Usage](#recaptcha-v2-api-and-usage)\n  - [`recaptcha_tags`](#recaptcha_tags)\n  - [`verify_recaptcha`](#"
+    },
+    "license": {
+      "url": "https://github.com/ambethia/recaptcha/blob/eaff28e4b302f854e4ae2d2a1c968c42b3b53746/LICENSE",
+      "apiUrl": "https://api.github.com/repos/ambethia/recaptcha/license?ref=eaff28e4b302f854e4ae2d2a1c968c42b3b53746",
+      "contentSha256": "850b605b94c73275c404bf5cd1c22ac63611a7fc42367d7f422be90c7af5ff87",
+      "path": "LICENSE",
+      "openingExcerpt": "Copyright (c) 2007 Jason L Perry\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH TH"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

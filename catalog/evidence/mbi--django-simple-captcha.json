@@ -1,0 +1,36 @@
+{
+  "repository": "mbi/django-simple-captcha",
+  "fetchedAt": "2026-11-12T09:43:01.066153+00:00",
+  "revision": "08c6e39af930e667859fb382fbe8886a9e155865",
+  "metadataUrl": "https://api.github.com/repos/mbi/django-simple-captcha",
+  "metadataSha256": "c534716ff7f8064590411f76983b61ba3444d69e511cd3319cce20d573ad8bbb",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1419,
+  "archived": false,
+  "pushedAt": "2026-07-30T13:53:47Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/mbi/django-simple-captcha/blob/08c6e39af930e667859fb382fbe8886a9e155865/README.rst",
+      "apiUrl": "https://api.github.com/repos/mbi/django-simple-captcha/readme?ref=08c6e39af930e667859fb382fbe8886a9e155865",
+      "contentSha256": "db12f60cf16e8340d50e9fa38c7346ffd2d182fd57a912f0f26f5cab234fca8f",
+      "path": "README.rst",
+      "openingExcerpt": "*********************\nDjango Simple Captcha\n*********************\n\n.. image:: https://github.com/mbi/django-simple-captcha/actions/workflows/test.yml/badge.svg\n  :target: https://github.com/mbi/django-simple-captcha/actions/workflows/test.yml\n\n.. image:: https://img.shields.io/pypi/v/django-simple-captcha\n  :target: https://pypi.org/project/django-simple-captcha/\n\n.. image:: https://img.shields.io/pypi/l/django-simple-captcha\n  :target: https://github.com/mbi/django-simple-captcha/blob/master/LICENSE\n\n\nDjango Simple Captcha is an extremely simple, yet highly customizable Django application to add captcha images to any Django form.\n\n.. image:: http://django-simple-captcha.readthedocs.io/en/latest/_images/captcha3.png\n\nFeatures\n++++++++\n\n* Very simple to setup and deploy, yet very configurable\n* Can use custom challenges (e.g. random chars, simple math, dictionary word, ...)\n* Custom generators, noise and filter functions alter the look of the generated image\n* Supports text-to-speech au"
+    },
+    "license": {
+      "url": "https://github.com/mbi/django-simple-captcha/blob/08c6e39af930e667859fb382fbe8886a9e155865/LICENSE",
+      "apiUrl": "https://api.github.com/repos/mbi/django-simple-captcha/license?ref=08c6e39af930e667859fb382fbe8886a9e155865",
+      "contentSha256": "ec5f4a79d35c389104f9113c013413fdbe884ac5c8a952a8734dc6765910cc0f",
+      "path": "LICENSE",
+      "openingExcerpt": "Copyright (c) 2008 - 2014 Marco Bonetti\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\n"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

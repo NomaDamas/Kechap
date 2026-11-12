@@ -1,0 +1,36 @@
+{
+  "repository": "anji-plus/captcha",
+  "fetchedAt": "2026-11-12T09:42:43.538922+00:00",
+  "revision": "9188ae31cad1b2041277f04351cde4bf78a01fc4",
+  "metadataUrl": "https://api.github.com/repos/anji-plus/captcha",
+  "metadataSha256": "a3a3e996a18a57450154a62ef688cd17c13d53b2db647b2a8b3c9b6cfd817b51",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 27,
+  "archived": false,
+  "pushedAt": "2025-08-18T08:49:50Z",
+  "apiLicenseCandidate": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/anji-plus/captcha/blob/9188ae31cad1b2041277f04351cde4bf78a01fc4/README.md",
+      "apiUrl": "https://api.github.com/repos/anji-plus/captcha/readme?ref=9188ae31cad1b2041277f04351cde4bf78a01fc4",
+      "contentSha256": "288548d86012843b17735a3bc5b77409cad986c24388ed12da984ef44911724a",
+      "path": "README.md",
+      "openingExcerpt": "# 本项目暂停维护\n"
+    },
+    "license": {
+      "url": "https://github.com/anji-plus/captcha/blob/9188ae31cad1b2041277f04351cde4bf78a01fc4/LICENSE",
+      "apiUrl": "https://api.github.com/repos/anji-plus/captcha/license?ref=9188ae31cad1b2041277f04351cde4bf78a01fc4",
+      "contentSha256": "20bcae93bc72bd5e6eb33e3a34b93094be49b1d48a1a71ae51a878157fbebacc",
+      "path": "LICENSE",
+      "openingExcerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial owne"
+    }
+  },
+  "notes": "Current upstream README says maintenance is suspended. Do not silently substitute forks or infer the project has its former popularity."
+}

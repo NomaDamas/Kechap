@@ -1,0 +1,36 @@
+{
+  "repository": "tiagozip/cap",
+  "fetchedAt": "2026-11-12T09:48:03.654868+00:00",
+  "revision": "5777eef515ab66de587df432512a92046e669d31",
+  "metadataUrl": "https://api.github.com/repos/tiagozip/cap",
+  "metadataSha256": "5d6f0f4c0a98b5e3db2aa7671738f1c6cb9afe427cc156e0629e10f334bd24f9",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 8352,
+  "archived": false,
+  "pushedAt": "2026-11-11T20:15:39Z",
+  "apiLicenseCandidate": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/tiagozip/cap/blob/5777eef515ab66de587df432512a92046e669d31/README.md",
+      "apiUrl": "https://api.github.com/repos/tiagozip/cap/readme?ref=5777eef515ab66de587df432512a92046e669d31",
+      "contentSha256": "427536852b01111ddae804762a698e498e63c1ff4945c6ab37756c418f058c32",
+      "path": "README.md",
+      "openingExcerpt": "<div align=\"center\">\n    <br/>\n    <p>\n        <img src=\"/docs/public/logo.png\" alt=\"cap logo\" width=\"80\" />\n    </p>\n    <p>\n        a privacy-first and self-hosted CAPTCHA.\n        <br>\n        <a href=\"https://trycap.dev/?utm_source=github&utm_campaign=read_docs\">read the docs</a> or <a href=\"https://trycap.dev/guide/demo?utm_source=github&utm_campaign=demo_link\">try the demo</a>\n    </p>\n    <br/>\n    <a href=\"https://trycap.dev/guide/demo?utm_source=github&utm_campaign=captcha_animated\">\n        <img src=\"./assets/captcha-animated.svg\" alt=\"cap widget\" width=\"270\" />\n    </a>\n    <br/>\n</div>\n\n## what's cap?\n\ncap is a self-hosted and privacy-first captcha alternative that doesn't force your users to click on traffic lights. there are no puzzles, no tracking, and no third parties watching your visitors.\n\ninstead, the user's browser quietly solves a few small challenges in the background, such as gpu-resistant proof-of-work and instrumentation, which can also be configured to stop a"
+    },
+    "license": {
+      "url": "https://github.com/tiagozip/cap/blob/5777eef515ab66de587df432512a92046e669d31/LICENSE",
+      "apiUrl": "https://api.github.com/repos/tiagozip/cap/license?ref=5777eef515ab66de587df432512a92046e669d31",
+      "contentSha256": "69acdeead2435cb91bd0d94aaadc8ee2d0fa7e30a789cdeeb9aa2e0d4a986318",
+      "path": "LICENSE",
+      "openingExcerpt": "\n                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial own"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

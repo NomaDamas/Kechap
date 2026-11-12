@@ -1,0 +1,23 @@
+{
+  "repository": "aezizhu/mcp-captcha-solver",
+  "fetchedAt": "2026-11-12T09:48:33.617518+00:00",
+  "revision": "4def24738f7c086957e367dc5d0d713ba72b9027",
+  "metadataUrl": "https://api.github.com/repos/aezizhu/mcp-captcha-solver",
+  "metadataSha256": "82d4dd40c134ace65b7ad15f2e469befd695c98bb9d686e5de16ae0f94ca3202",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 21,
+  "archived": false,
+  "pushedAt": "2026-08-25T02:56:48Z",
+  "apiLicenseCandidate": null,
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/aezizhu/mcp-captcha-solver/blob/4def24738f7c086957e367dc5d0d713ba72b9027/README.md",
+      "apiUrl": "https://api.github.com/repos/aezizhu/mcp-captcha-solver/readme?ref=4def24738f7c086957e367dc5d0d713ba72b9027",
+      "contentSha256": "9f4751e37dbafbf4b6d8ae746e05518e843ba638b062fd862cfec9aebd703a33",
+      "path": "README.md",
+      "openingExcerpt": "# MCP Captcha Solver\n\n**AI-Powered Captcha Resolution for Model Context Protocol**\n\nA comprehensive toolkit for AI agents to solve various captcha challenges—from simple text to complex reCAPTCHA.\n\n## 🚀 Quick Start\n\n```bash\ncd captcha-mcp\nnpm install\nnpm start\n```\n\n## 📂 Contents\n\n| Directory | Description |\n|-----------|-------------|\n| [captcha-mcp/](captcha-mcp/) | **MCP Server** - 30 tools for captcha solving |\n| [captcha_solver.js](captcha_solver.js) | Original Tampermonkey script |\n\n## ✨ Capabilities\n\n- **Local OCR** - Tesseract.js (no external API)\n- **Slider Puzzles** - Edge detection for offset calculation\n- **Grid Analysis** - Image selection coordinate mapping\n- **External Services** - CapSolver, CapMonster, CaptchaAI, 2Captcha, Anti-Captcha, DeathByCaptcha\n- **Smart Fallback** - Automatic service switching\n\n➡️ **[Full Documentation](captcha-mcp/README.md)**\n\n## License\n\nMIT\n"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

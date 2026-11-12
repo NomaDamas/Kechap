@@ -1,0 +1,36 @@
+{
+  "repository": "librecaptcha/lc-core",
+  "fetchedAt": "2026-11-12T09:42:57.107440+00:00",
+  "revision": "d0eeed50481bb24e6a3354921ec9c1a0520e6bfc",
+  "metadataUrl": "https://api.github.com/repos/librecaptcha/lc-core",
+  "metadataSha256": "a26320cc8263f93f484df3b345011f1f8fd395e19aa62e2eaffec01a1256359f",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 432,
+  "archived": false,
+  "pushedAt": "2026-10-18T07:16:42Z",
+  "apiLicenseCandidate": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/librecaptcha/lc-core/blob/d0eeed50481bb24e6a3354921ec9c1a0520e6bfc/README.md",
+      "apiUrl": "https://api.github.com/repos/librecaptcha/lc-core/readme?ref=d0eeed50481bb24e6a3354921ec9c1a0520e6bfc",
+      "contentSha256": "18d8536469548e25a9baf8523a717208c0bed13453dafe792a0e6cb28310c18d",
+      "path": "README.md",
+      "openingExcerpt": "# LibreCaptcha\nLibreCaptcha is a framework that allows developers to create their own [CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA)s.\nThe framework defines the API for a CAPTCHA generator and takes care of mundane details\nsuch as:\n* An HTTP interface for serving CAPTCHAs\n* Background workers to pre-compute CAPTCHAs and to store them in a database\n* Managing secrets for the CAPTCHAs (tokens, expected answers, etc)\n* Safe re-impressions of CAPTCHA images (by creating unique tokens for every impression)\n* Garbage collection of stale CAPTCHAs\n* Sandboxed plugin architecture (TBD)\n\nSome sample CAPTCHA generators are included in the distribution (see below). We will continue adding more samples to the list. For quick\ndeployments the samples themselves might be sufficient. Projects with more resources might want create their own CAPTCHAs\nand use the samples as inspiration. See the [CAPTCHA creation guide](https://github.com/librecaptcha/lc-core/wiki/Creating-your-own-CAPTCHA-provider).\n\n##"
+    },
+    "license": {
+      "url": "https://github.com/librecaptcha/lc-core/blob/d0eeed50481bb24e6a3354921ec9c1a0520e6bfc/LICENSE",
+      "apiUrl": "https://api.github.com/repos/librecaptcha/lc-core/license?ref=d0eeed50481bb24e6a3354921ec9c1a0520e6bfc",
+      "contentSha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "path": "LICENSE",
+      "openingExcerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial owne"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

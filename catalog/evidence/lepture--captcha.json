@@ -1,0 +1,36 @@
+{
+  "repository": "lepture/captcha",
+  "fetchedAt": "2026-11-12T09:42:55.143762+00:00",
+  "revision": "087b30be72640802fddc097472ef35a88020387a",
+  "metadataUrl": "https://api.github.com/repos/lepture/captcha",
+  "metadataSha256": "08e6c30649aac326cac1e568aa8127c94cd0efb25c59c75190bb3fb21b79848b",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1098,
+  "archived": false,
+  "pushedAt": "2025-10-21T06:24:16Z",
+  "apiLicenseCandidate": {
+    "key": "bsd-3-clause",
+    "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "spdx_id": "BSD-3-Clause",
+    "url": "https://api.github.com/licenses/bsd-3-clause",
+    "node_id": "MDc6TGljZW5zZTU="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/lepture/captcha/blob/087b30be72640802fddc097472ef35a88020387a/README.md",
+      "apiUrl": "https://api.github.com/repos/lepture/captcha/readme?ref=087b30be72640802fddc097472ef35a88020387a",
+      "contentSha256": "34dd7fe4d95b7885ea5a9f59815ec0f13a4363a37f33b5b2cc6614293375d8fa",
+      "path": "README.md",
+      "openingExcerpt": "# Captcha\n\nA captcha library that generates audio and image CAPTCHAs.\n\n\n[![GitHub Sponsor](https://badgen.net/badge/support/captcha/blue?icon=github)](https://github.com/sponsors/lepture)\n[![Build Status](https://github.com/lepture/captcha/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/lepture/captcha/actions/workflows/test.yml)\n[![codecov](https://codecov.io/gh/lepture/captcha/branch/main/graph/badge.svg?token=xLjcXGMaeo)](https://codecov.io/gh/lepture/captcha)\n\n## Install\n\nInstall captcha with pip:\n\n```\npip install captcha\n```\n\n## Features\n\n1. Audio CAPTCHAs\n2. Image CAPTCHAs\n\n## Usage\n\nAudio and Image CAPTCHAs are in separated modules:\n\n```python\nfrom captcha.audio import AudioCaptcha\nfrom captcha.image import ImageCaptcha\n\naudio = AudioCaptcha(voicedir='/path/to/voices')\nimage = ImageCaptcha(fonts=['/path/A.ttf', '/path/B.ttf'])\n\ndata = audio.generate('1234')\naudio.write('1234', 'out.wav')\n\ndata = image.generate('1234')\nimage.write('1234', 'out.png')\n```\n\nThi"
+    },
+    "license": {
+      "url": "https://github.com/lepture/captcha/blob/087b30be72640802fddc097472ef35a88020387a/LICENSE",
+      "apiUrl": "https://api.github.com/repos/lepture/captcha/license?ref=087b30be72640802fddc097472ef35a88020387a",
+      "contentSha256": "539013fd8e19f744f8bf0e27a532bbff54cd689ecef7a800f56ae5dc824be870",
+      "path": "LICENSE",
+      "openingExcerpt": "Copyright (c) 2014, Hsiaoming Yang\n\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\n* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\n* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\n* Neither the name of the creator nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER O"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

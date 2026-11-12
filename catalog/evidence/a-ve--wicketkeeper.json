@@ -1,0 +1,36 @@
+{
+  "repository": "a-ve/wicketkeeper",
+  "fetchedAt": "2026-11-12T09:48:20.788549+00:00",
+  "revision": "cde80c45ebb509dddc2c6cc81210f50cb17460c4",
+  "metadataUrl": "https://api.github.com/repos/a-ve/wicketkeeper",
+  "metadataSha256": "bd6e37c9dd1c8bf84b04d4dd6285915b38e4332a44b1a92e3d8b569497f194c2",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 229,
+  "archived": false,
+  "pushedAt": "2026-01-18T04:46:10Z",
+  "apiLicenseCandidate": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/a-ve/wicketkeeper/blob/cde80c45ebb509dddc2c6cc81210f50cb17460c4/README.md",
+      "apiUrl": "https://api.github.com/repos/a-ve/wicketkeeper/readme?ref=cde80c45ebb509dddc2c6cc81210f50cb17460c4",
+      "contentSha256": "d7b517ef97b1adc0bf5058e77021f7d77775bfc34e0ac3e422c926586982227d",
+      "path": "README.md",
+      "openingExcerpt": "<p align=\"center\">\n  <a href=\"https://wicketkeeper.io\"><img alt=\"wicketkeeper\" src=\"/assets/hero-repo.png\" width=\"100%\"></a>\n</p>\n\n![Go](https://img.shields.io/badge/Go-1.23-00ADD8?logo=go&logoColor=white)\n![Node.js](https://img.shields.io/badge/Node.js-16+-43853d?logo=node.js&logoColor=white)\n![Express.js](https://img.shields.io/badge/Express.js-4.x-000000?logo=express&logoColor=white)\n![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)\n![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?logo=docker&logoColor=white)\n\nA privacy-friendly, proof-of-work (PoW) captcha system designed to be a user-centric alternative to traditional captchas. Wicketkeeper protects your web forms from simple bots without requiring users to solve frustrating puzzles.\n\nIt achieves this by issuing a small, client-side computational challenge that is easy for a modern device to solve but costly for bots to perform at scale. The system is comprised of a Go "
+    },
+    "license": {
+      "url": "https://github.com/a-ve/wicketkeeper/blob/cde80c45ebb509dddc2c6cc81210f50cb17460c4/LICENSE",
+      "apiUrl": "https://api.github.com/repos/a-ve/wicketkeeper/license?ref=cde80c45ebb509dddc2c6cc81210f50cb17460c4",
+      "contentSha256": "7b1e5a2f97830c129cf5e6ad7e4d6883a1e57239288641d03b9352746a3b3d5b",
+      "path": "LICENSE",
+      "openingExcerpt": "## Licensing\n\n- `client/` and `example/` are released under the MIT License.  \n  See `client/LICENSE` and `example/LICENSE` for details.\n\n- `server/` is released under the GNU Affero GPL v3.0.  \n  See `server/LICENSE` for details.\n"
+    }
+  },
+  "notes": "Root LICENSE states client/example MIT, server GNU AGPL v3. Review per-component obligations before use."
+}

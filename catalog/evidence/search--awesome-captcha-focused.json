@@ -1,0 +1,105 @@
+{
+  "url": "https://api.github.com/search/repositories?q=awesome+captcha+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:48:36.242084+00:00",
+  "sha256": "c76103a6c711895300fe73639f2c73329226418198ffb92a63ae4b75416b5183",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 13,
+    "incompleteResults": false,
+    "returned": 13,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "ZYSzys/awesome-captcha",
+      "html_url": "https://github.com/ZYSzys/awesome-captcha",
+      "description": ":key: Curated list of awesome captcha libraries and crack tools.",
+      "stargazers_count": 1442,
+      "archived": false
+    },
+    {
+      "full_name": "mhakes/bootstrap-captcha",
+      "html_url": "https://github.com/mhakes/bootstrap-captcha",
+      "description": "jQuery plugin that along with Bootstrap and Font-Awesome will create a stylish, human validating captcha",
+      "stargazers_count": 21,
+      "archived": false
+    },
+    {
+      "full_name": "PODILICHAITANYAAKHILKUMAR/CUSTOM-CAPTCHA",
+      "html_url": "https://github.com/PODILICHAITANYAAKHILKUMAR/CUSTOM-CAPTCHA",
+      "description": "Awesome Custom Captcha using HTML,CSS,JAVASCRIPT. ",
+      "stargazers_count": 3,
+      "archived": false
+    },
+    {
+      "full_name": "VMWRITE/Font-Awesome-Captcha",
+      "html_url": "https://github.com/VMWRITE/Font-Awesome-Captcha",
+      "description": "A simple captcha which using a font-awesome to render icons",
+      "stargazers_count": 2,
+      "archived": false
+    },
+    {
+      "full_name": "PetalBranch/IconCaptcha",
+      "html_url": "https://github.com/PetalBranch/IconCaptcha",
+      "description": "IconCaptcha is a lightweight and secure PHP library for generating image-based click CAPTCHA challenges using open-source icon fonts (e.g., Font Awesome).",
+      "stargazers_count": 2,
+      "archived": false
+    },
+    {
+      "full_name": "zwzw911/node-awesomeCaptcha",
+      "html_url": "https://github.com/zwzw911/node-awesomeCaptcha",
+      "description": null,
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "FabienPayetJS/awesome-captcha",
+      "html_url": "https://github.com/FabienPayetJS/awesome-captcha",
+      "description": "captcha implemented with awesome font & jquery",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "ShejanMahamud/react-awesome-captcha",
+      "html_url": "https://github.com/ShejanMahamud/react-awesome-captcha",
+      "description": "Awesome captcha validation package for React app",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "awesome-archive/tensorflow-captcha-practice",
+      "html_url": "https://github.com/awesome-archive/tensorflow-captcha-practice",
+      "description": "用CNN识别验证码的实用教程，从数据标定到搭建服务， tensorflow captcha recognization practical tutorial",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "Kwoks2017/ocr-captcha-awesome",
+      "html_url": "https://github.com/Kwoks2017/ocr-captcha-awesome",
+      "description": "一些验证识别破解项目汇总",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "allen-oneill/awesome-anti-captcha",
+      "html_url": "https://github.com/allen-oneill/awesome-anti-captcha",
+      "description": "Curated list of captcha solving software, libraries and API.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "jwhijazi/ngx-images-recaptcha",
+      "html_url": "https://github.com/jwhijazi/ngx-images-recaptcha",
+      "description": "Angular Images Re-Captcha using Awesome Fonts 5 and bootstrap 4",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "anakataa/Epic-games-Awesome-Gamer-",
+      "html_url": "https://github.com/anakataa/Epic-games-Awesome-Gamer-",
+      "description": "Epic Awesome Gamer is a Python library for automating the process of claiming free games from the Epic Games Store, using playwright and captcha-solving solutions. The project allows easy integration of the processes for obtaining games and handling orders.",
+      "stargazers_count": 0,
+      "archived": false
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 // Browser entrypoint. It never receives provider secrets or authorizes an action.
+import {solveBrowserWork} from './browser-work.js';
 const loads = new WeakMap();
 const sources = {
   turnstile: 'https://challenges.cloudflare.com/turnstile/v0/api.js',
@@ -77,8 +78,8 @@ export async function mountChallenge(container, issued, {onResponse, onError = (
   container.replaceChildren();
   try {
     if (Date.now() >= expiresAt) throw new Error('Challenge expired; request another');
-    if (challenge.type === 'pow') {
-      if (!Number.isInteger(challenge.difficulty) || challenge.difficulty < 1 || challenge.difficulty > 5 || !/^[a-f0-9]{48}$/.test(challenge.salt)) throw new Error('Invalid PoW challenge');
+    if (['pow', 'altcha', 'cap'].includes(challenge.type)) {
+      if (challenge.type === 'pow' && (!Number.isInteger(challenge.difficulty) || challenge.difficulty < 1 || challenge.difficulty > 5 || !/^[a-f0-9]{48}$/.test(challenge.salt))) throw new Error('Invalid PoW challenge');
       const button = document.createElement('button');
       button.type = 'button'; button.textContent = '기기에서 검증 작업 시작';
       const status = document.createElement('p'); status.setAttribute('role', 'status');
@@ -87,6 +88,10 @@ export async function mountChallenge(container, issued, {onResponse, onError = (
       button.addEventListener('click', async () => {
         button.disabled = true; status.textContent = '기기에서 작업 중…';
         try {
+          if (challenge.type !== 'pow') {
+            const response = await solveBrowserWork(challenge, {signal: controller.signal, expiresAt});
+            status.textContent = '작업 완료. 서버에서 확인합니다.'; emit(response); return;
+          }
           const encoder = new TextEncoder();
           for (let answer = 0; answer < 2000000; answer++) {
             if (controller.signal.aborted) return;

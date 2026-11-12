@@ -1,0 +1,42 @@
+{
+  "url": "https://api.github.com/search/repositories?q=captcha+stars%3A%3E%3D10000&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:43:18.495532+00:00",
+  "sha256": "86aac573e0556ecd20ee2b2e32c70cfcc497796a1e8878d6bc2c64b3fc6add27",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 4,
+    "incompleteResults": false,
+    "returned": 4,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "chaitin/SafeLine",
+      "html_url": "https://github.com/chaitin/SafeLine",
+      "description": "SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your web apps from attacks and exploits.",
+      "stargazers_count": 23258,
+      "archived": false
+    },
+    {
+      "full_name": "sml2h3/ddddocr",
+      "html_url": "https://github.com/sml2h3/ddddocr",
+      "description": "带带弟弟 通用验证码识别OCR pypi版",
+      "stargazers_count": 14934,
+      "archived": false
+    },
+    {
+      "full_name": "ultrafunkamsterdam/undetected-chromedriver",
+      "html_url": "https://github.com/ultrafunkamsterdam/undetected-chromedriver",
+      "description": "Custom Selenium Chromedriver | Zero-Config | Passes ALL bot mitigation systems (like Distil / Imperva/ Datadadome / CloudFlare IUAM)",
+      "stargazers_count": 12902,
+      "archived": false
+    },
+    {
+      "full_name": "NopeCHALLC/nopecha-extension",
+      "html_url": "https://github.com/NopeCHALLC/nopecha-extension",
+      "description": "Automated CAPTCHA solver for your browser. Works with Selenium, Puppeteer, Playwright, and more.",
+      "stargazers_count": 11110,
+      "archived": false
+    }
+  ]
+}

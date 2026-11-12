@@ -1,0 +1,13 @@
+{
+  "url": "https://api.npmjs.org/downloads/point/last-month/svg-captcha",
+  "fetchedAt": "2026-11-12T09:59:26.649565+00:00",
+  "rawSha256": "6159cc2af2d1fc274a84e338b3c9cbf96afa498143fa3dcd0b579f38990be8bd",
+  "evidenceType": "npm-download-metric",
+  "data": {
+    "downloads": 324929,
+    "start": "2026-10-13",
+    "end": "2026-11-11",
+    "package": "svg-captcha"
+  },
+  "limitation": "Downloads are registry activity, not unique deployments, humans or audited security effectiveness."
+}
