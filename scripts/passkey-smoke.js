@@ -14,6 +14,8 @@ try {
   await client.send('WebAuthn.enable');
   await client.send('WebAuthn.addVirtualAuthenticator', {options: {protocol: 'ctap2', transport: 'internal', hasResidentKey: true, hasUserVerification: true, isUserVerified: true, automaticPresenceSimulation: true}});
   const captures = [];
+  let capturedCSRF;
+  page.on('request', request => {if (request.url().endsWith('/api/signup')) capturedCSRF = request.headers()['x-kechap-csrf'];});
   page.on('response', async response => {if (response.url().endsWith('/api/passkey/auth/verify') && response.ok()) captures.push(await response.json());});
   await page.goto(`http://localhost:${server.address().port}`);
   // The first alternative enrollment is never authorized merely by clicking it.
@@ -28,6 +30,11 @@ try {
   await page.getByRole('button', {name: '등록된 패스키로 진행'}).focus(); await page.keyboard.press('Enter');
   await page.getByRole('status').filter({hasText: '패스키 계정 연속성 경로를 사용했습니다'}).waitFor();
   assert.equal(captures.length, 1); assert.equal(captures[0].assurance, 'account-continuity');
+  const replay = await page.evaluate(async ({token, csrf}) => {
+    const result = await fetch('/api/signup', {method: 'POST', headers: {'Content-Type': 'application/json', 'X-Kechap-CSRF': csrf}, body: JSON.stringify({recoveryToken: token})});
+    return result.status;
+  }, {token: captures[0].token, csrf: capturedCSRF});
+  assert.equal(replay, 403, 'Valid-session replay must fail even with the correct CSRF token');
   const rejectedWithoutCSRF = await page.evaluate(async token => {
     const csrf = document.cookie;
     const result = await fetch('/api/signup', {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({recoveryToken: token})});
