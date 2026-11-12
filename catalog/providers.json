@@ -49,7 +49,9 @@
         "fetchedAt": "2026-11-12T09:59:24.057242+00:00",
         "evidenceFile": "catalog/evidence/npm-altcha.json",
         "meaning": "npm registry downloads, not unique deployments or proven security"
-      }
+      },
+      "implementedAssurance": "automation-cost",
+      "implementedProtocol": "ALTCHA v2 SHA-256"
     },
     {
       "id": "cap",
@@ -98,7 +100,9 @@
         "fetchedAt": "2026-11-12T09:59:24.542341+00:00",
         "evidenceFile": "catalog/evidence/npm-cap.js--widget.json",
         "meaning": "npm registry downloads, not unique deployments or proven security"
-      }
+      },
+      "implementedAssurance": "automation-cost",
+      "implementedProtocol": "Cap format1 SHA-256 (no instrumentation)"
     },
     {
       "id": "mcaptcha",

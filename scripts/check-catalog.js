@@ -12,5 +12,13 @@ for (const p of catalog.providers) {
   if (p.stars === null) assert.equal(p.over10k, null);
   else { assert.equal(p.over10k, p.stars >= 10000); assert.ok(p.starsCheckedAt); }
   if (p.sourceStatus === 'not-fetched') assert.notEqual(p.license.status, 'verified');
+  if (p.sourceStatus === 'source-reviewed') {
+    assert.ok(p.evidenceFile && /^catalog\/evidence\/[A-Za-z0-9_.-]+\.json$/.test(p.evidenceFile), `Evidence required: ${p.id}`);
+    const evidence = JSON.parse(await readFile(new URL('../' + p.evidenceFile, import.meta.url), 'utf8'));
+    assert.equal(evidence.revision, p.upstreamRevision, `Revision mismatch: ${p.id}`);
+    assert.equal(evidence.stars, p.stars, `Stars mismatch: ${p.id}`);
+    assert.equal(evidence.fetchedAt, p.starsCheckedAt, `Timestamp mismatch: ${p.id}`);
+    assert.equal(p.productionReady, false, 'Source review alone must not imply production approval');
+  }
 }
 console.log(`${ids.size} unique catalog candidates; evidence invariants valid.`);
