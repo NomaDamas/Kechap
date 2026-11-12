@@ -13,10 +13,18 @@
 | 서버/회전 | core/policy/web 테스트 | 세션문맥·TTL·일회성·assurance·health·policyVersion검증. Production 분산 저장소 미지원 |
 | 브라우저 실검증 | scripts/browser-smoke.js, .local/browser/report.json | Chromium에서 ALTCHA/Cap/PoW모두 교체·submit통과. 접근성 감사·상용 widget미검증 |
 | benchmark계획 | benchmark.md/roadmap, scripts/benchmark.js | 실제 소유toy3종 스크립트baseline. 인간/VLM결과는null, 연구확장 계획 |
-| 기여와 상세이슈 | CONTRIBUTING/forms, GitHub issues1~23 | 문서/양식과 실제23개이슈 게시 |
+| 기여와 상세이슈 | CONTRIBUTING/forms, GitHub issues1~24 | 실제24개이슈 게시. #2/#5/#8/#10/#12는 수용 근거를 첨부해 완료, 나머지는 후속 범위로 유지 |
 | Sponsors | .github/FUNDING.yml, sponsorship.md | 조직으로 설정, listing미활성이므로 실제 수령은 소유자 개설 필요 |
-| 커밋/푸시 | publishing-status.md와 원격refs/CI | 원격SHA·CI확인 후 게시상태로 기록 |
+| 커밋/푸시 | main 0edac435f6a8e6f946887b340741106a08495c66, CI43203277224 | 로컬·원격 SHA 일치. Node20/22/24와 Chromium success |
 
 ## 검증 한계
 
 카탈로그의 source-reviewed/다운로드/별수, 테스트 통과와 인간 구별·보안 감사·운영 SLA는 다르다. 모든 후보 productionReady=false다. 상용 비밀엔진을 획득한 사실은 없고 공식API어댑터만 제공한다. 실제 위험 점수 모델, 분산 저장소, 접근성 동등복구, 생체인증, 사람/VLM실험·리더보드는 구체적 후속이슈이며 이 초기 전달에서 완료됐다고 주장하지 않는다.
+
+## 최신 검증과 남은 필수 외부 작업
+
+MCP setup의 요구사항 기반 선택·파일생성·미충족시 무생성까지 연결했다. JS50개와 Python3개가 통과했고 공개 CI에 동일 커밋을 확인했다. Source-reviewed candidate50개 중37개 GitHub검토/10개 공식문서/3개미확인은 근거 수준 그대로 유지한다.
+
+후원 요청은 설정 게시까지만 완료됐다. 조직의 hasSponsorsListing=false이고 repository fundingLinks=[]이므로 Sponsor 버튼·결제는 아직 활성화되지 않았다. 이 조건은 세 차례 연속 goal 진행에서 재확인됐으며 소유자의 지급·세금·계정 심사가 필요하다. #24에 구체적 조치를 남겼다. 에이전트가 계정 소유자의 등록 정보를 대신 제출하지 않는다.
+
+따라서 초기 SDK·연구·설치·게시 산출물은 전달했지만 후원 활성화까지 포함한 전체 작업을 완료했다고 표시하지 않는다. 분산운영/생체인증/인간VLM실험은 원 요청대로 상세 확장 계획으로 남겼으며 별도 요청 없이 운영 완료라고 바꾸지 않는다.
