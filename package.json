@@ -4,8 +4,25 @@
   "private": true,
   "description": "Policy-driven human-verification provider orchestration for agents and products",
   "type": "module",
-  "engines": {"node": ">=20"},
-  "exports": {".": "./src/index.js", "./browser": "./src/browser.js"},
-  "scripts": {"test": "node test/core.test.js && node test/web.test.js", "demo": "node examples/local.js", "demo:web": "node examples/web/server.js", "mcp": "node src/mcp.js", "recommend": "node src/cli.js", "catalog:check": "node scripts/check-catalog.js", "research:refresh": "node scripts/refresh-evidence.js"},
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./browser": "./src/browser.js",
+    "./scaffold": "./src/scaffold.js"
+  },
+  "scripts": {
+    "test": "node test/core.test.js && node test/web.test.js && node test/scaffold.test.js",
+    "demo": "node examples/local.js",
+    "demo:web": "node examples/web/server.js",
+    "mcp": "node src/mcp.js",
+    "recommend": "node src/cli.js",
+    "catalog:check": "node scripts/check-catalog.js",
+    "research:refresh": "python3 scripts/research_github.py",
+    "research:plan": "python3 scripts/research_github.py --plan",
+    "test:research": "python3 -m unittest discover -s test -p '*_test.py'",
+    "scaffold": "node src/scaffold.js"
+  },
   "license": "Apache-2.0"
 }

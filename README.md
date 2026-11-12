@@ -64,7 +64,7 @@ Turnstile widget에는 발급된 `cData`를 그대로 전달해야 하며 서버
 
 ## MCP와 Skill
 
-MCP는 stdio JSON-RPC로 동작하는 읽기 전용 개발 도구입니다. 후보를 읽고 현재 구현 범위에서 추천·통합 계획을 반환합니다. 토큰 발급이나 제품 파일 자동 변경은 하지 않습니다. SDK 없이 CAPTCHA를 대신 풀어 주는 서비스도 아닙니다.
+MCP는 stdio JSON-RPC로 동작하는 개발 도구입니다. 파일 내용을 생성해 반환하지만 직접 디스크에 쓰지는 않습니다. 후보를 읽고 현재 구현 범위에서 추천·통합 계획을 반환합니다. 토큰 발급이나 제품 파일 자동 변경은 하지 않습니다. SDK 없이 CAPTCHA를 대신 풀어 주는 서비스도 아닙니다.
 
 ```json
 {
@@ -77,7 +77,7 @@ MCP는 stdio JSON-RPC로 동작하는 읽기 전용 개발 도구입니다. 후�
 }
 ```
 
-도구: `kechap_catalog`, `kechap_recommend`, `kechap_plan`. 설치 Skill은 [`skills/kechap/SKILL.md`](skills/kechap/SKILL.md)이며 참조 파일을 사용할 수 있도록 저장소 전체를 유지한 상태로 사용하세요. 코딩 에이전트가 제품 코드를 읽고 구체적인 통합 패치를 만드는 절차를 제공합니다. 자동 추천은 현재 self-host/제3자 금지/보증 범주/제외 목록만 처리하며, 지역·가격·프레임워크별 자동 패치 생성은 로드맵입니다.
+도구: `kechap_catalog`, `kechap_recommend`, `kechap_plan`, `kechap_scaffold`. 설치 Skill은 [`skills/kechap/SKILL.md`](skills/kechap/SKILL.md)이며 참조 파일을 사용할 수 있도록 저장소 전체를 유지한 상태로 사용하세요. 코딩 에이전트가 제품 코드를 읽고 구체적인 통합 패치를 만드는 절차를 제공합니다. 자동 추천은 현재 self-host/제3자 금지/보증 범주/제외 목록만 처리하며, 지역·가격·프레임워크별 자동 패치 생성은 로드맵입니다.
 
 ## 수단을 구분합니다
 
@@ -100,8 +100,17 @@ passkey는 계정 연속성 수단입니다. 게임 replay는 규칙에 맞는 �
 
 기존 Awesome list/MCP의 존재 여부는 아직 실시간 확인하지 못했습니다. 차별화 가설은 **버전이 있는 근거 + 제품별 선택 + 서버 결속 회전 + 접근성 + 인간/에이전트 비교 벤치마크**입니다. 벤치마크 실험·통계·동적 게임·영상 라이브니스 구현은 후속 작업이며 결과를 만들어 내지 않았습니다.
 
-이번 환경에서는 GitHub/Aside DNS 실패, 사용할 수 없는 GitHub 인증, 읽기 전용 `.git` 때문에 원격 게시가 막혔습니다. Aside/MyProxy 연결과 REA 호환성·라이선스를 확인하지 못했고 Windows VM도 설치하지 않았습니다. 상용 제품은 공식 API로 연결하며 비공개 엔진을 추출해 배포한 것으로 표시하지 않습니다.
+이번 환경에서는 GitHub/Aside DNS 실패, 유효성을 확인하지 못한 GitHub 인증, 읽기 전용 `.git` 때문에 원격 게시가 막혔습니다. Aside/MyProxy 연결과 REA 호환성·라이선스를 확인하지 못했고 Windows VM도 설치하지 않았습니다. 상용 제품은 공식 API로 연결하며 비공개 엔진을 추출해 배포한 것으로 표시하지 않습니다.
 
-네트워크 복구 후 `npm run research:refresh`는 GitHub 원본 응답·시각·hash를 `.local/evidence/`에 저장합니다. 이 과정은 후보를 자동 승인하지 않습니다. `python3 scripts/publish-issues.py`로 이슈 미리보기를 하고 `--publish`로 게시할 수 있습니다. 원격 저장소에 기존 이력이 있다면 먼저 fetch·통합한 후 커밋을 푸시하세요.
+네트워크 복구 후 `npm run research:refresh`는 기존 `gh` 인증을 재사용하여 GitHub 메타데이터, 커밋에 고정된 README·LICENSE, 유사 프로젝트 검색 결과와 시각·hash를 `.local/research/`에 저장합니다. Python 3와 GitHub CLI가 필요합니다. `npm run research:plan`은 네트워크 없이 조사 대상을 표시합니다. 이 과정은 후보를 자동 승인하지 않습니다. `python3 scripts/publish-issues.py`로 이슈 미리보기를 하고 `--publish`로 게시할 수 있습니다. 원격 저장소에 기존 이력이 있다면 먼저 fetch·통합한 후 커밋을 푸시하세요.
 
 프로젝트 코드는 Apache-2.0. 외부 후보 코드는 포함하지 않았으며 각 upstream 라이선스는 별도로 적용됩니다.
+
+## 새 제품용 설치 파일 생성
+
+```bash
+npm run scaffold -- /tmp/my-kechap-product '{"provider":"pow"}'
+npm run scaffold -- /tmp/my-kechap-turnstile '{"provider":"turnstile","hostname":"localhost"}'
+```
+
+목적지는 존재하지 않는 새 디렉터리여야 하며 기존 파일을 덮어쓰지 않습니다. 생성된 `.env.example`을 `.env`로 복사하고 필요한 키를 설정한 뒤 `npm start`로 실행합니다. 기본 프레임워크는 Node HTTP이며 외부 패키지 설치가 필요 없습니다. MCP `kechap_scaffold`는 같은 파일들을 검토용 JSON으로 반환합니다. 실제 계정 생성 로직·분산 저장소·실서비스 접근성 복구 경로는 제품에 맞게 구현해야 합니다. 생성된 프로젝트의 서버 핸들러 테스트는 통과했으나 이 실행 환경의 포트 제한 때문에 실제 브라우저 실행은 미확인입니다.
