@@ -3,6 +3,16 @@ on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis:8
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
     strategy:
       matrix:
         node: [20, 22, 24]
@@ -16,6 +26,9 @@ jobs:
       - run: npm run catalog:check
       - run: npm run test:research
       - run: npm run benchmark -- 20
+      - run: npm run test:redis
+        env:
+          REDIS_URL: redis://127.0.0.1:6379
   browser:
     runs-on: ubuntu-latest
     steps:
@@ -26,3 +39,8 @@ jobs:
       - run: npm ci --omit=optional
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
+      - run: npm run test:passkeys
+      - run: npm run test:generated
+      - run: npm run test:replay-browser
+      - run: npm run test:study-browser
+      - run: npm run benchmark:agents -- --samples=1

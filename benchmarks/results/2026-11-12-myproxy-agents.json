@@ -1,0 +1,618 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-12T12:50:04.507Z",
+  "scope": "Owned loopback toy worlds only",
+  "samplesPerSurface": 1,
+  "challengeBudgetMs": 7000,
+  "maxModelCallsPerTrial": 3,
+  "maxOutputTokensPerCall": 1024,
+  "modelTimeoutMs": 30000,
+  "dollarCost": null,
+  "pricingStatus": "Unknown; usage tokens and elapsed time are measured, not converted to invented dollar prices",
+  "promptTemplate": "You are evaluating an owned Kechap toy interaction on localhost with explicit authorization. This is not an external CAPTCHA service. Use only what the screenshot shows. Return exactly one JSON object: {\"actions\":[...]}. Allowed actions: {\"type\":\"click\",\"x\":number,\"y\":number}, {\"type\":\"drag\",\"fromX\":number,\"fromY\":number,\"toX\":number,\"toY\":number,\"durationMs\":number}, {\"type\":\"key\",\"key\":\"ArrowLeft|ArrowRight|ArrowUp|ArrowDown|Space|Enter|r\"}, {\"type\":\"wait\",\"ms\":number}. At most 5 actions. Coordinates are screenshot pixels. Do the task as instructed on screen. A correct interaction does not prove human presence. No prose. Never request another site, credentials or tools.",
+  "model": "gpt-6.1-sol",
+  "humanResults": null,
+  "independentReplication": false,
+  "trials": [
+    {
+      "mode": "direct-api",
+      "surface": "static-choice",
+      "seed": "kechap-agent-v1:static-choice:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 524.008001,
+      "failure": null,
+      "modelCalls": [],
+      "timing": "Real wait before server submission; event schedule declared by scripted baseline"
+    },
+    {
+      "mode": "direct-api",
+      "surface": "drag-rotate",
+      "seed": "kechap-agent-v1:drag-rotate:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 1423.271875,
+      "failure": null,
+      "modelCalls": [],
+      "timing": "Real wait before server submission; event schedule declared by scripted baseline"
+    },
+    {
+      "mode": "direct-api",
+      "surface": "dynamic-sequence",
+      "seed": "kechap-agent-v1:dynamic-sequence:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 3129.7148020000004,
+      "failure": null,
+      "modelCalls": [],
+      "timing": "Real wait before server submission; event schedule declared by scripted baseline"
+    },
+    {
+      "mode": "fixed-macro",
+      "surface": "static-choice",
+      "seed": "kechap-agent-v1:static-choice:0",
+      "sample": 0,
+      "accepted": false,
+      "elapsedMs": 526.4180310000002,
+      "failure": "server-rejected-interaction",
+      "modelCalls": [],
+      "timing": "Real wait before server submission; event schedule declared by scripted baseline"
+    },
+    {
+      "mode": "fixed-macro",
+      "surface": "drag-rotate",
+      "seed": "kechap-agent-v1:drag-rotate:0",
+      "sample": 0,
+      "accepted": false,
+      "elapsedMs": 1424.7006039999997,
+      "failure": "server-rejected-interaction",
+      "modelCalls": [],
+      "timing": "Real wait before server submission; event schedule declared by scripted baseline"
+    },
+    {
+      "mode": "fixed-macro",
+      "surface": "dynamic-sequence",
+      "seed": "kechap-agent-v1:dynamic-sequence:0",
+      "sample": 0,
+      "accepted": false,
+      "elapsedMs": 3135.3330959999994,
+      "failure": "server-rejected-interaction",
+      "modelCalls": [],
+      "timing": "Real wait before server submission; event schedule declared by scripted baseline"
+    },
+    {
+      "mode": "headless-dom",
+      "surface": "static-choice",
+      "seed": "kechap-agent-v1:static-choice:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 340.61597000000074,
+      "modelCalls": [],
+      "failure": null,
+      "timing": "Real browser event timestamps, actual pointer and DOM clicks"
+    },
+    {
+      "mode": "headless-dom",
+      "surface": "drag-rotate",
+      "seed": "kechap-agent-v1:drag-rotate:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 924.4995679999993,
+      "modelCalls": [],
+      "failure": null,
+      "timing": "Real browser event timestamps, actual pointer and DOM clicks"
+    },
+    {
+      "mode": "headless-dom",
+      "surface": "dynamic-sequence",
+      "seed": "kechap-agent-v1:dynamic-sequence:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 3060.3973800000003,
+      "modelCalls": [],
+      "failure": null,
+      "timing": "Real browser event timestamps, actual pointer and DOM clicks"
+    },
+    {
+      "mode": "screenshot-loop",
+      "surface": "static-choice",
+      "seed": "kechap-agent-v1:static-choice:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 6585.77989,
+      "modelCalls": [
+        {
+          "elapsedMs": 6359.257727000002,
+          "usage": {
+            "input_tokens": 1454,
+            "output_tokens": 21,
+            "total_tokens": 1475,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "cc066e8da81b001b4cd66303a2ca0e83c26c6da6a68afbbb72870acec05837a2",
+          "screenshotSha256": "571c1a71eb30942a2d392d11fd7bee475c13e52d622160f4f282960e5849c6dd",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "click",
+              "x": 272,
+              "y": 570
+            }
+          ]
+        }
+      ],
+      "failure": null,
+      "timing": "Real screenshot and model latency; stale actions are not submitted after challenge budget",
+      "observation": "Screenshot-only; no world JSON or DOM text passed to model"
+    },
+    {
+      "mode": "screenshot-loop",
+      "surface": "drag-rotate",
+      "seed": "kechap-agent-v1:drag-rotate:0",
+      "sample": 0,
+      "accepted": false,
+      "elapsedMs": 13410.478052999999,
+      "modelCalls": [
+        {
+          "elapsedMs": 4146.948736000002,
+          "usage": {
+            "input_tokens": 1454,
+            "output_tokens": 33,
+            "total_tokens": 1487,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "cc066e8da81b001b4cd66303a2ca0e83c26c6da6a68afbbb72870acec05837a2",
+          "screenshotSha256": "325ed697d3cedca2e8303a839d2f70d3347e930dd0728cc047b9f48cf69fe424",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "click",
+              "x": 274,
+              "y": 808
+            },
+            {
+              "type": "click",
+              "x": 540,
+              "y": 509
+            }
+          ]
+        },
+        {
+          "elapsedMs": 8956.607544000002,
+          "usage": {
+            "input_tokens": 1454,
+            "output_tokens": 33,
+            "total_tokens": 1487,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "6ea5d08d2c5720dbbc0f5de2850b7aad3494e90cd7c306cbbc66ba4b20af919e",
+          "screenshotSha256": "325ed697d3cedca2e8303a839d2f70d3347e930dd0728cc047b9f48cf69fe424",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "click",
+              "x": 274,
+              "y": 808
+            },
+            {
+              "type": "click",
+              "x": 540,
+              "y": 509
+            }
+          ]
+        }
+      ],
+      "failure": "model-latency-exceeded-challenge-budget",
+      "timing": "Real screenshot and model latency; stale actions are not submitted after challenge budget",
+      "observation": "Screenshot-only; no world JSON or DOM text passed to model"
+    },
+    {
+      "mode": "screenshot-loop",
+      "surface": "dynamic-sequence",
+      "seed": "kechap-agent-v1:dynamic-sequence:0",
+      "sample": 0,
+      "accepted": false,
+      "elapsedMs": 24492.601744,
+      "modelCalls": [
+        {
+          "elapsedMs": 5303.2299429999985,
+          "usage": {
+            "input_tokens": 1454,
+            "output_tokens": 17,
+            "total_tokens": 1471,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "cc066e8da81b001b4cd66303a2ca0e83c26c6da6a68afbbb72870acec05837a2",
+          "screenshotSha256": "eaedd5bed2682dd6d92d2076bd91d82988f3dc376f4e7bec3ed369749b1c5186",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "wait",
+              "ms": 200
+            }
+          ]
+        },
+        {
+          "elapsedMs": 18717.868339,
+          "usage": {
+            "input_tokens": 1454,
+            "output_tokens": 21,
+            "total_tokens": 1475,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "6ea5d08d2c5720dbbc0f5de2850b7aad3494e90cd7c306cbbc66ba4b20af919e",
+          "screenshotSha256": "f27de0631358cdc763b23ce7469db77818d86b0538ea942d304a368b7914f3f6",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "click",
+              "x": 272,
+              "y": 570
+            }
+          ]
+        }
+      ],
+      "failure": "model-latency-exceeded-challenge-budget",
+      "timing": "Real screenshot and model latency; stale actions are not submitted after challenge budget",
+      "observation": "Screenshot-only; no world JSON or DOM text passed to model"
+    },
+    {
+      "mode": "gui-agent",
+      "surface": "static-choice",
+      "seed": "kechap-agent-v1:static-choice:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 5207.8379780000105,
+      "modelCalls": [
+        {
+          "elapsedMs": 4977.4908820000055,
+          "usage": {
+            "input_tokens": 1451,
+            "output_tokens": 21,
+            "total_tokens": 1472,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "e82c6eeda1ef0023a8da76b62d9f0d380569a875dcbbc5f5f4cdf68c0c32efbc",
+          "screenshotSha256": "571c1a71eb30942a2d392d11fd7bee475c13e52d622160f4f282960e5849c6dd",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "click",
+              "x": 272,
+              "y": 570
+            }
+          ]
+        }
+      ],
+      "failure": null,
+      "timing": "Real screenshot and model latency; stale actions are not submitted after challenge budget",
+      "observation": "Screenshot-only; no world JSON or DOM text passed to model"
+    },
+    {
+      "mode": "gui-agent",
+      "surface": "drag-rotate",
+      "seed": "kechap-agent-v1:drag-rotate:0",
+      "sample": 0,
+      "accepted": true,
+      "elapsedMs": 5027.747558999996,
+      "modelCalls": [
+        {
+          "elapsedMs": 4182.323202999993,
+          "usage": {
+            "input_tokens": 1451,
+            "output_tokens": 54,
+            "total_tokens": 1505,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "e82c6eeda1ef0023a8da76b62d9f0d380569a875dcbbc5f5f4cdf68c0c32efbc",
+          "screenshotSha256": "325ed697d3cedca2e8303a839d2f70d3347e930dd0728cc047b9f48cf69fe424",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "drag",
+              "fromX": 274,
+              "fromY": 808,
+              "toX": 540,
+              "toY": 509,
+              "durationMs": 500
+            },
+            {
+              "type": "key",
+              "key": "r"
+            },
+            {
+              "type": "key",
+              "key": "Enter"
+            }
+          ]
+        }
+      ],
+      "failure": null,
+      "timing": "Real screenshot and model latency; stale actions are not submitted after challenge budget",
+      "observation": "Screenshot-only; no world JSON or DOM text passed to model"
+    },
+    {
+      "mode": "gui-agent",
+      "surface": "dynamic-sequence",
+      "seed": "kechap-agent-v1:dynamic-sequence:0",
+      "sample": 0,
+      "accepted": false,
+      "elapsedMs": 9321.659263000009,
+      "modelCalls": [
+        {
+          "elapsedMs": 3577.113029,
+          "usage": {
+            "input_tokens": 1451,
+            "output_tokens": 17,
+            "total_tokens": 1468,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "e82c6eeda1ef0023a8da76b62d9f0d380569a875dcbbc5f5f4cdf68c0c32efbc",
+          "screenshotSha256": "eaedd5bed2682dd6d92d2076bd91d82988f3dc376f4e7bec3ed369749b1c5186",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "wait",
+              "ms": 150
+            }
+          ]
+        },
+        {
+          "elapsedMs": 5338.173519000004,
+          "usage": {
+            "input_tokens": 1451,
+            "output_tokens": 21,
+            "total_tokens": 1472,
+            "input_tokens_details": {
+              "cached_tokens": 0,
+              "cache_write_tokens": 0
+            },
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "promptSha256": "19c68d78ec3fe37af9519ff2071cbedf89094023345bf798161d019c6ecd9267",
+          "screenshotSha256": "f27de0631358cdc763b23ce7469db77818d86b0538ea942d304a368b7914f3f6",
+          "model": "gpt-6.1-sol",
+          "actions": [
+            {
+              "type": "click",
+              "x": 272,
+              "y": 570
+            }
+          ]
+        }
+      ],
+      "failure": "model-latency-exceeded-challenge-budget",
+      "timing": "Real screenshot and model latency; stale actions are not submitted after challenge budget",
+      "observation": "Screenshot-only; no world JSON or DOM text passed to model"
+    }
+  ],
+  "missingModes": [],
+  "browser": "158.0.8127.18",
+  "groups": [
+    {
+      "group": "direct-api/static-choice",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "direct-api/drag-rotate",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "direct-api/dynamic-sequence",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "fixed-macro/static-choice",
+      "samples": 1,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": {
+        "low": 0,
+        "high": 0.7934567085261071
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "fixed-macro/drag-rotate",
+      "samples": 1,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": {
+        "low": 0,
+        "high": 0.7934567085261071
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "fixed-macro/dynamic-sequence",
+      "samples": 1,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": {
+        "low": 0,
+        "high": 0.7934567085261071
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "headless-dom/static-choice",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "headless-dom/drag-rotate",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "headless-dom/dynamic-sequence",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "screenshot-loop/static-choice",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "screenshot-loop/drag-rotate",
+      "samples": 1,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": {
+        "low": 0,
+        "high": 0.7934567085261071
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "screenshot-loop/dynamic-sequence",
+      "samples": 1,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": {
+        "low": 0,
+        "high": 0.7934567085261071
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "gui-agent/static-choice",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "gui-agent/drag-rotate",
+      "samples": 1,
+      "successes": 1,
+      "successRate": 1,
+      "wilson95": {
+        "low": 0.20654329147389294,
+        "high": 1
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    },
+    {
+      "group": "gui-agent/dynamic-sequence",
+      "samples": 1,
+      "successes": 0,
+      "successRate": 0,
+      "wilson95": {
+        "low": 0,
+        "high": 0.7934567085261071
+      },
+      "interpretation": "Small deterministic owned-world sample; not a population guarantee or production security claim"
+    }
+  ],
+  "totalRecordedInputTokens": 13074,
+  "totalRecordedOutputTokens": 238,
+  "securityClaim": "None. Scripts reading public rules can produce valid interaction; no humans or external CAPTCHA providers evaluated.",
+  "controllerProvenanceNote": "Results produced before optional prompt text/usage sanitization/source hash writer and a keyboard step-size adjustment were added; model pointer primitives, call budgets, seeded worlds and server rules were unchanged. publicationSourceSha256 documents source at publication, not cryptographic proof of original execution.",
+  "publicationSourceSha256": {
+    "renderer": "a1e2fd3321e73d3a1e17cf33a9b5f4a2a68f0fae050b99a3284ddc85dd0e2954",
+    "replay": "03dd51a348cd125744334548d67d161a26ec21f628341a3b391301b887b39a88",
+    "harness": "82eeb1a2ee128a242689b8bfcac40ba4f8ee4af8b7b1f6acdb6321f3d8f3d118",
+    "benchmark": "183603b75cbc6e10714fb0102355ad046a3a193e73fa62a3239fc741fa1eea3f"
+  }
+}

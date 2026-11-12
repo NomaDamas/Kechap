@@ -4,6 +4,6 @@ Kechap 0.1 is an unaudited prototype. Official-provider adapters have mocked con
 
 ALTCHA and Cap use pinned upstream libraries and have owned local protocol and Chromium form integration tests. That evidence does not establish resistance to automated solvers. The toy replay baseline explicitly permits rule-aware scripts to pass. No biometric model or globally unique human proof is implemented.
 
-For a vulnerability, use GitHub private vulnerability reporting on NomaDamas/Kechap if enabled. If it is unavailable, open a minimal issue requesting a private reporting channel without secrets, personal data, live tokens or exploit details. Maintainers must establish that channel before production release.
+Private vulnerability reporting is enabled on NomaDamas/Kechap. Report privately at https://github.com/NomaDamas/Kechap/security/advisories/new . If the channel becomes unavailable, open a minimal issue requesting a private channel without secrets, personal data, live tokens or exploit details.
 
 See [the threat model](docs/threat-model.md) for scope and [the roadmap](docs/roadmap.md) for production gates.

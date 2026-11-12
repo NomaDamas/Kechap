@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "testedAt": "2026-11-12T13:19:04.218Z",
+  "browser": "158.0.8127.18",
+  "mode": "real-headless-DOM-and-pointer",
+  "trials": [
+    {
+      "surface": "static-choice",
+      "seed": "browser-smoke-static-choice",
+      "elapsedMs": 333.95265900000004,
+      "accepted": true,
+      "assurance": "interaction"
+    },
+    {
+      "surface": "drag-rotate",
+      "seed": "browser-smoke-drag-rotate",
+      "elapsedMs": 976.39924,
+      "accepted": true,
+      "assurance": "interaction"
+    },
+    {
+      "surface": "dynamic-sequence",
+      "seed": "browser-smoke-dynamic-sequence",
+      "elapsedMs": 3065.0855600000004,
+      "accepted": true,
+      "assurance": "interaction"
+    },
+    {
+      "surface": "drag-rotate",
+      "seed": "browser-smoke-drag-rotate",
+      "mode": "keyboard",
+      "accepted": true,
+      "assurance": "interaction"
+    }
+  ],
+  "humanResults": null,
+  "securityClaim": "None. Rule-aware automation is expected to pass."
+}

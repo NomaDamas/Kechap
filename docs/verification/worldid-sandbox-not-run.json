@@ -1,0 +1,13 @@
+{
+  "status": "not-run",
+  "reason": "User confirmed no registered World ID application/RP sandbox credentials",
+  "requires": [
+    "registered app_id",
+    "rp_id",
+    "action",
+    "server signing key",
+    "authorized Sandbox tester or staging simulator actual proof"
+  ],
+  "productionEnabled": false,
+  "successProofVerified": false
+}

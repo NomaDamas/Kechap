@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "reportType": "kechap-evidence-board",
+  "generatedAt": "2026-11-12T13:14:03.967Z",
+  "rank": null,
+  "comparisonPolicy": "No universal human score. Compare only identical revision, split, budgets and category; automation and human UX remain separate.",
+  "rows": [
+    {
+      "id": "kechap-owned-automation-20261112",
+      "category": "owned-automation",
+      "state": "active",
+      "benchmarkRevision": "kechap-toy-replay-v1",
+      "split": {
+        "kind": "public-development",
+        "datasetVersion": "kechap-benchmark-v1",
+        "seedSetSha256": "b7a66d661bdad0618d14b12c1d3196e7bd9396e1399d745a4385302bd3b6932e"
+      },
+      "stale": false,
+      "reproductionStatus": "not-independently-reproduced",
+      "verified": false,
+      "verificationNote": "Artifact metadata cannot authenticate independent reviewer identity or prove a study happened. Maintainers must verify public evidence before awarding a verified badge.",
+      "eligibleForComparison": true,
+      "independentEvidenceCount": 0,
+      "comparableDigest": "c86b817584a6aa5e43e4c5f880c088206b4383a23a9eebc08520bfa25255e239",
+      "provenance": {
+        "codeUrl": "https://github.com/NomaDamas/Kechap/tree/3cdedf508bac2766638399713f0f79185654d297",
+        "commit": "3cdedf508bac2766638399713f0f79185654d297",
+        "artifactUrl": "https://github.com/NomaDamas/Kechap/blob/3cdedf508bac2766638399713f0f79185654d297/benchmarks/results/2026-11-12-toy-baseline.json",
+        "artifactSha256": "03b355f2bf632a99b66881d32d39d7c7e6fd0d7bbaf426776d61e337a887aaaf",
+        "submitter": "NomaDamas/Kechap maintainers",
+        "environment": "{\"node\":\"v20.20.0\",\"platform\":\"linux\",\"arch\":\"x64\",\"cpuModel\":\"Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz\"}"
+      },
+      "metrics": [
+        {
+          "surface": "static-choice",
+          "baseline": "rule-aware-script",
+          "samples": 100,
+          "successes": 100,
+          "successRate": 1,
+          "successRateWilson95": {
+            "low": 0.9630065017930143,
+            "high": 1,
+            "method": "Wilson 95%; descriptive for deterministic seed sample, not a population guarantee"
+          },
+          "verifierMedianMs": 0.01343999999999923,
+          "verifierP95Ms": 0.03374700000000175,
+          "simulatedCompletionMedianMs": 500,
+          "inputDigest": "9bf28891cac5c710fa94349c4a9dd92d3925f6f20630882f9f1dd3b884c818d4"
+        },
+        {
+          "surface": "static-choice",
+          "baseline": "fixed-macro",
+          "samples": 100,
+          "successes": 27,
+          "successRate": 0.27,
+          "successRateWilson95": {
+            "low": 0.1926958414957634,
+            "high": 0.36432116767944994,
+            "method": "Wilson 95%; descriptive for deterministic seed sample, not a population guarantee"
+          },
+          "verifierMedianMs": 0.00900900000000604,
+          "verifierP95Ms": 0.012520000000002085,
+          "simulatedCompletionMedianMs": 500,
+          "inputDigest": "025bd37d5ec9b1c07fbfe85db89893fd4ef99777bb3399729a9305bb8feda9f6"
+        },
+        {
+          "surface": "drag-rotate",
+          "baseline": "rule-aware-script",
+          "samples": 100,
+          "successes": 100,
+          "successRate": 1,
+          "successRateWilson95": {
+            "low": 0.9630065017930143,
+            "high": 1,
+            "method": "Wilson 95%; descriptive for deterministic seed sample, not a population guarantee"
+          },
+          "verifierMedianMs": 0.031794000000004985,
+          "verifierP95Ms": 0.06842300000000279,
+          "simulatedCompletionMedianMs": 1400,
+          "inputDigest": "f4a0d0b989171abde27f52d002431bfce3a6a3340f7f6ea7669b1226f5fca2b1"
+        },
+        {
+          "surface": "drag-rotate",
+          "baseline": "fixed-macro",
+          "samples": 100,
+          "successes": 0,
+          "successRate": 0,
+          "successRateWilson95": {
+            "low": 3.469446951953614e-18,
+            "high": 0.03699349820698568,
+            "method": "Wilson 95%; descriptive for deterministic seed sample, not a population guarantee"
+          },
+          "verifierMedianMs": 0.025375000000003922,
+          "verifierP95Ms": 0.03877200000000158,
+          "simulatedCompletionMedianMs": 1400,
+          "inputDigest": "44c193da3bb8ab37e7045a19c5b0686947889dba39443988c369c575977f2f0b"
+        },
+        {
+          "surface": "dynamic-sequence",
+          "baseline": "rule-aware-script",
+          "samples": 100,
+          "successes": 100,
+          "successRate": 1,
+          "successRateWilson95": {
+            "low": 0.9630065017930143,
+            "high": 1,
+            "method": "Wilson 95%; descriptive for deterministic seed sample, not a population guarantee"
+          },
+          "verifierMedianMs": 0.011398999999997272,
+          "verifierP95Ms": 0.01960099999999443,
+          "simulatedCompletionMedianMs": 3100,
+          "inputDigest": "7f6cb2d52882e1941695f55eab3a897d767be301d3a8820a304284172b1ccafa"
+        },
+        {
+          "surface": "dynamic-sequence",
+          "baseline": "fixed-macro",
+          "samples": 100,
+          "successes": 1,
+          "successRate": 0.01,
+          "successRateWilson95": {
+            "low": 0.0017674320641406505,
+            "high": 0.054486196178705315,
+            "method": "Wilson 95%; descriptive for deterministic seed sample, not a population guarantee"
+          },
+          "verifierMedianMs": 0.011023999999999035,
+          "verifierP95Ms": 0.012286000000003128,
+          "simulatedCompletionMedianMs": 3100,
+          "inputDigest": "1d41106d2eae57b7e554dd5cdfdc4d9e7e46815ef24c55a68cec81d411da1b4a"
+        }
+      ],
+      "limitations": [
+        "Owned toy environments only; no external CAPTCHA services evaluated.",
+        "Client event times and observed elapsed are simulated; verifier CPU elapsed is measured with performance.now().",
+        "None. Rule-aware automation is expected to pass; replay validates world rules rather than human presence.",
+        "Public development seeds; no sealed holdout or independent reproduction."
+      ],
+      "lifecycleReason": null
+    }
+  ],
+  "warnings": [
+    "Stale, superseded and retracted cards remain visible but are ineligible for current comparisons.",
+    "Source labels, submission identity and reproduction claims are not independently authenticated by this renderer.",
+    "No verified badge is granted without maintainer review of actual independent evidence."
+  ]
+}

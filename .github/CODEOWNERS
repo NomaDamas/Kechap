@@ -1,0 +1,6 @@
+# Account with repository administration permission, verified during publication.
+# Ownership means review routing, not an independent security endorsement.
+* @minsing-jin
+/catalog/ @minsing-jin
+/src/ @minsing-jin
+/SECURITY.md @minsing-jin

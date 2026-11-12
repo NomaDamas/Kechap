@@ -43,12 +43,35 @@ document.querySelector('#cancel').addEventListener('click', () => {
 submit.addEventListener('click', async () => {
   submit.disabled = true;
   const currentToken = token; token = undefined;
-  try { const result = await post('/api/signup', {token: currentToken}); status.textContent = result.message; lifecycle?.abort(); }
+  try { const result = await post('/api/signup', {token: currentToken}); status.textContent = result.message; lifecycle?.abort(); document.querySelector('#passkey-enroll').disabled = false; document.querySelector('#passkey-delete').disabled = false; }
   catch (error) { status.textContent = error.message; }
+});
+document.querySelector('#passkey-enroll').addEventListener('click', async () => {
+  try {
+    const challenge = await post('/api/passkey/register/options', {});
+    const response = await window.SimpleWebAuthnBrowser.startRegistration({optionsJSON: challenge.options});
+    await post('/api/passkey/register/verify', {id: challenge.id, response});
+    status.textContent = '데모 패스키를 등록했습니다. 이 브라우저 세션에서 사용할 수 있습니다.';
+  } catch (error) {status.textContent = error.message;}
+});
+document.querySelector('#passkey-auth').addEventListener('click', async () => {
+  lifecycle?.abort(); token = undefined; submit.disabled = true;
+  try {
+    const challenge = await post('/api/passkey/auth/options', {});
+    const response = await window.SimpleWebAuthnBrowser.startAuthentication({optionsJSON: challenge.options});
+    const proof = await post('/api/passkey/auth/verify', {id: challenge.id, response});
+    const result = await post('/api/signup', {recoveryToken: proof.token});
+    status.textContent = result.message + ' 패스키 계정 연속성 경로를 사용했습니다.';
+  } catch (error) {status.textContent = error.message;}
+});
+document.querySelector('#passkey-delete').addEventListener('click', async () => {
+  try {await post('/api/passkey/delete', {}); status.textContent = '데모 패스키의 서버 등록 정보를 삭제했습니다. 기기의 패스키 관리는 기기 설정에서 할 수 있습니다.';}
+  catch (error) {status.textContent = error.message;}
 });
 try {
   const response = await fetch('/api/session');
   if (!response.ok) throw new Error('세션을 시작할 수 없습니다.');
   session = await response.json();
+  document.querySelector('#passkeys').hidden = !session.passkeyRecovery;
   await refresh();
 } catch (error) { status.textContent = error.message; retry.disabled = true; }

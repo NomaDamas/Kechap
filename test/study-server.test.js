@@ -1,0 +1,30 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp, readFile, rm} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {createStudyServer} from '../scripts/study-server.js';
+test('human study cannot silently start with incomplete consent administration', async () => {
+  await assert.rejects(createStudyServer({source: 'human'}), /Human enrollment requires/);
+});
+test('study fixture requires consent, records actual dropout and deletes it on withdrawal', async t => {
+  const folder=await mkdtemp(join(tmpdir(),'kechap-study-http-')),file=join(folder,'data.jsonl');
+  const server=await createStudyServer({file,source:'fixture'});
+  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
+  t.after(async()=>{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));await rm(folder,{recursive:true,force:true});});
+  const origin=`http://localhost:${server.address().port}`;
+  const post=(path,body,headers={})=>fetch(origin+path,{method:'POST',headers:{Origin:origin,'Content-Type':'application/json',...headers},body:JSON.stringify(body)});
+  assert.equal((await post('/api/trial',{})).status,403);
+  const info=await(await fetch(origin+'/api/info')).json();assert.equal(info.source,'fixture');
+  assert.equal((await post('/api/consent',{consented:false})).status,400);
+  const initial=await post('/api/consent',{consented:true,consentVersion:info.consentVersion,device:'unspecified'});
+  const session=await initial.json(),headers={Cookie:initial.headers.get('set-cookie').split(';')[0],'X-Kechap-CSRF':session.csrf};
+  const trial=await(await post('/api/trial',{},headers)).json();assert.equal(trial.assurance,'interaction');
+  assert.equal((await post('/api/dropout',{},headers)).status,200);
+  const record=JSON.parse((await readFile(file,'utf8')).trim());
+  assert.equal(record.source,'fixture');assert.equal(record.attempts[0].outcome,'dropout');assert.equal(record.attempts[0].groundTruth,'unreviewed');
+  assert.equal(JSON.stringify(record).includes(session.withdrawalToken),false);
+  assert.equal((await post('/api/withdraw',{withdrawalToken:session.withdrawalToken})).status,200);
+  assert.equal(await readFile(file,'utf8'),'');
+  assert.equal((await post('/api/trial',{},headers)).status,403);
+});

@@ -45,7 +45,7 @@ cp .env.example .env
 npm start
 ```
 
-지원 생성 공급자: `pow`, `altcha`, `cap`, `turnstile`, `hcaptcha`, `recaptcha`. reCAPTCHA는 `recaptchaMode: "v2"` 또는 `"v3"`를 명시합니다. 상용 키는 공급자 계정에서 발급해야 합니다. 생성 예제는 실제 계정을 만들지 않으며 보호된 작업을 연결할 지점을 보여 줍니다.
+지원 생성 공급자: `pow`, `altcha`, `cap`, `turnstile`, `hcaptcha`, `recaptcha`. reCAPTCHA는 `recaptchaMode: "v2"` 또는 `"v3"`를 명시합니다. 상용 키는 공급자 계정에서 발급해야 합니다. 공개 dummy test key는 명시적 testMode에서만 허용하며 운영 방어로 쓰면 안 됩니다. 생성 예제는 실제 계정을 만들지 않으며 보호된 작업을 연결할 지점을 보여 줍니다.
 
 ## 구현한 인증 경로
 
@@ -54,9 +54,10 @@ npm start
 | ALTCHA | 공식 altcha-lib 2.8.0, v2 SHA-256, 실제 패키지 및 Chromium 폼 테스트 | automation-cost |
 | Cap | 공식 capjs-core 0.1.15, format 1 SHA-256, 실제 패키지 및 Chromium 폼 테스트 | automation-cost |
 | 자체 PoW | 실험·비교용, Chromium 폼 테스트 | automation-cost |
-| Turnstile·hCaptcha·classic reCAPTCHA | 공식 서버 endpoint 어댑터, hostname/action/score·오류 처리 모의 테스트 | bot-mitigation |
+| Turnstile·hCaptcha·classic reCAPTCHA | 공식 서버 endpoint와 모의 계약 테스트. hCaptcha 공식 dummy-key 실제 server roundtrip 통과 | bot-mitigation |
 | 세 가지 toy replay | 정적 선택·drag/rotate·동적 순서의 서버 이벤트 재생 및 스크립트 기준선 | interaction |
-| liveness·identity·uniqueness | 후보와 확장 계획. 현재 런타임 구현 없음 | 서로 별개 |
+| passkey | 공식 WebAuthn 등록·인증·삭제, virtual-authenticator Chromium 검증 | account-continuity 별도 경로 |
+| World ID | 기본 비활성 issuer-1 v4 준비 어댑터. 실제 sandbox는 앱/RP 미등록으로 대기 | uniqueness, 실제 승인 아님 |
 
 Cap의 HashWX·instrumentation·behavior scoring은 이 baseline에서 활성화하지 않습니다. 상용 공급자의 실제 계정 연동 검증은 별도입니다. 재생 가능한 입력과 사람의 존재는 다른 주장입니다. [OSS 근거와 계약](docs/oss-integrations.md), [외부 라이선스 고지](THIRD_PARTY_NOTICES.md)를 확인하세요.
 
@@ -81,7 +82,7 @@ if (!consumed.ok) throw new Error('Expired or already used');
 // 제품의 보호된 작업 실행. DB 트랜잭션/멱등성은 제품에서 처리합니다.
 ```
 
-`MemoryStore`는 단일 프로세스 개발용입니다. 운영에서는 원자적 `put(key,value,expiresAt)`/`take(key)` 공유 저장소, 실제 제품 세션·CSRF·속도 제한·요청 크기 제한·HTTPS·접근성 복구 경로가 필요합니다. 소비와 업무 처리의 원자성은 별도로 설계해야 합니다. 실패한 검증 시도도 challenge를 소비하므로 다시 발급해야 합니다.
+`MemoryStore`는 단일 프로세스 개발용입니다. Redis6.2+용 [원자적 TTL 저장소](docs/distributed-store.md)를 추가했고 실제 Redis8에서 다중 프로세스 100동시 검증·소비를 확인했습니다. 운영에서는 이 공유 저장소와 실제 제품 세션·CSRF·속도 제한·요청 크기 제한·HTTPS·접근성 복구 경로가 필요합니다. 소비와 업무 처리의 원자성은 별도로 설계해야 합니다. 실패한 검증 시도도 challenge를 소비하므로 다시 발급해야 합니다.
 
 브라우저는 `src/browser.js`의 `mountChallenge(container, issued, {onResponse,onError,signal})`을 사용합니다. 교체 시 abort하면 이전 widget과 콜백을 정리합니다. 외부 벤더 스크립트는 해당 방식 선택 시 로드합니다. Turnstile은 challenge별 cData를 검사합니다. hCaptcha/classic reCAPTCHA의 원본 토큰은 동일 site/action의 bearer proof이며 원래 브라우저 세션의 존재까지 증명하지 못합니다.
 
@@ -94,7 +95,7 @@ npm run recommend -- '{"useCase":"reward","minStars":10000}'
 
 추천은 self-host/제3자 금지, 용도, assurance, 최소 별 수, 테스트 근거, 실험 허용, modality와 제외 목록을 확인하고 공급자별 탈락 이유를 반환합니다. 지원하지 않는 제약은 무시하지 않고 오류로 돌려줍니다. 연락 폼·가입 기본 요구와 리워드 uniqueness·복구 identity 요구를 구분합니다. 기본 요구는 제품별 조정이 필요한 예시이며 보안 등급 인증이 아닙니다.
 
-`issueWithPolicy`는 서버의 action·risk별 공급자 집합, stable/rotate/weighted 방식, health와 정책 버전을 사용합니다. 발급된 challenge는 원래 공급자·assurance·정책 버전에 고정됩니다. 다른 범주의 자동 fallback이나 전체 장애 시 자동 통과는 없습니다. risk 입력·health는 신뢰된 서버가 제공해야 합니다. 자체 위험 점수 모델과 기기/IP 수집기는 아직 구현하지 않았습니다. [정책 예제](docs/runtime-policy.md)를 참고하세요.
+`issueWithPolicy`는 서버의 action·risk별 공급자 집합, stable/rotate/weighted 방식, health와 정책 버전을 사용합니다. 발급된 challenge는 원래 공급자·assurance·정책 버전에 고정됩니다. 다른 범주의 자동 fallback이나 전체 장애 시 자동 통과는 없습니다. risk 입력·health는 신뢰된 서버가 제공해야 합니다. 자체 위험 점수 모델과 기기/IP 수집기는 아직 구현하지 않았습니다. [관측성과 운영](docs/operations.md)의 bounded 지표·명시적 복구 probe circuit breaker와 dashboard를 제공합니다. [정책 예제](docs/runtime-policy.md)를 참고하세요.
 
 ## 조사 결과
 
@@ -116,7 +117,7 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-`npm test`는 현재 50개 테스트를 실행하며 Python 조사 테스트 3개는 별도입니다. Chromium 테스트는 소유한 폼에서 ALTCHA·Cap·PoW 교체와 실제 서버 제출을 확인합니다. 브라우저가 제한된 환경이면 해당 검증을 별도로 실행해야 합니다.
+`npm test`는 현재 102개 테스트를 실행하며 Python 조사 테스트 3개는 별도입니다. Chromium 테스트는 소유한 폼에서 ALTCHA·Cap·PoW 교체와 실제 서버 제출을 확인합니다. 브라우저가 제한된 환경이면 해당 검증을 별도로 실행해야 합니다.
 
 세 가지 toy surface의 rule-aware script는 각각 100/100 성공했습니다. 이는 **서버 replay만으로 사람과 자동화를 구분할 수 없다는 결과**입니다. 인간·VLM·접근성 데이터는 아직 없으며 허구 수치를 채우지 않습니다. [벤치 프로토콜과 결과 한계](docs/benchmark.md)를 확인하세요.
 
@@ -129,3 +130,32 @@ npm run test:browser
 GitHub Sponsor 설정은 NomaDamas로 연결했습니다. 현재 조직 Sponsors listing은 미활성이므로 소유자가 [Sponsors 가입](https://github.com/sponsors/accounts)을 완료해야 실제 수령이 가능합니다. [후원 상태](docs/sponsorship.md)를 참고하세요.
 
 프로젝트 코드는 Apache-2.0이며 외부 패키지와 후보의 라이선스는 별도로 적용됩니다.
+
+## 열린 이슈 구현 확장
+
+- [Redis store](docs/distributed-store.md): 분산 원자TTL·용량·timeout·worker crash 시험.
+- [관측성](docs/operations.md): 토큰·IP·context 없는 운영지표, 오류를 통과로 세지 않는 집계와 circuit breaker.
+- [접근성·privacy](docs/accessibility-privacy.md): 기본 비활성 패스키 경로, 실제 WebAuthn·키보드 검증과 데이터 삭제.
+- [Express](docs/express.md): 기존 auth·CSRF·rate-limit·권한을 유지하는 실제 route 통합.
+- [공급자 승인](docs/provider-review.md): JSON Schema·라이선스·별수·운영근거 분리, CODEOWNERS·PR양식·비공개 취약점 신고.
+- [실제 모델 실험](docs/agent-benchmark.md): 소유 과제15trials, 실제 MyProxy GPT스크린샷/GUI호출과 비용·실패 기록. 사람 결과 아님.
+- [연구 수집·분석](docs/study-protocol.md): consent/withdraw/dropout/균형순서·통계·작은 그룹 억제, fixture와 인간 분리.
+- [운영 파일럿](docs/pilot-operations.md): 운영자 모집문안·baseline/대조·비용/실패/해지 분석도구. 실제 운영자0명.
+- [선택적 World ID](docs/personhood.md): 현재 앱이 없다는 사용자 확인에 따라 실제 sandbox 성공은 대기.
+
+```bash
+# Redis는 본인이 운영하는 테스트 인스턴스만 지정
+REDIS_URL=redis://127.0.0.1:6379 npm run test:redis
+npm run test:generated
+npm run test:passkeys
+npm run test:replay-browser
+npm run test:study-browser
+npm run study:serve
+npm run benchmark:agents -- --samples=1
+# 비용이 있는 모델호출은 명시 opt-in, 기존 MyProxy설정 재사용
+npm run benchmark:agents -- --samples=1 --with-model
+```
+
+사용자는 사람 모집보다 실험 도구 완성을 우선하기로 했습니다. 따라서 실제 첫 사용자2명, 사람 참가자, 독립 외부 재현·기여, 운영자5곳은 아직 없습니다. 가상 참가·에이전트 테스트로 그 조건을 충족했다고 집계하지 않습니다. 후원 계정 활성화와 World ID sandbox 등록도 소유자 작업으로 남습니다.
+
+실험 도구 전체 실행 순서는 [실험 도구 안내](docs/experiment-tools.md), 실제 측정 결과는 [검증 기록](docs/verification/)과 [근거 보드](benchmarks/leaderboard/index.html)에 있습니다.

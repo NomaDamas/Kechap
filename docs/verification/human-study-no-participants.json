@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "reportType": "human-study-aggregate",
+  "protocolVersion": "kechap-human-pilot-v1",
+  "generatedAt": "2026-11-12T13:14:04.011Z",
+  "dataProvenance": "Source labels and consent are supplied by the study operator; this tool does not prove humanity, consent authenticity or recruitment independence.",
+  "humanParticipants": 0,
+  "humanTrialRecords": 0,
+  "incompleteParticipants": 0,
+  "exclusions": {
+    "nonHumanRecords": 0,
+    "withdrawnParticipants": 0,
+    "excludedRecords": 0,
+    "reasons": {
+      "technical-logging-failure": 0,
+      "duplicate-session": 0,
+      "protocol-violation": 0
+    }
+  },
+  "minimumCellSize": 5,
+  "primary": {
+    "static-choice": {
+      "suppressed": true,
+      "reason": "Fewer than 5 participant records"
+    },
+    "drag-rotate": {
+      "suppressed": true,
+      "reason": "Fewer than 5 participant records"
+    },
+    "dynamic-sequence": {
+      "suppressed": true,
+      "reason": "Fewer than 5 participant records"
+    }
+  },
+  "devices": {
+    "desktop": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "mobile": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "tablet": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "unspecified": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    }
+  },
+  "accessibilityGroups": {
+    "keyboard": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "screen-reader": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "reduced-motion": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "motor": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "low-vision": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "low-resource": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    },
+    "unspecified": {
+      "static-choice": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "drag-rotate": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      },
+      "dynamic-sequence": {
+        "suppressed": true,
+        "reason": "Fewer than 5 participant records"
+      }
+    }
+  },
+  "repeatRecords": 0,
+  "statisticsNotes": [
+    "Primary denominator is one participant per surface, first scored presentation, maximum two attempts.",
+    "Repeated practice and retests are not independent human samples and are not pooled into completion confidence intervals.",
+    "Wilson intervals are descriptive per-surface participant proportions; groups overlap and between-surface comparisons require participant-cluster analysis.",
+    "False reject means rejected independently adjudicated valid interaction among attempts with an actual success/rejected decision; unreviewed attempts, infrastructure errors and dropout are not verifier decisions and are separately counted.",
+    "Completion times include successful task wall time including retry; failures and dropout stay in completion denominators.",
+    "Missing costs and unmeasured fallback remain null or explicit counts; fixture and automation records never count as humans."
+  ],
+  "inputSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

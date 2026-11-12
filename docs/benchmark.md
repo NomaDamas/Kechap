@@ -34,7 +34,7 @@ const kechap = new Kechap({adapters: {
 // 공개 설정은 브라우저 world에 전달하고 검증에는 JSON response 문자열을 받는다.
 ```
 
-모듈 자체에는 브라우저 world renderer가 없다. 이벤트를 만들거나 어댑터를 직접 호출했다고 사람이 참여한 실험이 되지는 않는다. 이 모듈은 안정적인 가입폼의 기본 공급자가 아니라 명시적으로 선택하는 연구용 어댑터다.
+현재 `src/replay-browser.js`가 세 가지 world의 실제 pointer·키보드 renderer를 제공한다. `npm run test:replay-browser`는 실제 Chromium에서 서버 replay까지 실행한다. `npm run study:serve`는 동의·중단·철회·수집 화면을 실행하며 기본 source는 fixture다. [사람 연구 프로토콜](study-protocol.md), [실제 agent benchmark](agent-benchmark.md)를 따르고 이를 사람 참가 결과로 바꾸어 표시하지 않는다. 이 모듈은 안정적인 가입폼의 기본 공급자가 아니라 명시적으로 선택하는 연구용 어댑터다.
 
 ## 다음 실험의 완료 조건
 

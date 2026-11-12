@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "testedAt": "2026-11-12T12:36:25.134Z",
+  "scope": "Owned Redis integration; no external CAPTCHA evaluated",
+  "workers": 5,
+  "concurrentRequestsPerPhase": 100,
+  "redisVersion": "8.10.0",
+  "successfulVerifications": 1,
+  "successfulConsumptions": 1,
+  "ttlCapacityCleanup": "passed",
+  "responseTimeoutAfterCommit": "failed-closed-without-retry",
+  "workerCrashAfterCommit": "state-remains-consumed",
+  "pass": true
+}

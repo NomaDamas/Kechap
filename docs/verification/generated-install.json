@@ -1,0 +1,11 @@
+{
+  "testedAt": "2026-11-12T13:18:54.071Z",
+  "provider": "altcha",
+  "framework": "node-http",
+  "cleanDependencyInstall": true,
+  "browserSubmission": true,
+  "secretAbsentFromServedSources": true,
+  "invalidPostRejected": true,
+  "pass": true,
+  "limitations": "Automated fixture, not two independent first users or an external adoption study."
+}

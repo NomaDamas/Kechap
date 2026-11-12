@@ -1,0 +1,403 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/NomaDamas/Kechap/benchmarks/pilot.schema.json",
+  "title": "Anonymous operational pilot aggregate input (not raw user events)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "studyRevision",
+    "operators"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "studyRevision": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_.-]{1,80}$"
+    },
+    "operators": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": {
+        "$ref": "#/definitions/operator"
+      }
+    }
+  },
+  "definitions": {
+    "operator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "operatorId",
+        "source",
+        "productType",
+        "consent",
+        "provenance",
+        "baseline",
+        "intervention",
+        "comparability",
+        "failures",
+        "status",
+        "cancellationReason",
+        "willingnessToPay"
+      ],
+      "properties": {
+        "operatorId": {
+          "type": "string",
+          "pattern": "^op_[a-f0-9]{16}$"
+        },
+        "source": {
+          "enum": [
+            "real-operator",
+            "fixture",
+            "synthetic"
+          ]
+        },
+        "productType": {
+          "enum": [
+            "contact-form",
+            "community",
+            "commerce",
+            "rewards",
+            "account-recovery",
+            "ticketing",
+            "survey",
+            "other"
+          ]
+        },
+        "consent": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "granted",
+            "version",
+            "recordedAt",
+            "withdrawnAt"
+          ],
+          "properties": {
+            "granted": {
+              "type": "boolean"
+            },
+            "version": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_.-]{1,64}$"
+            },
+            "recordedAt": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$"
+            },
+            "withdrawnAt": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "reportSha256",
+            "independentlyReviewed"
+          ],
+          "properties": {
+            "reportSha256": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "independentlyReviewed": {
+              "type": "boolean"
+            }
+          }
+        },
+        "baseline": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "startsAt",
+            "endsAt",
+            "eligibleRequests",
+            "completedActions",
+            "confirmedAbusiveActions",
+            "supportTickets",
+            "providerCostUsd",
+            "infrastructureCostUsd",
+            "installationHours",
+            "maintenanceHours"
+          ],
+          "properties": {
+            "startsAt": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$"
+            },
+            "endsAt": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$"
+            },
+            "eligibleRequests": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "completedActions": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "confirmedAbusiveActions": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "supportTickets": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "providerCostUsd": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "infrastructureCostUsd": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "installationHours": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "maintenanceHours": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "intervention": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "startsAt",
+            "endsAt",
+            "eligibleRequests",
+            "completedActions",
+            "confirmedAbusiveActions",
+            "supportTickets",
+            "providerCostUsd",
+            "infrastructureCostUsd",
+            "installationHours",
+            "maintenanceHours"
+          ],
+          "properties": {
+            "startsAt": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$"
+            },
+            "endsAt": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$"
+            },
+            "eligibleRequests": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "completedActions": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "confirmedAbusiveActions": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "supportTickets": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "providerCostUsd": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "infrastructureCostUsd": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "installationHours": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "maintenanceHours": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "comparability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "assignment",
+            "sameProtectedAction",
+            "sameAbuseDefinition",
+            "sameTrafficInclusion",
+            "externalChangesControlled"
+          ],
+          "properties": {
+            "assignment": {
+              "enum": [
+                "sequential-observational",
+                "matched-observational",
+                "randomized-concurrent"
+              ]
+            },
+            "sameProtectedAction": {
+              "type": "boolean"
+            },
+            "sameAbuseDefinition": {
+              "type": "boolean"
+            },
+            "sameTrafficInclusion": {
+              "type": "boolean"
+            },
+            "externalChangesControlled": {
+              "type": "boolean"
+            }
+          }
+        },
+        "failures": {
+          "type": "array",
+          "maxItems": 20,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "count"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "outage",
+                  "false-reject",
+                  "integration",
+                  "accessibility",
+                  "cost",
+                  "other"
+                ]
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "status": {
+          "enum": [
+            "active",
+            "completed",
+            "withdrawn",
+            "terminated"
+          ]
+        },
+        "cancellationReason": {
+          "enum": [
+            null,
+            "privacy",
+            "accessibility",
+            "cost",
+            "no-value",
+            "integration-failure",
+            "operator-capacity",
+            "other"
+          ]
+        },
+        "willingnessToPay": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "source",
+            "monthlyUsd",
+            "askedAt"
+          ],
+          "properties": {
+            "source": {
+              "const": "operator-stated-not-revenue"
+            },
+            "monthlyUsd": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "askedAt": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

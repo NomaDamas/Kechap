@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kechap 운영 지표 보기</title>
+<style>
+body{font:16px/1.6 system-ui;max-width:1100px;margin:32px auto;padding:20px;color:#173b2b;background:#f6f6f0}
+table{border-collapse:collapse;width:100%;background:white}th,td{border:1px solid #ccd6cd;padding:8px;text-align:left}caption{text-align:left;font-weight:bold;padding:12px 0}input,button{font:inherit}#status{min-height:2em}small{display:block;margin:16px 0}pre{white-space:pre-wrap}
+</style>
+<h1>Kechap 운영 지표</h1>
+<p>서버의 <code>metrics.snapshot()</code> JSON을 열어 실제 누적 결과를 확인합니다. 업로드나 외부 요청은 하지 않습니다.</p>
+<label>지표 JSON 파일 <input id="file" type="file" accept="application/json,.json"></label>
+<p id="status" role="status" aria-live="polite">파일을 선택해 주세요.</p>
+<table><caption>공급자별 작업과 결과</caption><thead><tr><th>공급자</th><th>작업</th><th>전체</th><th>성공</th><th>거절</th><th>운영 오류</th><th>성공률</th><th>p50 ms</th><th>p95 ms</th></tr></thead><tbody id="rows"></tbody></table>
+<small>발급·fallback 성공은 인증 통과를 뜻하지 않습니다. 검증 성공률은 verify 행을 보세요. p50/p95는 최근 제한된 표본이며 전체 기간 percentile이 아닙니다. health는 운영 상태이며 사람 여부나 사기 위험 점수가 아닙니다.</small>
+<h2>Fallback 선택 수</h2><pre id="fallbacks">데이터 없음</pre>
+<script>
+const file=document.querySelector('#file'),status=document.querySelector('#status'),rows=document.querySelector('#rows');
+file.addEventListener('change',async()=>{
+  try{
+    const selected=file.files[0];if(!selected)return;if(selected.size>1024*1024)throw new Error('1MB 이하 파일만 열 수 있습니다.');
+    const data=JSON.parse(await selected.text());if(data.schemaVersion!==1||!Array.isArray(data.rows)||data.rows.length>260)throw new Error('지원하지 않는 지표 파일입니다.');
+    const fragment=document.createDocumentFragment();
+    for(const row of data.rows){
+      if(!row.outcomes||!row.latency||!Number.isFinite(row.total))throw new Error('잘못된 지표 행입니다.');
+      if(!row.total)continue;
+      const tr=document.createElement('tr');
+      const values=[row.provider,row.operation,row.total,row.outcomes.success,row.outcomes.rejected,row.outcomes.error,row.successRate===null?'—':`${(row.successRate*100).toFixed(1)}%`,row.latency.p50Ms??'—',row.latency.p95Ms??'—'];
+      for(const value of values){const td=document.createElement('td');td.textContent=String(value);tr.append(td);}fragment.append(tr);
+    }
+    rows.replaceChildren(fragment);document.querySelector('#fallbacks').textContent=JSON.stringify(data.fallbacks??[],null,2);
+    status.textContent=`표시했습니다. 유효하지 않아 버린 이벤트: ${data.droppedEvents??0}. 개인·토큰 데이터는 이 지표에 포함하지 않아야 합니다.`;
+  }catch(error){rows.replaceChildren();status.textContent=error.message;}
+});
+</script>
+</html>

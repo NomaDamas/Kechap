@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/NomaDamas/Kechap/blob/main/benchmarks/study.schema.json",
+  "title": "Kechap private human pilot trial and withdrawal record",
+  "description": "A JSONL format for explicitly consented trials. Strict runtime validation in scripts/analyze-study.js also checks assignment, temporal and repeat invariants. This schema does not prove human participation or consent authenticity.",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "protocolVersion", "participantId", "kind"],
+      "properties": {
+        "schemaVersion": {"const": 1},
+        "protocolVersion": {"const": "kechap-human-pilot-v1"},
+        "participantId": {"type": "string", "pattern": "^[A-Za-z0-9_-]{16,64}$"},
+        "kind": {"const": "withdrawal"}
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schemaVersion", "protocolVersion", "participantId", "kind", "source", "consentVersion", "consented", "surface", "benchmarkRevision", "allocationIndex", "allocationSeed", "orderIndex", "repeatIndex", "device", "accessibilityGroups", "attempts", "wallDurationMs", "withdrawalTokenHash", "fallback", "excludedReason"],
+      "properties": {
+        "schemaVersion": {"const": 1},
+        "protocolVersion": {"const": "kechap-human-pilot-v1"},
+        "participantId": {"type": "string", "pattern": "^[A-Za-z0-9_-]{16,64}$"},
+        "kind": {"const": "trial"},
+        "source": {"enum": ["human", "automation", "fixture"]},
+        "consentVersion": {"const": "kechap-study-consent-v1"},
+        "consented": {"const": true},
+        "surface": {"enum": ["static-choice", "drag-rotate", "dynamic-sequence"]},
+        "benchmarkRevision": {"const": "kechap-toy-replay-v1"},
+        "allocationIndex": {"type": "integer", "minimum": 0, "maximum": 999999},
+        "allocationSeed": {"type": "string", "minLength": 16, "maxLength": 128},
+        "orderIndex": {"type": "integer", "minimum": 0, "maximum": 2},
+        "repeatIndex": {"type": "integer", "minimum": 0, "maximum": 2},
+        "device": {"enum": ["desktop", "mobile", "tablet", "unspecified"]},
+        "accessibilityGroups": {"type": "array", "uniqueItems": true, "maxItems": 7, "items": {"enum": ["keyboard", "screen-reader", "reduced-motion", "motor", "low-vision", "low-resource", "unspecified"]}},
+        "wallDurationMs": {"type": "number", "minimum": 0, "maximum": 60000},
+        "withdrawalTokenHash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "excludedReason": {"enum": [null, "technical-logging-failure", "duplicate-session", "protocol-violation"]},
+        "fallback": {
+          "oneOf": [
+            {"type": "null"},
+            {"type": "object", "additionalProperties": false, "required": ["offered", "used", "completed", "assurance"], "properties": {"offered": {"type": "boolean"}, "used": {"type": "boolean"}, "completed": {"type": "boolean"}, "assurance": {"enum": ["automation-cost", "bot-mitigation", "interaction", "account-continuity", "liveness", "identity", "uniqueness"]}}}
+          ]
+        },
+        "attempts": {
+          "type": "array", "minItems": 1, "maxItems": 2,
+          "items": {"type": "object", "additionalProperties": false, "required": ["outcome", "durationMs", "groundTruth", "verifierCpuMs", "costUsd"], "properties": {"outcome": {"enum": ["success", "rejected", "error", "dropout"]}, "durationMs": {"type": "number", "minimum": 0, "maximum": 15000}, "groundTruth": {"enum": ["valid-interaction", "invalid-interaction", "unreviewed"]}, "verifierCpuMs": {"type": ["number", "null"], "minimum": 0, "maximum": 15000}, "costUsd": {"type": ["number", "null"], "minimum": 0, "maximum": 1000}}}
+        }
+      }
+    }
+  ]
+}
