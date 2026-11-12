@@ -47,7 +47,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@simplewebauthn/browser": "13.3.0",
+    "@simplewebauthn/browser": "14.0.0",
     "@simplewebauthn/server": "13.3.3",
     "@worldcoin/idkit-server": "1.2.0",
     "altcha-lib": "2.8.0",
