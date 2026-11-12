@@ -1,0 +1,36 @@
+{
+  "repository": "anhskohbo/no-captcha",
+  "fetchedAt": "2026-11-12T09:48:28.907265+00:00",
+  "revision": "43dd871ac4e6993ffc51d81701c73fdbfa098bb7",
+  "metadataUrl": "https://api.github.com/repos/anhskohbo/no-captcha",
+  "metadataSha256": "cc7d05593cd640bdeba3d82ee49fa081f27ab006757ea724bc9a38a3deee0290",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1847,
+  "archived": false,
+  "pushedAt": "2026-04-01T07:56:36Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/anhskohbo/no-captcha/blob/43dd871ac4e6993ffc51d81701c73fdbfa098bb7/README.md",
+      "apiUrl": "https://api.github.com/repos/anhskohbo/no-captcha/readme?ref=43dd871ac4e6993ffc51d81701c73fdbfa098bb7",
+      "contentSha256": "948b87a7862898714707d5dcd92c4b4e6b304db63b398ce724349585ddc065a0",
+      "path": "README.md",
+      "openingExcerpt": "No CAPTCHA reCAPTCHA\n==========\n\n[![Build Status](https://travis-ci.org/anhskohbo/no-captcha.svg?branch=master&style=flat-square)](https://travis-ci.org/anhskohbo/no-captcha)\n[![Latest Stable Version](https://poser.pugx.org/anhskohbo/no-captcha/v/stable)](https://packagist.org/packages/anhskohbo/no-captcha)\n[![Total Downloads](https://poser.pugx.org/anhskohbo/no-captcha/downloads)](https://packagist.org/packages/anhskohbo/no-captcha)\n[![Latest Unstable Version](https://poser.pugx.org/anhskohbo/no-captcha/v/unstable)](https://packagist.org/packages/anhskohbo/no-captcha)\n[![License](https://poser.pugx.org/anhskohbo/no-captcha/license)](https://packagist.org/packages/anhskohbo/no-captcha)\n\n![recaptcha_anchor 2x](https://cloud.githubusercontent.com/assets/1529454/5291635/1c426412-7b88-11e4-8d16-46161a081ece.gif)\n\n> For Laravel 4 use [v1](https://github.com/anhskohbo/no-captcha/tree/v1) branch.\n\n## Installation\n\n```\ncomposer require anhskohbo/no-captcha\n```\n\n## Laravel 5 and above\n\n### Setu"
+    },
+    "license": {
+      "url": "https://github.com/anhskohbo/no-captcha/blob/43dd871ac4e6993ffc51d81701c73fdbfa098bb7/LICENSE",
+      "apiUrl": "https://api.github.com/repos/anhskohbo/no-captcha/license?ref=43dd871ac4e6993ffc51d81701c73fdbfa098bb7",
+      "contentSha256": "a49d27386610a55c788522a1a4e7c542b421204b28d71d7393ff27f858b713c0",
+      "path": "LICENSE",
+      "openingExcerpt": "The MIT License (MIT)\n\nCopyright (c) 2014 Nguyễn Văn Ánh\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF "
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

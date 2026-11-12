@@ -1,0 +1,36 @@
+{
+  "repository": "AskAHumanOnline/askahuman-mcp-server",
+  "fetchedAt": "2026-11-12T09:54:55.032588+00:00",
+  "revision": "7d69a3309e8ca267e4985f59a7da488fcdef82be",
+  "metadataUrl": "https://api.github.com/repos/AskAHumanOnline/askahuman-mcp-server",
+  "metadataSha256": "d2673a7750753d4868f2d2ba774b5a0a2ae8c3445ce0668a0fce4115eee8f218",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 0,
+  "archived": false,
+  "pushedAt": "2026-11-11T10:43:03Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/AskAHumanOnline/askahuman-mcp-server/blob/7d69a3309e8ca267e4985f59a7da488fcdef82be/README.md",
+      "apiUrl": "https://api.github.com/repos/AskAHumanOnline/askahuman-mcp-server/readme?ref=7d69a3309e8ca267e4985f59a7da488fcdef82be",
+      "contentSha256": "6a30716f01f4cb4eac575723d883a71d7f005d57bb48524968f8654a28523c51",
+      "path": "README.md",
+      "openingExcerpt": "# askahuman-mcp\n\nAn MCP (Model Context Protocol) server that gives AI agents access to human verification. Ask a human a question, pay via the Lightning Network, and get a verified answer -- all through standard MCP tools.\n\nAny MCP-compatible AI agent (Claude, Gemini, Codex, etc.) can use this server to request human judgment on tasks that require real-world understanding, common sense, or subjective evaluation.\n\n> **Platform launch coming soon** — The AskAHuman marketplace is on its way. Follow [@AskAHumanOnline](https://github.com/AskAHumanOnline) for updates.\n\n## Prerequisites\n\n- **Node.js >= 18**\n- **LND node** with REST API enabled and a funded channel (for Lightning payments)\n\n## Installation\n\nRun directly (no install required):\n\n```bash\nnpx askahuman-mcp\n```\n\nOr install globally:\n\n```bash\nnpm install -g askahuman-mcp\n```\n\n## Configuration\n\nAll configuration is via environment variables:\n\n| Variable | Required | Description |\n|---|---|---|\n| `ASKAHUMAN_API_URL` | Yes | Base URL o"
+    },
+    "license": {
+      "url": "https://github.com/AskAHumanOnline/askahuman-mcp-server/blob/7d69a3309e8ca267e4985f59a7da488fcdef82be/LICENSE",
+      "apiUrl": "https://api.github.com/repos/AskAHumanOnline/askahuman-mcp-server/license?ref=7d69a3309e8ca267e4985f59a7da488fcdef82be",
+      "contentSha256": "2d8f393064645926883b6dcf39d02f3b6f5fe3f9f29e53abe80b9d3f417e5cd3",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2025 AskAHuman\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTIO"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

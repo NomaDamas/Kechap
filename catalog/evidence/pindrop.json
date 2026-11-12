@@ -1,0 +1,15 @@
+{
+  "url": "https://www.pindrop.com/products/liveness-detection",
+  "resolvedUrl": "https://www.pindrop.com/",
+  "fetchedAt": "2026-11-12T10:21:26.882163+00:00",
+  "rawSha256": "0b9b0930620d8ac9fc2e89b56349a845eff1781ef6c9f69795a01bbb793c564f",
+  "title": "Deepfake Defense for Calls, Virtual Meetings, & Contact Centers | Pindrop",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "authentication",
+      "text": "OPTIONAL ADD-ON Fraud Assist Add AI-assisted fraud investigation workflows. Available with Protect. AUTHENTICATION ENGINE Pindrop® Passport Authenticate known callers with less friction. OPTIONAL ADD-ON / standalone VeriCall® Technology Add ANI validation and spoof detection. Available with Passport. Fall '26 product updates All integrated into our Partner Ecosystem Solutions By use case PROTECT YOUR CUSTOMERS Detect fraud and risk Authenticate without friction Defend against deepfakes SAFEGUARD YOUR WORKFORC"
+    }
+  ],
+  "note": "Documentation/marketing description only; no live certification or independent performance validation."
+}

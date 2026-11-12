@@ -3,18 +3,22 @@ import {randomBytes} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {Kechap, powAdapter, siteverifyAdapter} from '../../src/index.js';
+import {altchaAdapter, capAdapter} from '../../src/oss.js';
 
 export function configuredAdapters(env = process.env) {
   const providers = (env.KECHAP_PROVIDERS ?? 'pow').split(',');
-  if (providers.includes('pow') && providers.length > 1) throw new Error('PoW cannot rotate with bot-mitigation providers');
+  const compute = ['pow', 'altcha', 'cap'];
+  if (providers.some(p => compute.includes(p)) && providers.some(p => !compute.includes(p))) throw new Error('PoW cannot rotate with bot-mitigation providers');
   const adapters = {};
   for (const provider of providers) {
     if (provider === 'pow') { adapters.pow = powAdapter({difficulty: 2}); continue; }
+    if (provider === 'altcha') { adapters.altcha = altchaAdapter({secret: env.ALTCHA_SECRET}); continue; }
+    if (provider === 'cap') { adapters.cap = capAdapter({secret: env.CAP_SECRET}); continue; }
     if (!['turnstile', 'hcaptcha', 'recaptcha'].includes(provider)) throw new Error('Unknown KECHAP_PROVIDERS value');
     const prefix = provider.toUpperCase();
     adapters[provider] = siteverifyAdapter({provider, siteKey: env[`${prefix}_SITE_KEY`], secret: env[`${prefix}_SECRET`], hostname: env.KECHAP_HOSTNAME ?? 'localhost', ...(provider !== 'hcaptcha' && !(provider === 'recaptcha' && env.RECAPTCHA_MODE === 'v2') ? {action: 'signup'} : {}), ...(provider === 'recaptcha' ? {recaptchaMode: env.RECAPTCHA_MODE, ...(env.RECAPTCHA_MODE === 'v3' ? {minScore: Number(env.RECAPTCHA_MIN_SCORE ?? 0.7)} : {})} : {})});
   }
-  return {adapters, providers, assurance: providers[0] === 'pow' ? 'automation-cost' : 'bot-mitigation'};
+  return {adapters, providers, assurance: compute.includes(providers[0]) ? 'automation-cost' : 'bot-mitigation'};
 }
 
 /** Local integration example; not a production session/authentication server. */
@@ -25,6 +29,7 @@ export function createDemoHandler({adapters, providers = Object.keys(adapters), 
     ['/', [new URL('./index.html', import.meta.url), 'text/html; charset=utf-8']],
     ['/app.js', [new URL('./app.js', import.meta.url), 'text/javascript; charset=utf-8']],
     ['/browser.js', [new URL('../../src/browser.js', import.meta.url), 'text/javascript; charset=utf-8']]
+    ,['/browser-work.js', [new URL('../../src/browser-work.js', import.meta.url), 'text/javascript; charset=utf-8']]
   ]);
   return async (req, res) => {
     const expectedOrigin = typeof origin === 'function' ? origin() : origin;

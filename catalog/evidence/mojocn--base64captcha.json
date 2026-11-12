@@ -1,0 +1,36 @@
+{
+  "repository": "mojocn/base64Captcha",
+  "fetchedAt": "2026-11-12T09:43:02.771448+00:00",
+  "revision": "74e19a0404aa30abaf93a9dcc4dfce96e9b53a8d",
+  "metadataUrl": "https://api.github.com/repos/mojocn/base64Captcha",
+  "metadataSha256": "fd41121589cc99d297396a7b6d5396a4e01d17440a4df982b87dab0e1d98d984",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2364,
+  "archived": false,
+  "pushedAt": "2025-09-29T10:35:08Z",
+  "apiLicenseCandidate": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/mojocn/base64Captcha/blob/74e19a0404aa30abaf93a9dcc4dfce96e9b53a8d/README.md",
+      "apiUrl": "https://api.github.com/repos/mojocn/base64Captcha/readme?ref=74e19a0404aa30abaf93a9dcc4dfce96e9b53a8d",
+      "contentSha256": "e977f03ed061cee5599a8f9062d78adc53c091dac3e80d3f77e5abf97751cd47",
+      "path": "README.md",
+      "openingExcerpt": "# A flexible and various captcha package\n![Test](https://github.com/mojocn/base64Captcha/workflows/Test/badge.svg)\n[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/mojocn/base64Captcha)\n[![Go Report Card](https://goreportcard.com/badge/github.com/mojocn/base64Captcha)](https://goreportcard.com/report/github.com/mojocn/base64Captcha)\n[![GoDoc](https://godoc.org/github.com/mojocn/base64Captcha?status.svg)](https://godoc.org/github.com/mojocn/base64Captcha)\n[![Build Status](https://travis-ci.org/mojocn/base64Captcha.svg?branch=master)](https://travis-ci.org/mojocn/base64Captcha)\n[![codecov](https://codecov.io/gh/mojocn/base64Captcha/branch/master/graph/badge.svg)](https://codecov.io/gh/mojocn/base64Captcha)\n![stability-stable](https://img.shields.io/badge/stability-stable-brightgreen.svg)\n[![Foundation](https://img.shields.io/badge/Golang-Foundation-green.svg)](http://golangfoundation.org)\n\nBase64captcha supports any unicode character and can easily be customized to "
+    },
+    "license": {
+      "url": "https://github.com/mojocn/base64Captcha/blob/74e19a0404aa30abaf93a9dcc4dfce96e9b53a8d/LICENSE",
+      "apiUrl": "https://api.github.com/repos/mojocn/base64Captcha/license?ref=74e19a0404aa30abaf93a9dcc4dfce96e9b53a8d",
+      "contentSha256": "29d23058b4407209cd18dd3befda5f305e6fea63fdebc575320a5e1c29cb0496",
+      "path": "LICENSE",
+      "openingExcerpt": "Copyright 2019 Eric neochau@gmail.com\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n    http://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License."
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

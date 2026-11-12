@@ -1,0 +1,11 @@
+{
+  "testedAt": "2026-11-12T10:18:21.390Z",
+  "browser": "158.0.8127.18",
+  "providers": [
+    "altcha",
+    "cap",
+    "pow"
+  ],
+  "pass": true,
+  "limitations": "Owned local PoW/ALTCHA SHA256/Cap SHA256. Does not measure humanity, commercial vendor defense, assistive technology, or VLM resistance."
+}

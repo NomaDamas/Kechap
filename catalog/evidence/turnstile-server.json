@@ -1,0 +1,42 @@
+{
+  "url": "https://developers.cloudflare.com/turnstile/get-started/server-side-validation/",
+  "resolvedUrl": "https://developers.cloudflare.com/turnstile/get-started/server-side-validation/",
+  "fetchedAt": "2026-11-12T09:49:59.088164+00:00",
+  "rawSha256": "3b5c61c1bbd9386a180f2b604151a45757fca57adefd4c8e328f11929f15f18c",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "single use",
+      "text": "nt without completing a challenge. Tokens expire. Each token is valid for 300 seconds (5 minutes) after generation. Tokens are intended for single use. A replayed token is rejected with the timeout-or-duplicate error code after the earlier redemption becomes visible. Refer to Token reuse and network convergence . Process Client generates token: Visitor completes Turnstile challenge on your webpage. Token sent to server: Form submission includes the Turnstile token. Server validates token: Your server calls Cloudflare's Siteverify API. Cloudflar"
+    },
+    {
+      "term": "five minutes",
+      "text": "etwork convergence Automatic expiry: Tokens automatically expire and cannot be reused The validation token issued by Turnstile is valid for five minutes. If a user submits the form after this period, the token is considered expired. In this scenario, the server-side verification API will return a failure, and the error-codes field in the response will include timeout-or-duplicate . To ensure a successful validation, the visitor must initiate the request and submit the token to your backend within the five-minute window. Otherwise, the Turnstile w"
+    },
+    {
+      "term": "300 seconds",
+      "text": "n be forged. An attacker can submit any string to your form endpoint without completing a challenge. Tokens expire. Each token is valid for 300 seconds (5 minutes) after generation. Tokens are intended for single use. A replayed token is rejected with the timeout-or-duplicate error code after the earlier redemption becomes visible. Refer to Token reuse and network convergence . Process Client generates token: Visitor completes Turnstile challenge on your webpage. Token sent to server: Form submission includes the Turnstile token. Server validate"
+    },
+    {
+      "term": "cdata",
+      "text": "n { \"success\" : true , \"challenge_ts\" : \"2022-02-28T15:14:30.096Z\" , \"hostname\" : \"example.com\" , \"error-codes\" : [], \"action\" : \"login\" , \"cdata\" : \"sessionid-123456789\" , \"metadata\" : { \"ephemeral_id\" : \"x:9f78e0ed210960d7693b167e\" } } Example json { \"success\" : false , \"error-codes\" : [ \"invalid-input-response\" ] } Response fields Field Description success Boolean indicating if validation was successful challenge_ts ISO 8601 timestamp when the challenge was solved hostname Hostname where the challenge was served error-codes Array of err"
+    },
+    {
+      "term": "hostname",
+      "text": " dashboard API Terraform Embed the widget Overview Widget configurations Validate the token Mobile implementation Additional configurations Hostname management Overview Pre-clearance configuration Any Hostname Pre-clearance support ↗︎ Ephemeral IDs Offlabel Turnstile Analytics Overview Challenge outcome Token validation Migration Overview Migrate from reCAPTCHA Migrate from hCaptcha Tutorials Troubleshooting Testing Rotate secret key Client-side errors Overview Error codes Challenge solve issues ↗︎ Feedback reports Extensions Pages Plugin ↗︎ "
+    },
+    {
+      "term": "secret",
+      "text": "Challenge outcome Token validation Migration Overview Migrate from reCAPTCHA Migrate from hCaptcha Tutorials Troubleshooting Testing Rotate secret key Client-side errors Overview Error codes Challenge solve issues ↗︎ Feedback reports Extensions Pages Plugin ↗︎ Google Firebase Waiting Room Analytics ↗︎ Reference Content Security Policy Turnstile Privacy Addendum Supported languages Supported browsers ↗︎ Community resources Changelog Agent resources Agent setup ↗︎ Cloudflare Skills ↗︎ Code Mode MCP Server ↗︎ Domain-specific MCP Servers ↗︎ MCP"
+    },
+    {
+      "term": "server",
+      "text": "m Supported languages Supported browsers ↗︎ Community resources Changelog Agent resources Agent setup ↗︎ Cloudflare Skills ↗︎ Code Mode MCP Server ↗︎ Domain-specific MCP Servers ↗︎ MCP Turnstile llms.txt ↗︎ Turnstile llms-full.txt ↗︎ Cloudflare Docs llms.txt ↗︎ Cloudflare Docs llms-full.txt ↗︎ Home / Turnstile / Get started / Validate the token Validate the token Last updated Nov 10, 2026 | Copy as Markdown | View as Markdown | Agent setup Overview Process Siteverify API overview Request format Token reuse and network convergence Basic vali"
+    },
+    {
+      "term": "captcha",
+      "text": "earance support ↗︎ Ephemeral IDs Offlabel Turnstile Analytics Overview Challenge outcome Token validation Migration Overview Migrate from reCAPTCHA Migrate from hCaptcha Tutorials Troubleshooting Testing Rotate secret key Client-side errors Overview Error codes Challenge solve issues ↗︎ Feedback reports Extensions Pages Plugin ↗︎ Google Firebase Waiting Room Analytics ↗︎ Reference Content Security Policy Turnstile Privacy Addendum Supported languages Supported browsers ↗︎ Community resources Changelog Agent resources Agent setup ↗︎ Cloudflar"
+    }
+  ],
+  "note": "Vendor/author claims are not independent Kechap security measurements."
+}

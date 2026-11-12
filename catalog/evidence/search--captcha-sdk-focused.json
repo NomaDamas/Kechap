@@ -1,0 +1,224 @@
+{
+  "url": "https://api.github.com/search/repositories?q=captcha+sdk+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:48:41.803578+00:00",
+  "sha256": "0d6d71722a4f29e12963ec8248c0637df422f3664bffe45b04927ac269fe37c2",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 208,
+    "incompleteResults": false,
+    "returned": 30,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "TikHub/TikHub-API-Python-SDK",
+      "html_url": "https://github.com/TikHub/TikHub-API-Python-SDK",
+      "description": "High-performance asynchronous Douyin(抖音) TikTok Xiaohongshu(小红书) Kuaishou(快手) Weibo(微博) Instagram YouTube(油管) Twitter(X) Captcha Solver(验证码解决器) Temp Mail(临时邮箱) API(接口).",
+      "stargazers_count": 943,
+      "archived": false
+    },
+    {
+      "full_name": "zszszszsz/.config",
+      "html_url": "https://github.com/zszszszsz/.config",
+      "description": "# # Automatically generated file; DO NOT EDIT. # OpenWrt Configuration # CONFIG_MODULES=y CONFIG_HAVE_DOT_CONFIG=y # CONFIG_TARGET_sunxi is not set # CONFIG_TARGET_apm821xx is not set # CONFIG_TARGET_ath25 is not set CONFIG_TARGET_ar71xx=y # CONFIG_TARGET_ath79 is not set # CONFIG_TARGET_bcm27xx is not set # CONFIG_TARGET_bcm53xx is not set # CONFIG_TARGET_brcm47xx is not set # CONFIG_TARGET_brcm6 [truncated]",
+      "stargazers_count": 370,
+      "archived": false
+    },
+    {
+      "full_name": "Thordata/how-to-bypass-amazon-captcha-when-scraping",
+      "html_url": "https://github.com/Thordata/how-to-bypass-amazon-captcha-when-scraping",
+      "description": "Step‑by‑step 2026 guide on how to bypass Amazon CAPTCHA when scraping: free requests examples, CAPTCHA detection, and a production‑ready approach using Thordata Web Scraper Tools with the official Python SDK.",
+      "stargazers_count": 163,
+      "archived": false
+    },
+    {
+      "full_name": "brightdata/sdk-python",
+      "html_url": "https://github.com/brightdata/sdk-python",
+      "description": "Bright Data's python SDK, use it to call bright data's scrape and search tools. bypass any Bot-detection or Captcha and extract data from any website in seconds.",
+      "stargazers_count": 100,
+      "archived": false
+    },
+    {
+      "full_name": "CapMonsterCloud/capmonster-python-captcha-solver",
+      "html_url": "https://github.com/CapMonsterCloud/capmonster-python-captcha-solver",
+      "description": "CapMonster Cloud Python SDK — captcha solver & captcha bypass for reCAPTCHA v2/v3, Cloudflare Turnstile, DataDome & GeeTest. A 2captcha and capsolver alternative for web scraping and automation.",
+      "stargazers_count": 39,
+      "archived": false
+    },
+    {
+      "full_name": "FriendlyCaptcha/friendly-captcha-sdk",
+      "html_url": "https://github.com/FriendlyCaptcha/friendly-captcha-sdk",
+      "description": "The SDK that is used to integrate Friendly Captcha v2 into your website. Protect your websites and online services from spam and abuse with Friendly Captcha, the privacy-first anti-bot solution.",
+      "stargazers_count": 37,
+      "archived": false
+    },
+    {
+      "full_name": "Godbyhub/108api",
+      "html_url": "https://github.com/Godbyhub/108api",
+      "description": "import os, wmi from sys import prefix from attr import validate import discord from discord.ext import commands from discord.ext import commands import discord from discord_buttons_plugin import * import requests, json, threading, requests, json, validators import requests, time, os from os import system from typing_extensions import Required import discord from discord import client from discord. [truncated]",
+      "stargazers_count": 37,
+      "archived": false
+    },
+    {
+      "full_name": "aarock1234/unicap",
+      "html_url": "https://github.com/aarock1234/unicap",
+      "description": "Go universal captcha solving service SDK",
+      "stargazers_count": 25,
+      "archived": false
+    },
+    {
+      "full_name": "CapMonsterCloud/capmonster-dotnet-captcha-solver",
+      "html_url": "https://github.com/CapMonsterCloud/capmonster-dotnet-captcha-solver",
+      "description": "CapMonster Cloud .NET SDK — C# captcha solver & captcha bypass for reCAPTCHA v2/v3, Cloudflare Turnstile, DataDome & GeeTest. A 2captcha and capsolver alternative for C# and .NET web scraping and automation.",
+      "stargazers_count": 24,
+      "archived": false
+    },
+    {
+      "full_name": "sweetcaptcha/sweetCaptcha-sdk-js",
+      "html_url": "https://github.com/sweetcaptcha/sweetCaptcha-sdk-js",
+      "description": "Sweet Captcha is an anti spam security widget useful for protecting comments, contact and login forms from bots in a human friendly manner - Node.js SDK",
+      "stargazers_count": 22,
+      "archived": false
+    },
+    {
+      "full_name": "ZenRows/zenrows-python-sdk",
+      "html_url": "https://github.com/ZenRows/zenrows-python-sdk",
+      "description": "SDK to access Zenrows API directly from Python. We handle proxies rotation, headless browsers and CAPTCHAs for you.",
+      "stargazers_count": 21,
+      "archived": false
+    },
+    {
+      "full_name": "sweetcaptcha/sweetCaptcha-sdk-php",
+      "html_url": "https://github.com/sweetcaptcha/sweetCaptcha-sdk-php",
+      "description": "Sweet Captcha is an anti spam security widget useful for protecting comments, contact and login forms from bots in a human friendly manner - PHP SDK",
+      "stargazers_count": 20,
+      "archived": false
+    },
+    {
+      "full_name": "ZenRows/zenrows-node-sdk",
+      "html_url": "https://github.com/ZenRows/zenrows-node-sdk",
+      "description": "SDK to access Zenrows API directly from Node.js. We handle proxies rotation, headless browsers and CAPTCHAs for you.",
+      "stargazers_count": 19,
+      "archived": false
+    },
+    {
+      "full_name": "CapMonsterCloud/capmonster-nodejs-captcha-solver",
+      "html_url": "https://github.com/CapMonsterCloud/capmonster-nodejs-captcha-solver",
+      "description": "CapMonster Cloud Node.js SDK — TypeScript captcha solver & captcha bypass for reCAPTCHA v2/v3, Cloudflare Turnstile, DataDome & GeeTest. A 2captcha and capsolver alternative for Node.js web scraping and automation.",
+      "stargazers_count": 18,
+      "archived": false
+    },
+    {
+      "full_name": "alperensert/node-capmonster",
+      "html_url": "https://github.com/alperensert/node-capmonster",
+      "description": "Node.js/TypeScript SDK for CapMonster Cloud — solve captchas at scale",
+      "stargazers_count": 17,
+      "archived": false
+    },
+    {
+      "full_name": "brightdata/sdk-js",
+      "html_url": "https://github.com/brightdata/sdk-js",
+      "description": "Bright Data's JS SDK, use it to call bright data's scrape and search tools. bypass any Bot-detection or Captcha and extract data from the web.",
+      "stargazers_count": 15,
+      "archived": false
+    },
+    {
+      "full_name": "tigusigalpa/yandex-smartcaptcha-php",
+      "html_url": "https://github.com/tigusigalpa/yandex-smartcaptcha-php",
+      "description": "Complete PHP/Laravel SDK for Yandex SmartCaptcha. Validate user tokens, manage captchas via API, integrate frontend widgets seamlessly. Auto OAuth/IAM token management, PSR-3 logging, strict typing. Includes service provider, facade, validation rules. Full docs in English & Russian. Production-ready, PSR-12 compliant. PHP 8.0+",
+      "stargazers_count": 15,
+      "archived": false
+    },
+    {
+      "full_name": "programmis/php-vk-api-sdk",
+      "html_url": "https://github.com/programmis/php-vk-api-sdk",
+      "description": "simple vk sdk on objects with anti captcha",
+      "stargazers_count": 11,
+      "archived": false
+    },
+    {
+      "full_name": "solvercaptcha/solvecaptcha-ruby",
+      "html_url": "https://github.com/solvercaptcha/solvecaptcha-ruby",
+      "description": "Ruby captcha solver for automating captcha bypass in scripts and web scraping workflows. Official Ruby SDK for SolveCaptcha.com a captcha-solving service with an easy-to-use API.",
+      "stargazers_count": 11,
+      "archived": false
+    },
+    {
+      "full_name": "FriendlyCaptcha/friendly-captcha-go-sdk",
+      "html_url": "https://github.com/FriendlyCaptcha/friendly-captcha-go-sdk",
+      "description": "A Go client for the Friendly Captcha verification API",
+      "stargazers_count": 8,
+      "archived": false
+    },
+    {
+      "full_name": "Swetrix/docs",
+      "html_url": "https://github.com/Swetrix/docs",
+      "description": "Documentation of Swetrix Analytics (API, SDK, captcha, analytics, etc.)",
+      "stargazers_count": 7,
+      "archived": true
+    },
+    {
+      "full_name": "tianaiyouqing/captcha-web-sdk",
+      "html_url": "https://github.com/tianaiyouqing/captcha-web-sdk",
+      "description": "tianai-captcha web实现",
+      "stargazers_count": 7,
+      "archived": false
+    },
+    {
+      "full_name": "WhyY0u/funBrowser",
+      "html_url": "https://github.com/WhyY0u/funBrowser",
+      "description": "Undetect / anti-detect browser SDK for Python — drives real Chrome via CDP with stealth patches, fingerprint customization, full proxy support, and automatic captcha solving (Turnstile, reCAPTCHA, hCaptcha, FunCaptcha) via funsolver.com.",
+      "stargazers_count": 7,
+      "archived": false
+    },
+    {
+      "full_name": "CapMonsterCloud/capmonster-go-captcha-solver",
+      "html_url": "https://github.com/CapMonsterCloud/capmonster-go-captcha-solver",
+      "description": "CapMonster Cloud Go SDK — Golang captcha solver & captcha bypass for reCAPTCHA v2/v3, Cloudflare Turnstile & GeeTest. A 2captcha and capsolver alternative for Go web scraping and automation.",
+      "stargazers_count": 6,
+      "archived": false
+    },
+    {
+      "full_name": "onliner/geetest-php-sdk",
+      "html_url": "https://github.com/onliner/geetest-php-sdk",
+      "description": "PHP client for GeeTest captcha.",
+      "stargazers_count": 6,
+      "archived": false
+    },
+    {
+      "full_name": "captcha-solver-api/python-sdk",
+      "html_url": "https://github.com/captcha-solver-api/python-sdk",
+      "description": "Official Python SDK for solving reCAPTCHA v2/v3, Cloudflare Turnstile, GeeTest v3/v4, and image captchas via the Captcha Solver API.",
+      "stargazers_count": 6,
+      "archived": false
+    },
+    {
+      "full_name": "godruoyi/laravel-tencent007-captcha",
+      "html_url": "https://github.com/godruoyi/laravel-tencent007-captcha",
+      "description": "一个简单的腾讯防水墙滑块验证码 SDK",
+      "stargazers_count": 6,
+      "archived": false
+    },
+    {
+      "full_name": "passxapi/passxapi-python",
+      "html_url": "https://github.com/passxapi/passxapi-python",
+      "description": "Official Python SDK for PassXAPI — solve reCAPTCHA, hCaptcha, Cloudflare Turnstile/WAF, Akamai, PerimeterX, Kasada, DataDome, Shape, FunCaptcha, AWS WAF, Vercel, Castle, Reese84, UTMVC, Sbsd, CaptchaFox, Forter, ThreatMetrix & TLS Forward. 27 captcha types, 99.5%+ success rate.",
+      "stargazers_count": 6,
+      "archived": false
+    },
+    {
+      "full_name": "wassafr/CaptchaFace-ios",
+      "html_url": "https://github.com/wassafr/CaptchaFace-ios",
+      "description": "Captchaface SDK reinvents mobile security by ensuring users of an app are real. ",
+      "stargazers_count": 5,
+      "archived": false
+    },
+    {
+      "full_name": "captcha-solver-api/javascript-sdk",
+      "html_url": "https://github.com/captcha-solver-api/javascript-sdk",
+      "description": "JavaScript SDK for Captcha Solver API. Solve reCAPTCHA v2, reCAPTCHA v3, Cloudflare Turnstile, GeeTest v3, GeeTest v4, and image captchas. Works in Node.js and browser environments.",
+      "stargazers_count": 5,
+      "archived": false
+    }
+  ]
+}

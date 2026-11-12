@@ -1,0 +1,18 @@
+{
+  "url": "https://docs.world.org/world-id",
+  "resolvedUrl": "https://docs.world.org/world-id/overview",
+  "fetchedAt": "2026-11-12T09:50:02.228044+00:00",
+  "rawSha256": "7b9423da543bb8981fcb079d81cca79644b6364fc0ade3d9c2d7889f5420cd98",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "server",
+      "text": " developers a high-assurance trust layer to stop bots, duplicate accounts, and abuse — while keeping onboarding fast and user data off your servers. Through credentials like Proof of Human, Proof of Attributes, and Proof of Presence, World ID extends that trust layer with additional proofs without exposing underlying user data. ​ Credentials ​ Proof of Human Highest-assurance uniqueness signal from Orb verification. Best for one-person-one-action flows and strong Sybil resistance. ​ Proof of Attributes Proves possession of a unique governme"
+    },
+    {
+      "term": "captcha",
+      "text": "e in rewards, referrals, governance, and account creation.`},{icon:`shield-check`,title:`Protect conversion and user privacy`,body:`Replace CAPTCHA-heavy or document-heavy gating with reusable proof flows. Relying parties receive proofs, not personal data.`}]})})}),`\\n`,_jsx(Visibility,{for:`agents`,children:_jsxs(_components.ul,{children:[`\\n`,_jsxs(_components.li,{children:[_jsx(_components.strong,{children:`Stop bots and duplicate accounts`}),` — Use proof of human to enforce one human per account and reduce Sybil abuse in rewards, referr"
+    }
+  ],
+  "note": "Vendor/author claims are not independent Kechap security measurements."
+}

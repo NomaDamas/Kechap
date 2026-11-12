@@ -1,0 +1,21 @@
+{
+  "url": "https://api.github.com/search/repositories?q=awesome+proof+personhood+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:48:45.711572+00:00",
+  "sha256": "f49d3955b6dd7947f5a48c21d6f2f44fbad9670b306fbe4973e235f88cc88f52",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 1,
+    "incompleteResults": false,
+    "returned": 1,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "andorsk/awesome-proof-of-personhood",
+      "html_url": "https://github.com/andorsk/awesome-proof-of-personhood",
+      "description": "curated list of proof of personhood approaches and papers.",
+      "stargazers_count": 19,
+      "archived": false
+    }
+  ]
+}

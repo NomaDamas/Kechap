@@ -1,0 +1,36 @@
+{
+  "repository": "WebDecoy/FCaptcha",
+  "fetchedAt": "2026-11-12T09:48:22.851059+00:00",
+  "revision": "1855e72f90e2a8a2cedab70210130135ce53dc5b",
+  "metadataUrl": "https://api.github.com/repos/WebDecoy/FCaptcha",
+  "metadataSha256": "56663e8533e90c6425332646497ef95a7274b1621c17499a1d18c1af578610f2",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 237,
+  "archived": false,
+  "pushedAt": "2026-11-12T00:12:39Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/WebDecoy/FCaptcha/blob/1855e72f90e2a8a2cedab70210130135ce53dc5b/README.md",
+      "apiUrl": "https://api.github.com/repos/WebDecoy/FCaptcha/readme?ref=1855e72f90e2a8a2cedab70210130135ce53dc5b",
+      "contentSha256": "f80a8574ae4fecd28025b765947c25ba309187443287b40ccb063426ca29a553",
+      "path": "README.md",
+      "openingExcerpt": "<p align=\"center\">\n  <img src=\".github/assets/hero.webp\" alt=\"F***Captcha: a duck in a pink hoodie spray-painting the name on a wall\" width=\"880\">\n</p>\n\n# F***Captcha\n\n**Open source CAPTCHA that blocks bots, vision AI agents, and automation - with a single click or less.**\n\n![License](https://img.shields.io/badge/license-MIT-blue.svg)\n![Go](https://img.shields.io/badge/Go-1.26.11+-00ADD8?logo=go)\n![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python)\n![Node](https://img.shields.io/badge/Node-22+-339933?logo=node.js)\n[![Docker](https://img.shields.io/badge/Docker-ghcr.io-2496ED?logo=docker)](https://github.com/WebDecoy/FCaptcha/pkgs/container/fcaptcha)\n[![Go Reference](https://pkg.go.dev/badge/github.com/WebDecoy/FCaptcha.svg)](https://pkg.go.dev/github.com/WebDecoy/FCaptcha)\n[![codecov](https://codecov.io/gh/WebDecoy/FCaptcha/graph/badge.svg)](https://app.codecov.io/gh/WebDecoy/FCaptcha)\n\n**[Try the Live Demo](https://webdecoy.com/product/fcaptcha-demo/)** · [Product o"
+    },
+    "license": {
+      "url": "https://github.com/WebDecoy/FCaptcha/blob/1855e72f90e2a8a2cedab70210130135ce53dc5b/LICENSE",
+      "apiUrl": "https://api.github.com/repos/WebDecoy/FCaptcha/license?ref=1855e72f90e2a8a2cedab70210130135ce53dc5b",
+      "contentSha256": "8fd7d7668f37bd91b1d70e6a609a4cd7797c3fb1173471dd6b1190a6eb8820a8",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2025 WebDecoy\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION"
+    }
+  },
+  "notes": "Maintainer claims AI-agent detection and privacy/accessibility properties. Kechap has not independently reproduced those security claims."
+}

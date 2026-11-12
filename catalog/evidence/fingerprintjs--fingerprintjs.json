@@ -1,0 +1,36 @@
+{
+  "repository": "fingerprintjs/fingerprintjs",
+  "fetchedAt": "2026-11-12T09:42:53.092767+00:00",
+  "revision": "7a738d0e9920c7431b34aff24b345a21f9054855",
+  "metadataUrl": "https://api.github.com/repos/fingerprintjs/fingerprintjs",
+  "metadataSha256": "29762537f6f28e03177a2996064d72439b1ab9df2a462dfefdd7ae7d885ea0d4",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 28731,
+  "archived": false,
+  "pushedAt": "2026-11-05T08:20:09Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/fingerprintjs/fingerprintjs/blob/7a738d0e9920c7431b34aff24b345a21f9054855/readme.md",
+      "apiUrl": "https://api.github.com/repos/fingerprintjs/fingerprintjs/readme?ref=7a738d0e9920c7431b34aff24b345a21f9054855",
+      "contentSha256": "f5d708ede2bb7b0516dfc293e9108ae92abf9df1d3f2b20b8ccb777879f06371",
+      "path": "readme.md",
+      "openingExcerpt": "<p align=\"center\">\n  <a href=\"https://fingerprint.com\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"resources/logo_light.svg\" />\n      <source media=\"(prefers-color-scheme: light)\" srcset=\"resources/logo_dark.svg\" />\n      <img src=\"resources/logo_dark.svg\" alt=\"FingerprintJS logo\" width=\"312px\" />\n    </picture>\n  </a>\n</p>\n<p align=\"center\">\n  <a href=\"https://github.com/fingerprintjs/fingerprintjs/actions/workflows/test.yml\"><img src=\"https://github.com/fingerprintjs/fingerprintjs/actions/workflows/test.yml/badge.svg\" alt=\"Build status\"></a>\n  <a href=\"https://www.npmjs.com/package/@fingerprintjs/fingerprintjs\"><img src=\"https://img.shields.io/npm/v/@fingerprintjs/fingerprintjs.svg\" alt=\"Current NPM version\"></a>\n  <a href=\"https://www.npmjs.com/package/@fingerprintjs/fingerprintjs\"><img src=\"https://img.shields.io/npm/dm/@fingerprintjs/fingerprintjs.svg\" alt=\"Monthly downloads from NPM\"></a>\n  <a href=\"https://www.jsdelivr.com/package/npm/@fingerprintjs"
+    },
+    "license": {
+      "url": "https://github.com/fingerprintjs/fingerprintjs/blob/7a738d0e9920c7431b34aff24b345a21f9054855/LICENSE",
+      "apiUrl": "https://api.github.com/repos/fingerprintjs/fingerprintjs/license?ref=7a738d0e9920c7431b34aff24b345a21f9054855",
+      "contentSha256": "b7eeaf845cbd307fbabdde266a01c632ab9ca30d08355dbfc7acc463b5ea8ee9",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2025 FingerprintJS, Inc\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN "
+    }
+  },
+  "notes": "Browser-side fingerprint identification; README distinguishes lower OSS accuracy from closed-source commercial Fingerprint Identification. A device identifier is not human presence."
+}

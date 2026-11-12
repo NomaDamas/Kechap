@@ -1,0 +1,84 @@
+{
+  "url": "https://api.github.com/search/repositories?q=captcha+orchestration+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:48:40.022568+00:00",
+  "sha256": "293da763ca7aaa77cfe845b2232cdd6db539fe2c15bf94d52c78cdc9200754cf",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 10,
+    "incompleteResults": false,
+    "returned": 10,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "Neverlow512/Breaking-the-Unbreakable-iOS-Captcha-Research",
+      "html_url": "https://github.com/Neverlow512/Breaking-the-Unbreakable-iOS-Captcha-Research",
+      "description": "Breaking the Unbreakable: A Practical Analysis of Arkose Labs' CAPTCHA Resilience via Orchestrated Visual Relay on iOS",
+      "stargazers_count": 3,
+      "archived": false
+    },
+    {
+      "full_name": "HanaT-DS/captcha_project",
+      "html_url": "https://github.com/HanaT-DS/captcha_project",
+      "description": "Automated text CAPTCHA solver using YOLOv8 character detection + Gemini vision fallback, orchestrated by Playwright and exposed via FastAPI.",
+      "stargazers_count": 2,
+      "archived": false
+    },
+    {
+      "full_name": "Yuurisan-N1/Toktok-Boost",
+      "html_url": "https://github.com/Yuurisan-N1/Toktok-Boost",
+      "description": "Interactive Rust CLI bot for Toktok Boost featuring automated glyph captcha solving, concurrent thread management, real-time logging, custom payload delivery, proxy rotation, and live service orchestration",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "ManashR7488/YojanaHarvest",
+      "html_url": "https://github.com/ManashR7488/YojanaHarvest",
+      "description": "YojanaHarvest is an automated pipeline that extracts report data from Indian government scheme portals — MGNREGA, SBM, JJM, PMAYG & eGram. It uses Playwright for browser automation, Gemini AI for CAPTCHA solving, and LangGraph for concurrent multi-pipeline orchestration, saving structured Excel reports automatically.",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "SriramS-77/rl-captcha-orchestration",
+      "html_url": "https://github.com/SriramS-77/rl-captcha-orchestration",
+      "description": "Reinforcement learning framework for adaptive CAPTCHA orchestration - balancing bot detection and user friction using DQN, PPO, and contextual bandits.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "intagcrm-creator/captcha-orchestrator",
+      "html_url": "https://github.com/intagcrm-creator/captcha-orchestrator",
+      "description": "Captcha solving orchestrator with proxy rotation and Capsolver/2Captcha integration",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "blairmichaelg/cryptobot",
+      "html_url": "https://github.com/blairmichaelg/cryptobot",
+      "description": "Production-grade browser automation platform with stealth anti-detection, multi-account orchestration, captcha solving, and Azure proxy infrastructure.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "Yuurisan-N1/Enstagram-Boost",
+      "html_url": "https://github.com/Yuurisan-N1/Enstagram-Boost",
+      "description": "Interactive Rust CLI bot for Enstagram-Boost featuring automated glyph captcha solving, live service orchestration, and proxy support.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "Sai-Santhan-Dodda/ai-navigation-automation",
+      "html_url": "https://github.com/Sai-Santhan-Dodda/ai-navigation-automation",
+      "description": "Browser automation agent for Bunnings website using the browser-use library, orchestrated via the laminar framework, managed with uv for Python environments, and running in Brave Browser for stealth and CAPTCHA bypass.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "matheustheus27/RainbowLeadCapture",
+      "html_url": "https://github.com/matheustheus27/RainbowLeadCapture",
+      "description": "🌈🎯 A robust full-stack Monorepo (Node.js/React/Postgres) featuring high-fidelity Glassmorphism, dynamic localization (pt-BR/en), JWT auth dashboard, and 100% local double-layer bot prevention (Honeypot + Math CAPTCHA). Orchestrated via Docker with Nginx reverse proxy on Port 80.",
+      "stargazers_count": 0,
+      "archived": false
+    }
+  ]
+}

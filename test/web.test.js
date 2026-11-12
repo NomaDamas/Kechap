@@ -97,7 +97,7 @@ test('live loopback HTTP session smoke (requires permission to bind a port)', as
     throw error;
   }
   t.after(() => {server.closeAllConnections(); return new Promise(resolve => server.close(resolve));});
-  const response = await fetch(`http://127.0.0.1:${server.address().port}/api/session`, {headers: {Host: `localhost:${server.address().port}`}});
+  const response = await fetch(`http://localhost:${server.address().port}/api/session`);
   assert.equal(response.status, 200);
   assert.equal((await response.json()).assurance, 'automation-cost');
 });

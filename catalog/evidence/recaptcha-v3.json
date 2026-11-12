@@ -1,0 +1,22 @@
+{
+  "url": "https://developers.google.com/recaptcha/docs/v3",
+  "resolvedUrl": "https://developers.google.com/recaptcha/docs/v3",
+  "fetchedAt": "2026-11-12T09:49:59.683775+00:00",
+  "rawSha256": "cc12914a777dc52783d2744f71ed4885b01116c3144feb87f75805f845edfd68",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "hostname",
+      "text": "this request (important to verify) \"challenge_ts\" : t imes ta mp , // timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ) \"hostname\" : s tr i n g , // the hostname of the site where the reCAPTCHA was solved \"error-codes\" : [ ... ] // optional } Tips grecaptcha.ready() runs your function when the reCAPTCHA library loads. To avoid race conditions with the api.js , include the api.js before your scripts that call grecaptcha, or continue to use the onload callback that&#39;s defined with the v2 API. Try hooking the execute call t"
+    },
+    {
+      "term": "server",
+      "text": "e Guides Support Get Started Introduction Choose a Type Loading reCAPTCHA reCAPTCHA v3 reCAPTCHA v3 reCAPTCHA v2 Checkbox Invisible Android Server Side Validation Verify the User’s Response Domain/Package Name Validation Admin Console Settings Analytics Additional Settings Language Codes This page is deprecated. See the Google Cloud Fraud Defense documentation page for additional information. Home Products reCAPTCHA Guides reCAPTCHA v3 Stay organized with collections Save and categorize content based on your preferences. Page Summary outlin"
+    },
+    {
+      "term": "captcha",
+      "text": " reCAPTCHA v3 &nbsp;|&nbsp; Google for Developers Skip to main content reCAPTCHA / English Deutsch Español Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어 Sign in Home Guides Support reCAPTCHA Home Guides Support Get Started Introduction Choose a Type Loading reCAPTCHA reCAPTCHA v3 reC"
+    }
+  ],
+  "note": "Vendor/author claims are not independent Kechap security measurements."
+}

@@ -1,0 +1,224 @@
+{
+  "url": "https://api.github.com/search/repositories?q=captcha+mcp+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:48:37.901427+00:00",
+  "sha256": "28d72a528d27fdf3d9cde66e979f7dacdda9786ad07bffb062415c5fbce66042",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 120,
+    "incompleteResults": false,
+    "returned": 30,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "feder-cr/invisible_playwright_mcp",
+      "html_url": "https://github.com/feder-cr/invisible_playwright_mcp",
+      "description": "Playwright MCP server undetected by anti-bots and captchas: AI agent browses the web on anti-detect stealth Firefox, Python, undetected browser automation, scraping, computer use.",
+      "stargazers_count": 879,
+      "archived": false
+    },
+    {
+      "full_name": "PleasePrompto/google-ai-mode-mcp",
+      "html_url": "https://github.com/PleasePrompto/google-ai-mode-mcp",
+      "description": "MCP server for free Google AI Mode search with citations. Query optimization, CAPTCHA handling, multi-agent support. Works with Claude Code, Cursor, Cline, Windsurf.",
+      "stargazers_count": 154,
+      "archived": true
+    },
+    {
+      "full_name": "Agent360dk/browser-mcp",
+      "html_url": "https://github.com/Agent360dk/browser-mcp",
+      "description": "The browser tool that can stop and ask you. A 2FA code, a CAPTCHA, a choice only you can make: it asks on your screen, then carries on in the same signed-in Chrome. 40 tools, MCP clients that run local servers, MIT.",
+      "stargazers_count": 63,
+      "archived": false
+    },
+    {
+      "full_name": "zigansh1n/imnotarobot",
+      "html_url": "https://github.com/zigansh1n/imnotarobot",
+      "description": "I am not a robot — a captcha solver for macOS: local model, Gemini vision, a stealth browser for checkbox captchas, RuCaptcha as the last resort. 2Captcha-compatible API and an MCP server.",
+      "stargazers_count": 48,
+      "archived": false
+    },
+    {
+      "full_name": "2captcha/2captcha-mcp",
+      "html_url": "https://github.com/2captcha/2captcha-mcp",
+      "description": "2Captcha MCP server for AI agents with web search, web scraping, browser automation, captcha solving, and scalable web data collection.",
+      "stargazers_count": 41,
+      "archived": false
+    },
+    {
+      "full_name": "opastorello/cpf-validador",
+      "html_url": "https://github.com/opastorello/cpf-validador",
+      "description": "MCP server + REST API para validacao de CPFs e consulta ao TRT3 com solver de CAPTCHA CRNN",
+      "stargazers_count": 22,
+      "archived": false
+    },
+    {
+      "full_name": "aezizhu/mcp-captcha-solver",
+      "html_url": "https://github.com/aezizhu/mcp-captcha-solver",
+      "description": "Captcha solver MCP server with 99% success rate. Supports reCAPTCHA v2/v3, hCaptcha, FunCaptcha, GeeTest, Cloudflare Turnstile, slider, rotate, audio captcha. Multi-service fallback.",
+      "stargazers_count": 21,
+      "archived": false
+    },
+    {
+      "full_name": "ilien-dev/svipall",
+      "html_url": "https://github.com/ilien-dev/svipall",
+      "description": "Local-first MCP server and CLI in Rust: any page as LLM-ready Markdown, whole-site crawls, keyless search, and local captcha solving. No cloud, no API keys.",
+      "stargazers_count": 20,
+      "archived": false
+    },
+    {
+      "full_name": "autokeren/ghostfox",
+      "html_url": "https://github.com/autokeren/ghostfox",
+      "description": "👻 Ghostfox — the browser that can SEE: Gecko-native agent browser. 71 MCP tools, unhookable a11y/compositor vision, captcha solvers, page_download, Android dial-out, visual QA for AI-built UIs.",
+      "stargazers_count": 17,
+      "archived": false
+    },
+    {
+      "full_name": "bgmacris/quimera-ai",
+      "html_url": "https://github.com/bgmacris/quimera-ai",
+      "description": "A Chrome browser shared in real time between you and Claude Code (CDP + Playwright MCP): you clear the captchas/logins, Claude operates and learns each site's navigation. Frugal, per-site memory.",
+      "stargazers_count": 12,
+      "archived": false
+    },
+    {
+      "full_name": "2captcha/mcp-captcha-solver",
+      "html_url": "https://github.com/2captcha/mcp-captcha-solver",
+      "description": "An MCP server for AI agents that handles captcha bypass workflows through dedicated tools instead of prompt hacks. Includes session-based browser automation, reCAPTCHA v2 solving, Selenium workflows, and a clean agent-to-tool architecture for verification-heavy web flows.",
+      "stargazers_count": 10,
+      "archived": false
+    },
+    {
+      "full_name": "interfluve-wav/auto-captcha-solver",
+      "html_url": "https://github.com/interfluve-wav/auto-captcha-solver",
+      "description": "Universal captcha solver for AI Agents using Playwright — hCaptcha + reCAPTCHA v2 via NopeCHA API. Python lib, CLI, MCP server, Hermes skill.",
+      "stargazers_count": 10,
+      "archived": false
+    },
+    {
+      "full_name": "SuperRogerio/css",
+      "html_url": "https://github.com/SuperRogerio/css",
+      "description": "*{margin:0;padding:0}html{font-size:100%;height:100%}* html{scrollbar-3dlight-color:#;scrollbar-arrow-color:#;scrollbar-darkshadow-color:#;scrollbar-face-color:#;scrollbar-highlight-color:#;scrollbar-shadow-color:#;scrollbar-track-color:#}*+ html{scrollbar-3dlight-color:#;scrollbar-arrow-color:#;scrollbar-darkshadow-color:#;scrollbar-face-color:#;scrollbar-highlight-color:#;scrollbar-shadow-color: [truncated]",
+      "stargazers_count": 9,
+      "archived": false
+    },
+    {
+      "full_name": "Mrshahidali420/pixel-bridge-mcp",
+      "html_url": "https://github.com/Mrshahidali420/pixel-bridge-mcp",
+      "description": "MCP server that lets Claude Code generate & edit images through your own ChatGPT and Gemini web accounts — no image API keys. Playwright-driven persistent browser sessions; you handle login/CAPTCHA yourself; Claude reviews the images.",
+      "stargazers_count": 7,
+      "archived": false
+    },
+    {
+      "full_name": "capskip/capskip-mcp",
+      "html_url": "https://github.com/capskip/capskip-mcp",
+      "description": "Captcha solver MCP server for AI agents — solve reCAPTCHA v2/v3, Cloudflare Turnstile, GeeTest, ALTCHA, Capy Puzzle, CaptchaFox, Friendly Captcha and image captchas with CapSkip, an unlimited local captcha solver. Works with Claude, Cursor and VS Code.",
+      "stargazers_count": 6,
+      "archived": false
+    },
+    {
+      "full_name": "libaibaia/CaptchaMCP",
+      "html_url": "https://github.com/libaibaia/CaptchaMCP",
+      "description": "MCP验证码识别服务",
+      "stargazers_count": 5,
+      "archived": false
+    },
+    {
+      "full_name": "ymeng98/ddddocr-captcha-mcp",
+      "html_url": "https://github.com/ymeng98/ddddocr-captcha-mcp",
+      "description": "A powerful MCP server for CAPTCHA recognition using ddddocr - built with Smithery scaffold",
+      "stargazers_count": 5,
+      "archived": false
+    },
+    {
+      "full_name": "0-SOFT/2Captcha-MCP",
+      "html_url": "https://github.com/0-SOFT/2Captcha-MCP",
+      "description": "MCP server exposing the full 2Captcha API to Claude Code: 43 tools (31 captcha solvers + 5 management + 3 pingback CRUD + 3 webhook event-store + 1 composite solve-and-wait), built on the official 2captcha-python AsyncTwoCaptcha SDK. >=92% branch coverage, mypy --strict clean.",
+      "stargazers_count": 5,
+      "archived": false
+    },
+    {
+      "full_name": "IIshikiII/Playwright-search-MCP",
+      "html_url": "https://github.com/IIshikiII/Playwright-search-MCP",
+      "description": "Free local Google Search MCP server — Playwright-driven, persistent Chrome profile, headless-by-default with CAPTCHA reveal",
+      "stargazers_count": 5,
+      "archived": false
+    },
+    {
+      "full_name": "swe-sanad/jdownloader-mcp",
+      "html_url": "https://github.com/swe-sanad/jdownloader-mcp",
+      "description": "MCP server to drive a local JDownloader 2 through its full download lifecycle (premium hosters, link containers, captcha folders) via myjdapi.",
+      "stargazers_count": 5,
+      "archived": false
+    },
+    {
+      "full_name": "dppalukuri/BlackHole",
+      "html_url": "https://github.com/dppalukuri/BlackHole",
+      "description": "MCP servers for AI agents — Google Maps lead gen, SERP scraper, LinkedIn scraper, CAPTCHA solver, UAE real estate. Free, open-source, no API keys needed.",
+      "stargazers_count": 5,
+      "archived": false
+    },
+    {
+      "full_name": "CapMonsterCloud/capmonster-mcp-captcha-solver",
+      "html_url": "https://github.com/CapMonsterCloud/capmonster-mcp-captcha-solver",
+      "description": "CapMonster Cloud MCP server — captcha solver & captcha bypass for AI agents (Claude, Cursor). Solve reCAPTCHA, Cloudflare Turnstile, DataDome & GeeTest via MCP. A 2captcha and capsolver alternative for AI web scraping and automation.",
+      "stargazers_count": 4,
+      "archived": false
+    },
+    {
+      "full_name": "ymeng98/ocr-captcha-mcp-server",
+      "html_url": "https://github.com/ymeng98/ocr-captcha-mcp-server",
+      "description": "高级 OCR 和验证码识别 MCP 服务器 - 为 AI 代理提供图像识别能力",
+      "stargazers_count": 4,
+      "archived": false
+    },
+    {
+      "full_name": "capsolver-ai/capsolver-mcp",
+      "html_url": "https://github.com/capsolver-ai/capsolver-mcp",
+      "description": "MCP Server for CapSolver — give AI agents the ability to solve CAPTCHAs (reCAPTCHA v2/v3, Cloudflare Turnstile) via the Model Context Protocol. Works with Claude, Cursor, Windsurf, and any MCP client.",
+      "stargazers_count": 4,
+      "archived": false
+    },
+    {
+      "full_name": "hokithree7/2nothing",
+      "html_url": "https://github.com/hokithree7/2nothing",
+      "description": "An open experiment where AI agents keep identities and voluntarily answer human questions. API-first · MCP server · llms.txt · no CAPTCHA.",
+      "stargazers_count": 4,
+      "archived": false
+    },
+    {
+      "full_name": "useapi/google-vids-api",
+      "html_url": "https://github.com/useapi/google-vids-api",
+      "description": "Google Vids API examples by useapi.net: Gemini Omni 1.2 Flash video up to 15 s with talking AI avatars in 30 voices, extend to about 34 s, 1080p upscale, on your Google AI subscription with no captcha. Node.js and Python, an n8n talking-avatar app, a hosted MCP server and an agent skill. Third-party, not affiliated with Google.",
+      "stargazers_count": 4,
+      "archived": false
+    },
+    {
+      "full_name": "Dutta-SD/web-fetch-mcp",
+      "html_url": "https://github.com/Dutta-SD/web-fetch-mcp",
+      "description": "Resilient web-fetch MCP server for LLM agents that fails honestly — raises instead of returning a CAPTCHA or login page.",
+      "stargazers_count": 3,
+      "archived": false
+    },
+    {
+      "full_name": "Captcha-Sonic/Agent-skills",
+      "html_url": "https://github.com/Captcha-Sonic/Agent-skills",
+      "description": "Solve any CAPTCHA with AI — reCAPTCHA, Cloudflare Turnstile, popular captcha, Geetest, AWS WAF, TikTok, OCR. Claude Code plugin + MCP server for AI agents.",
+      "stargazers_count": 3,
+      "archived": false
+    },
+    {
+      "full_name": "Albertous007/ddg-search-mcp",
+      "html_url": "https://github.com/Albertous007/ddg-search-mcp",
+      "description": "MCP server for real DuckDuckGo web searches. No API key required — scrapes DuckDuckGo Lite directly with Chrome fingerprint impersonation, CAPTCHA bypass, full page content extraction, and regional search support.",
+      "stargazers_count": 3,
+      "archived": false
+    },
+    {
+      "full_name": "opastorello/correios-rastreamento",
+      "html_url": "https://github.com/opastorello/correios-rastreamento",
+      "description": "MCP server + REST API para rastreamento de objetos dos Correios com solver de CAPTCHA CRNN (99.6% acuracia)",
+      "stargazers_count": 2,
+      "archived": false
+    }
+  ]
+}

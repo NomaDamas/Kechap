@@ -1,0 +1,36 @@
+{
+  "repository": "dapphp/securimage",
+  "fetchedAt": "2026-11-12T09:42:45.367841+00:00",
+  "revision": "864ba7505e1bd36ee73f04d8471d86e1f821d754",
+  "metadataUrl": "https://api.github.com/repos/dapphp/securimage",
+  "metadataSha256": "8e18b6333be61c14cee02f916d4720132e1d1b40168e8ece7f944b6248126615",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 576,
+  "archived": false,
+  "pushedAt": "2023-07-31T17:00:56Z",
+  "apiLicenseCandidate": {
+    "key": "bsd-2-clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "spdx_id": "BSD-2-Clause",
+    "url": "https://api.github.com/licenses/bsd-2-clause",
+    "node_id": "MDc6TGljZW5zZTQ="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/dapphp/securimage/blob/864ba7505e1bd36ee73f04d8471d86e1f821d754/README.md",
+      "apiUrl": "https://api.github.com/repos/dapphp/securimage/readme?ref=864ba7505e1bd36ee73f04d8471d86e1f821d754",
+      "contentSha256": "a765b71f6eae03bd6bf8013033920bafdb31279a8982fce3669c56174407d6d5",
+      "path": "README.md",
+      "openingExcerpt": "## Name\n\n**Securimage** - A PHP class for creating captcha images and audio with many options.\n\n## Version\n\n**4.0.2**\n\n## Project Status\n\nSecurimage is no longer maintained. Seek an alternative such as [hCaptcha](https://hcaptcha.com/).\n\nYou may use, modify, and distribute the code in accordance with the [license](LICENSE.txt).\n\nSee the [Project Status](https://github.com/dapphp/securimage/issues/99) issue on GitHub.\n\n## Download\n\nThe code will remain available to view and download at https://github.com/dapphp/securimage.\n\nTo use or modify the code, start with the 4.0 (nextgen) branch. It has many features and additions so the\n3.6 branch should be considered even more obsolete.\n\n## Requirements\n\n* PHP 7.0 or greater\n* GD  2.0\n* FreeType (Required, for TTF fonts)\n* PDO (if using Sqlite, MySQL, or PostgreSQL)\n\n## Synopsis\n    \nSee the [example form](example_form.php) to get started. PHP sessions are not required if database storage is used instead.\n\n## Description\n\nWhat is **Securimage**"
+    },
+    "license": {
+      "url": "https://github.com/dapphp/securimage/blob/864ba7505e1bd36ee73f04d8471d86e1f821d754/LICENSE.txt",
+      "apiUrl": "https://api.github.com/repos/dapphp/securimage/license?ref=864ba7505e1bd36ee73f04d8471d86e1f821d754",
+      "contentSha256": "12d7f5b0948e6e2354e84e13509aea15df838351fe25c3a8a7f05ee032a78a95",
+      "path": "LICENSE.txt",
+      "openingExcerpt": "COPYRIGHT:\n    Copyright (c) 2011 Drew Phillips\n    All rights reserved.\n\n    Redistribution and use in source and binary forms, with or without modification,\n    are permitted provided that the following conditions are met:\n\n    - Redistributions of source code must retain the above copyright notice,\n      this list of conditions and the following disclaimer.\n    - Redistributions in binary form must reproduce the above copyright notice,\n      this list of conditions and the following disclaimer in the documentation\n      and/or other materials provided with the distribution.\n\n    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n    ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE\n    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR\n    CONSEQUENTIAL DAMAGES (I"
+    }
+  },
+  "notes": "Current README explicitly says no longer maintained. Historical baseline only; not a default recommendation."
+}

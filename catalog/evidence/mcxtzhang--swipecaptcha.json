@@ -1,0 +1,23 @@
+{
+  "repository": "mcxtzhang/SwipeCaptcha",
+  "fetchedAt": "2026-11-12T09:54:50.653936+00:00",
+  "revision": "fc77cbe097c25fe1dd66f071233840d7c22e07a5",
+  "metadataUrl": "https://api.github.com/repos/mcxtzhang/SwipeCaptcha",
+  "metadataSha256": "3c512480799f006a5f6cefcc2988fb2a69eec747624d4f8c5f8227f530c02fb6",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 705,
+  "archived": false,
+  "pushedAt": "2019-04-19T03:35:30Z",
+  "apiLicenseCandidate": null,
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/mcxtzhang/SwipeCaptcha/blob/fc77cbe097c25fe1dd66f071233840d7c22e07a5/README.md",
+      "apiUrl": "https://api.github.com/repos/mcxtzhang/SwipeCaptcha/readme?ref=fc77cbe097c25fe1dd66f071233840d7c22e07a5",
+      "contentSha256": "b9027c849d0134aae04720d909411d3a75f45a1b501174e215b99b2ebe4a1af8",
+      "path": "README.md",
+      "openingExcerpt": "# -SwipeCaptcha\nSwipe captcha of Android platform。\nAndroid 平台的滑动验证码。\n\n**在 Android端app上，自定义View，仿一个斗鱼web端滑动验证码**。\n博文：http://blog.csdn.net/zxt0601/article/details/53315975\n\n![我们的Demo,Ac娘镇楼](http://ac-mhke0kuv.clouddn.com/7fcb58653e358b9ec003.gif)\n\n# Usage 用法：\nStep 1. Add the JitPack repository to your build file\n在项目根build.gradle文件中增加JitPack仓库依赖。\n```\n    allprojects {\n\t\trepositories {\n\t\t\t...\n\t\t\tmaven { url \"https://jitpack.io\" }\n\t\t}\n\t}\n```\nStep 2. Add the dependency\n```\n    dependencies {\n\t        compile 'com.github.mcxtzhang:SwipeCaptcha:V1.0.0'\n\t}\n```\n\n\nStep 3. \n```\n    <com.mcxtzhang.captchalib.SwipeCaptchaView\n        android:id=\"@+id/swipeCaptchaView\"\n        android:layout_width=\"300dp\"\n        android:layout_height=\"200dp\"\n        android:layout_centerHorizontal=\"true\"\n        android:scaleType=\"centerCrop\"\n        tools:src=\"@drawable/pic11\"\n        app:captchaHeight=\"30dp\"\n        app:captchaWidth=\"30dp\"/>\n\n    <SeekBar\n        android:id=\"@+id/dragBar\"\n        android:layout_wi"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

@@ -1,0 +1,36 @@
+{
+  "repository": "ZYSzys/awesome-captcha",
+  "fetchedAt": "2026-11-12T09:48:05.559003+00:00",
+  "revision": "444362cbf91350270f42a349eddaa460401a181d",
+  "metadataUrl": "https://api.github.com/repos/ZYSzys/awesome-captcha",
+  "metadataSha256": "b8f9700a2333d374575771291b74bf18a4a68b63b4ffa27eb1fd81dd6db701d1",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1442,
+  "archived": false,
+  "pushedAt": "2026-10-20T16:39:03Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/ZYSzys/awesome-captcha/blob/444362cbf91350270f42a349eddaa460401a181d/README.md",
+      "apiUrl": "https://api.github.com/repos/ZYSzys/awesome-captcha/readme?ref=444362cbf91350270f42a349eddaa460401a181d",
+      "contentSha256": "394b3e57560ab1ed2d2312b6141aeee0840ac22d68749d9c1bf787110a0c9392",
+      "path": "README.md",
+      "openingExcerpt": "# Awesome Captcha [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)\n\n> Curated list of awesome captcha libraries and captcha crack tools.\n\n[CAPTCHA](https://en.wikipedia.org/wiki/CAPTCHA) is a type of challenge–response test used in computing to determine whether or not the user is human.\n\n\n[English](README.md) | [中文](README-zh.md) | [Polish](README-pl.md)\n\n## Contents\n\n- [Libraries](#libraries)\n- [Generation](#generation)\n- [Crack](#crack)\n  - [General](#general)\n  - [Chinese](#chinese)\n- [Tools](#tools)\n- [Other](#other)\n- [Maintainers](#maintainers)\n\n\n## Libraries\n\n- [mewebstudio/captcha](https://github.com/mewebstudio/captcha) - Captcha for Laravel 5.\n- [CGregwar/Captcha](https://github.com/Gregwar/Captcha) - PHP Captcha library.\n- [trekjs/captcha](https://github.com/trekjs/captcha) - A Lightweight Pure JavaScript Captcha for Node.js. No C/C++, No ImageMagick, No Canvas.\n- [patchca](https://code.google.com/archive/p/patchca) - Simple yet powerful CAPTCHA library writte"
+    },
+    "license": {
+      "url": "https://github.com/ZYSzys/awesome-captcha/blob/444362cbf91350270f42a349eddaa460401a181d/LICENSE",
+      "apiUrl": "https://api.github.com/repos/ZYSzys/awesome-captcha/license?ref=444362cbf91350270f42a349eddaa460401a181d",
+      "contentSha256": "aa68007eec6479907e1ede8fad461fccfa7713806377945f65340a2bc34f0b18",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2018 ZYSzys\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION W"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

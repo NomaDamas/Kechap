@@ -1,32 +1,22 @@
-# 목표 완료 감사
+# 전달 범위 감사
 
-> 최신 범위 변경: 사용자 지시에 따라 Aside와 Windows VM은 실행하지 않습니다. 아래 관련 기록은 과거 시도·계획이며 현재 필수 작업이 아닙니다. 현재 보고와 실행 순서는 [진행 상태와 수정 계획](status-and-plan.md)을 따릅니다.
+2026-11-12 실제 출처·코드·실행 결과 기준이다. 이전 DNS 차단 기록은 현재 상황이 아니다. Aside·Windows VM은 사용자 최신 지시에 따라 제외했다.
 
-2026-11-12. 전체 목표는 **미완료**다. 초기 구현·로컬 테스트 결과는 외부 조사, 실제 공급자 연동, 원격 게시를 대신하지 않는다.
-
-| 요청 범위 | 현재 근거 | 판정 / 다음 단계 |
+| 요구 | 근거 | 판정 |
 | --- | --- | --- |
-| CAPTCHA 방법론과 검증된 OSS 수집 | `catalog/providers.json` 후보 34개, 모든 `sourceStatus=not-fetched`, stars 미조회 | 미완료. 공식 upstream과 LICENSE 원문, 현재 별 수, 도입 근거를 실제 수집해야 함 |
-| 10K 이상 프로젝트 확인 | stars·조회 시각·충족 여부 모두 미확인 | 미완료. 10K는 우선 GitHub stars로 해석했으며 다른 지표라면 분리 필요 |
-| 기존 Awesome list / MCP 존재 조사 | `docs/research.md`에 검색 경로만 존재 | 미완료. 존재·부재·독창성을 주장할 근거 없음 |
-| Aside deep research + MyProxy | Aside DNS 실패, 공식 연결 방식 미확인 | 미완료. 네트워크와 공식 API/계정 설정을 확보한 뒤 조사 실행 필요. 비밀키는 채팅이나 저장소에 기록하지 않음 |
-| REA 활용과 Windows VM 검토 | REA 문서 조회 불가, QEMU와 `/dev/kvm` 없음 | 호환성 조사·설치 미완료. 지원 OS·라이선스와 VM 자원부터 확인 필요. 상용 공급자는 공식 연동을 구현했으며 비공개 엔진을 추출한 결과는 없음 |
-| 편리한 SDK + MCP + Skill | SDK, MCP 4개 도구, Skill, CLI, Node HTTP 프로젝트 생성기 존재 | 신규 Node HTTP 프로젝트 파일 생성·독립 핸들러 검증 완료. 기존 제품 자동 패치·다른 framework·실운영 검증은 미완료 |
-| 여러 수단을 서버 정책으로 회전 | 서버 허용목록과 assurance 일치 검사, HTTP 요청 핸들러 회전 테스트 | 로컬 모의 테스트 완료. 실제 공급자 widget·네트워크 검증은 미완료 |
-| 기존 OSS 엔진 통합 | 후보 카탈로그와 자체 PoW, 상용 공식 API 어댑터만 존재 | 기존 OSS 엔진의 실제 통합은 미완료. ALTCHA/Cap 등의 upstream 계약 확인 후 구현·시험 필요 |
-| 서버 검증·재사용·만료 | core 테스트 12개, web 테스트 6개 통과 | 해당 테스트 범위 완료. 분산 원자 저장소·제품 DB 작업과의 원자성·운영 보안 감사는 별도 |
-| 실제 브라우저/HTTP 검증 | 공급자 SDK 모의 테스트, 요청 핸들러 직접 호출 | 미완료. loopback bind가 EPERM으로 실패하여 실제 HTTP 테스트 1개 건너뜀. 브라우저 시각·접근성 검증도 미실행 |
-| 커뮤니티 기여 구조 | CONTRIBUTING, 보안 문서, issue form, 카탈로그 검사 | 초기 문서·양식 완료. 실제 외부 기여 수용·보안 응답 운영 근거는 없음 |
-| 상세 이슈와 확장 계획 | 로드맵 KEC-001~023 및 개별 이슈 본문 23개, 게시 도구 | 로컬 문서 완료. GitHub 이슈 생성은 실패했으므로 원격 이슈 URL 없음 |
-| 벤치마크 확장 계획 | 연구 노트·로드맵에 인간/에이전트·접근성·통계·privacy 프로토콜 범위 | 계획 작성 완료. replay 게임·인간 참가자 실험·성능 결과·리더보드는 구현 또는 측정하지 않음 |
-| NomaDamas/Kechap 커밋·푸시 | 별도 Git 디렉터리에 로컬 커밋과 검증된 bundle, 원격 DNS 실패 | 로컬 커밋만 완료. 원격 이력 fetch·통합·push 및 원격 SHA 확인 필요 |
+| 기존 방법론·오픈소스 조사 | catalog/providers.json, evidence79개, research.md | 50개 후보. GitHub37개와 공식문서10개 검토, 3개는 미확인 유지 |
+| 10K/실사용 확인 | 조회시각·별수·npm 지표·유지보수/라이선스 원문 | 직접 CAPTCHA 후보 다수는10K미만. adjacent10K프로젝트와 구분, 고객 수·보안 인증 미주장 |
+| 기존 awesome/MCP 존재 확인 | comparison.md와 고정 출처 | 기존 목록·솔버/사람판단 MCP·연구 orchestration 발견. 부재·최초 미주장 |
+| REA 조사 | MIT·LinuxJS지원·Node버전 근거 | 호환성·라이선스 확인. 실제 실행/비공개 엔진 추출·재배포 미실행 |
+| SDK/CLI/MCP/Skill | src와 standalone scaffold·MCP테스트 | 초기 제품 통합 구현, 상용 키 발급/임의 기존제품 자동수정은 별도 |
+| 기존 OSS 사용 | 공식 altcha-lib2.8.0/capjs-core0.1.15, lockfile | 실제 라이브러리 및 Chromium 폼 통과, SHA256 baseline 한정 |
+| 서버/회전 | core/policy/web 테스트 | 세션문맥·TTL·일회성·assurance·health·policyVersion검증. Production 분산 저장소 미지원 |
+| 브라우저 실검증 | scripts/browser-smoke.js, .local/browser/report.json | Chromium에서 ALTCHA/Cap/PoW모두 교체·submit통과. 접근성 감사·상용 widget미검증 |
+| benchmark계획 | benchmark.md/roadmap, scripts/benchmark.js | 실제 소유toy3종 스크립트baseline. 인간/VLM결과는null, 연구확장 계획 |
+| 기여와 상세이슈 | CONTRIBUTING/forms, GitHub issues1~23 | 문서/양식과 실제23개이슈 게시 |
+| Sponsors | .github/FUNDING.yml, sponsorship.md | 조직으로 설정, listing미활성이므로 실제 수령은 소유자 개설 필요 |
+| 커밋/푸시 | publishing-status.md와 원격refs/CI | 원격SHA·CI확인 후 게시상태로 기록 |
 
-후속 진전: 저장된 GitHub 인증을 `gh` CLI가 읽을 수 있음만 비밀값 출력 없이 확인했다. 네트워크 소켓 생성은 `EPERM`으로 실패했다. 기존 인증을 교체하거나 사용자에게 재인증을 요구할 근거가 없다. `npm run research:refresh`는 해당 인증을 재사용하여 직접 출처 조사를 시도하지만 실제 수집은 아직 실패한다. 조사 도구는 커밋 고정·내용 hash·누락 문서·검색 범위 제한을 기록하며 자동 승인하지 않는다. JS 21개와 Python 3개 테스트가 통과했고 실제 HTTP 1개는 건너뛰었다.
+## 검증 한계
 
-## 차단 판정
-
-원 요청 턴과 두 차례 연속 진행 턴에서 GitHub/Aside DNS 제한이 반복 확인됐다. 사용 가능한 별도 검색·브라우저 커넥터도 발견하지 못했다. `.git`은 읽기 전용이고, 저장된 인증은 존재하며 유효성은 네트워크 복구 전 확인할 수 없다. 외부 근거와 실운영 증명이 필요한 남은 작업을 로컬 모의 테스트나 추가 문서로 완료 처리할 수 없다.
-
-재개에는 GitHub·Aside 및 공식 문서에 접근할 수 있는 네트워크, 저장소 쓰기가 가능한 GitHub 인증, 실제 공급자 테스트 설정이 필요하다. VM 단계는 REA의 실제 요구 사항을 확인한 다음 실행 가능한 Windows 가상화 환경과 허용된 이미지가 필요하다. 비밀정보는 서버의 환경변수·secret store로 제공한다.
-
-목표는 완료로 변경하지 않는다. 위 조건이 바뀌면 먼저 원격 이력과 출처를 읽고 기존 로컬 커밋을 통합한 후, 실제 검증과 게시 결과를 확인한다.
+카탈로그의 source-reviewed/다운로드/별수, 테스트 통과와 인간 구별·보안 감사·운영 SLA는 다르다. 모든 후보 productionReady=false다. 상용 비밀엔진을 획득한 사실은 없고 공식API어댑터만 제공한다. 실제 위험 점수 모델, 분산 저장소, 접근성 동등복구, 생체인증, 사람/VLM실험·리더보드는 구체적 후속이슈이며 이 초기 전달에서 완료됐다고 주장하지 않는다.

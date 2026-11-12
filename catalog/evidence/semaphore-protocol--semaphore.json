@@ -1,0 +1,36 @@
+{
+  "repository": "semaphore-protocol/semaphore",
+  "fetchedAt": "2026-11-12T09:43:08.461734+00:00",
+  "revision": "dbab5553c486a09d5e1042e5271e3316224cc176",
+  "metadataUrl": "https://api.github.com/repos/semaphore-protocol/semaphore",
+  "metadataSha256": "a535fea0dd1eda22d9b09569597cfa06b42dfaf1ecdf4e822433969d96551845",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1097,
+  "archived": false,
+  "pushedAt": "2026-10-17T21:28:52Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/semaphore-protocol/semaphore/blob/dbab5553c486a09d5e1042e5271e3316224cc176/README.md",
+      "apiUrl": "https://api.github.com/repos/semaphore-protocol/semaphore/readme?ref=dbab5553c486a09d5e1042e5271e3316224cc176",
+      "contentSha256": "cbe9c0bc4a820d13a869e81e339b90fb8328fb87242086e7626b5272628cf3ed",
+      "path": "README.md",
+      "openingExcerpt": "<p align=\"center\">\n    <h1 align=\"center\">\n      <picture>\n        <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://raw.githubusercontent.com/semaphore-protocol/.github/main/assets/semaphore-logo-light.svg\">\n        <source media=\"(prefers-color-scheme: light)\" srcset=\"https://raw.githubusercontent.com/semaphore-protocol/.github/main/assets/semaphore-logo-dark.svg\">\n        <img width=\"250\" alt=\"Semaphore icon\" src=\"https://raw.githubusercontent.com/semaphore-protocol/.github/main/assets/semaphore-logo-dark.svg\">\n      </picture>\n    </h1>\n</p>\n\n<p align=\"center\">\n    <a href=\"https://github.com/semaphore-protocol\" target=\"_blank\">\n        <img src=\"https://img.shields.io/badge/project-Semaphore-blue.svg?style=flat-square\">\n    </a>\n    <a href=\"/LICENSE\">\n        <img alt=\"Github license\" src=\"https://img.shields.io/github/license/semaphore-protocol/semaphore.svg?style=flat-square\">\n    </a>\n    <a href=\"https://github.com/semaphore-protocol/semaphore/actions?query=workflo"
+    },
+    "license": {
+      "url": "https://github.com/semaphore-protocol/semaphore/blob/dbab5553c486a09d5e1042e5271e3316224cc176/LICENSE",
+      "apiUrl": "https://api.github.com/repos/semaphore-protocol/semaphore/license?ref=dbab5553c486a09d5e1042e5271e3316224cc176",
+      "contentSha256": "cfcf88f57e7bdeeae0a02b1ed1c2e320b88ebfe527fd25b5237b7dc829c7620c",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2025 Ethereum Foundation\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

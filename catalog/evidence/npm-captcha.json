@@ -1,0 +1,13 @@
+{
+  "url": "https://api.npmjs.org/downloads/point/last-month/captcha",
+  "fetchedAt": "2026-11-12T09:59:26.170471+00:00",
+  "rawSha256": "2fff849a77bca20d875ee183d1c5caa31fd472dc3cff1562d81a33d3995c41a4",
+  "evidenceType": "npm-download-metric",
+  "data": {
+    "downloads": 198,
+    "start": "2026-10-13",
+    "end": "2026-11-11",
+    "package": "captcha"
+  },
+  "limitation": "Downloads are registry activity, not unique deployments, humans or audited security effectiveness."
+}

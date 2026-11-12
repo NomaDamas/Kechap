@@ -1,0 +1,36 @@
+{
+  "repository": "Agent360dk/browser-mcp",
+  "fetchedAt": "2026-11-12T09:48:31.126737+00:00",
+  "revision": "b99362deb069e0697fb6d9d8cf005a79949bd881",
+  "metadataUrl": "https://api.github.com/repos/Agent360dk/browser-mcp",
+  "metadataSha256": "1737e9ad901fe934a5d1768349088e2b01d1587f07d4553ea2d1c1c1dee65ccd",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 63,
+  "archived": false,
+  "pushedAt": "2026-11-12T05:56:49Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/Agent360dk/browser-mcp/blob/b99362deb069e0697fb6d9d8cf005a79949bd881/README.md",
+      "apiUrl": "https://api.github.com/repos/Agent360dk/browser-mcp/readme?ref=b99362deb069e0697fb6d9d8cf005a79949bd881",
+      "contentSha256": "2b154bef74976efb1b2eba028a5a38a4db5aae7523f21296a266745f715ed66c",
+      "path": "README.md",
+      "openingExcerpt": "# Browser MCP by [Agent360](https://agent360.dk)\n\n**The browser tool that can stop and ask you.** A 2FA code, a CAPTCHA, a choice only you can\nmake: it asks on your own screen, then carries on in the same signed-in Chrome.\n\nIt drives the Chrome you are already signed into: no login step to fail, no API key to wire\nup, no fresh profile that is a stranger to every account you have. Up to 20 agents at once, each\nin its own colour-coded tab group. 40 tools, MIT, runs on your machine.\n\n→ **[What it can and cannot get past](https://browsermcp.dev/docs/capability-matrix/)** - every\nwall, marked *measured*, *by design*, *not yet*, or *won't*. Including the ones we have not fixed.\n\n[![npm version](https://img.shields.io/npm/v/@agent360/browser-mcp)](https://www.npmjs.com/package/@agent360/browser-mcp)\n[![npm downloads](https://img.shields.io/npm/dw/@agent360/browser-mcp)](https://www.npmjs.com/package/@agent360/browser-mcp)\n[![GitHub stars](https://img.shields.io/github/stars/Agent360dk/browser"
+    },
+    "license": {
+      "url": "https://github.com/Agent360dk/browser-mcp/blob/b99362deb069e0697fb6d9d8cf005a79949bd881/LICENSE",
+      "apiUrl": "https://api.github.com/repos/Agent360dk/browser-mcp/license?ref=b99362deb069e0697fb6d9d8cf005a79949bd881",
+      "contentSha256": "21ecee1739c0a3d6a85b7fa8fc1161e85fcbd6113baccff018412630698f712d",
+      "path": "LICENSE",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2026 Agent360\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

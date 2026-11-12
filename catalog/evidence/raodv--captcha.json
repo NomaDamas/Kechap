@@ -1,0 +1,36 @@
+{
+  "repository": "raodv/captcha",
+  "fetchedAt": "2026-11-12T09:48:24.860119+00:00",
+  "revision": "2e0eb8468379176678a29a00208adb1f569110a1",
+  "metadataUrl": "https://api.github.com/repos/raodv/captcha",
+  "metadataSha256": "2d79f16e3f875956db656b12a495270ad1b291e5ab6d19a0168ea137ed31d79a",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1704,
+  "archived": false,
+  "pushedAt": "2026-10-09T07:08:39Z",
+  "apiLicenseCandidate": {
+    "key": "apache-2.0",
+    "name": "Apache License 2.0",
+    "spdx_id": "Apache-2.0",
+    "url": "https://api.github.com/licenses/apache-2.0",
+    "node_id": "MDc6TGljZW5zZTI="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/raodv/captcha/blob/2e0eb8468379176678a29a00208adb1f569110a1/README.md",
+      "apiUrl": "https://api.github.com/repos/raodv/captcha/readme?ref=2e0eb8468379176678a29a00208adb1f569110a1",
+      "contentSha256": "2acd6974eabfe7b9f23ae16e1e6f2d648bb00fbc25d162c1e37887a70cd31572",
+      "path": "README.md",
+      "openingExcerpt": "\n[AjPlus Captcha Official Website](https://captcha.anji-plus.com/)\n============\n[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)[![Total Lines](https://tokei.rs/b1/github/anji-plus/captcha?category=lines)](https://github.com/anji-plus/captcha)\n\n> AjPlus Captcha \n\n[![Stargazers over time](https://starchart.cc/anji-plus/captcha.svg)](https://starchart.cc/anji-plus/captcha)\n[![Stargazers over time](https://whnb.wang/img/anji-plus/captcha?e=604800)](https://whnb.wang/anji-plus/captcha?e=604800)\n          \n[![EN doc](https://img.shields.io/badge/document-English-blue.svg)](README.md)[![CN doc](https://img.shields.io/badge/文档-中文版-blue.svg)](README_CN.md)\n\n# 1. Online Demo\n### &emsp; 1.1 [Have a try](https://ajcaptcha.beliefteam.cn/captcha-doc/ \"链接\")\n### &emsp; 1.2 [Document](https://ajcaptcha.beliefteam.cn/captcha-doc/ \"doc\")\n### &emsp; 1.3 Wechat/H5 demo（based on uni-app)\n &emsp;&emsp; see also [gitee]( https://gitee."
+    },
+    "license": {
+      "url": "https://github.com/raodv/captcha/blob/2e0eb8468379176678a29a00208adb1f569110a1/LICENSE",
+      "apiUrl": "https://api.github.com/repos/raodv/captcha/license?ref=2e0eb8468379176678a29a00208adb1f569110a1",
+      "contentSha256": "20bcae93bc72bd5e6eb33e3a34b93094be49b1d48a1a71ae51a878157fbebacc",
+      "path": "LICENSE",
+      "openingExcerpt": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial owne"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

@@ -1,0 +1,224 @@
+{
+  "url": "https://api.github.com/search/repositories?q=captcha+mcp+in%3Aname%2Cdescription%2Creadme&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:43:14.552819+00:00",
+  "sha256": "9c46a5f66234b2e256447af63f05e4ea9a69c40656f2b1c4855e2de0e7c9cf18",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 10736,
+    "incompleteResults": false,
+    "returned": 30,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "awesome-selfhosted/awesome-selfhosted",
+      "html_url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+      "description": "A list of Free Software network services and web applications which can be hosted on your own servers",
+      "stargazers_count": 336272,
+      "archived": false
+    },
+    {
+      "full_name": "avelino/awesome-go",
+      "html_url": "https://github.com/avelino/awesome-go",
+      "description": "A curated list of awesome Go frameworks, libraries and software",
+      "stargazers_count": 193427,
+      "archived": false
+    },
+    {
+      "full_name": "ripienaar/free-for-dev",
+      "html_url": "https://github.com/ripienaar/free-for-dev",
+      "description": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+      "stargazers_count": 142659,
+      "archived": false
+    },
+    {
+      "full_name": "browser-use/browser-use",
+      "html_url": "https://github.com/browser-use/browser-use",
+      "description": "Open-source Python library for AI browser agents, plus Browser Use Cloud: stealth browsers and a hosted agent API.",
+      "stargazers_count": 120796,
+      "archived": false
+    },
+    {
+      "full_name": "D4Vinci/Scrapling",
+      "html_url": "https://github.com/D4Vinci/Scrapling",
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "stargazers_count": 101854,
+      "archived": false
+    },
+    {
+      "full_name": "punkpeye/awesome-mcp-servers",
+      "html_url": "https://github.com/punkpeye/awesome-mcp-servers",
+      "description": "A collection of MCP servers.",
+      "stargazers_count": 97636,
+      "archived": false
+    },
+    {
+      "full_name": "thedaviddias/Front-End-Checklist",
+      "html_url": "https://github.com/thedaviddias/Front-End-Checklist",
+      "description": "🗂 The essential checklist for modern web development, for humans and AI agents",
+      "stargazers_count": 74708,
+      "archived": false
+    },
+    {
+      "full_name": "VoltAgent/awesome-openclaw-skills",
+      "html_url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "description": "The awesome collection of OpenClaw skills. 5,400+ skills filtered and categorized from the official OpenClaw Skills Registry.🦞",
+      "stargazers_count": 53713,
+      "archived": false
+    },
+    {
+      "full_name": "GitHubDaily/GitHubDaily",
+      "html_url": "https://github.com/GitHubDaily/GitHubDaily",
+      "description": "坚持分享 GitHub 上高质量、有趣实用的开源技术教程、开发者工具、编程网站、技术资讯。A list cool, interesting projects of GitHub.",
+      "stargazers_count": 48431,
+      "archived": false
+    },
+    {
+      "full_name": "Tencent/WeKnora",
+      "html_url": "https://github.com/Tencent/WeKnora",
+      "description": "Open-source LLM knowledge platform: turn raw documents into a queryable RAG, an autonomous reasoning agent, and a self-maintaining Wiki.",
+      "stargazers_count": 37278,
+      "archived": false
+    },
+    {
+      "full_name": "VoltAgent/awesome-agent-skills",
+      "html_url": "https://github.com/VoltAgent/awesome-agent-skills",
+      "description": "A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more.",
+      "stargazers_count": 37109,
+      "archived": false
+    },
+    {
+      "full_name": "jivoi/awesome-osint",
+      "html_url": "https://github.com/jivoi/awesome-osint",
+      "description": ":scream: A curated list of amazingly awesome OSINT",
+      "stargazers_count": 31007,
+      "archived": false
+    },
+    {
+      "full_name": "Skyvern-AI/skyvern",
+      "html_url": "https://github.com/Skyvern-AI/skyvern",
+      "description": "Automate browser based workflows with AI",
+      "stargazers_count": 23391,
+      "archived": false
+    },
+    {
+      "full_name": "NirDiamant/agents-towards-production",
+      "html_url": "https://github.com/NirDiamant/agents-towards-production",
+      "description": "End-to-end, code-first tutorials for building production-grade GenAI agents. From prototype to enterprise deployment.",
+      "stargazers_count": 21886,
+      "archived": false
+    },
+    {
+      "full_name": "browser-use/browser-harness",
+      "html_url": "https://github.com/browser-use/browser-harness",
+      "description": "Let Claude Code, Codex or Cursor use your real Chrome, logged in as you. One prompt to set up. Open source, MIT.",
+      "stargazers_count": 19038,
+      "archived": false
+    },
+    {
+      "full_name": "zhuima/awesome-cloudflare",
+      "html_url": "https://github.com/zhuima/awesome-cloudflare",
+      "description": "⛅️ 精选的 Cloudflare 工具、开源项目、指南、博客和其他资源列表。/ ⛅️ A curated list of Cloudflare tools, open source projects, guides, blogs and other resources.",
+      "stargazers_count": 15609,
+      "archived": false
+    },
+    {
+      "full_name": "lsdefine/GenericAgent",
+      "html_url": "https://github.com/lsdefine/GenericAgent",
+      "description": "Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption",
+      "stargazers_count": 14412,
+      "archived": false
+    },
+    {
+      "full_name": "markets/awesome-ruby",
+      "html_url": "https://github.com/markets/awesome-ruby",
+      "description": "💎 A collection of awesome Ruby libraries, tools, frameworks and software",
+      "stargazers_count": 14186,
+      "archived": false
+    },
+    {
+      "full_name": "qazbnm456/awesome-web-security",
+      "html_url": "https://github.com/qazbnm456/awesome-web-security",
+      "description": "🐶 A curated list of Web Security materials and resources.",
+      "stargazers_count": 14040,
+      "archived": false
+    },
+    {
+      "full_name": "browserless/browserless",
+      "html_url": "https://github.com/browserless/browserless",
+      "description": "Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses.",
+      "stargazers_count": 13921,
+      "archived": false
+    },
+    {
+      "full_name": "seleniumbase/SeleniumBase",
+      "html_url": "https://github.com/seleniumbase/SeleniumBase",
+      "description": "Python APIs for web automation, testing, and bypassing bot-detection.",
+      "stargazers_count": 13250,
+      "archived": false
+    },
+    {
+      "full_name": "nestjs/awesome-nestjs",
+      "html_url": "https://github.com/nestjs/awesome-nestjs",
+      "description": "A curated list of awesome things related to NestJS 😎",
+      "stargazers_count": 13192,
+      "archived": false
+    },
+    {
+      "full_name": "h4cc/awesome-elixir",
+      "html_url": "https://github.com/h4cc/awesome-elixir",
+      "description": "A curated list of amazingly awesome Elixir and Erlang libraries, resources and shiny things. Updates:",
+      "stargazers_count": 13167,
+      "archived": false
+    },
+    {
+      "full_name": "jnv/lists",
+      "html_url": "https://github.com/jnv/lists",
+      "description": "The definitive list of lists (of lists) curated on GitHub and elsewhere",
+      "stargazers_count": 11657,
+      "archived": false
+    },
+    {
+      "full_name": "PatrickJS/awesome-angular",
+      "html_url": "https://github.com/PatrickJS/awesome-angular",
+      "description": ":page_facing_up: A curated list of awesome Angular resources",
+      "stargazers_count": 10098,
+      "archived": false
+    },
+    {
+      "full_name": "marcelscruz/public-apis",
+      "html_url": "https://github.com/marcelscruz/public-apis",
+      "description": "A collaborative list of public APIs for developers",
+      "stargazers_count": 9718,
+      "archived": false
+    },
+    {
+      "full_name": "ai-boost/awesome-prompts",
+      "html_url": "https://github.com/ai-boost/awesome-prompts",
+      "description": "Curated prompts, frameworks and papers for LLMs and agents, with an engineering bias. Prompt engineering, context engineering, agent harnesses, red teaming.",
+      "stargazers_count": 9225,
+      "archived": false
+    },
+    {
+      "full_name": "AIPentest/CyberStrikeAI",
+      "html_url": "https://github.com/AIPentest/CyberStrikeAI",
+      "description": "The system of action for AI-native cybersecurity—where intent becomes governed execution, evidence becomes operational memory, and every operation improves the next.",
+      "stargazers_count": 8575,
+      "archived": false
+    },
+    {
+      "full_name": "cporter202/API-mega-list",
+      "html_url": "https://github.com/cporter202/API-mega-list",
+      "description": "This GitHub repo is a powerhouse collection of APIs you can start using immediately to build everything from simple automations to full-scale applications. One of the most valuable API lists on GitHub—period. 💪",
+      "stargazers_count": 8368,
+      "archived": false
+    },
+    {
+      "full_name": "guchangan1/All-Defense-Tool",
+      "html_url": "https://github.com/guchangan1/All-Defense-Tool",
+      "description": "本项目集成了全网优秀的攻防武器工具项目，包含自动化利用，子域名、目录扫描、端口扫描等信息收集工具，各大中间件、cms、OA漏洞利用工具，爆破工具、内网横向、免杀、社工钓鱼以及应急响应、甲方安全资料等其他安全攻防资料。",
+      "stargazers_count": 8274,
+      "archived": false
+    }
+  ]
+}

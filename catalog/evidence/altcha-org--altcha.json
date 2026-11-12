@@ -1,0 +1,36 @@
+{
+  "repository": "altcha-org/altcha",
+  "fetchedAt": "2026-11-12T09:42:41.365712+00:00",
+  "revision": "5691046ab911524f7c8e0e6a01609c15fd5a2299",
+  "metadataUrl": "https://api.github.com/repos/altcha-org/altcha",
+  "metadataSha256": "2f368ae3b631dfe46f3aeff1fb1db5c0474ea4a930a81966937d7299e7c33e6f",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 2897,
+  "archived": false,
+  "pushedAt": "2026-11-12T03:47:31Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/altcha-org/altcha/blob/5691046ab911524f7c8e0e6a01609c15fd5a2299/README.md",
+      "apiUrl": "https://api.github.com/repos/altcha-org/altcha/readme?ref=5691046ab911524f7c8e0e6a01609c15fd5a2299",
+      "contentSha256": "6e88f43e3eb896df91218b83c63d696423d49d1c5c874f823983cdd0f012c86d",
+      "path": "README.md",
+      "openingExcerpt": "# ALTCHA\n\nALTCHA is a self-hosted, privacy-first security solution that protects your websites, APIs, and online services from spam and abuse through an innovative proof-of-work mechanism. Unlike traditional CAPTCHAs that depend on intrusive methods like cookies or fingerprinting, ALTCHA delivers robust protection while respecting user privacy.\n\nALTCHA is fully compliant with:\n\n- **Global privacy regulations**: GDPR, HIPAA, CCPA, PIPEDA/CPPA, LGPD, DPDPA, and PIPL\n- **Accessibility standards**: [WCAG 2.2 AA-level](https://altcha.org/legal/compliance/wcag/) and the [European Accessibility Act](https://altcha.org/legal/compliance/eaa/)\n\nFor more details, visit [altcha.org](https://altcha.org).\n\n## Playground\n\nWant to see it in action? Visit the official ALTCHA Playground to experiment with widget configurations, fine-tune the Proof-of-Work (PoW) settings, and see how the security mechanisms hold up in real-time.\n\n[Open ALTCHA Playground](https://playground.altcha.org)\n\n## Features\n\n- **F"
+    },
+    "license": {
+      "url": "https://github.com/altcha-org/altcha/blob/5691046ab911524f7c8e0e6a01609c15fd5a2299/LICENSE.txt",
+      "apiUrl": "https://api.github.com/repos/altcha-org/altcha/license?ref=5691046ab911524f7c8e0e6a01609c15fd5a2299",
+      "contentSha256": "bee1fb9d9c97d42c12c22332c5250f2fb1ef5c2321f6f82beb23e3b77be50a29",
+      "path": "LICENSE.txt",
+      "openingExcerpt": "MIT License\n\nCopyright (c) 2023-2026 Daniel Regeci, BAU Software s.r.o.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISIN"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

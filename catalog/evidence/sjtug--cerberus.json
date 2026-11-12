@@ -1,0 +1,36 @@
+{
+  "repository": "sjtug/cerberus",
+  "fetchedAt": "2026-11-12T09:42:35.506284+00:00",
+  "revision": "43a144d435de9c66931dbbab62b96f20b9bf00ce",
+  "metadataUrl": "https://api.github.com/repos/SJTUG/cerberus",
+  "metadataSha256": "de4436112c6b87fddbf988b203f29359286be9f8a3e665d9e374a80e248592a6",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 195,
+  "archived": false,
+  "pushedAt": "2026-09-10T10:43:33Z",
+  "apiLicenseCandidate": {
+    "key": "other",
+    "name": "Other",
+    "spdx_id": "NOASSERTION",
+    "url": null,
+    "node_id": "MDc6TGljZW5zZTA="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/sjtug/cerberus/blob/43a144d435de9c66931dbbab62b96f20b9bf00ce/README.md",
+      "apiUrl": "https://api.github.com/repos/SJTUG/cerberus/readme?ref=43a144d435de9c66931dbbab62b96f20b9bf00ce",
+      "contentSha256": "1b0420bba43267e4b43a5027b5f4a4f4ac8d19cdc5ac355534ad2535ccdac63e",
+      "path": "README.md",
+      "openingExcerpt": "# Cerberus\n\n<center>\n   <img width=256 src=\"./web/img/mascot-puzzle.png\" alt=\"A smiling chibi dark-skinned anthro jackal with brown hair and tall ears looking victorious with a thumbs-up\" />\n</center>\n\nCerberus guards the gates of open source infrastructure using a sha256 PoW challenge to protect them from unwanted traffic. It provides a Caddy handler that can be applied to existing Caddy servers.\n\nThis project started as a Caddy port of [Anubis](https://github.com/TecharoHQ/anubis/) and is now a standalone project. While Anubis focuses on protecting websites from AI scrapers, Cerberus serves a different purpose: it's designed as a last line of defense to protect volunteer-run open source infrastructure from abusive traffic. We would do whatever it takes to stop them, even if it means sacrificing a few innocent cats.\n\nFor now, the project is still mostly a re-implementation of Anubis, but it's actively developed, and will eventually employ more aggressive techniques. You can check the "
+    },
+    "license": {
+      "url": "https://github.com/sjtug/cerberus/blob/43a144d435de9c66931dbbab62b96f20b9bf00ce/LICENSE.md",
+      "apiUrl": "https://api.github.com/repos/SJTUG/cerberus/license?ref=43a144d435de9c66931dbbab62b96f20b9bf00ce",
+      "contentSha256": "c154077bd352afbd5eabc732f557033baab377436aec8444d8b1ca285684904a",
+      "path": "LICENSE.md",
+      "openingExcerpt": "Copyright (c) 2025 Yanning Chen <self@lightquantum.me>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

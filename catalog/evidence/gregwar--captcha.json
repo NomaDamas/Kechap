@@ -1,0 +1,36 @@
+{
+  "repository": "Gregwar/Captcha",
+  "fetchedAt": "2026-11-12T09:42:30.886115+00:00",
+  "revision": "c1e67b3d7ac4f873f785daa366051d7c73d19ca0",
+  "metadataUrl": "https://api.github.com/repos/Gregwar/Captcha",
+  "metadataSha256": "95e3b66994d8f14f11c2462493951b63daccaf2531c1863376f54eb27aba4992",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 1823,
+  "archived": false,
+  "pushedAt": "2026-09-01T15:17:16Z",
+  "apiLicenseCandidate": {
+    "key": "mit",
+    "name": "MIT License",
+    "spdx_id": "MIT",
+    "url": "https://api.github.com/licenses/mit",
+    "node_id": "MDc6TGljZW5zZTEz"
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/Gregwar/Captcha/blob/c1e67b3d7ac4f873f785daa366051d7c73d19ca0/README.md",
+      "apiUrl": "https://api.github.com/repos/Gregwar/Captcha/readme?ref=c1e67b3d7ac4f873f785daa366051d7c73d19ca0",
+      "contentSha256": "26dbf16e0540c03f317c528093e4d13188c4bb161b42366edaa63c6a6aa8aeee",
+      "path": "README.md",
+      "openingExcerpt": "Captcha\n=======\n\n![Captchas examples](http://gregwar.com/captchas.png)\n\nInstallation\n============\n\nWith composer : `composer require gregwar/captcha`\n\nUsage\n=====\n\nYou can create a captcha with the `CaptchaBuilder` :\n\n```php\n<?php\n\nuse Gregwar\\Captcha\\CaptchaBuilder;\n\n$builder = new CaptchaBuilder;\n$builder->build();\n```\n\nYou can then save it to a file :\n\n```php\n<?php\n\n$builder->save('out.jpg');\n```\n\nOr output it directly :\n\n```php\n<?php\n\nheader('Content-type: image/jpeg');\n$builder->output();\n```\n\nOr inline it directly in the HTML page:\n\n```php\n<img src=\"<?php echo $builder->inline(); ?>\" />\n```\n\nYou'll be able to get the code and compare it with a user input :\n\n```php\n<?php\n\n// Example: storing the phrase in the session to test for the user \n// input later\n$_SESSION['phrase'] = $builder->getPhrase();\n```\n\nYou can compare the phrase with user input:\n```php\nif($builder->testPhrase($userInput)) {\n    // instructions if user phrase is good\n}\nelse {\n    // user phrase is wrong\n}\n```\n\nAPI\n"
+    },
+    "license": {
+      "url": "https://github.com/Gregwar/Captcha/blob/c1e67b3d7ac4f873f785daa366051d7c73d19ca0/LICENSE",
+      "apiUrl": "https://api.github.com/repos/Gregwar/Captcha/license?ref=c1e67b3d7ac4f873f785daa366051d7c73d19ca0",
+      "contentSha256": "1fe6149e5bdfa505cb06ee0e546d92158add8161bcb1dd2999504ceaf1cea174",
+      "path": "LICENSE",
+      "openingExcerpt": "Copyright (c) <2012-2017> Grégoire Passault\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is furnished\nto do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECT"
+    }
+  },
+  "notes": "Source and license inspection do not establish security effectiveness or production adoption."
+}

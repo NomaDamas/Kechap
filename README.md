@@ -1,116 +1,131 @@
 # Kechap
 
-> 최신 범위 변경: 사용자 지시에 따라 Aside와 Windows VM은 실행하지 않습니다. 아래 관련 기록은 과거 시도·계획이며 현재 필수 작업이 아닙니다. 현재 보고와 실행 순서는 [진행 상태와 수정 계획](docs/status-and-plan.md)을 따릅니다.
+제품에 맞는 CAPTCHA·사람 검증 수단을 **고르고, 연결하고, 서버 정책으로 교체**하는 오픈소스입니다. SDK가 인증을 집행하고 MCP·CLI·Skill이 에이전트의 설치 작업을 돕습니다. 새로운 게임이나 얼굴 모델 하나가 모든 문제를 해결한다고 가정하지 않습니다.
 
-제품에 맞는 사람 인증 수단을 고르고 연결하는 오픈소스 정책 레이어. **SDK + 후보 카탈로그 + MCP + 에이전트 Skill**을 함께 제공합니다. 운영 중에는 서버가 허용한 동일 보증 범주의 공급자 사이에서 회전할 수 있습니다.
+현재는 **실행 가능한 초기 MVP**입니다. 운영 보안 감사·인간 참가자 실험·상용 벤더 인증은 아직 아닙니다.
 
-현재는 검증되지 않은 초기 프로토타입입니다. 34개 후보를 기록했고, 자체 실험 PoW와 Turnstile·hCaptcha·reCAPTCHA의 공식 서버 검증 어댑터를 구현했습니다. 상용 어댑터 테스트는 모의 응답 기반이며 실제 벤더 검증은 남아 있습니다. 후보의 현재 별 수·라이선스 원문·도입 사례는 네트워크 제한으로 확인하지 못했습니다. **10K 이상 검증 완료 목록이나 AI가 풀 수 없는 CAPTCHA라는 주장을 하지 않습니다.**
+![Kechap 인증 폼 데모](docs/assets/demo.png)
 
-## 실행
+## 바로 실행
 
-Node.js 20 이상, 외부 패키지 설치 없이 실행합니다.
+Node.js 20 이상과 npm이 필요합니다. 조사 도구에는 Python 3와 인증된 GitHub CLI가 추가로 필요합니다.
 
 ```bash
+npm ci --omit=optional
 npm test
 npm run catalog:check
-npm run demo
-npm run recommend -- '{"selfHosted":true,"assurance":"automation-cost"}'
+npm run test:research
+npm run demo:web
 ```
 
-PoW 예제는 스크립트로 작업을 풀고 토큰 재사용이 거절되는 것을 보여 줍니다. 이는 사람의 존재를 확인하는 예제가 아닙니다. 저장소는 아직 npm에 배포하지 않았습니다.
+`http://localhost:3000`에서 기본 PoW 폼을 사용할 수 있습니다. 연산 작업은 사람의 존재를 증명하지 않습니다.
 
-브라우저 폼 연동은 `npm run demo:web` 후 `http://localhost:3000`에서 확인할 수 있습니다. 기본값은 외부 서비스가 필요 없는 PoW이며, 서버 세션·CSRF 검사·서버 검증·토큰 소비를 연결합니다. 취소·재발급 UI도 포함합니다. 이 실행 환경에서는 포트 바인딩이 금지되어 실제 HTTP/브라우저 검증은 미완료이고, 요청 핸들러와 공급자 SDK 모의 테스트만 통과했습니다.
+## 에이전트에게 설치시키기
 
-공식 공급자를 쓰려면 `KECHAP_PROVIDERS=turnstile,hcaptcha`와 각 `TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET`, `HCAPTCHA_SITE_KEY`, `HCAPTCHA_SECRET`을 서버 환경에 설정합니다. `KECHAP_HOSTNAME`은 키에 등록한 호스트명이어야 합니다. reCAPTCHA는 `RECAPTCHA_MODE=v2` 또는 `v3`, v3는 `RECAPTCHA_MIN_SCORE`도 설정합니다. 브라우저 모듈 [`src/browser.js`](src/browser.js)의 `mountChallenge(container, issued, {onResponse, onError, signal})`이 공식 widget과 PoW를 같은 인터페이스로 연결하고 공급자 교체 시 이전 콜백을 정리합니다. 외부 공급자 스크립트는 해당 방식이 선택된 경우에만 로드합니다.
+이 저장소와 제품 코드를 코딩 에이전트에 연결하고 다음처럼 요청합니다.
 
-## SDK 사용
+> 가입 폼에 Kechap을 붙여줘. 자체 호스팅이 필요하고 제3자 추적은 금지해. 서버 검증·일회성 소비와 접근성 대체 경로까지 설정해줘. 근거가 없는 보안 주장은 하지 마.
 
-```js
-import { Kechap, siteverifyAdapter } from './src/index.js';
-
-const kechap = new Kechap({
-  adapters: {
-    turnstile: siteverifyAdapter({
-      provider: 'turnstile',
-      siteKey: process.env.TURNSTILE_SITE_KEY,
-      secret: process.env.TURNSTILE_SECRET,
-      hostname: 'example.com',
-      action: 'signup',
-    }),
-  },
-  // 실제 서비스에서는 store: sharedAtomicTtlStore 필수
-});
-
-// 로그인/서버 세션에서 파생. 브라우저 입력을 그대로 신뢰하지 않습니다.
-const context = { tenant: 'product-a', action: 'signup', subject: 'opaque-session' };
-const challenge = await kechap.issue({
-  context, sessionId: 'server-generated-session',
-  providers: ['turnstile'], assurance: 'bot-mitigation',
-});
-// challenge 공개 설정으로 공식 widget을 렌더링합니다.
-// 아래 providerToken은 widget callback으로 받은 뒤 서버 endpoint에 전달합니다.
-const result = await kechap.verify({ id: challenge.id, context, response: providerToken });
-if (!result.ok) throw new Error('Verification failed');
-const accepted = await kechap.consume({ token: result.token, context });
-if (!accepted.ok) throw new Error('Expired, mismatched, or already used');
-// 이후 보호된 작업 실행. DB idempotency/transaction은 제품에서 구현합니다.
-```
-
-샘플의 기본 `MemoryStore`는 단일 프로세스 개발용입니다. 운영 저장소는 `put(key, value, expiresAt)`와 **원자적 삭제·반환 및 만료 처리**를 하는 `take(key)`를 구현해야 합니다. 보호된 작업과 토큰 소비 사이의 장애는 별도 트랜잭션/멱등성 설계가 필요합니다. 서버 인증·CSRF·속도 제한·요청 크기 제한·공급자 widget UI는 이 코어가 제공하지 않습니다.
-
-검증 시도는 성공 여부와 관계없이 challenge를 소모합니다. 다시 시도하려면 새 challenge를 발급합니다. hostname을 고정하고, 공급자가 지원하면 action·reCAPTCHA score를 검사합니다. 보증 범주가 다른 공급자로 회전하면 오류가 납니다. 공급자 장애가 자동 통과로 바뀌지 않습니다.
-
-Turnstile widget에는 발급된 `cData`를 그대로 전달해야 하며 서버가 일치 여부를 검사합니다. hCaptcha와 classic reCAPTCHA의 토큰은 해당 site/action에서 얻은 bearer proof입니다. 이 어댑터는 그 토큰을 처음 얻은 브라우저 세션까지 증명하지 못합니다. 최종 Kechap 토큰의 문맥 결속과 구분해야 합니다. reCAPTCHA 설정에는 `recaptchaMode: 'v2'` 또는 `'v3'`가 필수이며 v3는 `action`과 `minScore`도 필요합니다. Enterprise API는 별도 미구현입니다.
-
-## MCP와 Skill
-
-MCP는 stdio JSON-RPC로 동작하는 개발 도구입니다. 파일 내용을 생성해 반환하지만 직접 디스크에 쓰지는 않습니다. 후보를 읽고 현재 구현 범위에서 추천·통합 계획을 반환합니다. 토큰 발급이나 제품 파일 자동 변경은 하지 않습니다. SDK 없이 CAPTCHA를 대신 풀어 주는 서비스도 아닙니다.
+MCP는 후보 조회, 설명 가능한 추천, 통합 계획, 신규 Node HTTP 프로젝트 파일 생성을 제공합니다. 기존 제품의 임의 코드를 자동 수정하는 범용 설치기는 아직 아닙니다.
 
 ```json
-{
-  "mcpServers": {
-    "kechap": {
-      "command": "node",
-      "args": ["/absolute/path/to/Kechap/src/mcp.js"]
-    }
-  }
-}
+{"mcpServers":{"kechap":{"command":"node","args":["/absolute/path/to/Kechap/src/mcp.js"]}}}
 ```
 
-도구: `kechap_catalog`, `kechap_recommend`, `kechap_plan`, `kechap_scaffold`. 설치 Skill은 [`skills/kechap/SKILL.md`](skills/kechap/SKILL.md)이며 참조 파일을 사용할 수 있도록 저장소 전체를 유지한 상태로 사용하세요. 코딩 에이전트가 제품 코드를 읽고 구체적인 통합 패치를 만드는 절차를 제공합니다. 자동 추천은 현재 self-host/제3자 금지/보증 범주/제외 목록만 처리하며, 지역·가격·프레임워크별 자동 패치 생성은 로드맵입니다.
+도구는 `kechap_catalog`, `kechap_recommend`, `kechap_plan`, `kechap_scaffold`입니다. [설치 Skill](skills/kechap/SKILL.md)은 이 저장소를 유지한 상태로 사용하세요.
 
-## 수단을 구분합니다
-
-| 요구 | 현재 상태 |
-| --- | --- |
-| 자동화 비용 증가 (`automation-cost`) | 실험 PoW |
-| 봇 완화 (`bot-mitigation`) | 공식 siteverify 어댑터 3개, 실제 환경 검증 필요 |
-| 라이브니스 (`liveness`) | 후보만 기록 |
-| 등록 신원 (`identity`) | 후보만 기록 |
-| 중복 사람 방지 (`uniqueness`) | 후보만 기록 |
-
-passkey는 계정 연속성 수단입니다. 게임 replay는 규칙에 맞는 입력을 확인하는 수단입니다. 이들을 하나의 `human=true`로 합치지 않습니다. 지원되지 않는 요구는 빈 추천을 반환합니다. 접근 가능한 대체 경로와 생체정보 동의는 제품 정책의 일부로 설계해야 합니다.
-
-## 조사·확장 계획
-
-- [조사와 기존 프로젝트 비교 경로](docs/research.md): 34개 후보, Awesome/MCP 검색 경로, 근거 승인 기준
-- [아키텍처](docs/architecture.md), [위협 모델](docs/threat-model.md)
-- [상세 로드맵 23개](docs/roadmap.md), [개별 이슈 본문](.github/planned-issues/)
-- [기여 방법](CONTRIBUTING.md), [보안 상태](SECURITY.md)
-
-기존 Awesome list/MCP의 존재 여부는 아직 실시간 확인하지 못했습니다. 차별화 가설은 **버전이 있는 근거 + 제품별 선택 + 서버 결속 회전 + 접근성 + 인간/에이전트 비교 벤치마크**입니다. 벤치마크 실험·통계·동적 게임·영상 라이브니스 구현은 후속 작업이며 결과를 만들어 내지 않았습니다.
-
-이번 환경에서는 GitHub/Aside DNS 실패, 유효성을 확인하지 못한 GitHub 인증, 읽기 전용 `.git` 때문에 원격 게시가 막혔습니다. Aside/MyProxy 연결과 REA 호환성·라이선스를 확인하지 못했고 Windows VM도 설치하지 않았습니다. 상용 제품은 공식 API로 연결하며 비공개 엔진을 추출해 배포한 것으로 표시하지 않습니다.
-
-네트워크 복구 후 `npm run research:refresh`는 기존 `gh` 인증을 재사용하여 GitHub 메타데이터, 커밋에 고정된 README·LICENSE, 유사 프로젝트 검색 결과와 시각·hash를 `.local/research/`에 저장합니다. Python 3와 GitHub CLI가 필요합니다. `npm run research:plan`은 네트워크 없이 조사 대상을 표시합니다. 이 과정은 후보를 자동 승인하지 않습니다. `python3 scripts/publish-issues.py`로 이슈 미리보기를 하고 `--publish`로 게시할 수 있습니다. 원격 저장소에 기존 이력이 있다면 먼저 fetch·통합한 후 커밋을 푸시하세요.
-
-프로젝트 코드는 Apache-2.0. 외부 후보 코드는 포함하지 않았으며 각 upstream 라이선스는 별도로 적용됩니다.
-
-## 새 제품용 설치 파일 생성
+CLI로 새 통합 프로젝트를 만들 수 있습니다. 목적지가 이미 존재하면 덮어쓰지 않습니다.
 
 ```bash
-npm run scaffold -- /tmp/my-kechap-product '{"provider":"pow"}'
-npm run scaffold -- /tmp/my-kechap-turnstile '{"provider":"turnstile","hostname":"localhost"}'
+npm run scaffold -- /tmp/my-product '{"provider":"altcha"}'
+cd /tmp/my-product
+npm install --omit=optional
+cp .env.example .env
+# .env의 ALTCHA_SECRET에 32바이트 이상의 서버 전용 난수 문자열 설정
+npm start
 ```
 
-목적지는 존재하지 않는 새 디렉터리여야 하며 기존 파일을 덮어쓰지 않습니다. 생성된 `.env.example`을 `.env`로 복사하고 필요한 키를 설정한 뒤 `npm start`로 실행합니다. 기본 프레임워크는 Node HTTP이며 외부 패키지 설치가 필요 없습니다. MCP `kechap_scaffold`는 같은 파일들을 검토용 JSON으로 반환합니다. 실제 계정 생성 로직·분산 저장소·실서비스 접근성 복구 경로는 제품에 맞게 구현해야 합니다. 생성된 프로젝트의 서버 핸들러 테스트는 통과했으나 이 실행 환경의 포트 제한 때문에 실제 브라우저 실행은 미확인입니다.
+지원 생성 공급자: `pow`, `altcha`, `cap`, `turnstile`, `hcaptcha`, `recaptcha`. reCAPTCHA는 `recaptchaMode: "v2"` 또는 `"v3"`를 명시합니다. 상용 키는 공급자 계정에서 발급해야 합니다. 생성 예제는 실제 계정을 만들지 않으며 보호된 작업을 연결할 지점을 보여 줍니다.
+
+## 구현한 인증 경로
+
+| 수단 | 구현·검증 범위 | 보증 범주 |
+| --- | --- | --- |
+| ALTCHA | 공식 altcha-lib 2.8.0, v2 SHA-256, 실제 패키지 및 Chromium 폼 테스트 | automation-cost |
+| Cap | 공식 capjs-core 0.1.15, format 1 SHA-256, 실제 패키지 및 Chromium 폼 테스트 | automation-cost |
+| 자체 PoW | 실험·비교용, Chromium 폼 테스트 | automation-cost |
+| Turnstile·hCaptcha·classic reCAPTCHA | 공식 서버 endpoint 어댑터, hostname/action/score·오류 처리 모의 테스트 | bot-mitigation |
+| 세 가지 toy replay | 정적 선택·drag/rotate·동적 순서의 서버 이벤트 재생 및 스크립트 기준선 | interaction |
+| liveness·identity·uniqueness | 후보와 확장 계획. 현재 런타임 구현 없음 | 서로 별개 |
+
+Cap의 HashWX·instrumentation·behavior scoring은 이 baseline에서 활성화하지 않습니다. 상용 공급자의 실제 계정 연동 검증은 별도입니다. 재생 가능한 입력과 사람의 존재는 다른 주장입니다. [OSS 근거와 계약](docs/oss-integrations.md), [외부 라이선스 고지](THIRD_PARTY_NOTICES.md)를 확인하세요.
+
+## 서버 SDK
+
+```js
+import {Kechap} from './src/index.js';
+import {altchaAdapter, capAdapter} from './src/oss.js';
+
+const kechap = new Kechap({adapters: {
+  altcha: altchaAdapter({secret: process.env.ALTCHA_SECRET}),
+  cap: capAdapter({secret: process.env.CAP_SECRET}),
+}});
+const context = {tenant: 'product', action: 'signup', subject: 'server-derived-session'};
+const challenge = await kechap.issue({context, sessionId: 'server-session',
+  providers: ['altcha', 'cap'], assurance: 'automation-cost', mode: 'rotate', previous: 'altcha'});
+// 공개 challenge를 browser mountChallenge에 전달하고 응답을 서버로 받습니다.
+const verified = await kechap.verify({id: challenge.id, context, response: browserResponse});
+if (!verified.ok) throw new Error('Verification failed');
+const consumed = await kechap.consume({token: verified.token, context});
+if (!consumed.ok) throw new Error('Expired or already used');
+// 제품의 보호된 작업 실행. DB 트랜잭션/멱등성은 제품에서 처리합니다.
+```
+
+`MemoryStore`는 단일 프로세스 개발용입니다. 운영에서는 원자적 `put(key,value,expiresAt)`/`take(key)` 공유 저장소, 실제 제품 세션·CSRF·속도 제한·요청 크기 제한·HTTPS·접근성 복구 경로가 필요합니다. 소비와 업무 처리의 원자성은 별도로 설계해야 합니다. 실패한 검증 시도도 challenge를 소비하므로 다시 발급해야 합니다.
+
+브라우저는 `src/browser.js`의 `mountChallenge(container, issued, {onResponse,onError,signal})`을 사용합니다. 교체 시 abort하면 이전 widget과 콜백을 정리합니다. 외부 벤더 스크립트는 해당 방식 선택 시 로드합니다. Turnstile은 challenge별 cData를 검사합니다. hCaptcha/classic reCAPTCHA의 원본 토큰은 동일 site/action의 bearer proof이며 원래 브라우저 세션의 존재까지 증명하지 못합니다.
+
+## 추천과 로테이션
+
+```bash
+npm run recommend -- '{"selfHosted":true,"assurance":"automation-cost","requireLiveEvidence":true}'
+npm run recommend -- '{"useCase":"reward","minStars":10000}'
+```
+
+추천은 self-host/제3자 금지, 용도, assurance, 최소 별 수, 테스트 근거, 실험 허용, modality와 제외 목록을 확인하고 공급자별 탈락 이유를 반환합니다. 지원하지 않는 제약은 무시하지 않고 오류로 돌려줍니다. 연락 폼·가입 기본 요구와 리워드 uniqueness·복구 identity 요구를 구분합니다. 기본 요구는 제품별 조정이 필요한 예시이며 보안 등급 인증이 아닙니다.
+
+`issueWithPolicy`는 서버의 action·risk별 공급자 집합, stable/rotate/weighted 방식, health와 정책 버전을 사용합니다. 발급된 challenge는 원래 공급자·assurance·정책 버전에 고정됩니다. 다른 범주의 자동 fallback이나 전체 장애 시 자동 통과는 없습니다. risk 입력·health는 신뢰된 서버가 제공해야 합니다. 자체 위험 점수 모델과 기기/IP 수집기는 아직 구현하지 않았습니다. [정책 예제](docs/runtime-policy.md)를 참고하세요.
+
+## 조사 결과
+
+[실시간 조사](docs/research.md)와 [기존 프로젝트 비교](docs/comparison.md)에 공식 출처·라이선스·고정 revision·조회 시각·근거 hash를 기록했습니다. 카탈로그는 50개 역할별 후보이며, 모든 항목이 실행 어댑터나 검증 완료 CAPTCHA인 것은 아닙니다.
+
+- 관련 목록은 이미 있습니다: awesome-captcha, awesome-proof-of-personhood 등.
+- CAPTCHA MCP도 있으나 조사 표본 상당수는 인증 해제 솔버입니다. 최초·유일을 주장하지 않습니다.
+- ALTCHA 2,897, Cap 8,352, mCaptcha 2,501 stars로 조사 시점에 10K 미만입니다. Anubis·FingerprintJS·SafeLine·CrowdSec은 10K 이상이지만 프록시·신호·위험 방어 역할입니다.
+- npm 다운로드·maintainer 도입 주장은 별도 근거이며 고유 고객 수나 독립 감사로 바꾸어 쓰지 않습니다.
+- REA는 Linux 일부 분석을 지원하며 별도 최신 Node 요구가 있습니다. 이번에는 문서·라이선스만 확인했고 실행·비공개 엔진 추출은 하지 않았습니다. 상용 제품은 공식 API로 연결합니다.
+
+Aside와 Windows VM은 사용자 지시에 따라 실행하지 않았습니다.
+
+## 벤치마크와 검증
+
+```bash
+npm run benchmark -- 100
+npx playwright install chromium
+npm run test:browser
+```
+
+`npm test`는 현재 46개 테스트를 실행하며 Python 조사 테스트 3개는 별도입니다. Chromium 테스트는 소유한 폼에서 ALTCHA·Cap·PoW 교체와 실제 서버 제출을 확인합니다. 브라우저가 제한된 환경이면 해당 검증을 별도로 실행해야 합니다.
+
+세 가지 toy surface의 rule-aware script는 각각 100/100 성공했습니다. 이는 **서버 replay만으로 사람과 자동화를 구분할 수 없다는 결과**입니다. 인간·VLM·접근성 데이터는 아직 없으며 허구 수치를 채우지 않습니다. [벤치 프로토콜과 결과 한계](docs/benchmark.md)를 확인하세요.
+
+실제 실행 원본은 [toy baseline JSON](benchmarks/results/2026-11-12-toy-baseline.json), [Chromium 검증 기록](docs/assets/browser-verification.json)에 포함했습니다. client timeline은 시뮬레이션이고 verifier CPU만 실측임을 결과에 명시했습니다.
+
+## 기여·계획·후원
+
+[기여 방법](CONTRIBUTING.md), [보안 상태](SECURITY.md), [상세 로드맵](docs/roadmap.md), [GitHub 이슈](https://github.com/NomaDamas/Kechap/issues)에 실제 패키지 통합·분산 저장소·접근성·영상/음성 승격·인간/에이전트 실험·리더보드 확장을 계획했습니다. 후속 계획을 구현 완료로 표시하지 않습니다.
+
+GitHub Sponsor 설정은 NomaDamas로 연결했습니다. 현재 조직 Sponsors listing은 미활성이므로 소유자가 [Sponsors 가입](https://github.com/sponsors/accounts)을 완료해야 실제 수령이 가능합니다. [후원 상태](docs/sponsorship.md)를 참고하세요.
+
+프로젝트 코드는 Apache-2.0이며 외부 패키지와 후보의 라이선스는 별도로 적용됩니다.

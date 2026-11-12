@@ -1,0 +1,35 @@
+{
+  "url": "https://www.w3.org/TR/webauthn-3/",
+  "resolvedUrl": "https://www.w3.org/TR/webauthn-3/",
+  "fetchedAt": "2026-11-12T10:21:27.228072+00:00",
+  "rawSha256": "157030c980d44a3ce4b1ec5bcfaa16790c7dfefac20709af6ed2b11c7120970b",
+  "title": "Web Authentication: An API for accessing Public Key Credentials - Level 3",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "server",
+      "text": "ernal Method 5.1.6 Availability of User-Verifying Platform Authenticator - PublicKeyCredential’s isUserVerifyingPlatformAuthenticatorAvailable() Method 5.1.7 Availability of client capabilities - PublicKeyCredential’s getClientCapabilities() Method 5.1.8 Deserialize Registration ceremony options - PublicKeyCredential’s parseCreationOptionsFromJSON() Method 5.1.9 Deserialize Authentication ceremony options - PublicKeyCredential’s parseRequestOptionsFromJSON() Methods 5.1.10 Signal Credential Changes to"
+    },
+    {
+      "term": "verify",
+      "text": "rations 1.3 Sample API Usage Scenarios 1.3.1 Registration 1.3.2 Registration Specifically with User-Verifying Platform Authenticator 1.3.3 Authentication 1.3.4 Aborting Authentication Operations 1.3.5 Decommissioning 1.4 Platform-Specific Implementation Guidance 2 Conformance 2.1 User Agents 2.1.1 Enumerations as DOMString types 2.2 Authenticators 2.2.1 Backwards Compatibility with FIDO U2F 2.3 WebAuthn Relying Parties 2.4 All Conformance Classes 3 Dependencies 4 Terminology 5 Web Authentication API 5"
+    },
+    {
+      "term": "token",
+      "text": "me of the Document to interact with any input form control tagged with a \"webauthn\" autofill detail token . For example, upon the user clicking in such an input field, the user agent can render a list of discovered credentials for the user to select from, and perhaps also give the user the option to \"try another way\". Else: Let credentialIdFilter be an empty list . If pkOptions . timeout is present, check if its value lies within a reasonable range as defined by the client and if not, correct it to t"
+    },
+    {
+      "term": "authentication",
+      "text": " Web Authentication: An API for accessing Public Key Credentials - Level 3 Web Authentication: An API for accessing Public Key Credentials Level 3 W3C Recommendation , 25 August 2026 More details about this document This version: https://www.w3.org/TR/2026/REC-webauthn-3-20260825/ Latest published version: https://www.w3.org/TR/webauthn-3/ Editor's Draft: https://w3c.github.io/webauthn/ Previous Versions: https://ww"
+    },
+    {
+      "term": "biometric",
+      "text": "n Measures 14.2 Anonymous, Scoped, Non-correlatable Public Key Credentials 14.3 Authenticator-local Biometric Recognition 14.4 Privacy considerations for authenticators 14.4.1 Attestation Privacy 14.4.2 Privacy of personally identifying information Stored in Authenticators 14.5 Privacy considerations for clients 14.5.1 Registration Ceremony Privacy 14.5.2 Authentication Ceremony Privacy 14.5.3 Privacy Between Operating System Accounts 14.5.4 Disclosing Client Capabilities 14.5.5 Cross-Origin Usage of Web"
+    },
+    {
+      "term": "webAuthn",
+      "text": "tion , 25 August 2026 More details about this document This version: https://www.w3.org/TR/2026/REC-webauthn-3-20260825/ Latest published version: https://www.w3.org/TR/webauthn-3/ Editor's Draft: https://w3c.github.io/webauthn/ Previous Versions: https://www.w3.org/TR/2026/CR-webauthn-3-20260526/ https://www.w3.org/TR/2021/REC-webauthn-2-20210408/ https://www.w3.org/TR/2019/REC-webauthn-1-20190304/ History: https://www.w3.org/standards/history/webauthn-3/ Implementation Report: https://www.w3.org/2026/"
+    }
+  ],
+  "note": "Documentation/marketing description only; no live certification or independent performance validation."
+}

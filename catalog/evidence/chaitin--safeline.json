@@ -1,0 +1,36 @@
+{
+  "repository": "chaitin/SafeLine",
+  "fetchedAt": "2026-11-12T09:48:09.891088+00:00",
+  "revision": "9b72ba6ad4d7e042e7a79ee2e062305179312c98",
+  "metadataUrl": "https://api.github.com/repos/chaitin/SafeLine",
+  "metadataSha256": "01992caa962181548e95151f6b40aee02a85ffa054089d9c79eb458405f85d9a",
+  "metadataHashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "stars": 23258,
+  "archived": false,
+  "pushedAt": "2026-11-11T06:26:47Z",
+  "apiLicenseCandidate": {
+    "key": "gpl-3.0",
+    "name": "GNU General Public License v3.0",
+    "spdx_id": "GPL-3.0",
+    "url": "https://api.github.com/licenses/gpl-3.0",
+    "node_id": "MDc6TGljZW5zZTk="
+  },
+  "assessment": "source-reviewed-not-security-audited",
+  "documents": {
+    "readme": {
+      "url": "https://github.com/chaitin/SafeLine/blob/9b72ba6ad4d7e042e7a79ee2e062305179312c98/README.md",
+      "apiUrl": "https://api.github.com/repos/chaitin/SafeLine/readme?ref=9b72ba6ad4d7e042e7a79ee2e062305179312c98",
+      "contentSha256": "ae750654239737a297b486d978c8b3adaa7aa8476da27bbab6a108124cbb7324",
+      "path": "README.md",
+      "openingExcerpt": "<p align=\"center\">\n  <img src=\"/images/banner.png\" width=\"400\" />\n</p>\n\n<h4 align=\"center\">\n  SafeLine - Make your web apps secure\n</h4>\n\n<p align=\"center\">\n  <a target=\"_blank\" href=\"https://ly.safepoint.cloud/laA8asp\">🏠 Website</a> &nbsp; | &nbsp;\n  <a target=\"_blank\" href=\"https://ly.safepoint.cloud/w2AeHhb\">📖 Docs</a> &nbsp; | &nbsp;\n  <a target=\"_blank\" href=\"https://ly.safepoint.cloud/hSMd4SH\">🔍 Live Demo</a> &nbsp; | &nbsp;\n  <a target=\"_blank\" href=\"https://discord.gg/SVnZGzHFvn\">🙋‍♂️ Discord</a> &nbsp; | &nbsp;\n  <a target=\"_blank\" href=\"/README_CN.md\">中文版</a>\n</p>\n\n<h3 align=\"center\">🏆 Achievements</h3>\n\n<p align=\"center\">\n  <a href=\"https://trendshift.io/repositories/30?utm_source=repository-badge&amp;utm_medium=badge&amp;utm_campaign=badge-repository-30\" target=\"_blank\" rel=\"noopener noreferrer\">\n    <img src=\"https://trendshift.io/api/badge/repositories/30\" alt=\"chaitin/SafeLine — #1 GitHub Trending Repository\" width=\"250\" height=\"55\" />\n  </a>\n  <a href=\"https://trendshif"
+    },
+    "license": {
+      "url": "https://github.com/chaitin/SafeLine/blob/9b72ba6ad4d7e042e7a79ee2e062305179312c98/LICENSE.md",
+      "apiUrl": "https://api.github.com/repos/chaitin/SafeLine/license?ref=9b72ba6ad4d7e042e7a79ee2e062305179312c98",
+      "contentSha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "path": "LICENSE.md",
+      "openingExcerpt": "                    GNU GENERAL PUBLIC LICENSE\n                       Version 3, 29 June 2007\n\n Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>\n Everyone is permitted to copy and distribute verbatim copies\n of this license document, but changing it is not allowed.\n\n                            Preamble\n\n  The GNU General Public License is a free, copyleft license for\nsoftware and other kinds of works.\n\n  The licenses for most software and other practical works are designed\nto take away your freedom to share and change the works.  By contrast,\nthe GNU General Public License is intended to guarantee your freedom to\nshare and change all versions of a program--to make sure it remains free\nsoftware for all its users.  We, the Free Software Foundation, use the\nGNU General Public License for most of our software; it applies also to\nany other work released this way by its authors.  You can apply it to\nyour programs, too.\n\n  When we speak of free software, we are referring t"
+    }
+  },
+  "notes": "Reverse-proxy WAF with anti-bot features. GPL-3.0 root license does not establish that every shipped binary/service component is open source; review component boundaries."
+}

@@ -1,0 +1,30 @@
+{
+  "url": "https://docs.hcaptcha.com/",
+  "resolvedUrl": "https://docs.hcaptcha.com/",
+  "fetchedAt": "2026-11-12T09:49:59.150261+00:00",
+  "rawSha256": "029ff9ecc53d0b82080c15a270336c98a0dc13539c48b5abcfdcf2b08ec4cf7a",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "single-use",
+      "text": "ration ​ Use test keys to exercise successful verification and send an invalid token to confirm your server rejects the request. Tokens are single-use: obtain a new token after each submission, expiration, or error. For local setup, use a development hostname . Check your Content Security Policy , then replace test keys with your production keys before going live. Request Flow ​ Switching from reCAPTCHA ​ If you're already using Google's reCAPTCHA, you can use your existing code with only a few changes . hCaptcha methods are API-compatible with"
+    },
+    {
+      "term": "hostname",
+      "text": "e ) - > dict : \"\"\" Sends a POST request to hCaptcha's /siteverify endpoint and returns a result dict including 'success' (bool), timestamp, hostname, and any error codes returned. \"\"\" payload = { 'secret' : SECRET_KEY , 'response' : token } if remoteip : payload [ 'remoteip' ] = remoteip # recommended, improves accuracy try : response = requests . post ( HCAPTCHA_VERIFY_URL , data = payload , timeout = 10 ) response . raise_for_status ( ) data = response . json ( ) except ( requests . RequestException , ValueError ) : return { 'success' : Fal"
+    },
+    {
+      "term": "secret",
+      "text": " to make your agent an expert. Quick Start ​ Get your keys ​ Create an hCaptcha account , then copy your public sitekey from Sites and your secret from Settings . Use the sitekey in your frontend; keep the secret on your server. Add hCaptcha to your site or app ​ Load the JavaScript SDK and add the widget inside your form. After a successful challenge, hCaptcha adds an h-captcha-response token to the form submission. Using a framework? Follow the React , Vue , or WordPress guide, or browse all integrations . Plugins and examples are availab"
+    },
+    {
+      "term": "server",
+      "text": "Login Getting started Quick Start Migrate from reCAPTCHA Agent Skills for Docs Web JavaScript React Vue Angular WordPress More Integrations Server Node.js More Integrations Mobile iOS Android React Native Guides & reference Invisible Captcha Custom Themes Language Codes API reference FAQ Plans Pro Features Enterprise Overview Getting started Quick Start On this page Developer Guide hCaptcha helps to protect your sites and apps from bots, spam, and other automated abuse. Installing it is easy: add a few lines of code, or use one of the many "
+    },
+    {
+      "term": "captcha",
+      "text": " Developer Guide | hCaptcha Skip to main content hCaptcha Docs English English Français FAQ Login Getting started Quick Start Migrate from reCAPTCHA Agent Skills for Docs Web JavaScript React Vue Angular WordPress More Integrations Server Node.js More Integrations Mobile iOS Android React Native Guides & reference Invisible Captcha Custom Themes Language Codes API reference FAQ Plans Pro Features Enterprise Overview Getting"
+    }
+  ],
+  "note": "Vendor/author claims are not independent Kechap security measurements."
+}

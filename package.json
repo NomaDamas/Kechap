@@ -10,10 +10,12 @@
   "exports": {
     ".": "./src/index.js",
     "./browser": "./src/browser.js",
-    "./scaffold": "./src/scaffold.js"
+    "./scaffold": "./src/scaffold.js",
+    "./oss": "./src/oss.js",
+    "./replay": "./src/replay.js"
   },
   "scripts": {
-    "test": "node test/core.test.js && node test/web.test.js && node test/scaffold.test.js",
+    "test": "node --test test/*.test.js",
     "demo": "node examples/local.js",
     "demo:web": "node examples/web/server.js",
     "mcp": "node src/mcp.js",
@@ -22,7 +24,16 @@
     "research:refresh": "python3 scripts/research_github.py",
     "research:plan": "python3 scripts/research_github.py --plan",
     "test:research": "python3 -m unittest discover -s test -p '*_test.py'",
-    "scaffold": "node src/scaffold.js"
+    "scaffold": "node src/scaffold.js",
+    "benchmark": "node scripts/benchmark.js",
+    "test:browser": "node scripts/browser-smoke.js"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "altcha-lib": "2.8.0",
+    "capjs-core": "0.1.15"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0"
+  }
 }

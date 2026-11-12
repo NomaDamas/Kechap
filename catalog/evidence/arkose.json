@@ -1,0 +1,31 @@
+{
+  "url": "https://developer.arkoselabs.com/docs/standard-setup",
+  "resolvedUrl": "https://developer.arkoselabs.com/docs/standard-setup",
+  "fetchedAt": "2026-11-12T10:21:23.085391+00:00",
+  "rawSha256": "6ff80966c3e3e323bb840bb534d7e17964ec83bacdcb45f3af688c1c98a9c351",
+  "title": "Client-Side Instructions",
+  "evidenceType": "official-document-excerpts",
+  "excerpts": [
+    {
+      "term": "server",
+      "text": "WebView Setup iOS WebView Setup React Native Mobile SDK React Native Mobile SDK (v2.12.1 and Below) Server Side Setup Server-Side Instructions Specialized Setup Subresource Integrity (SRI) Iframe Setup Guide Angular Setup Guide React Setup Guide Vue Setup Guide Connected Devices Integration reCAPTCHA to Arkose Labs Migration Guide Arkose Enforcement Challenge UI 2.0 Content Delivery Network Setup Arkose on Akamai - Reference Architecture Akamai CDN Setup - Client Side Akamai CDN Setup - Server Side Ar"
+    },
+    {
+      "term": "verify",
+      "text": " Setup Guide Arkose on Microsoft Entra - Integration Setup API Specifications Arkose Labs API Guide Verify API Calling Verify API Verify Request and Response Schemas Verify API Response Fields and Examples IP Velocity Fields Risk Score Migrating to Verify v4 from v1, v2, v3 Enhanced Error Codes Client API Callbacks Configuration Object Response Object Latency Best Practices Edge API Edge API Request Parameters Edge API Response Parameters Retroactive Attack Insights API Common Across Products Truth Da"
+    },
+    {
+      "term": "token",
+      "text": "ify client traffic, display an Enforcement Challenge (EC) if applicable, and provide a one-time use token. Server-side implementation that takes the client-side provided token and verifies it with the Arkose Labs Verify API. The response contains information about the session, either as a JSON object or in a simple format. This page describes the required steps to implement client-side integration of Arkose Bot Manager, both for our detection and enforcement components. The detection component provid"
+    },
+    {
+      "term": "authentication",
+      "text": "rcements. There are additional instructions for iOS Mobile SDK and Android Mobile SDK . API Request Authentication Arkose Labs authenticates your API requests using a private/public key pair that can be retrieved from the Key Settings page of the Arkose Labs Command Center . As shown below, go to the left menubar's Settings entry, and then to the Keys sub-entry. If you do not have access to the Command Center or do not have your private and public keys, contact your Sales Rep or Sales Engineer. You use the pr"
+    },
+    {
+      "term": "captcha",
+      "text": "e Setup Guide Angular Setup Guide React Setup Guide Vue Setup Guide Connected Devices Integration reCAPTCHA to Arkose Labs Migration Guide Arkose Enforcement Challenge UI 2.0 Content Delivery Network Setup Arkose on Akamai - Reference Architecture Akamai CDN Setup - Client Side Akamai CDN Setup - Server Side Arkose on Cloudflare - Reference Architecture Cloudflare CDN Setup - Client Side Cloudflare CDN Setup - Server Side Cloudflare CDN Integration - Auth0 Arkose on Fastly - Reference Architecture Usin"
+    }
+  ],
+  "note": "Documentation/marketing description only; no live certification or independent performance validation."
+}

@@ -1,0 +1,224 @@
+{
+  "url": "https://api.github.com/search/repositories?q=proof+of+personhood+in%3Aname%2Cdescription&sort=stars&order=desc&per_page=30",
+  "fetchedAt": "2026-11-12T09:43:17.755694+00:00",
+  "sha256": "4b912c5c5e5088ac0e543f0931a5caed98a4aff55d768eecbfd4c859931bafb5",
+  "hashFormat": "UTF-8 JSON with sorted keys, ensure_ascii=False, default separators",
+  "scope": {
+    "totalCount": 71,
+    "incompleteResults": false,
+    "returned": 30,
+    "exhaustive": false
+  },
+  "results": [
+    {
+      "full_name": "dedis/popstellar",
+      "html_url": "https://github.com/dedis/popstellar",
+      "description": "Proof-of-personhood System",
+      "stargazers_count": 36,
+      "archived": false
+    },
+    {
+      "full_name": "andorsk/awesome-proof-of-personhood",
+      "html_url": "https://github.com/andorsk/awesome-proof-of-personhood",
+      "description": "curated list of proof of personhood approaches and papers.",
+      "stargazers_count": 19,
+      "archived": false
+    },
+    {
+      "full_name": "paritytech/individuality-community",
+      "html_url": "https://github.com/paritytech/individuality-community",
+      "description": "Pallets and a runtime to manage Proof-of-Personhood (PoP) and related on-chain logic.",
+      "stargazers_count": 11,
+      "archived": false
+    },
+    {
+      "full_name": "Dentity-Development/ens-client",
+      "html_url": "https://github.com/Dentity-Development/ens-client",
+      "description": "A JavaScript library that fetches Dentity's Proof of Personhood and Social Credentials linked to an ENS profile",
+      "stargazers_count": 7,
+      "archived": false
+    },
+    {
+      "full_name": "0xcadams/proof-of-residency",
+      "html_url": "https://github.com/0xcadams/proof-of-residency",
+      "description": "The Ethereum proof of personhood protocol based on mailing addresses 📫",
+      "stargazers_count": 6,
+      "archived": true
+    },
+    {
+      "full_name": "ethereum/ZK-based-Proof-of-Personhood",
+      "html_url": "https://github.com/ethereum/ZK-based-Proof-of-Personhood",
+      "description": null,
+      "stargazers_count": 6,
+      "archived": false
+    },
+    {
+      "full_name": "AstroxNetwork/Proof-of-Personhood",
+      "html_url": "https://github.com/AstroxNetwork/Proof-of-Personhood",
+      "description": null,
+      "stargazers_count": 5,
+      "archived": false
+    },
+    {
+      "full_name": "Tori-kara/Obelisk",
+      "html_url": "https://github.com/Tori-kara/Obelisk",
+      "description": "A blockchain-powered preservation protocol designed to safeguard humanity’s identity, knowledge, history, and legacy for future generations. Built as a decentralized proof of personhood system, this system establishes verifiable human authenticity while creating a permanent, tamper-resistant archive of human existence, culture, and contribution.",
+      "stargazers_count": 3,
+      "archived": false
+    },
+    {
+      "full_name": "willclarktech/personhood-nft",
+      "html_url": "https://github.com/willclarktech/personhood-nft",
+      "description": "Proof of concept for a token representing personhood",
+      "stargazers_count": 2,
+      "archived": true
+    },
+    {
+      "full_name": "ltraveler/phaos-wallet",
+      "html_url": "https://github.com/ltraveler/phaos-wallet",
+      "description": "1st Idena Proof-of-Personhood Blockchain Wallet",
+      "stargazers_count": 2,
+      "archived": false
+    },
+    {
+      "full_name": "ubiubi18/IdenaAI",
+      "html_url": "https://github.com/ubiubi18/IdenaAI",
+      "description": "An AI harness for human-captcha puzzles. Connect a local model (or API provider) to create, solve, and benchmark picture puzzles of proof-of-personhood captchas.",
+      "stargazers_count": 2,
+      "archived": false
+    },
+    {
+      "full_name": "pauldev20/proofoftruth",
+      "html_url": "https://github.com/pauldev20/proofoftruth",
+      "description": "Proof-of-Personhood Truth Oracle 🔮",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "Malfizz/Proof-of-Personhood",
+      "html_url": "https://github.com/Malfizz/Proof-of-Personhood",
+      "description": null,
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "krl/zeroid",
+      "html_url": "https://github.com/krl/zeroid",
+      "description": "Decentralized proof of personhood experiment",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "anima-protocol/personhood-android-sdk",
+      "html_url": "https://github.com/anima-protocol/personhood-android-sdk",
+      "description": "Proof of Personhood (PoP) - Android SDK",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "decentralized-identity/labs-legally-binding-proof-of-personhood-for-verifiable-credentials",
+      "html_url": "https://github.com/decentralized-identity/labs-legally-binding-proof-of-personhood-for-verifiable-credentials",
+      "description": "Labs: Legally-Binding Proof of Personhood for Verifiable Credentials via QES",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "encointer/personhood-oracle",
+      "html_url": "https://github.com/encointer/personhood-oracle",
+      "description": "A service which provides single-use unlinkable proofs of personhood reputation on the encointer network",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "POPsicleID/POPsicle",
+      "html_url": "https://github.com/POPsicleID/POPsicle",
+      "description": "Worldcoin World ID Chrome Extension with Proof of Personhood Cookie",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "paritytech/polkadot-pop-e2e",
+      "html_url": "https://github.com/paritytech/polkadot-pop-e2e",
+      "description": "End-to-end tests for the Polkadot proof-of-personhood stack",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "Global-IDo1/Self-Sovereign-ID",
+      "html_url": "https://github.com/Global-IDo1/Self-Sovereign-ID",
+      "description": "Whitepaper: Proof of Personhood – A Global Digital Identity for the AI Age.",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "TalDerei/zkID",
+      "html_url": "https://github.com/TalDerei/zkID",
+      "description": "Privacy-Preserving Proof-of-Personhood Protocol (PPPoPP) enabling sybil resistant quadratic voting mechanism. ETH NYC Hackathon.",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "ElMatiOfficial/realh",
+      "html_url": "https://github.com/ElMatiOfficial/realh",
+      "description": "Open-source proof-of-personhood and content-provenance tooling. Issues W3C Verifiable Credentials signed with Ed25519; verifiable offline via did:web + JWKS.",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "karthikcsq/veritas",
+      "html_url": "https://github.com/karthikcsq/veritas",
+      "description": "Clinical research platform pairing World ID iris-biometric proof-of-personhood with GPT-4o response-quality scoring to filter fraudulent trial participants. Won Best Proof-of-Human Application at Catapult 2026.",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "PopuliDAO/PopuliDAO-monorepo",
+      "html_url": "https://github.com/PopuliDAO/PopuliDAO-monorepo",
+      "description": "A DAO platform with proof of personhood and a token cap per individual implemented to maintain decentralization and limit disproportionate influence by whales.",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "Axle-Bucamp/whomi",
+      "html_url": "https://github.com/Axle-Bucamp/whomi",
+      "description": "a small and yet big project about beeing anon while getting access to proof of personhood and oauth decentralised system. A way to yiel who you are without teling  anything",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "crystaltai/anti-social-recovery-club-2",
+      "html_url": "https://github.com/crystaltai/anti-social-recovery-club-2",
+      "description": "Anti Social Recovery (ASR) allows users to create smart contracts where ownership of that smart contract is tied to the user's unique proof‑of‑personhood, using @worldcoin's World ID. Check out our live demo below 👇",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "felixyustian/zkktp",
+      "html_url": "https://github.com/felixyustian/zkktp",
+      "description": "Proof-of-personhood for Indonesia — verify KTP off-chain, mint an ERC-5192 soulbound credential on-chain, keep every byte of PII off the chain. EIP-712 attestation now, zero-knowledge issuance on the roadmap. Built for Coinfest Asia Vibe Coding.",
+      "stargazers_count": 1,
+      "archived": false
+    },
+    {
+      "full_name": "sagearbor/personhood",
+      "html_url": "https://github.com/sagearbor/personhood",
+      "description": "Pluggable proof-of-personhood: W3C Verifiable Credentials with policy-driven verification. Anchor methods + supplementary signals, no naive weighted-sum stacking.",
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "pradeep-c-gopai/Proof-Of-Personhood",
+      "html_url": "https://github.com/pradeep-c-gopai/Proof-Of-Personhood",
+      "description": null,
+      "stargazers_count": 0,
+      "archived": false
+    },
+    {
+      "full_name": "mohtashimnawaz/proof-of-personhood",
+      "html_url": "https://github.com/mohtashimnawaz/proof-of-personhood",
+      "description": null,
+      "stargazers_count": 0,
+      "archived": false
+    }
+  ]
+}
