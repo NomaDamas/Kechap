@@ -1,14 +1,18 @@
 import {readFile, mkdir, writeFile, lstat, realpath} from 'node:fs/promises';
 import {resolve, dirname, join, relative} from 'node:path';
 import {pathToFileURL} from 'node:url';
+import {recommend} from './policy.js';
 
 const supported = new Set(['pow', 'altcha', 'cap', 'turnstile', 'hcaptcha', 'recaptcha']);
 
-/** Produce a complete local Node HTTP integration without secrets or dependencies. */
-export async function scaffoldPlan({provider = 'turnstile', recaptchaMode, hostname = 'localhost'} = {}) {
+/** Produce a reviewable Node HTTP integration without generating credentials. */
+export async function scaffoldPlan(options = {}) {
+  if (!options || typeof options !== 'object' || Array.isArray(options) || Object.keys(options).some(k => !['provider', 'recaptchaMode', 'hostname'].includes(k))) throw new Error('Unknown or invalid scaffold option');
+  const {provider = 'turnstile', recaptchaMode, hostname = 'localhost'} = options;
   if (!supported.has(provider)) throw new Error('Unsupported provider');
-  if (!/^[a-zA-Z0-9.-]+$/.test(hostname) || hostname.length > 253) throw new Error('Expected hostname without protocol, port or path');
+  if (typeof hostname !== 'string' || hostname.length > 253 || !hostname.split('.').every(label => /^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?$/.test(label))) throw new Error('Expected hostname without protocol, port or path');
   if (provider === 'recaptcha' && !['v2', 'v3'].includes(recaptchaMode)) throw new Error('Choose recaptchaMode v2 or v3');
+  if (provider !== 'recaptcha' && recaptchaMode !== undefined) throw new Error('recaptchaMode only applies to recaptcha');
   const files = {};
   const computeOnly = ['pow', 'altcha', 'cap'].includes(provider);
   for (const source of ['src/index.js', 'src/oss.js', 'src/policy.js', 'src/runtime-policy.js', 'src/browser.js', 'src/browser-work.js', 'examples/web/server.js', 'examples/web/app.js', 'examples/web/index.html', 'LICENSE', 'THIRD_PARTY_NOTICES.md']) {
@@ -23,8 +27,21 @@ export async function scaffoldPlan({provider = 'turnstile', recaptchaMode, hostn
   return {framework: 'node-http', provider, status: 'review-required', files, warnings: ['No vendor credentials are generated.', 'This creates a new standalone integration; it does not patch existing product routes.', 'Production storage, real accessible recovery and live provider validation remain required.']};
 }
 
+/** Recommendation constraints stay authoritative through generated output. */
+export async function integrationPlan(options = {}) {
+  if (!options || typeof options !== 'object' || Array.isArray(options) || Object.keys(options).some(k => !['requirements', 'provider', 'recaptchaMode', 'hostname'].includes(k))) throw new Error('Unknown or invalid integration option');
+  if (!options.requirements) throw new Error('Product requirements are required');
+  const recommendation = recommend(options.requirements);
+  if (!recommendation.candidates.length) return {status: 'unmet-requirements', recommendation, files: {}, warnings: ['No installation files generated: no implemented provider meets the declared requirements.']};
+  const selected = options.provider ?? recommendation.candidates[0].id;
+  if (!recommendation.candidates.some(candidate => candidate.id === selected)) throw new Error('Selected provider does not satisfy product requirements');
+  const plan = await scaffoldPlan({provider: selected, ...(options.hostname !== undefined ? {hostname: options.hostname} : {}), ...(options.recaptchaMode !== undefined ? {recaptchaMode: options.recaptchaMode} : {})});
+  return {...plan, recommendation, selectionReason: options.provider ? 'Explicit choice among eligible adapters' : 'First eligible adapter in declared implementation order; not a security ranking'};
+}
+
 export async function writeScaffold(destination, options) {
-  const plan = await scaffoldPlan(options);
+  const plan = options && Object.hasOwn(options, 'requirements') ? await integrationPlan(options) : await scaffoldPlan(options);
+  if (plan.status === 'unmet-requirements') throw new Error('No eligible adapter; refusing to create an integration with weaker requirements');
   const target = resolve(destination);
   const parent = await realpath(dirname(target));
   if (join(parent, target.split('/').at(-1)) !== target) throw new Error('Destination parent must be a real directory, not a symlink');
@@ -46,7 +63,7 @@ if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) 
     const [destination, json] = process.argv.slice(2);
     if (!destination) throw new Error('Usage: node src/scaffold.js <new-directory|--preview> [options JSON]');
     const options = JSON.parse(json ?? '{}');
-    const result = destination === '--preview' ? await scaffoldPlan(options) : await writeScaffold(destination, options);
+    const result = destination === '--preview' ? (Object.hasOwn(options, 'requirements') ? await integrationPlan(options) : await scaffoldPlan(options)) : await writeScaffold(destination, options);
     process.stdout.write(JSON.stringify(result, null, 2) + '\n');
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

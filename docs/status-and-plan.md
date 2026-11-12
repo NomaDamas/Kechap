@@ -9,7 +9,7 @@
 | 기존 OSS 통합 | ALTCHA2.8.0와 Cap0.1.15 실제 생성/검증/만료/재사용 + Chromium 폼 | Cap instrumentation/HashWX, mCaptcha 등 |
 | 상용 연동 | 공식 Turnstile/hCaptcha/classic reCAPTCHA 어댑터와 계약 모의 테스트 | 실제 고객 키·운영환경 연동 |
 | SDK/rotation | 문맥 결속, 일회성 토큰, TTL, server policy version, action/risk/health/가중치 | 분산 atomic store, 자체 risk signal 모델, 운영 계측 |
-| 설치 | CLI/MCP가 신규 Node HTTP 프로젝트 파일 생성, 기존 파일 덮어쓰기 거절 | 기존 제품 자동 패치·추가 framework |
+| 설치 | CLI/MCP가 요구사항 기반 공급자 선택과 신규 Node HTTP 프로젝트 파일 생성까지 연결, 기존 파일 덮어쓰기 거절 | 기존 제품 자동 패치·추가 framework |
 | 브라우저 | 실제 Chromium에서 ALTCHA/Cap/PoW 교체·작업·서버 제출, HTTP smoke | 장애 사용자·실제 모바일/저사양·상용 widget |
 | 실시간 연구 | 세 가지 toy surface, 서버 replay, rule-aware/fixed macro 실측 baseline | 실제 시각 UI·인간/VLM/computer-use 평가 |
 | 벤치마크 | seed/nonce/hash·버전·표본 수와 공개 가능한 자동화 결과, 확장 계획 | 인간 완료율/p95/접근성·VLM비용·리더보드 |

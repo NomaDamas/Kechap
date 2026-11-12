@@ -23,7 +23,7 @@ MCP가 인증 비밀키를 반환하거나 에이전트가 CAPTCHA를 대신 풀
 
 `MemoryStore`는 데모용이다. 운영에서는 원자적인 `put`/`take` 계약을 구현한 공유 저장소가 필요하다. 토큰 소비와 실제 지급·게시 작업 사이의 장애를 제품 트랜잭션 또는 idempotency key로 처리해야 한다.
 
-`siteverifyAdapter`는 Turnstile/hCaptcha/reCAPTCHA의 공식 검증 endpoint와 hostname/action/score 조건을 사용하며 오류 시 실패한다. `powAdapter`는 실험적인 automation-cost 예제로, 인간 존재를 검증하는 공급자가 아니다. 현재 MCP의 catalog/recommend/plan/scaffold 도구는 읽기·계획·신규 Node HTTP 파일 생성용이며 인증 세션이나 토큰을 발급하지 않는다. ALTCHA/Cap은 공식 패키지 실제 통합과 브라우저 검증을 수행했다. replay는 세 가지 toy world와 benchmark가 구현되어 있으나 인간 구별 성능은 미검증이다. 분산 저장소·운영 대시보드·liveness는 백로그다.
+`siteverifyAdapter`는 Turnstile/hCaptcha/reCAPTCHA의 공식 검증 endpoint와 hostname/action/score 조건을 사용하며 오류 시 실패한다. `powAdapter`는 실험적인 automation-cost 예제로, 인간 존재를 검증하는 공급자가 아니다. 현재 MCP의 catalog/recommend/plan/scaffold/setup 도구는 읽기·계획·신규 Node HTTP 파일 생성용이며 인증 세션이나 토큰을 발급하지 않는다. ALTCHA/Cap은 공식 패키지 실제 통합과 브라우저 검증을 수행했다. replay는 세 가지 toy world와 benchmark가 구현되어 있으나 인간 구별 성능은 미검증이다. 분산 저장소·운영 대시보드·liveness는 백로그다.
 
 ## 보장의 구분
 

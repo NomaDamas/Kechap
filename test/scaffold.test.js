@@ -6,7 +6,8 @@ import {join} from 'node:path';
 import {pathToFileURL} from 'node:url';
 import {createHash} from 'node:crypto';
 import {Readable} from 'node:stream';
-import {scaffoldPlan, writeScaffold} from '../src/scaffold.js';
+import {scaffoldPlan, writeScaffold, integrationPlan} from '../src/scaffold.js';
+import {handle} from '../src/mcp.js';
 
 test('scaffold creates an independent product integration with working server verification', async t => {
   const root = await mkdtemp(join(tmpdir(), 'kechap-scaffold-'));
@@ -53,4 +54,37 @@ test('scaffold never writes into an existing symlink destination', async t => {
   await mkdir(join(root, 'existing'));
   await symlink(join(root, 'existing'), join(root, 'link'));
   await assert.rejects(writeScaffold(join(root, 'link'), {provider: 'pow'}), /already exists/);
+});
+test('requirements select an eligible self-host adapter and never silently change assurance', async () => {
+  const selected = await integrationPlan({requirements: {selfHosted: true, noThirdParty: true, assurance: 'automation-cost', requireLiveEvidence: true}});
+  assert.equal(selected.provider, 'altcha');
+  assert.match(selected.files['.env.example'], /ALTCHA_SECRET=/);
+  assert.equal(selected.recommendation.requirements.assurance, 'automation-cost');
+  const reward = await integrationPlan({requirements: {useCase: 'reward'}});
+  assert.equal(reward.status, 'unmet-requirements');
+  assert.deepEqual(reward.files, {});
+  await assert.rejects(integrationPlan({requirements: {selfHosted: true, assurance: 'automation-cost'}, provider: 'turnstile'}), /does not satisfy/);
+  await assert.rejects(integrationPlan({requirements: {region: 'KR'}}), /Unknown requirement/);
+});
+test('unmet requirements never create the destination directory', async t => {
+  const root = await mkdtemp(join(tmpdir(), 'kechap-setup-'));
+  t.after(() => rm(root, {recursive: true, force: true}));
+  const destination = join(root, 'no-adapter');
+  await assert.rejects(writeScaffold(destination, {requirements: {minStars: 10000, assurance: 'automation-cost'}}), /No eligible adapter/);
+  await assert.rejects(readFile(join(destination, 'package.json')), {code: 'ENOENT'});
+});
+test('MCP setup preserves the requirement contract in generated file contents', async () => {
+  const call = arguments_ => handle({jsonrpc: '2.0', id: 1, method: 'tools/call', params: {name: 'kechap_setup', arguments: arguments_}});
+  const response = await call({requirements: {selfHosted: true, assurance: 'automation-cost'}, provider: 'cap'});
+  const plan = JSON.parse(response.result.content[0].text);
+  assert.equal(plan.provider, 'cap');
+  assert.match(plan.files['.env.example'], /CAP_SECRET=/);
+  assert.equal((await call({requirements: {assurance: 'identity'}, provider: 'pow'})).result.isError, undefined);
+  assert.equal(JSON.parse((await call({requirements: {assurance: 'identity'}})).result.content[0].text).status, 'unmet-requirements');
+  assert.equal((await call({requirements: {assurance: 'automation-cost'}, provider: 'turnstile'})).result.isError, true);
+});
+test('scaffold rejects malformed hosts and silently ignored options', async () => {
+  for (const hostname of ['-bad.example', 'bad..example', 'good.example\n', null, false]) await assert.rejects(scaffoldPlan({hostname}));
+  await assert.rejects(scaffoldPlan({provider: 'cap', recaptchaMode: 'v3'}));
+  await assert.rejects(scaffoldPlan({provider: 'cap', requirements: {minStars: 10000}}));
 });

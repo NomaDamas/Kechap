@@ -32,12 +32,12 @@ MCP는 후보 조회, 설명 가능한 추천, 통합 계획, 신규 Node HTTP �
 {"mcpServers":{"kechap":{"command":"node","args":["/absolute/path/to/Kechap/src/mcp.js"]}}}
 ```
 
-도구는 `kechap_catalog`, `kechap_recommend`, `kechap_plan`, `kechap_scaffold`입니다. [설치 Skill](skills/kechap/SKILL.md)은 이 저장소를 유지한 상태로 사용하세요.
+도구는 `kechap_catalog`, `kechap_recommend`, `kechap_plan`, `kechap_scaffold`, `kechap_setup`입니다. `kechap_setup`은 제품 요구사항으로 후보를 필터한 뒤 선택·설치 파일 생성을 연결합니다. 조건을 만족하지 못하면 파일을 생성하지 않고 이유를 반환합니다. [설치 Skill](skills/kechap/SKILL.md)은 이 저장소를 유지한 상태로 사용하세요.
 
 CLI로 새 통합 프로젝트를 만들 수 있습니다. 목적지가 이미 존재하면 덮어쓰지 않습니다.
 
 ```bash
-npm run scaffold -- /tmp/my-product '{"provider":"altcha"}'
+npm run scaffold -- /tmp/my-product '{"requirements":{"selfHosted":true,"noThirdParty":true,"assurance":"automation-cost","requireLiveEvidence":true}}'
 cd /tmp/my-product
 npm install --omit=optional
 cp .env.example .env
@@ -116,7 +116,7 @@ npx playwright install chromium
 npm run test:browser
 ```
 
-`npm test`는 현재 46개 테스트를 실행하며 Python 조사 테스트 3개는 별도입니다. Chromium 테스트는 소유한 폼에서 ALTCHA·Cap·PoW 교체와 실제 서버 제출을 확인합니다. 브라우저가 제한된 환경이면 해당 검증을 별도로 실행해야 합니다.
+`npm test`는 현재 50개 테스트를 실행하며 Python 조사 테스트 3개는 별도입니다. Chromium 테스트는 소유한 폼에서 ALTCHA·Cap·PoW 교체와 실제 서버 제출을 확인합니다. 브라우저가 제한된 환경이면 해당 검증을 별도로 실행해야 합니다.
 
 세 가지 toy surface의 rule-aware script는 각각 100/100 성공했습니다. 이는 **서버 replay만으로 사람과 자동화를 구분할 수 없다는 결과**입니다. 인간·VLM·접근성 데이터는 아직 없으며 허구 수치를 채우지 않습니다. [벤치 프로토콜과 결과 한계](docs/benchmark.md)를 확인하세요.
 
