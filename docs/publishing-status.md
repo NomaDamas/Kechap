@@ -15,6 +15,8 @@
 
 아래는 원격 이력을 유지하기 위한 예시이며 실행된 결과가 아닙니다. 로컬 커밋은 `/tmp/kechap-delivery.bundle`에도 보존합니다. `/tmp`는 임시 위치이고 소스는 작업 폴더에 남아 있습니다.
 
+최신 전달 번들과 SHA-256은 작업 폴더의 `.local/delivery/`에도 보존합니다. `.local`은 Git 추적에서 제외되므로 소스 커밋에 번들이 재귀 포함되지 않습니다. 최신 완료 범위와 남은 요구 사항은 [완료 감사](completion-audit.md)에 있습니다. 세 차례 연속 동일한 외부 접근 제한을 확인하여 전체 목표를 차단 상태로 기록합니다.
+
 ```bash
 git clone https://github.com/NomaDamas/Kechap.git /tmp/kechap-publish
 cd /tmp/kechap-publish
