@@ -124,7 +124,7 @@ npm run test:browser
 
 ## 기여·계획·후원
 
-[기여 방법](CONTRIBUTING.md), [보안 상태](SECURITY.md), [상세 로드맵](docs/roadmap.md), [GitHub 이슈](https://github.com/NomaDamas/Kechap/issues)에 실제 패키지 통합·분산 저장소·접근성·영상/음성 승격·인간/에이전트 실험·리더보드 확장을 계획했습니다. 후속 계획을 구현 완료로 표시하지 않습니다.
+[기여 방법](CONTRIBUTING.md), [보안 상태](SECURITY.md), [상세 로드맵](docs/roadmap.md), [게시한 이슈 24개](docs/issues.md)에 실제 패키지 통합·분산 저장소·접근성·영상/음성 승격·인간/에이전트 실험·리더보드 확장과 후원 계정 활성화를 계획했습니다. 후속 계획을 구현 완료로 표시하지 않습니다.
 
 GitHub Sponsor 설정은 NomaDamas로 연결했습니다. 현재 조직 Sponsors listing은 미활성이므로 소유자가 [Sponsors 가입](https://github.com/sponsors/accounts)을 완료해야 실제 수령이 가능합니다. [후원 상태](docs/sponsorship.md)를 참고하세요.
 

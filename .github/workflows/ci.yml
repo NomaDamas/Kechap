@@ -16,3 +16,13 @@ jobs:
       - run: npm run catalog:check
       - run: npm run test:research
       - run: npm run benchmark -- 20
+  browser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --omit=optional
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser

@@ -42,6 +42,10 @@ test('scaffold validates provider, recaptcha mode and hostname without executing
   const plan = await scaffoldPlan({provider: 'recaptcha', recaptchaMode: 'v3'});
   assert.match(plan.files['.env.example'], /RECAPTCHA_MIN_SCORE=0.7/);
   assert.match(plan.files['.env.example'], /RECAPTCHA_SECRET=\n/);
+  const oss = await scaffoldPlan({provider: 'cap'});
+  assert.match(oss.files['README.md'], /Assurance: automation-cost/);
+  assert.match(oss.files['.env.example'], /CAP_SECRET=\n/);
+  assert.doesNotMatch(oss.files['.env.example'], /CAP_SITE_KEY/);
 });
 test('scaffold never writes into an existing symlink destination', async t => {
   const root = await mkdtemp(join(tmpdir(), 'kechap-scaffold-'));
