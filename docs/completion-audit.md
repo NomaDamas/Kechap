@@ -28,3 +28,23 @@ MCP setup의 요구사항 기반 선택·파일생성·미충족시 무생성까
 후원 요청은 설정 게시까지만 완료됐다. 조직의 hasSponsorsListing=false이고 repository fundingLinks=[]이므로 Sponsor 버튼·결제는 아직 활성화되지 않았다. 이 조건은 세 차례 연속 goal 진행에서 재확인됐으며 소유자의 지급·세금·계정 심사가 필요하다. #24에 구체적 조치를 남겼다. 에이전트가 계정 소유자의 등록 정보를 대신 제출하지 않는다.
 
 따라서 초기 SDK·연구·설치·게시 산출물은 전달했지만 후원 활성화까지 포함한 전체 작업을 완료했다고 표시하지 않는다. 분산운영/생체인증/인간VLM실험은 원 요청대로 상세 확장 계획으로 남겼으며 별도 요청 없이 운영 완료라고 바꾸지 않는다.
+
+## 열린 전체 이슈 처리 후 감사 (추가 구현)
+
+사용자는 실제 참가자 모집보다 실험도구를 먼저 완성하도록 지시했고 World ID 앱은 없다고 확인했다. 이 범위에서 24개 모두를 재검토했다.17개닫힘/7개열림이며 실제 상태는 [이슈목록](issues.md)을 따른다.
+
+추가 구현 근거:
+
+- Redis8.10.0 실제5프로세스100요청 검증/소비각1성공, TTL·용량·응답timeout·workercrash시험. Node20/22/24 CI도 실제Redis실행.
+- onEvent bounded지표/오류분모/collector격리/circuitbreaker·dashboard, 실제SDK·브라우저기록.
+- 공식WebAuthn 패스키등록·UV검증·재인증·삭제·keyboard/reducedmotion과 비퍼즐account-continuity대체경로. 독립보조공학인증과구분.
+- 기존Express auth/CSRF/rate-limit/callback유지router·실제HTTP시험, clean generated install·실제문제품구현forwardtest.
+- 정식카탈로그Schema·추가제품요구·라이선스게이트·CODEOWNERS/Dependabot/PR검토·비공개취약점신고활성화.
+- 실제hCaptcha공식dummy-key roundtrip, dummy testMode명시·운영키와구분.
+- 실제화면3종·pointer/keyboard replay와15trials MyProxy GPT모델실행.1sample/surface라보안일반화없음. 실패비용포함13074입력/238출력tokens, 단가미확인null.
+- 동의·철회·dropout·균형순서·최대2회·최소수집·인간fixture분리·통계분모·기기/접근성집계·결과수명관리보드와운영파일럿분석도구.
+- WorldID기본비활성RP서명/issuer/동의/환경/nullifier검증준비. 실제앱부재로sandbox성공NOT RUN.
+
+구현 게시 커밋49624baf80c2f985bc39e10223af16e33d855f84, CI43227160100은Node20/22/24와Chromium모두success. JS102개와Python3개통과. npm audit취약점0건(조회시점). 이는production보안감사나실제인간완료율이아니다.
+
+외부조건7개: #9사람2명설치, #19인간연구, #20독립외부재현, #21외부기여승인, #22등록WorldID앱sandbox, #23운영자5곳, #24Sponsors조직가입. 각이슈에실행법·필요조건·왜현재닫지않는지근거를추가했다. 전체완료가아닌 **개발가능범위와실험준비완료**로보고한다.
