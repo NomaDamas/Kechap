@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "studyRevision": "pilot-v1-no-participants",
+  "generatedAt": "2026-11-12T13:05:30.247Z",
+  "status": "insufficient-real-comparable-pilots",
+  "minimumOperators": 5,
+  "minimumDistinctProductTypes": 5,
+  "recordsReceived": 0,
+  "fixtureOrSyntheticExcluded": 0,
+  "realConsentingReviewedOperators": 0,
+  "comparableOperators": 0,
+  "distinctComparableProductTypes": [],
+  "exclusions": [],
+  "operators": [],
+  "aggregate": null,
+  "revenueUsd": null,
+  "willingnessToPayMeaning": "Operator-stated only; not revenue or customer conversion.",
+  "securityClaim": "None. Operational pilot data is descriptive and must not be represented as a security audit or personhood proof.",
+  "privacy": "Input and report accept anonymous operator IDs and aggregate counts only; no user events, names, emails, IPs, free-text interviews or raw biometrics."
+}

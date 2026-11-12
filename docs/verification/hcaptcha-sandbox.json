@@ -1,0 +1,13 @@
+{
+  "testedAt": "2026-11-12T13:03:30.001Z",
+  "provider": "hcaptcha",
+  "environment": "official-public-dummy-test",
+  "documentation": "https://docs.hcaptcha.com/#integration-testing-test-keys",
+  "pass": true,
+  "checks": [
+    "official siteverify response",
+    "expected dummy hostname",
+    "Kechap challenge binding and one-use consumption"
+  ],
+  "limitations": "Test keys always permit a documented dummy token; this verifies integration only, not challenge effectiveness, browser widget or production approval."
+}

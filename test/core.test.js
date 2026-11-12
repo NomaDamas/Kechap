@@ -63,7 +63,7 @@ test('official verification enforces hostname, action, score and timeout failure
   const valid = {success: true, hostname: 'example.com', action: 'signup', score: 0.9};
   assert.equal(await make(valid).verify({response: 'token'}), true);
   for (const patch of [{hostname: 'attacker.com'}, {action: 'login'}, {score: 0.1}, {score: undefined}, {success: false}]) assert.equal(await make({...valid, ...patch}).verify({response: 't'}), false);
-  assert.equal(await make(valid, {fetchImpl: async () => {throw new Error('offline');}}).verify({response: 't'}), false);
+  await assert.rejects(make(valid, {fetchImpl: async () => {throw new Error('offline');}}).verify({response: 't'}), /unavailable/);
   assert.equal(JSON.stringify(await make(valid).issue()).includes('server-only'), false);
 });
 test('provider config rejects inherited names and unsafe reCAPTCHA v3', () => {
@@ -71,6 +71,8 @@ test('provider config rejects inherited names and unsafe reCAPTCHA v3', () => {
   assert.throws(() => siteverifyAdapter({...config, provider: 'toString'}));
   assert.throws(() => siteverifyAdapter({...config, provider: 'recaptcha'}));
   assert.throws(() => siteverifyAdapter({...config, provider: 'recaptcha', recaptchaMode: 'v3', action: 'signup'}));
+  assert.throws(() => siteverifyAdapter({...config, provider: 'hcaptcha', siteKey: '10000000-ffff-ffff-ffff-000000000001'}), /testMode/);
+  assert.doesNotThrow(() => siteverifyAdapter({...config, provider: 'hcaptcha', siteKey: '10000000-ffff-ffff-ffff-000000000001', testMode: true}));
 });
 test('Turnstile proof must echo this challenge cData', async () => {
   let result;

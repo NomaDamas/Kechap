@@ -4,6 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {Kechap, powAdapter, siteverifyAdapter} from '../../src/index.js';
 import {altchaAdapter, capAdapter} from '../../src/oss.js';
+import {createPasskeyService} from '../../src/passkeys.js';
 
 export function configuredAdapters(env = process.env) {
   const providers = (env.KECHAP_PROVIDERS ?? 'pow').split(',');
@@ -22,17 +23,20 @@ export function configuredAdapters(env = process.env) {
 }
 
 /** Local integration example; not a production session/authentication server. */
-export function createDemoHandler({adapters, providers = Object.keys(adapters), assurance, now = Date.now, origin = 'http://localhost:3000'} = {}) {
+export function createDemoHandler({adapters, providers = Object.keys(adapters), assurance, now = Date.now, origin = 'http://localhost:3000', passkeyRecovery = false} = {}) {
   const kechap = new Kechap({adapters, now});
   const sessions = new Map();
+  let passkeys;
   const assets = new Map([
     ['/', [new URL('./index.html', import.meta.url), 'text/html; charset=utf-8']],
     ['/app.js', [new URL('./app.js', import.meta.url), 'text/javascript; charset=utf-8']],
     ['/browser.js', [new URL('../../src/browser.js', import.meta.url), 'text/javascript; charset=utf-8']]
-    ,['/browser-work.js', [new URL('../../src/browser-work.js', import.meta.url), 'text/javascript; charset=utf-8']]
+    ,['/browser-work.js', [new URL('../../src/browser-work.js', import.meta.url), 'text/javascript; charset=utf-8']],
+    ['/passkey-sdk.js', [new URL('../../node_modules/@simplewebauthn/browser/dist/bundle/index.umd.min.js', import.meta.url), 'text/javascript; charset=utf-8']]
   ]);
   return async (req, res) => {
     const expectedOrigin = typeof origin === 'function' ? origin() : origin;
+    if (passkeyRecovery && !passkeys) passkeys = createPasskeyService({rpID: new URL(expectedOrigin).hostname, rpName: 'Kechap local example', origin: expectedOrigin, now, authorizeEnrollment: context => (sessions.get(context.subject)?.enrollmentUntil ?? 0) > now()});
     const send = (status, value, headers = {}) => {
       res.writeHead(status, {'Content-Type': 'application/json', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff', ...headers});
       res.end(JSON.stringify(value));
@@ -52,9 +56,9 @@ export function createDemoHandler({adapters, providers = Object.keys(adapters), 
       const id = randomBytes(24).toString('base64url');
       const csrf = randomBytes(24).toString('base64url');
       sessions.set(id, {csrf, expiresAt: now() + 900000, calls: 0});
-      return send(200, {csrf, assurance, providers}, {'Set-Cookie': `kechap_demo=${id}; HttpOnly; SameSite=Strict; Path=/; Max-Age=900`});
+      return send(200, {csrf, assurance, providers, passkeyRecovery}, {'Set-Cookie': `kechap_demo=${id}; HttpOnly; SameSite=Strict; Path=/; Max-Age=900`});
     }
-    if (req.method !== 'POST' || !['/api/challenge', '/api/verify', '/api/signup'].includes(req.url)) return send(404, {error: 'Not found'});
+    if (req.method !== 'POST' || !['/api/challenge', '/api/verify', '/api/signup', '/api/passkey/register/options', '/api/passkey/register/verify', '/api/passkey/auth/options', '/api/passkey/auth/verify', '/api/passkey/delete'].includes(req.url)) return send(404, {error: 'Not found'});
     if (req.headers.origin !== expectedOrigin || req.headers['content-type']?.split(';')[0] !== 'application/json') return send(403, {error: 'Same-origin JSON request required'});
     const id = /(?:^|;\s*)kechap_demo=([A-Za-z0-9_-]+)/.exec(req.headers.cookie ?? '')?.[1];
     const session = sessions.get(id);
@@ -71,6 +75,13 @@ export function createDemoHandler({adapters, providers = Object.keys(adapters), 
       let body;
       try { body = JSON.parse(Buffer.concat(chunks).toString('utf8')); } catch { return send(400, {error: 'Invalid JSON'}); }
       if (!body || typeof body !== 'object' || Array.isArray(body)) return send(400, {error: 'JSON object required'});
+      if (req.url.startsWith('/api/passkey/')) {
+        if (!passkeys) return send(404, {error: 'Passkey recovery disabled'});
+        const args = {context, id: body.id, response: body.response};
+        const methods = {'/api/passkey/register/options': 'beginRegistration', '/api/passkey/register/verify': 'finishRegistration', '/api/passkey/auth/options': 'beginAuthentication', '/api/passkey/auth/verify': 'finishAuthentication', '/api/passkey/delete': 'deleteCredentials'};
+        const result = await passkeys[methods[req.url]](args);
+        return send(result?.ok === false ? 403 : 200, result ?? {ok: true});
+      }
       if (req.url === '/api/challenge') {
         const issued = await kechap.issue({context, sessionId: id, providers, assurance, mode: 'rotate', previous: session.previous});
         session.previous = issued.provider;
@@ -80,8 +91,9 @@ export function createDemoHandler({adapters, providers = Object.keys(adapters), 
         const result = await kechap.verify({id: body.id, response: body.response, context});
         return send(result.ok ? 200 : 403, result);
       }
-      const consumed = await kechap.consume({token: body.token, context});
+      const consumed = body.recoveryToken && passkeys ? await passkeys.consumeRecovery({token: body.recoveryToken, context}) : await kechap.consume({token: body.token, context});
       if (!consumed.ok) return send(403, consumed);
+      session.enrollmentUntil = now() + 120000;
       // Demonstrate a protected action; this example does not create accounts.
       return send(200, {ok: true, message: '데모 요청이 접수되었습니다. 계정은 생성하지 않습니다.', assurance: consumed.assurance, provider: consumed.provider});
     } catch { send(503, {error: 'Verification unavailable; request a new challenge'}); }
@@ -96,6 +108,6 @@ export function createDemoServer(options) {
 
 if (process.argv[1] && pathToFileURL(process.argv[1]).href === import.meta.url) {
   const port = Number(process.env.PORT ?? 3000);
-  const server = createDemoServer(configuredAdapters());
+  const server = createDemoServer({...configuredAdapters(), passkeyRecovery: process.env.KECHAP_PASSKEY_RECOVERY === 'true'});
   server.listen(port, '127.0.0.1', () => console.log(`Kechap local demo: http://localhost:${server.address().port}`));
 }

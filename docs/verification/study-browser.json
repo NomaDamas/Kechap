@@ -1,0 +1,10 @@
+{
+  "testedAt": "2026-11-12T13:18:57.494Z",
+  "source": "fixture",
+  "pass": true,
+  "consentRequired": true,
+  "threeCounterbalancedSurfaces": true,
+  "dropoutRecorded": true,
+  "withdrawalDeleted": true,
+  "actualHumanParticipants": 0
+}

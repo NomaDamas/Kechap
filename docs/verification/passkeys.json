@@ -1,0 +1,14 @@
+{
+  "testedAt": "2026-11-12T13:18:55.856Z",
+  "browser": "158.0.8127.18",
+  "pass": true,
+  "checks": [
+    "server-authorized enrollment",
+    "actual WebAuthn registration and authentication verification",
+    "keyboard activation",
+    "reduced-motion setting",
+    "account-continuity assurance",
+    "server credential deletion"
+  ],
+  "limitations": "Virtual authenticator; not human study or screen-reader certification. Prior enrollment required; not human proof."
+}

@@ -12,7 +12,12 @@
     "./browser": "./src/browser.js",
     "./scaffold": "./src/scaffold.js",
     "./oss": "./src/oss.js",
-    "./replay": "./src/replay.js"
+    "./replay": "./src/replay.js",
+    "./redis-store": "./src/redis-store.js",
+    "./observability": "./src/observability.js",
+    "./passkeys": "./src/passkeys.js",
+    "./express": "./src/express.js",
+    "./personhood": "./src/personhood.js"
   },
   "scripts": {
     "test": "node --test test/*.test.js",
@@ -26,14 +31,32 @@
     "test:research": "python3 -m unittest discover -s test -p '*_test.py'",
     "scaffold": "node src/scaffold.js",
     "benchmark": "node scripts/benchmark.js",
-    "test:browser": "node scripts/browser-smoke.js"
+    "test:browser": "node scripts/browser-smoke.js",
+    "test:redis": "node scripts/test-redis.js",
+    "test:passkeys": "node scripts/passkey-smoke.js",
+    "test:vendors": "node scripts/vendor-smoke.js",
+    "test:generated": "node scripts/generated-smoke.js",
+    "test:replay-browser": "node scripts/replay-browser-smoke.js",
+    "test:study-browser": "node scripts/study-browser-smoke.js",
+    "study:serve": "node scripts/study-server.js",
+    "study:analyze": "node scripts/analyze-study.js",
+    "pilots:analyze": "node scripts/analyze-pilots.js",
+    "leaderboard": "node scripts/leaderboard.js",
+    "benchmark:agents": "node scripts/agent-benchmark.js",
+    "test:personhood": "node scripts/personhood-smoke.js"
   },
   "license": "Apache-2.0",
   "dependencies": {
+    "@simplewebauthn/browser": "13.3.0",
+    "@simplewebauthn/server": "13.3.3",
+    "@worldcoin/idkit-server": "1.2.0",
     "altcha-lib": "2.8.0",
-    "capjs-core": "0.1.15"
+    "capjs-core": "0.1.15",
+    "express": "5.3.0",
+    "redis": "6.3.1"
   },
   "devDependencies": {
+    "ajv": "8.20.0",
     "playwright": "1.65.0"
   }
 }

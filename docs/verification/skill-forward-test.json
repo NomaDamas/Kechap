@@ -1,0 +1,30 @@
+{
+  "executedAt": "2026-11-12T13:07:15.996Z",
+  "node": "v20.20.0",
+  "browser": "158.0.8127.18",
+  "productRoot": "/tmp/kechap-skill-acceptance-XV72HyQ8/product",
+  "skill": "/home/gajet/Desktop/kechap/skills/kechap/SKILL.md",
+  "framework": "node-http",
+  "provider": "altcha",
+  "assurance": "automation-cost",
+  "checks": [
+    "real ALTCHA configured",
+    "protected inquiry rejects missing proof",
+    "CSRF mismatch rejected",
+    "actual browser work verified server-side",
+    "real protected product inquiry persisted",
+    "token replay denied without duplicate inquiry",
+    "zero third-party requests and camera/microphone calls",
+    "secret absent from browser response content"
+  ],
+  "externalRequestCount": 0,
+  "mediaRequestCount": 0,
+  "jsErrors": [],
+  "limitations": [
+    "Controlled own-browser fixture, not real human verification or independent user study",
+    "Production needs shared TTL store, identity/session ownership, distributed rate limiting, HTTPS and deployment",
+    "inquiry persistence and proof consumption are not one atomic transaction; add idempotency and durability",
+    "Define inquiry retention/deletion and an actual accessible non-puzzle recovery channel",
+    "Generated application dependencies are pinned but npm package installation downloads packages; runtime sent no data to third parties"
+  ]
+}
