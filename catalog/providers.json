@@ -1,0 +1,919 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-11-12",
+  "evidenceStatus": "offline-candidates",
+  "evidenceNote": "Network DNS resolution failed in this execution environment. Entries are discovery candidates, not live-verified recommendations. License identifiers are preliminary and must be checked at a pinned upstream revision. No star counts or adoption claims have been verified.",
+  "providers": [
+    {
+      "id": "altcha",
+      "name": "ALTCHA",
+      "kind": "open-source",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://github.com/altcha-org/altcha",
+      "docsUrl": "https://altcha.org/docs/",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "proof-of-work"
+      ],
+      "privacy": "No camera or microphone needed; resource use must be measured.",
+      "accessibility": "Provide a non-compute fallback for low-power devices.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Core proof-of-work is computational cost, not proof of a unique or present human."
+    },
+    {
+      "id": "cap",
+      "name": "Cap",
+      "kind": "open-source",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://capjs.js.org/",
+      "docsUrl": "https://capjs.js.org/",
+      "license": {
+        "spdx": "Apache-2.0",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "proof-of-work",
+        "browser-signals"
+      ],
+      "privacy": "Review instrumentation signals and retention.",
+      "accessibility": "Evaluate keyboard and assistive technology behavior.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Canonical repository and standalone server compatibility require live confirmation."
+    },
+    {
+      "id": "mcaptcha",
+      "name": "mCaptcha",
+      "kind": "open-source",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://github.com/mCaptcha/mCaptcha",
+      "docsUrl": "https://mcaptcha.org/",
+      "license": {
+        "spdx": "AGPL-3.0",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "proof-of-work"
+      ],
+      "privacy": "Privacy-oriented deployment; review logs.",
+      "accessibility": "Measure mobile compute cost and alternatives.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "AGPL obligations need review before distribution or hosted modifications."
+    },
+    {
+      "id": "anubis",
+      "name": "Anubis",
+      "kind": "open-source",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://github.com/TecharoHQ/anubis",
+      "docsUrl": "https://anubis.techaro.lol/",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "reverse-proxy"
+      ],
+      "modalities": [
+        "proof-of-work",
+        "browser-signals"
+      ],
+      "privacy": "Review proxy access logs.",
+      "accessibility": "Provide a route for browsers without supported JavaScript.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Scraper defense at the edge, not a form widget or proof of humanity."
+    },
+    {
+      "id": "vaptcha",
+      "name": "VAPTCHA",
+      "kind": "commercial",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://www.vaptcha.com/",
+      "docsUrl": "https://www.vaptcha.com/",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "interaction"
+      ],
+      "privacy": "Vendor processing and region must be assessed.",
+      "accessibility": "Require a documented fallback.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Candidate vendor; no server adapter implemented."
+    },
+    {
+      "id": "dchest-captcha",
+      "name": "dchest/captcha",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/dchest/captcha",
+      "docsUrl": "https://github.com/dchest/captcha",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "image",
+        "audio"
+      ],
+      "privacy": "Self-hosted image/audio generation.",
+      "accessibility": "Audio is an alternative modality, not complete accessibility coverage.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Go image/audio CAPTCHA library; no modern bot resistance claim."
+    },
+    {
+      "id": "base64captcha",
+      "name": "base64Captcha",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/mojocn/base64Captcha",
+      "docsUrl": "https://github.com/mojocn/base64Captcha",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "image",
+        "audio"
+      ],
+      "privacy": "Self-hosted generated challenge assets.",
+      "accessibility": "Evaluate each driver separately.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Go generators; production replay and rate limits remain integrator responsibilities."
+    },
+    {
+      "id": "tianai",
+      "name": "Tianai CAPTCHA",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/dromara/tianai-captcha",
+      "docsUrl": "https://github.com/dromara/tianai-captcha",
+      "license": {
+        "spdx": "Apache-2.0",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "drag",
+        "image"
+      ],
+      "privacy": "Review behavior telemetry before deployment.",
+      "accessibility": "Pointer puzzles need an equivalent accessible route.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Java interaction CAPTCHA candidate; license and active maintenance need live checks."
+    },
+    {
+      "id": "aj-captcha",
+      "name": "AJ-Captcha",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/anji-plus/captcha",
+      "docsUrl": "https://github.com/anji-plus/captcha",
+      "license": {
+        "spdx": "Apache-2.0",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "drag",
+        "image"
+      ],
+      "privacy": "Self-hosting does not remove behavioral data obligations.",
+      "accessibility": "Provide keyboard/nonvisual alternatives.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Java slider and point-selection CAPTCHA candidate."
+    },
+    {
+      "id": "simplecaptcha",
+      "name": "SimpleCaptcha",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/lepture/captcha",
+      "docsUrl": "https://github.com/lepture/captcha",
+      "license": {
+        "spdx": "BSD-3-Clause",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "image",
+        "audio"
+      ],
+      "privacy": "Python-generated challenge assets can stay on your server.",
+      "accessibility": "Audio and image both need usability testing.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Python library, not an adaptive risk platform."
+    },
+    {
+      "id": "django-simple-captcha",
+      "name": "django-simple-captcha",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/mbi/django-simple-captcha",
+      "docsUrl": "https://django-simple-captcha.readthedocs.io/",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "image",
+        "audio"
+      ],
+      "privacy": "Review challenge expiry, session, and storage settings.",
+      "accessibility": "Optional audio requires dependency and usability checks.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Django integration candidate; no agent resistance assertion."
+    },
+    {
+      "id": "svg-captcha",
+      "name": "svg-captcha",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/produck/svg-captcha",
+      "docsUrl": "https://github.com/produck/svg-captcha",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "image"
+      ],
+      "privacy": "Generated SVG can remain local.",
+      "accessibility": "Visual text challenges require an accessible alternative.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Library only; easy integration does not imply effectiveness against OCR/VLMs."
+    },
+    {
+      "id": "gregwar-captcha",
+      "name": "Gregwar/Captcha",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/Gregwar/Captcha",
+      "docsUrl": "https://github.com/Gregwar/Captcha",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "image"
+      ],
+      "privacy": "Generated assets can remain local.",
+      "accessibility": "Require an alternative to image text recognition.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "PHP image CAPTCHA generator; evaluate modern solver success before recommending."
+    },
+    {
+      "id": "securimage",
+      "name": "Securimage",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/dapphp/securimage",
+      "docsUrl": "https://www.phpcaptcha.org/",
+      "license": {
+        "spdx": "BSD-3-Clause",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "image",
+        "audio"
+      ],
+      "privacy": "Review server-side session and audio retention.",
+      "accessibility": "Test real assistive technology and language coverage.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "PHP CAPTCHA candidate; maintenance and package integrity must be checked."
+    },
+    {
+      "id": "botd",
+      "name": "FingerprintJS BotD",
+      "kind": "open-source",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://github.com/fingerprintjs/BotD",
+      "docsUrl": "https://github.com/fingerprintjs/BotD",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "browser"
+      ],
+      "modalities": [
+        "browser-signals"
+      ],
+      "privacy": "Document detected signals and retention.",
+      "accessibility": "No puzzle alone; browser support can cause exclusion.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Browser automation signal library, not a standalone verification authority."
+    },
+    {
+      "id": "fingerprintjs",
+      "name": "FingerprintJS",
+      "kind": "open-source",
+      "assurance": "device-continuity",
+      "sourceUrl": "https://github.com/fingerprintjs/fingerprintjs",
+      "docsUrl": "https://fingerprint.com/",
+      "license": {
+        "spdx": "unknown",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "browser"
+      ],
+      "modalities": [
+        "device-signals"
+      ],
+      "privacy": "Device fingerprinting can be personal data; explicit review required.",
+      "accessibility": "Do not penalize assistive browsers solely on unusual signals.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Open-source and commercial product licenses/capabilities differ; verify current license."
+    },
+    {
+      "id": "creepjs",
+      "name": "CreepJS",
+      "kind": "open-source",
+      "assurance": "research-signal",
+      "sourceUrl": "https://github.com/abrahamjuliot/creepjs",
+      "docsUrl": "https://github.com/abrahamjuliot/creepjs",
+      "license": {
+        "spdx": "unknown",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "browser"
+      ],
+      "modalities": [
+        "device-signals"
+      ],
+      "privacy": "Research fingerprinting can be invasive; opt-in lab use first.",
+      "accessibility": "Atypical browser signals are not proof of automation.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Research signal source; do not present as CAPTCHA or production risk verdict."
+    },
+    {
+      "id": "cerberus",
+      "name": "Cerberus",
+      "kind": "open-source",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://github.com/SJTUG/cerberus",
+      "docsUrl": "https://github.com/SJTUG/cerberus",
+      "license": {
+        "spdx": "unknown",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "reverse-proxy"
+      ],
+      "modalities": [
+        "proof-of-work"
+      ],
+      "privacy": "Review edge logs and any browser instrumentation.",
+      "accessibility": "Review JavaScript/compute dependencies.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Proof-of-work protection candidate; current project scope must be confirmed."
+    },
+    {
+      "id": "librecaptcha",
+      "name": "LibreCaptcha",
+      "kind": "open-source",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/librecaptcha/lc-core",
+      "docsUrl": "https://github.com/librecaptcha/lc-core",
+      "license": {
+        "spdx": "unknown",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "image"
+      ],
+      "privacy": "Confirm current repository and deployed data flow.",
+      "accessibility": "Require modality alternatives.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Discovery candidate only: repository identity and maintenance unverified."
+    },
+    {
+      "id": "friendlycaptcha",
+      "name": "Friendly Captcha",
+      "kind": "mixed-source",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://github.com/FriendlyCaptcha/friendly-challenge",
+      "docsUrl": "https://developer.friendlycaptcha.com/",
+      "license": {
+        "spdx": "unknown",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed",
+        "self-hosted-components"
+      ],
+      "modalities": [
+        "proof-of-work"
+      ],
+      "privacy": "Separate open widget from commercial service processing.",
+      "accessibility": "Evaluate low-power clients and supported fallback.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Versioned open client/server feature and license boundaries require confirmation."
+    },
+    {
+      "id": "turnstile",
+      "name": "Cloudflare Turnstile",
+      "kind": "commercial",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://developers.cloudflare.com/turnstile/",
+      "docsUrl": "https://developers.cloudflare.com/turnstile/",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "browser-signals",
+        "managed-challenge"
+      ],
+      "privacy": "Disclose vendor processing and assess jurisdiction.",
+      "accessibility": "Use vendor accessibility documentation plus local testing.",
+      "adapterStatus": "implemented-mock-tested-live-unverified",
+      "sourceStatus": "not-fetched",
+      "notes": "Use official Siteverify; hostname/action, TTL, and one-time use are essential."
+    },
+    {
+      "id": "recaptcha",
+      "name": "Google reCAPTCHA",
+      "kind": "commercial",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://docs.cloud.google.com/recaptcha/docs/overview",
+      "docsUrl": "https://docs.cloud.google.com/recaptcha/docs/overview",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "risk-score",
+        "image",
+        "managed-challenge"
+      ],
+      "privacy": "Assess vendor data processing and consent requirements.",
+      "accessibility": "Offer alternatives when image/audio challenges fail.",
+      "adapterStatus": "implemented-mock-tested-live-unverified",
+      "sourceStatus": "not-fetched",
+      "notes": "Enterprise assessments and classic APIs have different verification contracts."
+    },
+    {
+      "id": "hcaptcha",
+      "name": "hCaptcha",
+      "kind": "commercial",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://docs.hcaptcha.com/",
+      "docsUrl": "https://docs.hcaptcha.com/",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "image",
+        "risk-score",
+        "managed-challenge"
+      ],
+      "privacy": "Assess DPA, telemetry, and regional settings.",
+      "accessibility": "Verify the supported accessibility route.",
+      "adapterStatus": "implemented-mock-tested-live-unverified",
+      "sourceStatus": "not-fetched",
+      "notes": "Official siteverify and enterprise signals; do not copy challenge engine."
+    },
+    {
+      "id": "arkose",
+      "name": "Arkose Labs",
+      "kind": "commercial",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://developer.arkoselabs.com/",
+      "docsUrl": "https://developer.arkoselabs.com/docs/standard-setup",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "game",
+        "risk-score"
+      ],
+      "privacy": "Assess behavioral telemetry and contractual terms.",
+      "accessibility": "Confirm accessible challenge and support paths.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Official Verify API only; game mechanics do not independently prove humanity."
+    },
+    {
+      "id": "geetest",
+      "name": "GeeTest",
+      "kind": "commercial",
+      "assurance": "bot-mitigation",
+      "sourceUrl": "https://www.geetest.com/",
+      "docsUrl": "https://docs.geetest.com/",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "drag",
+        "image",
+        "game"
+      ],
+      "privacy": "Review cross-border processing and telemetry.",
+      "accessibility": "Require accessible fallback for pointer/visual tasks.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Use documented vendor protocol; license does not permit engine extraction."
+    },
+    {
+      "id": "aws-liveness",
+      "name": "AWS Rekognition Face Liveness",
+      "kind": "commercial",
+      "assurance": "liveness",
+      "sourceUrl": "https://docs.aws.amazon.com/rekognition/latest/dg/face-liveness.html",
+      "docsUrl": "https://docs.aws.amazon.com/rekognition/latest/dg/face-liveness.html",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "camera",
+        "face-liveness"
+      ],
+      "privacy": "Explicit opt-in, region, retention, biometric impact review.",
+      "accessibility": "Camera-free equivalent path required; never default for ordinary forms.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Liveness confidence is probabilistic; it is not identity or uniqueness."
+    },
+    {
+      "id": "facetec",
+      "name": "FaceTec",
+      "kind": "commercial",
+      "assurance": "liveness",
+      "sourceUrl": "https://dev.facetec.com/",
+      "docsUrl": "https://dev.facetec.com/api-guide",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed",
+        "licensed-server"
+      ],
+      "modalities": [
+        "camera",
+        "face-liveness",
+        "face-match"
+      ],
+      "privacy": "Biometric templates and retention require strict governance.",
+      "accessibility": "Provide non-biometric alternatives.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Face matching is a separate configured capability from live presence."
+    },
+    {
+      "id": "iproov",
+      "name": "iProov",
+      "kind": "commercial",
+      "assurance": "liveness",
+      "sourceUrl": "https://docs.iproov.com/",
+      "docsUrl": "https://docs.iproov.com/getting_started/product_overview",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "camera",
+        "face-liveness"
+      ],
+      "privacy": "Opt-in biometric processing; check regional and retention terms.",
+      "accessibility": "Consider photosensitivity, camera quality, and alternative routes.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Product claims need independent PAD evaluation and versioned evidence."
+    },
+    {
+      "id": "pindrop",
+      "name": "Pindrop",
+      "kind": "commercial",
+      "assurance": "liveness",
+      "sourceUrl": "https://www.pindrop.com/products/liveness-detection",
+      "docsUrl": "https://www.pindrop.com/products/liveness-detection",
+      "license": {
+        "spdx": "proprietary",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed"
+      ],
+      "modalities": [
+        "voice-liveness"
+      ],
+      "privacy": "Voice may be sensitive personal data; minimize collection.",
+      "accessibility": "Provide alternatives for speech/hearing disabilities and noisy contexts.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Voice liveness does not prove unique personhood or account ownership."
+    },
+    {
+      "id": "world-id",
+      "name": "World ID",
+      "kind": "mixed-source",
+      "assurance": "personhood",
+      "sourceUrl": "https://github.com/worldcoin",
+      "docsUrl": "https://docs.world.org/world-id",
+      "license": {
+        "spdx": "unknown",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "managed",
+        "protocol"
+      ],
+      "modalities": [
+        "personhood-proof"
+      ],
+      "privacy": "Review credential issuer, unlinkability, enrollment and region constraints.",
+      "accessibility": "Enrollment availability can exclude people; provide alternatives.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Credential type determines assurance; never equate every credential with uniqueness."
+    },
+    {
+      "id": "semaphore",
+      "name": "Semaphore",
+      "kind": "open-source",
+      "assurance": "group-membership",
+      "sourceUrl": "https://github.com/semaphore-protocol/semaphore",
+      "docsUrl": "https://docs.semaphore.pse.dev/",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted",
+        "protocol"
+      ],
+      "modalities": [
+        "zero-knowledge-proof"
+      ],
+      "privacy": "Anonymous membership can reduce disclosure; enrollment still matters.",
+      "accessibility": "No puzzle, but enrollment must be accessible.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Proves membership/nullifier constraints, not humanity of arbitrary group entrants."
+    },
+    {
+      "id": "webauthn",
+      "name": "WebAuthn / passkeys",
+      "kind": "standard",
+      "assurance": "account-continuity",
+      "sourceUrl": "https://www.w3.org/TR/webauthn-3/",
+      "docsUrl": "https://fidoalliance.org/passkeys/",
+      "license": {
+        "spdx": "not-applicable",
+        "status": "not-applicable"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "public-key-authentication"
+      ],
+      "privacy": "Device biometric need not leave the authenticator.",
+      "accessibility": "Support recovery and multiple authenticators.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "User verification authenticates account/device continuity, not initial humanity."
+    },
+    {
+      "id": "simplewebauthn",
+      "name": "SimpleWebAuthn",
+      "kind": "open-source",
+      "assurance": "account-continuity",
+      "sourceUrl": "https://github.com/MasterKale/SimpleWebAuthn",
+      "docsUrl": "https://simplewebauthn.dev/",
+      "license": {
+        "spdx": "MIT",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "public-key-authentication"
+      ],
+      "privacy": "Store public keys and minimal account metadata.",
+      "accessibility": "Provide enrollment/recovery alternatives.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Integration building block for a trusted-account route, not CAPTCHA replacement evidence."
+    },
+    {
+      "id": "kechap-replay",
+      "name": "Kechap interaction replay",
+      "kind": "experimental",
+      "assurance": "interaction",
+      "sourceUrl": "https://github.com/NomaDamas/Kechap",
+      "docsUrl": "https://github.com/NomaDamas/Kechap",
+      "license": {
+        "spdx": "Apache-2.0",
+        "status": "candidate-not-audited"
+      },
+      "stars": null,
+      "starsCheckedAt": null,
+      "over10k": null,
+      "deployment": [
+        "self-hosted"
+      ],
+      "modalities": [
+        "keyboard",
+        "pointer",
+        "event-replay"
+      ],
+      "privacy": "Minimize event streams; do not collect raw biometrics.",
+      "accessibility": "Keyboard and non-cognitive routes need independent evaluation.",
+      "adapterStatus": "planned",
+      "sourceStatus": "not-fetched",
+      "notes": "Research only until benchmarked; server replay prevents forged outcomes but does not prove human origin."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# 전달과 원격 게시 상태
+
+2026-11-12 기준입니다. GitHub 푸시와 이슈 생성은 완료하지 못했습니다.
+
+- GitHub·API·Aside DNS 조회가 실패했습니다. `git ls-remote`도 실패하여 기존 이력을 확인하지 못했습니다.
+- `gh auth status`는 현재 계정 인증을 사용할 수 없다고 보고했습니다. 비밀값은 수집하지 않았습니다.
+- `python3 scripts/publish-issues.py --publish`는 기존 이슈 조회 단계에서 연결 실패로 중단했습니다. 생성 단계에 도달하지 않았습니다.
+- 작업 공간 `.git`은 읽기 전용 빈 디렉터리입니다. 기존 폴더는 변경하지 않고 `/tmp/kechap-publication.git`에 별도 메타데이터로 로컬 커밋을 만듭니다.
+- Windows VM은 생성하지 않았습니다. `qemu-system-x86_64`와 `/dev/kvm`이 없고 게스트 이미지·도구 호환성도 미확인입니다. 여유 디스크는 약 35GB였습니다.
+- Aside/MyProxy 연결·REA 실행은 수행하지 않았습니다.
+
+로컬 산출물은 SDK·CLI·읽기 전용 MCP·Skill·카탈로그 후보 34개·테스트 12개·문서·이슈 본문 23개입니다. 모의 계약 검증이며 상용 벤더 인증·보안 감사·인간 벤치마크 결과는 아닙니다.
+
+## 연결 복구 후
+
+아래는 원격 이력을 유지하기 위한 예시이며 실행된 결과가 아닙니다. 로컬 커밋은 `/tmp/kechap-delivery.bundle`에도 보존합니다. `/tmp`는 임시 위치이고 소스는 작업 폴더에 남아 있습니다.
+
+```bash
+git clone https://github.com/NomaDamas/Kechap.git /tmp/kechap-publish
+cd /tmp/kechap-publish
+git fetch /tmp/kechap-delivery.bundle main
+git cherry-pick FETCH_HEAD
+# 기존 코드와 충돌하면 원격 이력을 보존하며 해결
+npm test
+npm run catalog:check
+git push origin HEAD:main
+python3 scripts/publish-issues.py --publish
+```
+
+실제 원격 기본 브랜치가 다르면 그에 맞춰 진행합니다. 원격이 비어 있으면 정상적인 최초 push를 사용합니다. 강제 push는 필요하지 않습니다. 사용 가능한 인증 방식으로 복구하며 토큰을 저장소나 이슈에 넣지 않습니다.

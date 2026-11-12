@@ -1,0 +1,11 @@
+{
+  "name": "kechap",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Policy-driven human-verification provider orchestration for agents and products",
+  "type": "module",
+  "engines": {"node": ">=20"},
+  "exports": {".": "./src/index.js"},
+  "scripts": {"test": "node test/core.test.js", "demo": "node examples/local.js", "mcp": "node src/mcp.js", "recommend": "node src/cli.js", "catalog:check": "node scripts/check-catalog.js", "research:refresh": "node scripts/refresh-evidence.js"},
+  "license": "Apache-2.0"
+}
