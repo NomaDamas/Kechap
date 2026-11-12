@@ -1,0 +1,30 @@
+name: 벤치마크 제안·결과
+description: 통제된 환경의 재현 가능한 검증 실험을 제안합니다.
+title: "[benchmark] "
+body:
+  - type: textarea
+    id: protocol
+    attributes:
+      label: 가설·환경·허용 범위
+      description: 소유 또는 명시적으로 허가된 테스트 환경만 사용하세요.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: 데이터·모델·도구·시도 한도
+      description: seed, 버전, 비용, 인간 참여 동의, 보관·삭제 정책을 포함하세요.
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: 지표·분모·불확실성
+      description: 완료율, median/p95, 실패, 공격 비용, 접근성, 신뢰구간과 미측정 항목을 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 재현 artifact와 한계
+      description: 아직 결과가 없으면 계획임을 표시하세요. 비밀키·개인 영상·음성을 첨부하지 마세요.

@@ -1,0 +1,49 @@
+name: 공급자 또는 방법론 제안
+description: 카탈로그 근거와 연동 가능성을 제안합니다.
+title: "[provider] "
+body:
+  - type: input
+    id: upstream
+    attributes:
+      label: 공식 저장소·문서 URL
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 제안 범위
+      options:
+        - 카탈로그 후보
+        - 공식 API adapter
+        - 오픈소스 self-host adapter
+        - 실험 challenge
+    validations:
+      required: true
+  - type: textarea
+    id: assurance
+    attributes:
+      label: 보장 범주와 한계
+      description: 현재 SDK assurance인 automation-cost, bot-mitigation, liveness, identity, uniqueness 중 해당 범주와 근거를 적어주세요. 확장 분류는 제안임을 표시하세요.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 라이선스·유지보수·실사용 근거
+      description: 확인 날짜와 원본 링크를 포함하세요. 미확인 수치와 10K stars 조건을 추측하지 마세요.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: 개인정보·접근성·운영 제약
+      description: 수집 데이터, 보관, 외부 전송, 대체 경로, 비용, self-host 가능 여부를 적어주세요.
+  - type: checkboxes
+    id: permissions
+    attributes:
+      label: 연동 권한
+      options:
+        - label: 공개 코드의 라이선스 또는 공식 API 이용 경로를 제시했습니다.
+          required: true
+        - label: 카탈로그 제안과 검증 완료된 production adapter를 구분했습니다.
+          required: true
