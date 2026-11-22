@@ -51,7 +51,7 @@
     "@simplewebauthn/server": "13.3.3",
     "@worldcoin/idkit-server": "1.2.0",
     "altcha-lib": "2.8.0",
-    "capjs-core": "0.1.15",
+    "capjs-core": "0.1.18",
     "express": "5.3.0",
     "redis": "6.3.1"
   },
